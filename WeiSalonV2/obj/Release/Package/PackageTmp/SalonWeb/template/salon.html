@@ -1,0 +1,87 @@
+<div class="salon-detail">
+	<div class="salon-head">
+		<div class="top" style="display:none;">
+			技术：9.4&emsp;服务：9.2&emsp;环境：9.4
+		</div>
+		<div class="swiper-container focus">
+			<ul class="swiper-wrapper">
+				{@each detail as item}
+					<li class="swiper-slide">
+						<a class="pic" href="javascript:;"><img src="http://qiniupic.bobo.so${item.photo}?imageView2/0/w/750"></a>
+					</li>
+				{@/each}
+			</ul>
+		</div>
+
+		<div class="boot">
+			<div class="name">${detail[0].nickname}</div>
+			<div class="price">
+				<i class="icon-bg"><i class="iconfont" data-icon="&#xe603;"></i></i>
+				<span>
+					{@if detail[0].price }
+					人均${detail[0].price}元
+					{@else}
+					价格未设定
+					{@/if}
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="block-box salon-info">
+		<a class="row salon-info-item" href="{@if detail[0].lon&&detail[0].lat }#salonmap/${detail[0].lon}/${detail[0].lat}{@else}javascript:;{@/if}">
+			<div class="col-90 place"><i class="icon-bg"><i class="iconfont" data-icon="&#xe600;"></i></i>${detail[0].address}</div>
+			<div class="col-10"><i class="iconfont icon-more" data-icon="&#xe601;"></i></div>
+		</a>
+		<a class="row salon-info-item" href="tel:${detail[0].cell}">
+			<div class="col-90 phone"><i class="icon-bg"><i class="iconfont" data-icon="&#xe605;"></i></i>${detail[0].cell}</div>
+			<div class="col-10"><i class="iconfont icon-more" data-icon="&#xe601;"></i></div>
+		</a>
+	</div>
+
+	<div class="block-box salon-info">
+		<div class="row salon-info-item title has-son">
+			<div class="col-90 place">
+				沙龙简介
+			</div>
+			<div class="col-10"></div>
+		</div>
+		{@if detail[0].summary }
+		<div class="salon-info-item notice">
+			${detail[0].summary}
+		</div>
+		{@/if}
+	</div>
+
+	<div class="block-box salon-fxs">
+		<a class="row salon-info-item title" href="javascript:;">
+			<div class="col-90">沙龙推荐发型师(0)</div>
+			<div class="col-10"><i class="iconfont icon-more" data-icon="&#xe601;"></i></div>
+		</a>
+	</div>
+
+	<div class="block-box salon-info">
+		<div class="row salon-info-item title has-son">
+			<div class="col-90 place">
+				沙龙公告
+			</div>
+			<div class="col-10"></div>
+		</div>
+		{@if detail[0].noticecontent }
+		<div class="salon-info-item notice">
+			${detail[0].noticecontent}
+		</div>
+		{@/if}
+		<div class="row salon-info-item title">
+			<div class="col-90 place">营业时间：${detail[0].businessdate}</div>
+			<div class="col-10"></div>
+		</div>
+	</div>
+
+	<div class="block-box salon-works">
+		<a class="row salon-info-item title" href="javascript:;">
+			<div class="col-90">沙龙作品(0)</div>
+			<div class="col-10"><i class="iconfont icon-more" data-icon="&#xe601;"></i></div>
+		</a>
+	</div>
+</div>	

@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = ViewBag.showreel;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="am-cf admin-main">
+    <!-- content start -->
+    <div class="admin-content am-g">
+        <div class="am-u-lg-12 am-u-sm-12">
+            <div class="am-cf am-padding">
+                <div class="am-fl am-cf">
+                   <strong class="am-text-primary am-text-lg">作品墙</strong> / <small>你沙龙旗下全部发型师的优秀作品将被统一展示</small>
+                </div>
+            </div>
+            <div class="center-preview">
+                <div class="preview">
+                    <a class="back" href="javascript:history.back();"></a>
+                    <iframe src="@ViewBag.allworkurl" width="320" height="503"></iframe>
+                </div>
+                <div class="show-code">
+                    <div id="qrcodeTable" class="form_wrp">
+                    </div>
+                    <span>扫描二维码预览页面</span>
+                </div>
+                <div class="page-link am-g am-padding">
+                    <div class="am-u-sm-9">
+                        <input class="am-form-field" type="text" value="@ViewBag.allworkurl">
+                    </div>
+                    <a class="am-u-sm-3 am-btn am-btn-default am-radius">复制链接</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- content end -->
+</div>
+@section scripts{
+    <script type="text/javascript" src="/js/jquery.qrcode.js"></script>
+    <script type="text/javascript" src="/js/qrcode.js"></script>
+    <script type="text/javascript">
+        $(function () {
+        
+            $("#qrcodeTable").qrcode({
+                render: "canvas",
+                text: "@ViewBag.allworkurl",
+                width: "100",
+                height: "100"
+            });
+
+        })
+    </script>
+}

@@ -1,0 +1,441 @@
+﻿@{
+    Layout = null;
+    var salo = new SalonSimple();
+    if (Model != null)
+    {
+        salo = (SalonSimple)Model;
+        if (salo.Uid == null || salo.Uid == "")
+        {
+            salo = new SalonSimple();
+        }
+    }
+    
+}
+
+@using BoboModel
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>微沙龙</title>
+    <link rel="icon" href="/images/register/logo_o.png">
+    <link rel="stylesheet" type="text/css" href="/css/Register/main.css" />
+    <style>
+    </style>
+    <script type="text/javascript">
+
+        var _token = "@ViewBag.Token";
+
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="inside clearfix">
+            <div class="logo">
+                <a href="/Home/index" style="cursor: pointer;">
+                    <img src="/images/register/logo.gif" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="container reg-box">
+        <div class="inside clearfix">
+            <div class="reg-step">
+                <ul class="clearfix">
+                    <li class="current"><i>1</i><span>账号信息</span></li>
+                    <li><i>2</i><span>基本信息</span></li>
+                    <li><i>3</i><span>沙龙资料</span></li>
+                    <li><i>4</i><span>审核</span></li>
+                    <li><i>5</i><span>支付</span></li>
+                </ul>
+            </div>
+            <div class="reg-cnt f-l">
+                <form id="form1" runat="server" class="reg-form">
+                    <ul class="users-form">
+                        <li>
+                            <label>
+                                用户名</label>
+                            <input class="username" id="B_LogName" runat="server" type="text" value="@(salo.Email == null || salo.Email == "" ? "" : salo.Email)" 
+                                 onkeydown="fncKeyStop(event)" @(salo.Email == null || salo.Email == "" ? "" : "readonly") maxlength="20" onpaste="return false" oncontextmenu = "return false" /><font
+                                     class="required">*</font>
+                            <div class="tips">用户名只能由字母数字和_符号组成，最短6位</div>
+                        </li>
+                        <li>
+                            <label>
+                                密码</label>
+                            <input class="password" id="B_Password" maxlength="20" runat="server" type="password" value="" /><font
+                                class="required">*</font>
+                            <div class="tips">
+                                密码只能是字母、数字或者英文符号，最短6位，区分大小写
+                            </div>
+                        </li>
+                        <li>
+                            <label>
+                                确认密码</label>
+                            <input class="re-pass" type="password" maxlength="20" value="" /><font class="required">*</font>
+                            <div class="tips">
+                                请确认两次密码输入一致
+                            </div>
+                        </li>
+
+                        <li><a class="pass-users" href="javascript:;" style="cursor: pointer;">下一步</a></li>
+                    </ul>
+                    <ul class="base-form">
+                        <li>
+                            <label>
+                                美发沙龙名称</label>
+                            <input class="shop-name" id="B_Name" maxlength="20" runat="server" type="text" value="@(salo.Nickname == "" ? "" : salo.Nickname)" /><font
+                                class="required">*</font> </li>
+                        <li>
+                            <label>
+                                美发沙龙联系电话</label>
+                            <input class="telephone" id="B_Phone" runat="server" maxlength="13" runat="server" type="text" value="@(salo.Cell == null || salo.Cell.Trim() == "" ? "" : salo.Cell.Trim())" /><font
+                                class="required">*</font>
+                            <div class="tips">仅支持中国大陆手机号和区号-座机号两种格式（如：021-12345678）</div>
+                        </li>
+                        <li>
+                            <label>
+                                美发沙龙联系人</label>
+                            <input class="contacts" id="B_LinkRealName" maxlength="20" runat="server" type="text" value="@(salo.LinkName == "" ? "" : salo.LinkName)" /><font
+                                class="required">*</font> </li>
+                        <li class="clearfix">
+                            <label>
+                                美发沙龙地址</label>
+                            <div id="select-city" class="address f-l">
+                                <select class="prov" id="prov" runat="server">
+                                </select>
+                                <select class="city" disabled="disabled" id="city" runat="server">
+                                </select>
+                                <select class="dist" disabled="disabled" id="dist" runat="server">
+                                </select>
+                            </div>
+                            <input class="road f-l" type="text"  maxlength="100" value="@(salo.Address == "" ? "" : salo.Address)" id="add" runat="server" /><font class="required">*</font>
+                        </li>
+                        <li>
+                            <label>
+                                美发沙龙简介</label>
+                            <textarea class="introduction" id="B_Summary" runat="server">@(salo.Summary == "" ? "" : salo.Summary)</textarea>
+                            <div class="tips">
+                                最多输入500个字符
+                            </div>
+                        </li>
+                        <li>
+                            <label>
+                                公众号名字</label>
+                            <input class="contacts" id="B_Wxname" maxlength="50" runat="server" type="text" value="@(salo.Wxname == "" ? "" : salo.Wxname)"/>
+
+                        </li>
+                        <li>
+                            <label>
+                                请输入推荐码</label>
+                            <input class="contacts" id="Recommend" maxlength="11" runat="server" type="text" value="@(salo.Recommend == "" ? "" : salo.Recommend)" />
+                        </li>
+                        <li><a class="pass-base" href="javascript:;" style="cursor: pointer;">下一步</a></li>
+                    </ul>
+                    <ul class="shop-form">
+                        <li>
+                            <label>美发沙龙营业执照或门头照片</label>
+                            <div class="upload-box" id="B_Image1-parent">
+                                <img class="up-img" id="Image1" src="@(ViewBag.img4 == null || ViewBag.img4 == "" ? "/images/register/up-img.gif" : "http://bobosquad.qiniudn.com" + ViewBag.img4)" width="120" height="120" />
+                                <a class="upload-btn" id="B_Image1" href="javascript:;"></a>
+                            </div>
+                            <div class="tips">请上传营业执照照片或门头照片,照片要清晰显示出沙龙名称</div>
+
+                        </li>
+                        <li>
+                            <label>沙龙主页使用头像</label>
+                            <div class="upload-box" id="B_Image2-parent">
+                                <img class="up-img" id="Image2" src="@(salo.Logo == null || salo.Logo == "" ? "/images/register/up-img.gif" : "http://bobosquad.qiniudn.com" + salo.Logo)" width="120" height="120" />
+                                <a class="upload-btn" id="B_Image2" href="javascript:;"></a>
+                            </div>
+                            <div class="tips">头像不能为空，建议使用清晰显示沙龙Logo的图片</div>
+                        </li>
+                        <li>
+                            <label>美发沙龙店内照片</label>
+                            <div class="upload-box f-l" id="B_Image3-parent">
+                                <img class="up-img" id="Image3" src="@(ViewBag.img1 == null || ViewBag.img1 == "" ? "/images/register/up-img.gif" : "http://bobosquad.qiniudn.com" + ViewBag.img1)" width="120" height="120" />
+                                <a class="upload-btn" id="B_Image3" href="javascript:;"></a>
+                            </div>
+                            <div class="upload-box f-l" id="B_Image4-parent">
+                                <img class="up-img" id="Image4" src="@(ViewBag.img2 == null || ViewBag.img2 == "" ? "/images/register/up-img.gif" : "http://bobosquad.qiniudn.com" + ViewBag.img2)" width="120" height="120" />
+                                <a class="upload-btn" id="B_Image4" href="javascript:;"></a>
+                            </div>
+                            <div class="upload-box f-l" id="B_Image5-parent">
+                                <img class="up-img" id="Image5" src="@(ViewBag.img3 == null || ViewBag.img3 == "" ? "/images/register/up-img.gif" : "http://bobosquad.qiniudn.com" + ViewBag.img3)" width="120" height="120" />
+                                <a class="upload-btn" id="B_Image5" href="javascript:;"></a>
+                            </div>
+                            <div class="tips">注：要求三张，包括：前台照片、店内其他照片2张</div>
+                        </li>
+
+                        <li class="consent-agreement">
+                            <label>
+                                <input type="checkbox" checked="checked" />我同意<a href="/Register/pact" target="_blank">《微沙龙服务协议》</a></label></li>
+                        <li>
+                            <input class="submit-all" type="button" style="cursor: pointer;" value="立即申请"></li>
+                    </ul>
+                </form>
+            </div>
+            <div class="right-side f-r">
+
+                @{
+                    if (salo.Nickname == null || salo.Nickname == "")
+                    {
+                    <div class="tips-search">
+                        如果已经提交申请，可登录查看审核状态。
+                    </div>
+                    <div class="search-form">
+                        <label>
+                            用户名</label>
+                        <input class="username" id="logname" maxlength="30" type="text" value="" />
+                        <label>
+                            密码</label>
+                        <input class="password" type="password" maxlength="20" id="pws" value="" />
+                        <input class="search-btn" type="button" style="cursor: pointer;" onclick="checkLogin();" value="查询" />
+                    </div>
+                    }
+                    else
+                    {
+                    <div class="tips-search">
+                        欢迎 @salo.Nickname
+                        <a href="#" onclick="LoginOut();" style="cursor: pointer;">注销</a>
+                    </div>}
+                }
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="inside">
+            <div class="foot-menu">
+                <a href="/Register/pact" style="cursor: pointer;">服务协议</a>@*|<a href="#">侵权投诉</a>*@
+                |<a href="http://www.hairbobo.com" style="cursor: pointer;">波波网</a>@*|<a href="#">问题反馈</a>*@
+            </div>
+            <div class="copyright">
+                上海莫笛思信息科技有限公司版权所有 沪ICP备11041741号
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/js/Register/jquery-1.8.1.min.js"></script>
+
+    <script type="text/javascript" src="/js/qiniu/plupload/plupload.full.min.js"></script>
+    <script type="text/javascript" src="/js/qiniu/qiniu.js"></script>
+
+    <script type="text/javascript" src="/js/Register/jquery.cityselect.js"></script>
+
+    <script type="text/javascript" src="/js/Register/jquery.ba-hashchange.js"></script>
+
+
+    <script type="text/javascript" src="/js/qiniu/main.js"></script>
+    <script type="text/javascript" src="/js/Register/main.js"></script>
+    <script type="text/javascript" src="/JS/AES.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=LOoFXO0NxsgLd6BgTjGxb2ZD"></script>
+    <script type="text/javascript" src="/JS/layer/layer.js"></script>
+
+
+    <script type="text/javascript">
+
+        var istemporary = 0;
+        $(document).ready(function () {
+            var index = layer.confirm('“微沙龙”提供7天免费体验服务，您是否先申请免费试用？（注意：7天免费试用到期后，您必须支付认证费才能继续使用哦）', {
+                btn: ['是', '否'] //按钮
+            }, function () {
+                //layer.msg('', { icon: 1 });
+                istemporary = 1;
+                layer.close(index);
+            }, function () {
+                istemporary = 0;
+                layer.close(index);
+            });
+
+        });
+
+        $("#pws").keydown(function (event) {
+            if (event.keyCode == 13) {
+                checkLogin();
+            }
+        });
+
+        var k = false;
+        //验证是否登录
+        function CHKregister() {
+            if (k) {
+                return;
+            }
+            k = true;
+            if ($('#B_LogName').val().trim() == "") {
+                //alert("登录名不能为空");
+                k = false;
+                return k;
+            }
+            if ($('#B_Name').val().trim() == "") {
+                //alert("沙龙名称不能为空");
+                k = false;
+                return k;
+            }
+            if ($('#B_Phone').val().trim() == "") {
+                //alert("沙龙电话不能为空");
+                k = false;
+                return k;
+            }
+            if ($('#B_LinkRealName').val().trim() == "") {
+                //alert("联系人不能为空");
+                k = false;
+                return k;
+            }
+            if ($('#add').val().trim() == "") {
+                //alert("沙龙地址不能为空");
+                k = false;
+                return k;
+            }
+            if ($('#B_Password').val().trim() == "") {
+                //alert("密码不能为空");
+                k = false;
+                return k;
+            }
+            if ($('#B_Summary').val().length > 500) {
+                //alert("沙龙描述不能超过500个字");
+                k = false;
+                return k;
+            }
+
+            if ($("#add").val().trim() == "") {
+                k = false;
+                return k;
+            }
+
+
+            var loginID = Encrypt($('#B_LogName').val());
+            var PWD = Encrypt($('#B_Password').val());
+            var B_Name = $('#B_Name').val();
+            var B_Phone = $('#B_Phone').val();
+            var B_LinkRealName = $('#B_LinkRealName').val();
+
+            var B_Summary = $('#B_Summary').val();
+            var B_Image1 = $('#Image1')[0].src;
+            var tips = $('.shop-form').find(".tips");
+            var B_Wxname = $('#B_Wxname').val();
+            var Recommend = $("#Recommend").val();
+
+            var add = $('#prov').val() + "|" + $('#city').val() + "|" + ($('#dist').val() == null ? "" : $('#dist').val()) + "|" + $('#add').val();
+            if (B_Image1.indexOf("/images/register/up-img.gif") != -1) {
+                //alert("营业执照图片不能为空");
+                tips.eq(0).addClass('error');
+                k = false;
+                return k;
+            } else {
+                tips.eq(0).removeClass('error');
+            }
+            var B_Image2 = $('#Image2')[0].src;
+            if (B_Image2.indexOf("/images/register/up-img.gif") != -1) {
+                //alert("沙龙LOGO不能为空");                            
+                tips.eq(1).addClass('error');
+                k = false;
+                return k;
+            } else {
+                tips.eq(1).removeClass('error');
+            }
+            var B_Image3 = $('#Image3')[0].src;
+            if (B_Image3.indexOf("/images/register/up-img.gif") != -1) {
+                //alert("店内照片不能为空");                           
+                tips.eq(2).addClass('error');
+                k = false;
+                return k;
+            } else {
+                tips.eq(2).removeClass('error');
+            }
+            var B_Image4 = $('#Image4')[0].src;
+            if (B_Image4.indexOf("/images/register/up-img.gif") != -1) {
+                //alert("店内照片不能为空");                                                   
+                tips.eq(2).addClass('error');
+                k = false;
+                return k;
+            } else {
+                tips.eq(2).removeClass('error');
+            }
+            var B_Image5 = $('#Image5')[0].src;
+            if (B_Image5.indexOf("/images/register/up-img.gif") != -1) {
+                //alert("店内照片不能为空");                                                   
+                tips.eq(2).addClass('error');
+                k = false;
+                return k;
+            } else {
+                tips.eq(2).removeClass('error');
+            }
+
+            var param = {
+                "loginID": loginID,
+                "PWD": PWD,
+                "B_Name": B_Name,
+                "B_Phone": B_Phone,
+                "B_LinkRealName": B_LinkRealName,
+                "add": add,
+                "B_Summary": encodeURI(B_Summary),
+                "B_Image1": B_Image1,
+                "B_Image2": B_Image2,
+                "B_Image3": B_Image3,
+                "B_Image4": B_Image4,
+                "B_Image5": B_Image5,
+                "B_Wxname": B_Wxname,
+                "istemporary": istemporary,
+                "recommend": Recommend
+            };
+
+
+            var pointlnglat = $('#prov').val() + $('#city').val() + ($('#dist').val() == null ? "" : $('#dist').val()) + $('#add').val();
+            // 创建地址解析器实例
+            var myGeo = new BMap.Geocoder();
+            // 将地址解析结果显示在地图上,并调整地图视野
+            myGeo.getPoint(pointlnglat, function (point) {
+                var lng = 0;
+                var lat = 0;
+                if (point) {
+                    lng = point.lng;
+                    lat = point.lat;
+                }
+                param.lng = lng;
+                param.lat = lat;
+                $.ajax({
+                    type: "post",
+                    url: "/Register/CHKregister",
+                    dataType: "text",
+                    data: param,
+                    success: function (data) {
+                        if (data == 1) {
+                            //window.location.href = "/manage/index";
+                            alert("申请提交成功，我们的工作人员正在审核。审核通过后您将收到短信或者电话通知。");
+                            window.location.href = "/Register/check";
+                        } else {
+                            alert(data);
+                            k = false;
+                        }
+                    },
+                    error: function (data) {
+                        alert("失败-" + data.readyState);
+                        k = false;
+                    }
+                });
+            });
+
+        }
+        function fncKeyStop(evt) {
+            if (!window.event) {
+                var keycode = evt.keyCode;
+                var key = String.fromCharCode(keycode).toLowerCase();
+                if (evt.ctrlKey && key == "v") {
+                    evt.preventDefault();
+                    evt.stopPropagation();
+                }
+            }
+        }
+
+    </script>
+    <!--[if IE 6]>
+	<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+	<script type="text/javascript">
+	    $(function(){
+	        DD_belatedPNG.fix('.reg-step li,.reg-step i');
+	    });
+	</script>
+	<![endif]-->
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+﻿.paging
+{
+	text-align: right;
+	margin: 20px 0;
+}
+
+	.paging a
+	{
+        border:1px #ccc solid;
+		display: inline-block;
+		padding: 5px 10px;
+		background: #ccc;
+		margin-right: 10px;
+		color: #333;
+		text-decoration: none;
+		border-radius: 5px;
+	}
+
+		.paging a.disabled
+		{
+			background: #eee;
+			color: #999;
+		}
+
+		.paging a.active
+		{
+			background: #666;
+			color: #fff;
+		}
+
+        .paging span { 
+            border:1px #ccc solid;
+            display: inline-block;
+		    padding: 5px 10px;
+		    margin-right: 10px;
+		    color: #333;
+		    text-decoration: none;
+		    border-radius: 5px;
+        }

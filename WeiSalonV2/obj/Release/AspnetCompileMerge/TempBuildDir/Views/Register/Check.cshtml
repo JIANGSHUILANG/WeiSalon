@@ -1,0 +1,177 @@
+﻿@{
+    Layout = null;
+}
+
+@{  
+    BoboModel.SalonSimple salo = (BoboModel.SalonSimple)Model;
+    if (salo == null)
+    {
+        return;
+    }
+}
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>审核状态</title>
+    <link rel="icon" href="/images/register/logo_o.png"> 
+    <link rel="stylesheet" type="text/css" href="/css/Register/main.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <div class="inside clearfix">
+                <div class="logo">
+                    <a href="/Home/index" style="cursor: pointer;">
+                        <img src="/images/Register/logo.gif" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="container reg-box">
+            <div class="inside clearfix">
+                <div class="reg-step">
+                    <ul class="clearfix">
+                        <li><i>1</i><span>账号信息</span></li>
+                        <li><i>2</i><span>基本信息</span></li>
+                        <li><i>3</i><span>沙龙资料</span></li>
+                        <li class="current"><i>4</i><span>审核</span></li>
+                        <li><i>5</i><span>支付</span></li>
+                    </ul>
+                </div>
+                <div class="reg-cnt f-l">
+                    <div class="tips-status">
+                        您申请的“微沙龙”服务当前状态为：
+                    </div>
+                    <div class="now-status">
+                        @{
+                            switch (salo.Status)
+                            {
+                                case 0: 
+                            <ul class="clearfix">
+                                <li><span>提交申请</span> <i>1</i> </li>
+                                <li><span>待审核</span> <i>2</i> </li>
+                                <li><span>待支付</span> <i>3</i> </li>
+                            </ul>    
+                            <a class="check-next disabled" href="#" style="cursor: pointer;">账户已被禁用</a>
+                                    break;
+                                case 1: 
+                            <ul class="clearfix">
+                                <li class="before"><span>提交申请</span> <i>1</i> </li>
+                                <li class="before"><span>审核中</span> <i>2</i> </li>
+                                <li><span>待支付</span> <i>3</i> </li>
+                            </ul>                                               
+                            <a class="check-next disabled" style="cursor: pointer;" href="#">下一步</a>  
+                                    break;
+                                case 2:  
+                            <ul class="clearfix">
+                                <li class="before"><span>申请通过</span> <i>1</i> </li>
+                                <li class="failure"><span>审核未通过</span> <i>2</i> </li>
+                            </ul>     
+                            <a class="check-next" style="cursor:pointer;" href="/Register/Register/@(salo.Uid)">重新提交资料</a>
+                                    break;
+                                case 3:  
+                            <ul class="clearfix">
+                                <li class="before"><span>提交申请</span> <i>1</i> </li>
+                                <li class="before"><span>审核通过</span> <i>2</i> </li>
+                                <li class="before"><span>待支付</span> <i>3</i> </li>
+                            </ul>                
+                            <a class="check-next" style="cursor: pointer;" target="_blank" href="/Register/pay">立即支付，开通服务</a> 
+                                    break;
+                                case 4:
+                                    break;
+                                case 5:   
+                            <ul class="clearfix">
+                                <li class="before"><span>申请通过</span> <i>1</i> </li>
+                                <li class="failure"><span>审核未通过</span> <i>2</i> </li>
+                            </ul>     
+                            <a class="check-next" style="cursor:pointer;" href="/Register/Register/@(salo.Uid)">重新提交资料</a>
+                        
+                                    break;
+                            }
+                        }
+                    </div>
+                    <div class="pay-explain">
+                        <h3>付费说明：</h3>
+                        <p>“微沙龙”是波波网提供的沙龙推广服务，您只需每年支付300元认证费即可立即享受如下服务：</p>
+                        <p>1、生成沙龙H5页面，基于微信推广传播，拓展沙龙品牌；</p>
+                        <p>2、由波波网通过搜索引擎和第三方应用协助您的沙龙进行传播；</p>
+                        <p>3、通过各种统计报表，随时了解店内发型师客人和预约状况；</p>
+                        <div class="pay-type-tips">* “微沙龙”服务和收费的解释权由上海莫笛思信息科技有限公司（波波网）进行解释</div>
+                    </div>
+                </div>
+                <div class="right-side f-r">
+                    @{
+                        if (salo.Nickname == null || salo.Nickname == "")
+                        {
+@*<div class="tips-login">
+                            已有帐号<a href="#">立即登录</a>
+                        </div>*@
+                        <div class="tips-search">
+                            如果已经提交申请，可登录查看审核状态。
+                        </div>
+                        <div class="search-form">
+                            <label>
+                                用户名</label>
+                            <input class="username" id="logname" maxlength="30" type="text" value="" />
+                            <label>
+                                密码</label>
+                            <input class="password" type="password" maxlength="20" id="pws" value="" />
+                            <input class="search-btn" type="button" onclick="checkLogin();" style="cursor: pointer;" value="查询" />
+                        </div>
+                        }
+                        else
+                        {
+                        <div class="tips-search">
+                            欢迎 @salo.Nickname
+                            <a href="#" style="cursor: pointer;" onclick="LoginOut();">注销</a>
+                        </div>}
+                    }
+                    @*<div class="tips-login">
+                    已有帐号<a href="#">立即登录</a>
+                    </div>
+                    <div class="tips-search">
+                        正在申请中，查看申请状态
+                    </div>
+                    <form class="search-form" runat="server" />
+                    <label>
+                        用户名</label>
+                    <input class="username" type="text" value="" />
+                    <label>
+                        密码</label>
+                    <input class="password" type="password" value="" />
+                    <input class="search-btn" type="submit" value="查询" />
+    </form>
+    <% }
+                   else
+                   { %>
+                <div class="tips-search">
+                    <%=LogName %>
+    </div>
+    <% } %>*@
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="inside">
+                <div class="foot-menu">
+
+                    <a href="/Register/pact" style="cursor: pointer;">服务协议</a>@*|<a href="#">侵权投诉</a>*@
+                    |<a href="http://www.hairbobo.com" style="cursor: pointer;">波波网</a>@*|<a href="#">问题反馈</a>*@
+                </div>
+                <div class="copyright">
+                    上海莫笛思信息科技有限公司版权所有 沪ICP备11041741号
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="/js/Register/jquery-1.8.1.min.js"></script>
+
+        <script type="text/javascript" src="/js/Register/jquery.cityselect.js"></script>
+
+        <script type="text/javascript" src="/js/Register/main.js"></script>
+
+        <script type="text/javascript" src="/JS/AES.js"></script>
+
+    </form>
+</body>
+</html>

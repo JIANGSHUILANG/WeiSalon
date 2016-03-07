@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeiSalonV2", "WeiSalonV2\WeiSalonV2.csproj", "{31AF796F-3692-4805-8352-75E6411626F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boboframework", "Boboframework\Boboframework.csproj", "{0B83EC20-D79B-4277-A1F0-9C6857A2722F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoboModel", "BoboModel\BoboModel.csproj", "{85B7B1F6-8B0F-4330-BFB9-F0AA30A3F0DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoboIService", "BoboIService\BoboIService.csproj", "{FDCC7FAB-8312-4FEA-8E7D-9FA07D533A7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoboCommon", "BoboCommon\BoboCommon.csproj", "{E11466C8-27FC-4067-80BD-737731766F67}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BoboCommon\\BoboCommon.csproj
+		SccProjectName1 = BoboCommon
+		SccLocalPath1 = BoboCommon
+		SccProjectUniqueName2 = Boboframework\\Boboframework.csproj
+		SccProjectName2 = Boboframework
+		SccLocalPath2 = Boboframework
+		SccProjectUniqueName3 = BoboIService\\BoboIService.csproj
+		SccProjectName3 = BoboIService
+		SccLocalPath3 = BoboIService
+		SccProjectUniqueName4 = BoboModel\\BoboModel.csproj
+		SccProjectName4 = BoboModel
+		SccLocalPath4 = BoboModel
+		SccProjectUniqueName5 = WeiSalonV2\\WeiSalonV2.csproj
+		SccProjectName5 = WeiSalonV2
+		SccLocalPath5 = WeiSalonV2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31AF796F-3692-4805-8352-75E6411626F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31AF796F-3692-4805-8352-75E6411626F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31AF796F-3692-4805-8352-75E6411626F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31AF796F-3692-4805-8352-75E6411626F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B83EC20-D79B-4277-A1F0-9C6857A2722F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B83EC20-D79B-4277-A1F0-9C6857A2722F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B83EC20-D79B-4277-A1F0-9C6857A2722F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B83EC20-D79B-4277-A1F0-9C6857A2722F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85B7B1F6-8B0F-4330-BFB9-F0AA30A3F0DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85B7B1F6-8B0F-4330-BFB9-F0AA30A3F0DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85B7B1F6-8B0F-4330-BFB9-F0AA30A3F0DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85B7B1F6-8B0F-4330-BFB9-F0AA30A3F0DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDCC7FAB-8312-4FEA-8E7D-9FA07D533A7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDCC7FAB-8312-4FEA-8E7D-9FA07D533A7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDCC7FAB-8312-4FEA-8E7D-9FA07D533A7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDCC7FAB-8312-4FEA-8E7D-9FA07D533A7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E11466C8-27FC-4067-80BD-737731766F67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E11466C8-27FC-4067-80BD-737731766F67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E11466C8-27FC-4067-80BD-737731766F67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E11466C8-27FC-4067-80BD-737731766F67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

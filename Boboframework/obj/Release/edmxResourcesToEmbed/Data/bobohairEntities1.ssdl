@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bobosquadModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="T_Advice">
+    <Key>
+      <PropertyRef Name="ad_id" />
+    </Key>
+    <Property Name="ad_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ad_s_uid" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="ad_content" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="ad_date" Type="datetime" Nullable="false" />
+    <Property Name="ad_cell" Type="char" MaxLength="11" Nullable="false" />
+    <Property Name="ad_kind" Type="int" Nullable="false" />
+    <Property Name="ad_status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Backflow">
+    <Key>
+      <PropertyRef Name="bk_id" />
+    </Key>
+    <Property Name="bk_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bk_s_uid" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="bk_uid" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="bk_date" Type="datetime" Nullable="false" />
+    <Property Name="bk_type" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_CustomerManage">
+    <Key>
+      <PropertyRef Name="cm_id" />
+    </Key>
+    <Property Name="cm_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cm_s_uid" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="cm_s_nickname" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="cm_h_uid" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="cm_h_name" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="cm_openid" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="cm_nickname" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="cm_remarks1" Type="varchar" MaxLength="50" />
+    <Property Name="cm_remarks2" Type="varchar" MaxLength="50" />
+    <Property Name="cm_remarks3" Type="varchar" MaxLength="50" />
+    <Property Name="cm_remarks4" Type="varchar" MaxLength="50" />
+    <Property Name="cm_remarks5" Type="varchar" MaxLength="50" />
+    <Property Name="cm_status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Error">
+    <Key>
+      <PropertyRef Name="eo_id" />
+    </Key>
+    <Property Name="eo_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="eo_date" Type="datetime" Nullable="false" />
+    <Property Name="eo_name" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="eo_content" Type="nvarchar" MaxLength="1000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_HairOff">
+    <Key>
+      <PropertyRef Name="ho_id" />
+    </Key>
+    <Property Name="ho_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ho_h_uid" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="ho_s_uid" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="ho_date" Type="datetime" Nullable="false" />
+    <Property Name="ho_status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Notice">
+    <Key>
+      <PropertyRef Name="tn_id" />
+    </Key>
+    <Property Name="tn_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tn_s_uid" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="tn_content" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="tn_date" Type="datetime" Nullable="false" />
+    <Property Name="tn_status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Order">
+    <Key>
+      <PropertyRef Name="o_id" />
+    </Key>
+    <Property Name="o_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="o_orid" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="o_s_uid" Type="nchar" MaxLength="36" Nullable="false" />
+    <Property Name="o_name" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="o_money" Type="float" Nullable="false" />
+    <Property Name="o_status" Type="int" Nullable="false" />
+    <Property Name="o_date" Type="datetime" Nullable="false" />
+    <Property Name="o_paydate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_SaleManager">
+    <Key>
+      <PropertyRef Name="sm_id" />
+    </Key>
+    <Property Name="sm_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sm_s_uid" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="sm_name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="sm_date" Type="datetime" Nullable="false" />
+    <Property Name="sm_oldname" Type="nvarchar" MaxLength="20" />
+    <Property Name="sm_editdate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_SalinHairStylist">
+    <Key>
+      <PropertyRef Name="shs_h_uid" />
+    </Key>
+    <Property Name="shs_h_uid" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="shs_s_uid" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="shs_cell" Type="char" MaxLength="11" Nullable="false" />
+    <Property Name="shs_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="shs_hairprice" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="shs_exp" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="shs_logo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="shs_sort" Type="int" Nullable="false" />
+    <Property Name="shs_status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Salon">
+    <Key>
+      <PropertyRef Name="s_uid" />
+    </Key>
+    <Property Name="s_uid" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="s_email" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="s_cell" Type="nchar" MaxLength="13" Nullable="false" />
+    <Property Name="s_pwd" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="s_nickname" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="s_logo" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="s_address" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="s_linkname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="s_summary" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="s_lon" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="s_lat" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="s_date" Type="datetime" Nullable="false" />
+    <Property Name="s_kind" Type="int" Nullable="false" />
+    <Property Name="s_status" Type="int" Nullable="false" />
+    <Property Name="s_businessdate" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="s_price" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="s_opendate" Type="datetime" />
+    <Property Name="s_wxname" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="s_recommend" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="T_SalonImageInfo">
+    <Key>
+      <PropertyRef Name="si_id" />
+    </Key>
+    <Property Name="si_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="si_s_uid" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="si_photo" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="si_kind" Type="int" Nullable="false" />
+    <Property Name="si_status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_SalonPackage">
+    <Key>
+      <PropertyRef Name="spk_id" />
+    </Key>
+    <Property Name="spk_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="spk_title" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="spk_content" Type="nvarchar" MaxLength="2000" Nullable="false" />
+    <Property Name="spk_price" Type="float" Nullable="false" />
+    <Property Name="spk_dorder" Type="int" Nullable="false" />
+    <Property Name="spk_s_uid" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="spk_date" Type="datetime" Nullable="false" />
+    <Property Name="spk_status" Type="int" Nullable="false" />
+    <Property Name="spk_image" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Scanrec">
+    <Key>
+      <PropertyRef Name="scr_id" />
+    </Key>
+    <Property Name="scr_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="scr_s_uid" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="scr_code" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="scr_date" Type="datetime" Nullable="false" />
+    <Property Name="scr_ip" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Sms">
+    <Key>
+      <PropertyRef Name="sm_id" />
+    </Key>
+    <Property Name="sm_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sm_cell" Type="nchar" MaxLength="11" Nullable="false" />
+    <Property Name="sm_content" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="sm_date" Type="datetime" Nullable="false" />
+    <Property Name="sm_status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_SysInformation">
+    <Key>
+      <PropertyRef Name="sy_id" />
+    </Key>
+    <Property Name="sy_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sy_title" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="sy_content" Type="nvarchar" MaxLength="3000" Nullable="false" />
+    <Property Name="sy_date" Type="datetime" Nullable="false" />
+    <Property Name="sy_status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Winning">
+    <Key>
+      <PropertyRef Name="wig_id" />
+    </Key>
+    <Property Name="wig_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="wig_s_uid" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="wig_title" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="wig_date" Type="datetime" Nullable="false" />
+    <Property Name="wig_image" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="wig_pro" Type="int" Nullable="false" />
+    <Property Name="wig_status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Winningrec">
+    <Key>
+      <PropertyRef Name="win_id" />
+    </Key>
+    <Property Name="win_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="win_content" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="win_date" Type="datetime" Nullable="false" />
+    <Property Name="win_ip" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="win_cell" Type="char" MaxLength="11" Nullable="false" />
+    <Property Name="win_temuid" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="win_s_uid" Type="char" MaxLength="36" Nullable="false" />
+  </EntityType>
+  <EntityType Name="To_Employee">
+    <Key>
+      <PropertyRef Name="oe_uid" />
+    </Key>
+    <Property Name="oe_uid" Type="nchar" MaxLength="36" Nullable="false" />
+    <Property Name="oe_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="oe_sex" Type="int" Nullable="false" />
+    <Property Name="oe_logo" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="oe_lon" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="oe_lat" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="oe_introduce" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="oe_sort" Type="int" Nullable="false" />
+    <Property Name="oe_workstatus" Type="int" Nullable="false" />
+    <Property Name="oe_cell" Type="nchar" MaxLength="11" Nullable="false" />
+    <Property Name="oe_cuid" Type="nchar" MaxLength="36" Nullable="false" />
+    <Property Name="oe_status" Type="int" Nullable="false" />
+    <Property Name="oe_sa" Type="int" Nullable="false" />
+    <Property Name="oe_quota" Type="float" Nullable="false" />
+    <Property Name="oe_grade" Type="int" Nullable="false" />
+    <Property Name="oe_b_uid" Type="nchar" MaxLength="36" Nullable="false" />
+    <Property Name="oe_s_uid" Type="nchar" MaxLength="36" Nullable="false" />
+    <Property Name="oe_idcard" Type="nchar" MaxLength="18" Nullable="false" />
+    <Property Name="oe_income" Type="float" Nullable="false" />
+    <Property Name="oe_price" Type="float" Nullable="false" />
+    <Property Name="oe_worktime" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="oe_restday" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Wx_BindHair">
+    <Key>
+      <PropertyRef Name="wb_id" />
+    </Key>
+    <Property Name="wb_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="wb_openid" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="wb_h_uid" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="wb_date" Type="datetime" Nullable="false" />
+    <Property Name="wb_status" Type="int" Nullable="false" />
+    <Property Name="wb_name" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="wb_cell" Type="varchar" MaxLength="11" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Wx_Comment">
+    <Key>
+      <PropertyRef Name="wc_id" />
+    </Key>
+    <Property Name="wc_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="wc_openid" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="wc_h_uid" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="wc_content" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="wc_date" Type="datetime" Nullable="false" />
+    <Property Name="wc_wo_id" Type="int" Nullable="false" />
+    <Property Name="wc_score" Type="int" Nullable="false" />
+    <Property Name="wc_status" Type="int" Nullable="false" />
+    <Property Name="wc_image" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Wx_Member">
+    <Key>
+      <PropertyRef Name="wm_openid" />
+    </Key>
+    <Property Name="wm_openid" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="wm_cell" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="wm_subscribe" Type="int" Nullable="false" />
+    <Property Name="wm_nickname" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="wm_sex" Type="int" Nullable="false" />
+    <Property Name="wm_city" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="wm_country" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="wm_province" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="wm_language" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="wm_headimgurl" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="wm_subscribe_time" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="wm_unionid" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="wm_type" Type="int" Nullable="false" />
+    <Property Name="wm_pwd" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="Wx_Order">
+    <Key>
+      <PropertyRef Name="wo_id" />
+    </Key>
+    <Property Name="wo_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="wo_openid" Type="varchar" MaxLength="36" Nullable="false" />
+    <Property Name="wo_h_uid" Type="char" MaxLength="36" Nullable="false" />
+    <Property Name="wo_bookingdate" Type="datetime" Nullable="false" />
+    <Property Name="wo_date" Type="datetime" Nullable="false" />
+    <Property Name="wo_cell" Type="char" MaxLength="11" Nullable="false" />
+    <Property Name="wo_remarks" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="wo_image" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="wo_status" Type="int" Nullable="false" />
+    <Property Name="wo_type" Type="int" Nullable="false" />
+    <Property Name="wo_source" Type="int" Nullable="false" />
+    <Property Name="wo_adress" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="wo_orderid" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="wo_payid" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="wo_paykind" Type="int" Nullable="false" />
+    <Property Name="wo_orderstatus" Type="int" Nullable="false" />
+    <Property Name="wo_price" Type="float" Nullable="false" />
+    <Property Name="wo_out_refund_no" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="wo_s_uid" Type="char" MaxLength="36" />
+  </EntityType>
+  <EntityContainer Name="bobosquadModelStoreContainer">
+    <EntitySet Name="T_Advice" EntityType="Self.T_Advice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Backflow" EntityType="Self.T_Backflow" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_CustomerManage" EntityType="Self.T_CustomerManage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Error" EntityType="Self.T_Error" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_HairOff" EntityType="Self.T_HairOff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Notice" EntityType="Self.T_Notice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Order" EntityType="Self.T_Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SaleManager" EntityType="Self.T_SaleManager" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SalinHairStylist" EntityType="Self.T_SalinHairStylist" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Salon" EntityType="Self.T_Salon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SalonImageInfo" EntityType="Self.T_SalonImageInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SalonPackage" EntityType="Self.T_SalonPackage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Scanrec" EntityType="Self.T_Scanrec" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Sms" EntityType="Self.T_Sms" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SysInformation" EntityType="Self.T_SysInformation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Winning" EntityType="Self.T_Winning" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Winningrec" EntityType="Self.T_Winningrec" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="To_Employee" EntityType="Self.To_Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Wx_BindHair" EntityType="Self.Wx_BindHair" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Wx_Comment" EntityType="Self.Wx_Comment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Wx_Member" EntityType="Self.Wx_Member" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Wx_Order" EntityType="Self.Wx_Order" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

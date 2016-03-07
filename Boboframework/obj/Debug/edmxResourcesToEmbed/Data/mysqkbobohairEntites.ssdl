@@ -1,0 +1,1032 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mysqkbobohairEntites.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="mysqkbobohairEntitesStoreContainer">
+    <EntitySet Name="ex_ad" EntityType="mysqkbobohairEntites.Store.ex_ad" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="ex_bookingorder" EntityType="mysqkbobohairEntites.Store.ex_bookingorder" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="ex_comment" EntityType="mysqkbobohairEntites.Store.ex_comment" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="ex_hair" EntityType="mysqkbobohairEntites.Store.ex_hair" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="ex_seerec" EntityType="mysqkbobohairEntites.Store.ex_seerec" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="ex_topic" EntityType="mysqkbobohairEntites.Store.ex_topic" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="t_advice" EntityType="mysqkbobohairEntites.Store.t_advice" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="t_backflow" EntityType="mysqkbobohairEntites.Store.t_backflow" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="t_customermanage" EntityType="mysqkbobohairEntites.Store.t_customermanage" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="t_error" EntityType="mysqkbobohairEntites.Store.t_error" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="t_hairoff" EntityType="mysqkbobohairEntites.Store.t_hairoff" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="t_notice" EntityType="mysqkbobohairEntites.Store.t_notice" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="t_order" EntityType="mysqkbobohairEntites.Store.t_order" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="t_salemanager" EntityType="mysqkbobohairEntites.Store.t_salemanager" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="t_salinhairstylist" EntityType="mysqkbobohairEntites.Store.t_salinhairstylist" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="t_salon" EntityType="mysqkbobohairEntites.Store.t_salon" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="t_salonimageinfo" EntityType="mysqkbobohairEntites.Store.t_salonimageinfo" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="t_salonpackage" EntityType="mysqkbobohairEntites.Store.t_salonpackage" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="t_scanrec" EntityType="mysqkbobohairEntites.Store.t_scanrec" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="t_sms" EntityType="mysqkbobohairEntites.Store.t_sms" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="t_sysinformation" EntityType="mysqkbobohairEntites.Store.t_sysinformation" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="t_winning" EntityType="mysqkbobohairEntites.Store.t_winning" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="t_winningrec" EntityType="mysqkbobohairEntites.Store.t_winningrec" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="to_activity" EntityType="mysqkbobohairEntites.Store.to_activity" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="to_ad" EntityType="mysqkbobohairEntites.Store.to_ad" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="to_address" EntityType="mysqkbobohairEntites.Store.to_address" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="to_apns" EntityType="mysqkbobohairEntites.Store.to_apns" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="to_apply" EntityType="mysqkbobohairEntites.Store.to_apply" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="to_balanceofpayments" EntityType="mysqkbobohairEntites.Store.to_balanceofpayments" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="to_bgerror" EntityType="mysqkbobohairEntites.Store.to_bgerror" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="to_binding" EntityType="mysqkbobohairEntites.Store.to_binding" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="to_employee" EntityType="mysqkbobohairEntites.Store.to_employee" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="wx_answers" EntityType="mysqkbobohairEntites.Store.wx_answers" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="wx_article" EntityType="mysqkbobohairEntites.Store.wx_article" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="wx_bindhair" EntityType="mysqkbobohairEntites.Store.wx_bindhair" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="wx_comment" EntityType="mysqkbobohairEntites.Store.wx_comment" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="wx_customerservice" EntityType="mysqkbobohairEntites.Store.wx_customerservice" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="wx_impression" EntityType="mysqkbobohairEntites.Store.wx_impression" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="wx_infromation" EntityType="mysqkbobohairEntites.Store.wx_infromation" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="wx_location" EntityType="mysqkbobohairEntites.Store.wx_location" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="wx_member" EntityType="mysqkbobohairEntites.Store.wx_member" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="wx_order" EntityType="mysqkbobohairEntites.Store.wx_order" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="wx_phonecall" EntityType="mysqkbobohairEntites.Store.wx_phonecall" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="wx_post" EntityType="mysqkbobohairEntites.Store.wx_post" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="wx_qrcode" EntityType="mysqkbobohairEntites.Store.wx_qrcode" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="wx_questions" EntityType="mysqkbobohairEntites.Store.wx_questions" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="wx_request" EntityType="mysqkbobohairEntites.Store.wx_request" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="wx_searchcell" EntityType="mysqkbobohairEntites.Store.wx_searchcell" store:Type="Tables" Schema="bobohair" />
+    <EntitySet Name="wx_tip" EntityType="mysqkbobohairEntites.Store.wx_tip" store:Type="Tables" Schema="bobohair" />
+  </EntityContainer>
+  <EntityType Name="ex_ad">
+    <Key>
+      <PropertyRef Name="ea_id" />
+    </Key>
+    <Property Name="ea_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ea_title" Type="varchar" MaxLength="30" />
+    <Property Name="ea_content" Type="varchar" MaxLength="255" />
+    <Property Name="ea_image" Type="varchar" MaxLength="50" />
+    <Property Name="ea_url" Type="varchar" MaxLength="100" />
+    <Property Name="ea_type" Type="int" />
+    <Property Name="ea_date" Type="datetime" />
+    <Property Name="ea_status" Type="int" />
+  </EntityType>
+  <EntityType Name="ex_bookingorder">
+    <Key>
+      <PropertyRef Name="ebo_id" />
+    </Key>
+    <Property Name="ebo_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ebo_uid" Type="guid" />
+    <Property Name="ebo_cell" Type="char" MaxLength="11" />
+    <Property Name="ebo_eh_uid" Type="guid" />
+    <Property Name="ebo_date" Type="datetime" />
+    <Property Name="ebo_content" Type="varchar" MaxLength="255" />
+    <Property Name="ebo_about" Type="varchar" MaxLength="255" />
+    <Property Name="ebo_orderid" Type="varchar" MaxLength="30" />
+    <Property Name="ebo_payid" Type="varchar" MaxLength="30" />
+    <Property Name="ebo_paykind" Type="int" />
+    <Property Name="ebo_et_id" Type="int" />
+    <Property Name="ebo_price" Type="double" />
+    <Property Name="ebo_status" Type="int" />
+    <Property Name="ebo_out_refund_no" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="ex_comment">
+    <Key>
+      <PropertyRef Name="ec_id" />
+    </Key>
+    <Property Name="ec_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ec_ebo_id" Type="int" />
+    <Property Name="ec_content" Type="varchar" MaxLength="255" />
+    <Property Name="ec_score" Type="int" />
+    <Property Name="ec_status" Type="int" />
+  </EntityType>
+  <EntityType Name="ex_hair">
+    <Key>
+      <PropertyRef Name="eh_id" />
+    </Key>
+    <Property Name="eh_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="eh_uid" Type="guid" />
+    <Property Name="eh_name" Type="varchar" MaxLength="20" />
+    <Property Name="eh_logo" Type="varchar" MaxLength="80" />
+    <Property Name="eh_phone" Type="varchar" MaxLength="80" />
+    <Property Name="eh_cell" Type="char" MaxLength="11" />
+    <Property Name="eh_salonname" Type="varchar" MaxLength="30" />
+    <Property Name="eh_title" Type="varchar" MaxLength="20" />
+    <Property Name="eh_workingyears" Type="varchar" MaxLength="15" />
+    <Property Name="eh_skill" Type="varchar" MaxLength="100" />
+    <Property Name="eh_introduction" Type="varchar" MaxLength="255" />
+    <Property Name="eh_city" Type="varchar" MaxLength="10" />
+    <Property Name="eh_applydate" Type="datetime" />
+    <Property Name="eh_through" Type="datetime" />
+    <Property Name="eh_see" Type="int" />
+    <Property Name="eh_seeend" Type="int" />
+    <Property Name="eh_status" Type="int" />
+    <Property Name="eh_sort" Type="int" />
+  </EntityType>
+  <EntityType Name="ex_seerec">
+    <Key>
+      <PropertyRef Name="es_id" />
+    </Key>
+    <Property Name="es_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="es_uid" Type="guid" />
+    <Property Name="es_eh_uid" Type="guid" />
+    <Property Name="es_date" Type="datetime" />
+    <Property Name="es_status" Type="int" />
+  </EntityType>
+  <EntityType Name="ex_topic">
+    <Key>
+      <PropertyRef Name="et_id" />
+    </Key>
+    <Property Name="et_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="et_uid" Type="guid" />
+    <Property Name="et_price" Type="double" />
+    <Property Name="et_title" Type="varchar" MaxLength="50" />
+    <Property Name="et_tag" Type="varchar" MaxLength="100" />
+    <Property Name="et_content" Type="varchar" MaxLength="255" />
+    <Property Name="et_time" Type="varchar" MaxLength="10" />
+    <Property Name="et_date" Type="datetime" />
+    <Property Name="et_status" Type="int" />
+  </EntityType>
+  <EntityType Name="t_advice">
+    <Key>
+      <PropertyRef Name="ad_id" />
+    </Key>
+    <Property Name="ad_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ad_content" Type="varchar" MaxLength="255" />
+    <Property Name="ad_date" Type="datetime" />
+    <Property Name="ad_cell" Type="char" MaxLength="11" />
+    <Property Name="ad_kind" Type="int" />
+    <Property Name="ad_status" Type="int" />
+    <Property Name="ad_s_uid" Type="guid" />
+  </EntityType>
+  <EntityType Name="t_backflow">
+    <Key>
+      <PropertyRef Name="bk_id" />
+    </Key>
+    <Property Name="bk_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="bk_s_uid" Type="guid" />
+    <Property Name="bk_uid" Type="guid" />
+    <Property Name="bk_date" Type="datetime" />
+    <Property Name="bk_type" Type="int" />
+  </EntityType>
+  <EntityType Name="t_customermanage">
+    <Key>
+      <PropertyRef Name="cm_id" />
+    </Key>
+    <Property Name="cm_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="cm_s_uid" Type="guid" />
+    <Property Name="cm_s_nickname" Type="varchar" MaxLength="30" />
+    <Property Name="cm_h_uid" Type="guid" />
+    <Property Name="cm_h_name" Type="varchar" MaxLength="30" />
+    <Property Name="cm_openid" Type="varchar" MaxLength="36" />
+    <Property Name="cm_nickname" Type="varchar" MaxLength="200" />
+    <Property Name="cm_remarks1" Type="varchar" MaxLength="50" />
+    <Property Name="cm_remarks2" Type="varchar" MaxLength="50" />
+    <Property Name="cm_remarks3" Type="varchar" MaxLength="50" />
+    <Property Name="cm_remarks4" Type="varchar" MaxLength="50" />
+    <Property Name="cm_remarks5" Type="varchar" MaxLength="50" />
+    <Property Name="cm_status" Type="int" />
+  </EntityType>
+  <EntityType Name="t_error">
+    <Key>
+      <PropertyRef Name="eo_id" />
+    </Key>
+    <Property Name="eo_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="eo_date" Type="datetime" />
+    <Property Name="eo_name" Type="varchar" MaxLength="64" />
+    <Property Name="eo_content" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="t_hairoff">
+    <Key>
+      <PropertyRef Name="ho_id" />
+    </Key>
+    <Property Name="ho_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ho_h_uid" Type="guid" />
+    <Property Name="ho_s_uid" Type="guid" />
+    <Property Name="ho_date" Type="datetime" />
+    <Property Name="ho_status" Type="int" />
+  </EntityType>
+  <EntityType Name="t_notice">
+    <Key>
+      <PropertyRef Name="tn_id" />
+    </Key>
+    <Property Name="tn_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="tn_s_uid" Type="guid" />
+    <Property Name="tn_content" Type="varchar" MaxLength="255" />
+    <Property Name="tn_date" Type="datetime" />
+    <Property Name="tn_status" Type="int" />
+  </EntityType>
+  <EntityType Name="t_order">
+    <Key>
+      <PropertyRef Name="o_id" />
+    </Key>
+    <Property Name="o_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="o_orid" Type="varchar" MaxLength="30" />
+    <Property Name="o_s_uid" Type="guid" />
+    <Property Name="o_name" Type="varchar" MaxLength="30" />
+    <Property Name="o_money" Type="double" />
+    <Property Name="o_date" Type="datetime" />
+    <Property Name="o_paydate" Type="datetime" />
+    <Property Name="o_status" Type="int" />
+  </EntityType>
+  <EntityType Name="t_salemanager">
+    <Key>
+      <PropertyRef Name="sm_id" />
+    </Key>
+    <Property Name="sm_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="sm_s_uid" Type="guid" />
+    <Property Name="sm_name" Type="varchar" MaxLength="20" />
+    <Property Name="sm_date" Type="datetime" />
+    <Property Name="sm_oldname" Type="varchar" MaxLength="20" />
+    <Property Name="sm_editdate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="t_salinhairstylist">
+    <Key>
+      <PropertyRef Name="shs_h_uid" />
+    </Key>
+    <Property Name="shs_h_uid" Type="guid" Nullable="false" />
+    <Property Name="shs_name" Type="varchar" MaxLength="50" />
+    <Property Name="shs_hairprice" Type="varchar" MaxLength="200" />
+    <Property Name="shs_exp" Type="varchar" MaxLength="200" />
+    <Property Name="shs_logo" Type="varchar" MaxLength="100" />
+    <Property Name="shs_s_uid" Type="guid" />
+    <Property Name="shs_cell" Type="char" MaxLength="11" />
+    <Property Name="shs_sort" Type="int" />
+    <Property Name="shs_status" Type="int" />
+  </EntityType>
+  <EntityType Name="t_salon">
+    <Key>
+      <PropertyRef Name="s_uid" />
+    </Key>
+    <Property Name="s_uid" Type="guid" Nullable="false" />
+    <Property Name="s_email" Type="varchar" MaxLength="64" />
+    <Property Name="s_cell" Type="char" MaxLength="13" />
+    <Property Name="s_pwd" Type="varchar" MaxLength="32" />
+    <Property Name="s_nickname" Type="varchar" MaxLength="30" />
+    <Property Name="s_logo" Type="varchar" MaxLength="100" />
+    <Property Name="s_date" Type="datetime" />
+    <Property Name="s_kind" Type="int" />
+    <Property Name="s_status" Type="int" />
+    <Property Name="s_address" Type="varchar" MaxLength="255" />
+    <Property Name="s_linkname" Type="varchar" MaxLength="50" />
+    <Property Name="s_summary" Type="varchar" MaxLength="255" />
+    <Property Name="s_lon" Type="varchar" MaxLength="100" />
+    <Property Name="s_lat" Type="varchar" MaxLength="100" />
+    <Property Name="s_price" Type="varchar" MaxLength="20" />
+    <Property Name="s_wxname" Type="varchar" MaxLength="100" />
+    <Property Name="s_opendate" Type="datetime" />
+    <Property Name="s_businessdate" Type="varchar" MaxLength="20" />
+    <Property Name="s_recommend" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="t_salonimageinfo">
+    <Key>
+      <PropertyRef Name="si_id" />
+    </Key>
+    <Property Name="si_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="si_s_uid" Type="guid" />
+    <Property Name="si_photo" Type="varchar" MaxLength="100" />
+    <Property Name="si_kind" Type="int" />
+    <Property Name="si_status" Type="int" />
+  </EntityType>
+  <EntityType Name="t_salonpackage">
+    <Key>
+      <PropertyRef Name="spk_id" />
+    </Key>
+    <Property Name="spk_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="spk_title" Type="varchar" MaxLength="200" />
+    <Property Name="spk_content" Type="varchar" MaxLength="255" />
+    <Property Name="spk_price" Type="double" />
+    <Property Name="spk_dorder" Type="int" />
+    <Property Name="spk_s_uid" Type="guid" />
+    <Property Name="spk_date" Type="datetime" />
+    <Property Name="spk_status" Type="int" />
+    <Property Name="spk_image" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="t_scanrec">
+    <Key>
+      <PropertyRef Name="scr_id" />
+    </Key>
+    <Property Name="scr_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="scr_s_uid" Type="guid" />
+    <Property Name="scr_code" Type="guid" />
+    <Property Name="scr_date" Type="datetime" />
+    <Property Name="scr_ip" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="t_sms">
+    <Key>
+      <PropertyRef Name="sm_id" />
+    </Key>
+    <Property Name="sm_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="sm_cell" Type="char" MaxLength="11" />
+    <Property Name="sm_content" Type="varchar" MaxLength="100" />
+    <Property Name="sm_date" Type="datetime" />
+    <Property Name="sm_status" Type="int" />
+  </EntityType>
+  <EntityType Name="t_sysinformation">
+    <Key>
+      <PropertyRef Name="sy_id" />
+    </Key>
+    <Property Name="sy_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="sy_title" Type="varchar" MaxLength="30" />
+    <Property Name="sy_content" Type="varchar" MaxLength="255" />
+    <Property Name="sy_date" Type="datetime" />
+    <Property Name="sy_status" Type="int" />
+  </EntityType>
+  <EntityType Name="t_winning">
+    <Key>
+      <PropertyRef Name="wig_id" />
+    </Key>
+    <Property Name="wig_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="wig_s_uid" Type="guid" />
+    <Property Name="wig_title" Type="varchar" MaxLength="200" />
+    <Property Name="wig_date" Type="datetime" />
+    <Property Name="wig_image" Type="varchar" MaxLength="100" />
+    <Property Name="wig_pro" Type="int" />
+    <Property Name="wig_status" Type="int" />
+  </EntityType>
+  <EntityType Name="t_winningrec">
+    <Key>
+      <PropertyRef Name="win_id" />
+    </Key>
+    <Property Name="win_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="win_content" Type="varchar" MaxLength="255" />
+    <Property Name="win_date" Type="datetime" />
+    <Property Name="win_ip" Type="varchar" MaxLength="30" />
+    <Property Name="win_cell" Type="char" MaxLength="11" />
+    <Property Name="win_temuid" Type="guid" />
+    <Property Name="win_s_uid" Type="guid" />
+  </EntityType>
+  <EntityType Name="to_activity">
+    <Key>
+      <PropertyRef Name="act_id" />
+    </Key>
+    <Property Name="act_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="act_cell" Type="varchar" MaxLength="11" />
+    <Property Name="act_type" Type="int" />
+    <Property Name="act_name" Type="varchar" MaxLength="20" />
+    <Property Name="act_status" Type="int" />
+  </EntityType>
+  <EntityType Name="to_ad">
+    <Key>
+      <PropertyRef Name="oa_id" />
+    </Key>
+    <Property Name="oa_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="oa_image" Type="varchar" MaxLength="100" />
+    <Property Name="oa_url" Type="varchar" MaxLength="100" />
+    <Property Name="oa_date" Type="datetime" />
+    <Property Name="oa_status" Type="int" />
+    <Property Name="oa_title" Type="varchar" MaxLength="50" />
+    <Property Name="oa_content" Type="varchar" MaxLength="255" />
+    <Property Name="oa_sort" Type="int" />
+  </EntityType>
+  <EntityType Name="to_address">
+    <Key>
+      <PropertyRef Name="od_id" />
+    </Key>
+    <Property Name="od_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="od_uid" Type="guid" />
+    <Property Name="od_province" Type="varchar" MaxLength="20" />
+    <Property Name="od_city" Type="varchar" MaxLength="20" />
+    <Property Name="od_district" Type="varchar" MaxLength="50" />
+    <Property Name="od_detailed" Type="varchar" MaxLength="100" />
+    <Property Name="od_default" Type="int" />
+    <Property Name="od_lon" Type="varchar" MaxLength="100" />
+    <Property Name="od_lat" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="to_apns">
+    <Key>
+      <PropertyRef Name="ao_id" />
+    </Key>
+    <Property Name="ao_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ao_cell" Type="char" MaxLength="11" />
+    <Property Name="ao_tokenid" Type="varchar" MaxLength="80" />
+    <Property Name="ao_cid" Type="guid" />
+    <Property Name="ao_date" Type="datetime" />
+    <Property Name="ao_device" Type="int" />
+    <Property Name="ao_apptype" Type="int" />
+  </EntityType>
+  <EntityType Name="to_apply">
+    <Key>
+      <PropertyRef Name="ap_id" />
+    </Key>
+    <Property Name="ap_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ap_uid" Type="guid" />
+    <Property Name="ap_cell" Type="char" MaxLength="11" />
+    <Property Name="ap_name" Type="varchar" MaxLength="50" />
+    <Property Name="ap_idcard" Type="char" MaxLength="18" />
+    <Property Name="ap_salonname" Type="varchar" MaxLength="50" />
+    <Property Name="ap_salonaddress" Type="varchar" MaxLength="100" />
+    <Property Name="ap_gps" Type="varchar" MaxLength="200" />
+    <Property Name="ap_status" Type="int" />
+    <Property Name="ap_date" Type="datetime" />
+    <Property Name="ap_adate" Type="datetime" />
+    <Property Name="ap_sex" Type="int" />
+    <Property Name="ap_open" Type="int" />
+  </EntityType>
+  <EntityType Name="to_balanceofpayments">
+    <Key>
+      <PropertyRef Name="bp_id" />
+    </Key>
+    <Property Name="bp_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="bp_oe_uid" Type="guid" />
+    <Property Name="bp_type" Type="int" />
+    <Property Name="bp_source" Type="int" />
+    <Property Name="bp_title" Type="varchar" MaxLength="50" />
+    <Property Name="bp_money" Type="double" />
+    <Property Name="bp_payid" Type="varchar" MaxLength="30" />
+    <Property Name="bp_kind" Type="int" />
+    <Property Name="bp_date" Type="datetime" />
+    <Property Name="bp_status" Type="int" />
+    <Property Name="bp_orderid" Type="int" />
+    <Property Name="bp_table" Type="int" />
+    <Property Name="bp_oreid" Type="int" />
+  </EntityType>
+  <EntityType Name="to_bgerror">
+    <Key>
+      <PropertyRef Name="bg_id" />
+    </Key>
+    <Property Name="bg_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="bg_date" Type="datetime" />
+    <Property Name="bg_name" Type="varchar" MaxLength="64" />
+    <Property Name="bg_content" Type="varchar" MaxLength="255" />
+    <Property Name="bg_status" Type="int" />
+  </EntityType>
+  <EntityType Name="to_binding">
+    <Key>
+      <PropertyRef Name="bd_id" />
+    </Key>
+    <Property Name="bd_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="bd_oe_uid" Type="guid" />
+    <Property Name="bd_account" Type="varchar" MaxLength="100" />
+    <Property Name="bd_kind" Type="int" />
+    <Property Name="bd_date" Type="datetime" />
+    <Property Name="bd_status" Type="int" />
+    <Property Name="bd_name" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="to_employee">
+    <Key>
+      <PropertyRef Name="oe_uid" />
+    </Key>
+    <Property Name="oe_uid" Type="guid" Nullable="false" />
+    <Property Name="oe_name" Type="varchar" MaxLength="50" />
+    <Property Name="oe_sex" Type="int" />
+    <Property Name="oe_logo" Type="varchar" MaxLength="100" />
+    <Property Name="oe_lon" Type="varchar" MaxLength="100" />
+    <Property Name="oe_lat" Type="varchar" MaxLength="100" />
+    <Property Name="oe_introduce" Type="varchar" MaxLength="100" />
+    <Property Name="oe_sort" Type="int" />
+    <Property Name="oe_workstatus" Type="int" />
+    <Property Name="oe_cell" Type="char" MaxLength="11" />
+    <Property Name="oe_cuid" Type="guid" />
+    <Property Name="oe_status" Type="int" />
+    <Property Name="oe_sa" Type="int" />
+    <Property Name="oe_quota" Type="double" />
+    <Property Name="oe_grade" Type="int" />
+    <Property Name="oe_b_uid" Type="guid" />
+    <Property Name="oe_s_uid" Type="guid" />
+    <Property Name="oe_idcard" Type="char" MaxLength="18" />
+    <Property Name="oe_income" Type="double" />
+    <Property Name="oe_price" Type="double" />
+    <Property Name="oe_worktime" Type="varchar" MaxLength="30" />
+    <Property Name="oe_restday" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="wx_answers">
+    <Key>
+      <PropertyRef Name="wa_id" />
+    </Key>
+    <Property Name="wa_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="wa_h_uid" Type="guid" />
+    <Property Name="wa_openid" Type="varchar" MaxLength="36" />
+    <Property Name="wa_date" Type="datetime" />
+    <Property Name="wa_content" Type="varchar" MaxLength="200" />
+    <Property Name="wa_image" Type="varchar" MaxLength="100" />
+    <Property Name="wa_wq_id" Type="int" />
+    <Property Name="wa_replyid" Type="int" />
+    <Property Name="wa_status" Type="int" />
+    <Property Name="wa_attribute" Type="varchar" MaxLength="30" />
+    <Property Name="wa_hot" Type="int" />
+  </EntityType>
+  <EntityType Name="wx_article">
+    <Key>
+      <PropertyRef Name="atr_id" />
+    </Key>
+    <Property Name="atr_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="atr_image" Type="varchar" MaxLength="100" />
+    <Property Name="atr_link" Type="varchar" MaxLength="200" />
+    <Property Name="atr_date" Type="datetime" />
+    <Property Name="atr_status" Type="int" />
+  </EntityType>
+  <EntityType Name="wx_bindhair">
+    <Key>
+      <PropertyRef Name="wb_id" />
+    </Key>
+    <Property Name="wb_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="wb_openid" Type="varchar" MaxLength="36" />
+    <Property Name="wb_h_uid" Type="guid" />
+    <Property Name="wb_date" Type="datetime" />
+    <Property Name="wb_status" Type="int" />
+    <Property Name="wb_name" Type="varchar" MaxLength="20" />
+    <Property Name="wb_cell" Type="varchar" MaxLength="11" />
+  </EntityType>
+  <EntityType Name="wx_comment">
+    <Key>
+      <PropertyRef Name="wc_id" />
+    </Key>
+    <Property Name="wc_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="wc_openid" Type="varchar" MaxLength="36" />
+    <Property Name="wc_h_uid" Type="guid" />
+    <Property Name="wc_content" Type="varchar" MaxLength="255" />
+    <Property Name="wc_date" Type="datetime" />
+    <Property Name="wc_wo_id" Type="int" />
+    <Property Name="wc_score" Type="int" />
+    <Property Name="wc_status" Type="int" />
+    <Property Name="wc_image" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="wx_customerservice">
+    <Key>
+      <PropertyRef Name="wcs_id" />
+    </Key>
+    <Property Name="wcs_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="wcs_openid" Type="varchar" MaxLength="36" />
+    <Property Name="wcs_account" Type="varchar" MaxLength="30" />
+    <Property Name="wcs_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="wx_impression">
+    <Key>
+      <PropertyRef Name="wi_id" />
+    </Key>
+    <Property Name="wi_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="wi_openid" Type="varchar" MaxLength="36" />
+    <Property Name="wi_h_uid" Type="guid" />
+    <Property Name="wi_content" Type="varchar" MaxLength="20" />
+    <Property Name="wi_type" Type="int" />
+    <Property Name="wi_date" Type="datetime" />
+    <Property Name="wi_status" Type="int" />
+  </EntityType>
+  <EntityType Name="wx_infromation">
+    <Key>
+      <PropertyRef Name="wim_id" />
+    </Key>
+    <Property Name="wim_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="wim_title" Type="varchar" MaxLength="50" />
+    <Property Name="wim_content" Type="longtext" />
+    <Property Name="wim_image" Type="varchar" MaxLength="100" />
+    <Property Name="wim_date" Type="datetime" />
+    <Property Name="wim_url" Type="varchar" MaxLength="255" />
+    <Property Name="wim_status" Type="int" />
+    <Property Name="wim_push_status" Type="int" />
+  </EntityType>
+  <EntityType Name="wx_location">
+    <Key>
+      <PropertyRef Name="wl_id" />
+    </Key>
+    <Property Name="wl_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="wl_lng" Type="varchar" MaxLength="15" />
+    <Property Name="wl_lat" Type="varchar" MaxLength="15" />
+    <Property Name="wl_openid" Type="varchar" MaxLength="36" />
+    <Property Name="wl_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="wx_member">
+    <Key>
+      <PropertyRef Name="wm_openid" />
+    </Key>
+    <Property Name="wm_openid" Type="varchar" Nullable="false" MaxLength="36" />
+    <Property Name="wm_cell" Type="varchar" MaxLength="11" />
+    <Property Name="wm_subscribe" Type="int" />
+    <Property Name="wm_nickname" Type="varchar" MaxLength="200" />
+    <Property Name="wm_sex" Type="int" />
+    <Property Name="wm_city" Type="varchar" MaxLength="20" />
+    <Property Name="wm_country" Type="varchar" MaxLength="20" />
+    <Property Name="wm_province" Type="varchar" MaxLength="20" />
+    <Property Name="wm_language" Type="varchar" MaxLength="20" />
+    <Property Name="wm_headimgurl" Type="varchar" MaxLength="255" />
+    <Property Name="wm_subscribe_time" Type="varchar" MaxLength="20" />
+    <Property Name="wm_unionid" Type="varchar" MaxLength="36" />
+    <Property Name="wm_type" Type="int" />
+    <Property Name="wm_pwd" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="wx_order">
+    <Key>
+      <PropertyRef Name="wo_id" />
+    </Key>
+    <Property Name="wo_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="wo_openid" Type="varchar" MaxLength="36" />
+    <Property Name="wo_h_uid" Type="guid" />
+    <Property Name="wo_bookingdate" Type="datetime" />
+    <Property Name="wo_date" Type="datetime" />
+    <Property Name="wo_cell" Type="char" MaxLength="11" />
+    <Property Name="wo_remarks" Type="varchar" MaxLength="50" />
+    <Property Name="wo_image" Type="varchar" MaxLength="255" />
+    <Property Name="wo_status" Type="int" />
+    <Property Name="wo_type" Type="int" />
+    <Property Name="wo_source" Type="int" />
+    <Property Name="wo_adress" Type="varchar" MaxLength="50" />
+    <Property Name="wo_orderid" Type="varchar" MaxLength="30" />
+    <Property Name="wo_payid" Type="varchar" MaxLength="30" />
+    <Property Name="wo_paykind" Type="int" />
+    <Property Name="wo_orderstatus" Type="int" />
+    <Property Name="wo_price" Type="double" />
+    <Property Name="wo_out_refund_no" Type="varchar" MaxLength="30" />
+    <Property Name="wo_s_uid" Type="guid" />
+  </EntityType>
+  <EntityType Name="wx_phonecall">
+    <Key>
+      <PropertyRef Name="wpc_id" />
+    </Key>
+    <Property Name="wpc_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="wpc_openid" Type="guid" />
+    <Property Name="wpc_h_uid" Type="guid" />
+    <Property Name="wpc_cell" Type="char" MaxLength="11" />
+    <Property Name="wpc_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="wx_post">
+    <Key>
+      <PropertyRef Name="wp_id" />
+    </Key>
+    <Property Name="wp_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="wp_fromid" Type="varchar" MaxLength="36" />
+    <Property Name="wp_date" Type="datetime" />
+    <Property Name="wp_content" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="wx_qrcode">
+    <Key>
+      <PropertyRef Name="qr_id" />
+    </Key>
+    <Property Name="qr_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="qr_ticket" Type="varchar" MaxLength="100" />
+    <Property Name="qr_h_uid" Type="guid" />
+    <Property Name="qr_date" Type="datetime" />
+    <Property Name="qr_num" Type="int" />
+    <Property Name="qr_type" Type="int" />
+    <Property Name="qr_code" Type="int" />
+  </EntityType>
+  <EntityType Name="wx_questions">
+    <Key>
+      <PropertyRef Name="wq_id" />
+    </Key>
+    <Property Name="wq_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="wq_title" Type="varchar" MaxLength="30" />
+    <Property Name="wq_openid" Type="varchar" MaxLength="36" />
+    <Property Name="wq_date" Type="datetime" />
+    <Property Name="wq_content" Type="varchar" MaxLength="200" />
+    <Property Name="wq_image1" Type="varchar" MaxLength="100" />
+    <Property Name="wq_image2" Type="varchar" MaxLength="100" />
+    <Property Name="wq_type" Type="int" />
+    <Property Name="wq_status" Type="int" />
+  </EntityType>
+  <EntityType Name="wx_request">
+    <Key>
+      <PropertyRef Name="wr_id" />
+    </Key>
+    <Property Name="wr_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="wr_post" Type="varchar" MaxLength="255" />
+    <Property Name="wr_interfacename" Type="varchar" MaxLength="100" />
+    <Property Name="wr_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="wx_searchcell">
+    <Key>
+      <PropertyRef Name="ws_id" />
+    </Key>
+    <Property Name="ws_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ws_cell" Type="char" MaxLength="11" />
+    <Property Name="ws_search" Type="int" />
+    <Property Name="ws_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="wx_tip">
+    <Key>
+      <PropertyRef Name="wt_id" />
+    </Key>
+    <Property Name="wt_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="wt_openid" Type="varchar" MaxLength="36" />
+    <Property Name="wt_h_uid" Type="guid" />
+    <Property Name="wt_price" Type="double" />
+    <Property Name="wt_orderid" Type="varchar" MaxLength="30" />
+    <Property Name="wt_payid" Type="varchar" MaxLength="30" />
+    <Property Name="wt_paykind" Type="int" />
+    <Property Name="wt_date" Type="datetime" />
+    <Property Name="wt_status" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_bookingdate”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_bookingdate">
+        <Property Name="ob_id" Type="int" />
+        <Property Name="ob_date" Type="varchar" MaxLength="10" />
+        <Property Name="ob_bdate" Type="varchar" MaxLength="10" />
+        <Property Name="ob_edate" Type="varchar" MaxLength="10" />
+        <Property Name="ob_status" Type="int" />
+        <Property Name="ob_interval" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_comment”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_comment">
+        <Property Name="om_id" Type="int" />
+        <Property Name="om_or_id" Type="int" />
+        <Property Name="om_eo_uid" Type="guid" />
+        <Property Name="om_content" Type="varchar" MaxLength="100" />
+        <Property Name="om_img1" Type="varchar" MaxLength="50" />
+        <Property Name="om_img2" Type="varchar" MaxLength="50" />
+        <Property Name="om_img3" Type="varchar" MaxLength="50" />
+        <Property Name="om_score" Type="int" />
+        <Property Name="om_hairscore" Type="int" />
+        <Property Name="om_servicescore" Type="int" />
+        <Property Name="om_modescore" Type="int" />
+        <Property Name="om_status" Type="int" />
+        <Property Name="om_co_uid" Type="guid" />
+        <Property Name="om_date" Type="datetime" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_coupon”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_coupon">
+        <Property Name="oc_id" Type="int" />
+        <Property Name="oc_title" Type="varchar" MaxLength="20" />
+        <Property Name="oc_money" Type="int" />
+        <Property Name="oc_content" Type="varchar" MaxLength="50" />
+        <Property Name="oc_status" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_couponrec”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_couponrec">
+        <Property Name="ore_id" Type="int" />
+        <Property Name="ore_suid" Type="guid" />
+        <Property Name="ore_ruid" Type="guid" />
+        <Property Name="ore_name" Type="varchar" MaxLength="20" />
+        <Property Name="ore_discount" Type="double" />
+        <Property Name="ore_kind" Type="int" />
+        <Property Name="ore_date" Type="datetime" />
+        <Property Name="ore_bdate" Type="datetime" />
+        <Property Name="ore_edate" Type="datetime" />
+        <Property Name="ore_code" Type="char" MaxLength="6" />
+        <Property Name="ore_status" Type="int" />
+        <Property Name="ore_remarks" Type="varchar" MaxLength="50" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_customer”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_customer">
+        <Property Name="co_uid" Type="guid" />
+        <Property Name="co_cell" Type="char" MaxLength="11" />
+        <Property Name="co_pwd" Type="varchar" MaxLength="200" />
+        <Property Name="co_ip" Type="varchar" MaxLength="50" />
+        <Property Name="co_nickname" Type="varchar" MaxLength="50" />
+        <Property Name="co_logo" Type="varchar" MaxLength="100" />
+        <Property Name="co_sex" Type="int" />
+        <Property Name="co_date" Type="datetime" />
+        <Property Name="co_status" Type="int" />
+        <Property Name="co_kind" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_error”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_error">
+        <Property Name="eo_id" Type="int" />
+        <Property Name="eo_date" Type="datetime" />
+        <Property Name="eo_name" Type="varchar" MaxLength="64" />
+        <Property Name="eo_content" Type="varchar" MaxLength="255" />
+        <Property Name="eo_status" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_hairtypes”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_hairtypes">
+        <Property Name="oh_id" Type="int" />
+        <Property Name="oh_name" Type="varchar" MaxLength="50" />
+        <Property Name="oh_price" Type="double" />
+        <Property Name="oh_time" Type="int" />
+        <Property Name="oh_content" Type="varchar" MaxLength="255" />
+        <Property Name="oh_cover" Type="varchar" MaxLength="100" />
+        <Property Name="oh_img" Type="varchar" MaxLength="100" />
+        <Property Name="oh_imgleft" Type="varchar" MaxLength="100" />
+        <Property Name="oh_imgright" Type="varchar" MaxLength="100" />
+        <Property Name="oh_imgbg" Type="varchar" MaxLength="100" />
+        <Property Name="oh_video" Type="varchar" MaxLength="100" />
+        <Property Name="oh_face" Type="varchar" MaxLength="100" />
+        <Property Name="oh_kind" Type="int" />
+        <Property Name="oh_url" Type="varchar" MaxLength="255" />
+        <Property Name="oh_status" Type="int" />
+        <Property Name="oh_sort" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_notify”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_notify">
+        <Property Name="nf_id" Type="int" />
+        <Property Name="nf_date" Type="datetime" />
+        <Property Name="nf_type" Type="int" />
+        <Property Name="nf_trade" Type="varchar" MaxLength="100" />
+        <Property Name="nf_outtrade" Type="varchar" MaxLength="100" />
+        <Property Name="nf_status" Type="varchar" MaxLength="100" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_operation”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_operation">
+        <Property Name="op_id" Type="int" />
+        <Property Name="op_uid" Type="guid" />
+        <Property Name="op_name" Type="varchar" MaxLength="30" />
+        <Property Name="op_date" Type="datetime" />
+        <Property Name="op_interfacename" Type="varchar" MaxLength="50" />
+        <Property Name="op_post" Type="varchar" MaxLength="255" />
+        <Property Name="op_status" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_order”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_order">
+        <Property Name="or_id" Type="int" />
+        <Property Name="or_oh_id" Type="int" />
+        <Property Name="or_co_uid" Type="guid" />
+        <Property Name="or_money" Type="double" />
+        <Property Name="or_kind" Type="int" />
+        <Property Name="or_date" Type="datetime" />
+        <Property Name="or_orderid" Type="varchar" MaxLength="30" />
+        <Property Name="or_payid" Type="varchar" MaxLength="30" />
+        <Property Name="or_paykind" Type="int" />
+        <Property Name="or_address" Type="varchar" MaxLength="100" />
+        <Property Name="or_oe_uid" Type="guid" />
+        <Property Name="or_cell" Type="char" MaxLength="11" />
+        <Property Name="or_bookingdate" Type="datetime" />
+        <Property Name="or_ore_id" Type="int" />
+        <Property Name="or_status" Type="int" />
+        <Property Name="or_lon" Type="varchar" MaxLength="100" />
+        <Property Name="or_lat" Type="varchar" MaxLength="100" />
+        <Property Name="or_remarks" Type="varchar" MaxLength="100" />
+        <Property Name="or_num" Type="int" />
+        <Property Name="or_source" Type="int" />
+        <Property Name="or_type" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_orderbooking”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_orderbooking">
+        <Property Name="bo_id" Type="int" />
+        <Property Name="bo_date" Type="datetime" />
+        <Property Name="bo_oe_uid" Type="guid" />
+        <Property Name="bo_type" Type="int" />
+        <Property Name="bo_status" Type="int" />
+        <Property Name="bo_source" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_permissions”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_permissions">
+        <Property Name="pe_id" Type="int" />
+        <Property Name="pe_oe_uid" Type="guid" />
+        <Property Name="pe_kind" Type="int" />
+        <Property Name="pe_date" Type="datetime" />
+        <Property Name="pe_status" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_post”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_post">
+        <Property Name="po_id" Type="int" />
+        <Property Name="po_date" Type="datetime" />
+        <Property Name="po_post" Type="varchar" MaxLength="255" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_sms”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_sms">
+        <Property Name="os_id" Type="int" />
+        <Property Name="os_cell" Type="char" MaxLength="11" />
+        <Property Name="os_content" Type="varchar" MaxLength="100" />
+        <Property Name="os_date" Type="datetime" />
+        <Property Name="os_status" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_statusdate”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_statusdate">
+        <Property Name="osd_id" Type="int" />
+        <Property Name="osd_or_id" Type="int" />
+        <Property Name="osd_confirmdate" Type="varchar" MaxLength="20" />
+        <Property Name="ob_startdate" Type="varchar" MaxLength="20" />
+        <Property Name="ob_arrivedate" Type="varchar" MaxLength="20" />
+        <Property Name="ob_overdate" Type="varchar" MaxLength="20" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_withdraw”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_withdraw">
+        <Property Name="wd_id" Type="int" />
+        <Property Name="wd_oe_uid" Type="guid" />
+        <Property Name="wd_money" Type="double" />
+        <Property Name="wd_bd_id" Type="int" />
+        <Property Name="wd_applydate" Type="datetime" />
+        <Property Name="wd_handledate" Type="datetime" />
+        <Property Name="wd_status" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.tp_cachepush”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="tp_cachepush">
+        <Property Name="cp_id" Type="int" />
+        <Property Name="cp_sender" Type="guid" />
+        <Property Name="cp_receiver" Type="guid" />
+        <Property Name="cp_token" Type="varchar" MaxLength="80" />
+        <Property Name="cp_content" Type="varchar" MaxLength="100" />
+        <Property Name="cp_param" Type="varchar" MaxLength="200" />
+        <Property Name="cp_type" Type="int" />
+        <Property Name="cp_device" Type="int" />
+        <Property Name="cp_date" Type="datetime" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.tp_push”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="tp_push">
+        <Property Name="p_id" Type="int" />
+        <Property Name="p_sender" Type="guid" />
+        <Property Name="p_receiver" Type="guid" />
+        <Property Name="p_content" Type="varchar" MaxLength="100" />
+        <Property Name="p_type" Type="int" />
+        <Property Name="p_date" Type="datetime" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.tp_remind”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="tp_remind">
+        <Property Name="rp_id" Type="int" />
+        <Property Name="rp_receiver" Type="guid" />
+        <Property Name="rp_apptype" Type="int" />
+        <Property Name="rp_remind" Type="varchar" MaxLength="36" />
+        <Property Name="rp_read" Type="tinyint" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.ts_ask”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="ts_ask">
+        <Property Name="sk_id" Type="int" />
+        <Property Name="sk_name" Type="varchar" MaxLength="30" />
+        <Property Name="sk_logo" Type="varchar" MaxLength="100" />
+        <Property Name="sk_cell" Type="char" MaxLength="11" />
+        <Property Name="sk_sex" Type="int" />
+        <Property Name="sk_type" Type="int" />
+        <Property Name="sk_s_uid" Type="guid" />
+        <Property Name="sk_address" Type="varchar" MaxLength="100" />
+        <Property Name="sk_money" Type="double" />
+        <Property Name="sk_orderid" Type="varchar" MaxLength="30" />
+        <Property Name="sk_payid" Type="varchar" MaxLength="30" />
+        <Property Name="sk_paykind" Type="int" />
+        <Property Name="sk_date" Type="datetime" />
+        <Property Name="sk_status" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.ts_comment”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="ts_comment">
+        <Property Name="co_id" Type="int" />
+        <Property Name="co_so_id" Type="int" />
+        <Property Name="co_cell" Type="varchar" MaxLength="11" />
+        <Property Name="co_content" Type="varchar" MaxLength="200" />
+        <Property Name="co_skill" Type="int" />
+        <Property Name="co_service" Type="int" />
+        <Property Name="co_environment" Type="int" />
+        <Property Name="co_again" Type="tinyint" />
+        <Property Name="co_date" Type="datetime" />
+        <Property Name="co_status" Type="int" />
+        <Property Name="co_s_uid" Type="guid" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.ts_coupon”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="ts_coupon">
+        <Property Name="sc_id" Type="int" />
+        <Property Name="sc_code" Type="varchar" MaxLength="10" />
+        <Property Name="sc_money" Type="double" />
+        <Property Name="sc_bdate" Type="datetime" />
+        <Property Name="sc_edate" Type="datetime" />
+        <Property Name="sc_date" Type="datetime" />
+        <Property Name="sc_status" Type="int" />
+        <Property Name="sc_about" Type="varchar" MaxLength="20" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.ts_order”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="ts_order">
+        <Property Name="so_id" Type="int" />
+        <Property Name="so_money" Type="double" />
+        <Property Name="so_date" Type="datetime" />
+        <Property Name="so_orderid" Type="varchar" MaxLength="30" />
+        <Property Name="so_payid" Type="varchar" MaxLength="30" />
+        <Property Name="so_paykind" Type="int" />
+        <Property Name="so_oe_uid" Type="guid" />
+        <Property Name="so_cell" Type="char" MaxLength="11" />
+        <Property Name="so_s_uid" Type="guid" />
+        <Property Name="so_bookingdate" Type="datetime" />
+        <Property Name="so_status" Type="int" />
+        <Property Name="so_source" Type="int" />
+        <Property Name="so_code" Type="char" MaxLength="6" />
+        <Property Name="so_sc_id" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.ts_vipcustomer”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="ts_vipcustomer">
+        <Property Name="vc_id" Type="int" />
+        <Property Name="vc_kname" Type="varchar" MaxLength="30" />
+        <Property Name="vc_logo" Type="varchar" MaxLength="100" />
+        <Property Name="vc_cell" Type="char" MaxLength="11" />
+        <Property Name="vc_bdate" Type="datetime" />
+        <Property Name="vc_edate" Type="datetime" />
+        <Property Name="vc_card" Type="varchar" MaxLength="20" />
+        <Property Name="vc_co_uid" Type="guid" />
+        <Property Name="vc_status" Type="int" />
+      </EntityType>-->
+</Schema>

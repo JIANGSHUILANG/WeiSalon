@@ -1,0 +1,702 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="mysqkbobohairEntites" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="mysqkbobohairEntitesContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ex_ad" EntityType="mysqkbobohairEntites.ex_ad" />
+    <EntitySet Name="ex_bookingorder" EntityType="mysqkbobohairEntites.ex_bookingorder" />
+    <EntitySet Name="ex_comment" EntityType="mysqkbobohairEntites.ex_comment" />
+    <EntitySet Name="ex_hair" EntityType="mysqkbobohairEntites.ex_hair" />
+    <EntitySet Name="ex_seerec" EntityType="mysqkbobohairEntites.ex_seerec" />
+    <EntitySet Name="ex_topic" EntityType="mysqkbobohairEntites.ex_topic" />
+    <EntitySet Name="t_advice" EntityType="mysqkbobohairEntites.t_advice" />
+    <EntitySet Name="t_backflow" EntityType="mysqkbobohairEntites.t_backflow" />
+    <EntitySet Name="t_customermanage" EntityType="mysqkbobohairEntites.t_customermanage" />
+    <EntitySet Name="t_error" EntityType="mysqkbobohairEntites.t_error" />
+    <EntitySet Name="t_hairoff" EntityType="mysqkbobohairEntites.t_hairoff" />
+    <EntitySet Name="t_notice" EntityType="mysqkbobohairEntites.t_notice" />
+    <EntitySet Name="t_order" EntityType="mysqkbobohairEntites.t_order" />
+    <EntitySet Name="t_salemanager" EntityType="mysqkbobohairEntites.t_salemanager" />
+    <EntitySet Name="t_salinhairstylist" EntityType="mysqkbobohairEntites.t_salinhairstylist" />
+    <EntitySet Name="t_salon" EntityType="mysqkbobohairEntites.t_salon" />
+    <EntitySet Name="t_salonimageinfo" EntityType="mysqkbobohairEntites.t_salonimageinfo" />
+    <EntitySet Name="t_salonpackage" EntityType="mysqkbobohairEntites.t_salonpackage" />
+    <EntitySet Name="t_scanrec" EntityType="mysqkbobohairEntites.t_scanrec" />
+    <EntitySet Name="t_sms" EntityType="mysqkbobohairEntites.t_sms" />
+    <EntitySet Name="t_sysinformation" EntityType="mysqkbobohairEntites.t_sysinformation" />
+    <EntitySet Name="t_winning" EntityType="mysqkbobohairEntites.t_winning" />
+    <EntitySet Name="t_winningrec" EntityType="mysqkbobohairEntites.t_winningrec" />
+    <EntitySet Name="to_activity" EntityType="mysqkbobohairEntites.to_activity" />
+    <EntitySet Name="to_ad" EntityType="mysqkbobohairEntites.to_ad" />
+    <EntitySet Name="to_address" EntityType="mysqkbobohairEntites.to_address" />
+    <EntitySet Name="to_apns" EntityType="mysqkbobohairEntites.to_apns" />
+    <EntitySet Name="to_apply" EntityType="mysqkbobohairEntites.to_apply" />
+    <EntitySet Name="to_balanceofpayments" EntityType="mysqkbobohairEntites.to_balanceofpayments" />
+    <EntitySet Name="to_bgerror" EntityType="mysqkbobohairEntites.to_bgerror" />
+    <EntitySet Name="to_binding" EntityType="mysqkbobohairEntites.to_binding" />
+    <EntitySet Name="wx_answers" EntityType="mysqkbobohairEntites.wx_answers" />
+    <EntitySet Name="wx_article" EntityType="mysqkbobohairEntites.wx_article" />
+    <EntitySet Name="wx_bindhair" EntityType="mysqkbobohairEntites.wx_bindhair" />
+    <EntitySet Name="wx_comment" EntityType="mysqkbobohairEntites.wx_comment" />
+    <EntitySet Name="wx_customerservice" EntityType="mysqkbobohairEntites.wx_customerservice" />
+    <EntitySet Name="wx_impression" EntityType="mysqkbobohairEntites.wx_impression" />
+    <EntitySet Name="wx_infromation" EntityType="mysqkbobohairEntites.wx_infromation" />
+    <EntitySet Name="wx_location" EntityType="mysqkbobohairEntites.wx_location" />
+    <EntitySet Name="wx_member" EntityType="mysqkbobohairEntites.wx_member" />
+    <EntitySet Name="wx_order" EntityType="mysqkbobohairEntites.wx_order" />
+    <EntitySet Name="wx_phonecall" EntityType="mysqkbobohairEntites.wx_phonecall" />
+    <EntitySet Name="wx_post" EntityType="mysqkbobohairEntites.wx_post" />
+    <EntitySet Name="wx_qrcode" EntityType="mysqkbobohairEntites.wx_qrcode" />
+    <EntitySet Name="wx_questions" EntityType="mysqkbobohairEntites.wx_questions" />
+    <EntitySet Name="wx_request" EntityType="mysqkbobohairEntites.wx_request" />
+    <EntitySet Name="wx_searchcell" EntityType="mysqkbobohairEntites.wx_searchcell" />
+    <EntitySet Name="wx_tip" EntityType="mysqkbobohairEntites.wx_tip" />
+    <EntitySet Name="to_employee" EntityType="mysqkbobohairEntites.to_employee" />
+  </EntityContainer>
+  <EntityType Name="ex_ad">
+    <Key>
+      <PropertyRef Name="ea_id" />
+    </Key>
+    <Property Type="Int32" Name="ea_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ea_title" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ea_content" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ea_image" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ea_url" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ea_type" />
+    <Property Type="DateTime" Name="ea_date" />
+    <Property Type="Int32" Name="ea_status" />
+  </EntityType>
+  <EntityType Name="ex_bookingorder">
+    <Key>
+      <PropertyRef Name="ebo_id" />
+    </Key>
+    <Property Type="Int32" Name="ebo_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="ebo_uid" />
+    <Property Type="String" Name="ebo_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="ebo_eh_uid" />
+    <Property Type="DateTime" Name="ebo_date" />
+    <Property Type="String" Name="ebo_content" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ebo_about" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ebo_orderid" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ebo_payid" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ebo_paykind" />
+    <Property Type="Int32" Name="ebo_et_id" />
+    <Property Type="Double" Name="ebo_price" />
+    <Property Type="Int32" Name="ebo_status" />
+    <Property Type="String" Name="ebo_out_refund_no" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ex_comment">
+    <Key>
+      <PropertyRef Name="ec_id" />
+    </Key>
+    <Property Type="Int32" Name="ec_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ec_ebo_id" />
+    <Property Type="String" Name="ec_content" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ec_score" />
+    <Property Type="Int32" Name="ec_status" />
+  </EntityType>
+  <EntityType Name="ex_hair">
+    <Key>
+      <PropertyRef Name="eh_id" />
+    </Key>
+    <Property Type="Int32" Name="eh_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="eh_uid" />
+    <Property Type="String" Name="eh_name" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="eh_logo" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="eh_phone" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="eh_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="eh_salonname" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="eh_title" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="eh_workingyears" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="eh_skill" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="eh_introduction" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="eh_city" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="eh_applydate" />
+    <Property Type="DateTime" Name="eh_through" />
+    <Property Type="Int32" Name="eh_see" />
+    <Property Type="Int32" Name="eh_seeend" />
+    <Property Type="Int32" Name="eh_status" />
+    <Property Type="Int32" Name="eh_sort" />
+  </EntityType>
+  <EntityType Name="ex_seerec">
+    <Key>
+      <PropertyRef Name="es_id" />
+    </Key>
+    <Property Type="Int32" Name="es_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="es_uid" />
+    <Property Type="Guid" Name="es_eh_uid" />
+    <Property Type="DateTime" Name="es_date" />
+    <Property Type="Int32" Name="es_status" />
+  </EntityType>
+  <EntityType Name="ex_topic">
+    <Key>
+      <PropertyRef Name="et_id" />
+    </Key>
+    <Property Type="Int32" Name="et_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="et_uid" />
+    <Property Type="Double" Name="et_price" />
+    <Property Type="String" Name="et_title" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="et_tag" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="et_content" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="et_time" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="et_date" />
+    <Property Type="Int32" Name="et_status" />
+  </EntityType>
+  <EntityType Name="t_advice">
+    <Key>
+      <PropertyRef Name="ad_id" />
+    </Key>
+    <Property Type="Int32" Name="ad_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ad_content" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ad_date" />
+    <Property Type="String" Name="ad_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ad_kind" />
+    <Property Type="Int32" Name="ad_status" />
+    <Property Type="Guid" Name="ad_s_uid" />
+  </EntityType>
+  <EntityType Name="t_backflow">
+    <Key>
+      <PropertyRef Name="bk_id" />
+    </Key>
+    <Property Type="Int32" Name="bk_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="bk_s_uid" />
+    <Property Type="Guid" Name="bk_uid" />
+    <Property Type="DateTime" Name="bk_date" />
+    <Property Type="Int32" Name="bk_type" />
+  </EntityType>
+  <EntityType Name="t_customermanage">
+    <Key>
+      <PropertyRef Name="cm_id" />
+    </Key>
+    <Property Type="Int32" Name="cm_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="cm_s_uid" />
+    <Property Type="String" Name="cm_s_nickname" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="cm_h_uid" />
+    <Property Type="String" Name="cm_h_name" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="cm_openid" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="cm_nickname" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="cm_remarks1" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="cm_remarks2" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="cm_remarks3" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="cm_remarks4" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="cm_remarks5" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="cm_status" />
+  </EntityType>
+  <EntityType Name="t_error">
+    <Key>
+      <PropertyRef Name="eo_id" />
+    </Key>
+    <Property Type="Int32" Name="eo_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="eo_date" />
+    <Property Type="String" Name="eo_name" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="eo_content" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="t_hairoff">
+    <Key>
+      <PropertyRef Name="ho_id" />
+    </Key>
+    <Property Type="Int32" Name="ho_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="ho_h_uid" />
+    <Property Type="Guid" Name="ho_s_uid" />
+    <Property Type="DateTime" Name="ho_date" />
+    <Property Type="Int32" Name="ho_status" />
+  </EntityType>
+  <EntityType Name="t_notice">
+    <Key>
+      <PropertyRef Name="tn_id" />
+    </Key>
+    <Property Type="Int32" Name="tn_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="tn_s_uid" />
+    <Property Type="String" Name="tn_content" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="tn_date" />
+    <Property Type="Int32" Name="tn_status" />
+  </EntityType>
+  <EntityType Name="t_order">
+    <Key>
+      <PropertyRef Name="o_id" />
+    </Key>
+    <Property Type="Int32" Name="o_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="o_orid" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="o_s_uid" />
+    <Property Type="String" Name="o_name" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="o_money" />
+    <Property Type="DateTime" Name="o_date" />
+    <Property Type="DateTime" Name="o_paydate" />
+    <Property Type="Int32" Name="o_status" />
+  </EntityType>
+  <EntityType Name="t_salemanager">
+    <Key>
+      <PropertyRef Name="sm_id" />
+    </Key>
+    <Property Type="Int32" Name="sm_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="sm_s_uid" />
+    <Property Type="String" Name="sm_name" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="sm_date" />
+    <Property Type="String" Name="sm_oldname" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="sm_editdate" />
+  </EntityType>
+  <EntityType Name="t_salinhairstylist">
+    <Key>
+      <PropertyRef Name="shs_h_uid" />
+    </Key>
+    <Property Type="Guid" Name="shs_h_uid" Nullable="false" />
+    <Property Type="String" Name="shs_name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="shs_hairprice" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="shs_exp" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="shs_logo" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="shs_s_uid" />
+    <Property Type="String" Name="shs_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="shs_sort" />
+    <Property Type="Int32" Name="shs_status" />
+  </EntityType>
+  <EntityType Name="t_salon">
+    <Key>
+      <PropertyRef Name="s_uid" />
+    </Key>
+    <Property Type="Guid" Name="s_uid" Nullable="false" />
+    <Property Type="String" Name="s_email" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="s_cell" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="s_pwd" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="s_nickname" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="s_logo" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="s_date" />
+    <Property Type="Int32" Name="s_kind" />
+    <Property Type="Int32" Name="s_status" />
+    <Property Type="String" Name="s_address" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="s_linkname" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="s_summary" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="s_lon" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="s_lat" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="s_price" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="s_wxname" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="s_opendate" />
+    <Property Type="String" Name="s_businessdate" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="s_recommend" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="t_salonimageinfo">
+    <Key>
+      <PropertyRef Name="si_id" />
+    </Key>
+    <Property Type="Int32" Name="si_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="si_s_uid" />
+    <Property Type="String" Name="si_photo" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="si_kind" />
+    <Property Type="Int32" Name="si_status" />
+  </EntityType>
+  <EntityType Name="t_salonpackage">
+    <Key>
+      <PropertyRef Name="spk_id" />
+    </Key>
+    <Property Type="Int32" Name="spk_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="spk_title" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="spk_content" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="spk_price" />
+    <Property Type="Int32" Name="spk_dorder" />
+    <Property Type="Guid" Name="spk_s_uid" />
+    <Property Type="DateTime" Name="spk_date" />
+    <Property Type="Int32" Name="spk_status" />
+    <Property Type="String" Name="spk_image" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="t_scanrec">
+    <Key>
+      <PropertyRef Name="scr_id" />
+    </Key>
+    <Property Type="Int32" Name="scr_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="scr_s_uid" />
+    <Property Type="Guid" Name="scr_code" />
+    <Property Type="DateTime" Name="scr_date" />
+    <Property Type="String" Name="scr_ip" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="t_sms">
+    <Key>
+      <PropertyRef Name="sm_id" />
+    </Key>
+    <Property Type="Int32" Name="sm_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="sm_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="sm_content" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="sm_date" />
+    <Property Type="Int32" Name="sm_status" />
+  </EntityType>
+  <EntityType Name="t_sysinformation">
+    <Key>
+      <PropertyRef Name="sy_id" />
+    </Key>
+    <Property Type="Int32" Name="sy_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="sy_title" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="sy_content" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="sy_date" />
+    <Property Type="Int32" Name="sy_status" />
+  </EntityType>
+  <EntityType Name="t_winning">
+    <Key>
+      <PropertyRef Name="wig_id" />
+    </Key>
+    <Property Type="Int32" Name="wig_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="wig_s_uid" />
+    <Property Type="String" Name="wig_title" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="wig_date" />
+    <Property Type="String" Name="wig_image" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="wig_pro" />
+    <Property Type="Int32" Name="wig_status" />
+  </EntityType>
+  <EntityType Name="t_winningrec">
+    <Key>
+      <PropertyRef Name="win_id" />
+    </Key>
+    <Property Type="Int32" Name="win_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="win_content" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="win_date" />
+    <Property Type="String" Name="win_ip" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="win_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="win_temuid" />
+    <Property Type="Guid" Name="win_s_uid" />
+  </EntityType>
+  <EntityType Name="to_activity">
+    <Key>
+      <PropertyRef Name="act_id" />
+    </Key>
+    <Property Type="Int32" Name="act_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="act_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="act_type" />
+    <Property Type="String" Name="act_name" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="act_status" />
+  </EntityType>
+  <EntityType Name="to_ad">
+    <Key>
+      <PropertyRef Name="oa_id" />
+    </Key>
+    <Property Type="Int32" Name="oa_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="oa_image" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="oa_url" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="oa_date" />
+    <Property Type="Int32" Name="oa_status" />
+    <Property Type="String" Name="oa_title" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="oa_content" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="oa_sort" />
+  </EntityType>
+  <EntityType Name="to_address">
+    <Key>
+      <PropertyRef Name="od_id" />
+    </Key>
+    <Property Type="Int32" Name="od_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="od_uid" />
+    <Property Type="String" Name="od_province" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="od_city" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="od_district" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="od_detailed" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="od_default" />
+    <Property Type="String" Name="od_lon" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="od_lat" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="to_apns">
+    <Key>
+      <PropertyRef Name="ao_id" />
+    </Key>
+    <Property Type="Int32" Name="ao_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ao_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ao_tokenid" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="ao_cid" />
+    <Property Type="DateTime" Name="ao_date" />
+    <Property Type="Int32" Name="ao_device" />
+    <Property Type="Int32" Name="ao_apptype" />
+  </EntityType>
+  <EntityType Name="to_apply">
+    <Key>
+      <PropertyRef Name="ap_id" />
+    </Key>
+    <Property Type="Int32" Name="ap_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="ap_uid" />
+    <Property Type="String" Name="ap_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ap_name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ap_idcard" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ap_salonname" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ap_salonaddress" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ap_gps" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ap_status" />
+    <Property Type="DateTime" Name="ap_date" />
+    <Property Type="DateTime" Name="ap_adate" />
+    <Property Type="Int32" Name="ap_sex" />
+    <Property Type="Int32" Name="ap_open" />
+  </EntityType>
+  <EntityType Name="to_balanceofpayments">
+    <Key>
+      <PropertyRef Name="bp_id" />
+    </Key>
+    <Property Type="Int32" Name="bp_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="bp_oe_uid" />
+    <Property Type="Int32" Name="bp_type" />
+    <Property Type="Int32" Name="bp_source" />
+    <Property Type="String" Name="bp_title" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="bp_money" />
+    <Property Type="String" Name="bp_payid" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="bp_kind" />
+    <Property Type="DateTime" Name="bp_date" />
+    <Property Type="Int32" Name="bp_status" />
+    <Property Type="Int32" Name="bp_orderid" />
+    <Property Type="Int32" Name="bp_table" />
+    <Property Type="Int32" Name="bp_oreid" />
+  </EntityType>
+  <EntityType Name="to_bgerror">
+    <Key>
+      <PropertyRef Name="bg_id" />
+    </Key>
+    <Property Type="Int32" Name="bg_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="bg_date" />
+    <Property Type="String" Name="bg_name" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="bg_content" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="bg_status" />
+  </EntityType>
+  <EntityType Name="to_binding">
+    <Key>
+      <PropertyRef Name="bd_id" />
+    </Key>
+    <Property Type="Int32" Name="bd_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="bd_oe_uid" />
+    <Property Type="String" Name="bd_account" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="bd_kind" />
+    <Property Type="DateTime" Name="bd_date" />
+    <Property Type="Int32" Name="bd_status" />
+    <Property Type="String" Name="bd_name" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="wx_answers">
+    <Key>
+      <PropertyRef Name="wa_id" />
+    </Key>
+    <Property Type="Int32" Name="wa_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="wa_h_uid" />
+    <Property Type="String" Name="wa_openid" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="wa_date" />
+    <Property Type="String" Name="wa_content" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wa_image" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="wa_wq_id" />
+    <Property Type="Int32" Name="wa_replyid" />
+    <Property Type="Int32" Name="wa_status" />
+    <Property Type="String" Name="wa_attribute" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="wa_hot" />
+  </EntityType>
+  <EntityType Name="wx_article">
+    <Key>
+      <PropertyRef Name="atr_id" />
+    </Key>
+    <Property Type="Int32" Name="atr_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="atr_image" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="atr_link" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="atr_date" />
+    <Property Type="Int32" Name="atr_status" />
+  </EntityType>
+  <EntityType Name="wx_bindhair">
+    <Key>
+      <PropertyRef Name="wb_id" />
+    </Key>
+    <Property Type="Int32" Name="wb_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="wb_openid" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="wb_h_uid" />
+    <Property Type="DateTime" Name="wb_date" />
+    <Property Type="Int32" Name="wb_status" />
+    <Property Type="String" Name="wb_name" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wb_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="wx_comment">
+    <Key>
+      <PropertyRef Name="wc_id" />
+    </Key>
+    <Property Type="Int32" Name="wc_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="wc_openid" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="wc_h_uid" />
+    <Property Type="String" Name="wc_content" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="wc_date" />
+    <Property Type="Int32" Name="wc_wo_id" />
+    <Property Type="Int32" Name="wc_score" />
+    <Property Type="Int32" Name="wc_status" />
+    <Property Type="String" Name="wc_image" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="wx_customerservice">
+    <Key>
+      <PropertyRef Name="wcs_id" />
+    </Key>
+    <Property Type="Int32" Name="wcs_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="wcs_openid" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wcs_account" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="wcs_date" />
+  </EntityType>
+  <EntityType Name="wx_impression">
+    <Key>
+      <PropertyRef Name="wi_id" />
+    </Key>
+    <Property Type="Int32" Name="wi_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="wi_openid" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="wi_h_uid" />
+    <Property Type="String" Name="wi_content" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="wi_type" />
+    <Property Type="DateTime" Name="wi_date" />
+    <Property Type="Int32" Name="wi_status" />
+  </EntityType>
+  <EntityType Name="wx_infromation">
+    <Key>
+      <PropertyRef Name="wim_id" />
+    </Key>
+    <Property Type="Int32" Name="wim_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="wim_title" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wim_content" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wim_image" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="wim_date" />
+    <Property Type="String" Name="wim_url" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="wim_status" />
+    <Property Type="Int32" Name="wim_push_status" />
+  </EntityType>
+  <EntityType Name="wx_location">
+    <Key>
+      <PropertyRef Name="wl_id" />
+    </Key>
+    <Property Type="Int32" Name="wl_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="wl_lng" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wl_lat" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wl_openid" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="wl_date" />
+  </EntityType>
+  <EntityType Name="wx_member">
+    <Key>
+      <PropertyRef Name="wm_openid" />
+    </Key>
+    <Property Type="String" Name="wm_openid" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wm_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="wm_subscribe" />
+    <Property Type="String" Name="wm_nickname" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="wm_sex" />
+    <Property Type="String" Name="wm_city" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wm_country" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wm_province" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wm_language" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wm_headimgurl" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wm_subscribe_time" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wm_unionid" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="wm_type" />
+    <Property Type="String" Name="wm_pwd" MaxLength="64" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="wx_order">
+    <Key>
+      <PropertyRef Name="wo_id" />
+    </Key>
+    <Property Type="Int32" Name="wo_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="wo_openid" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="wo_h_uid" />
+    <Property Type="DateTime" Name="wo_bookingdate" />
+    <Property Type="DateTime" Name="wo_date" />
+    <Property Type="String" Name="wo_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wo_remarks" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wo_image" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="wo_status" />
+    <Property Type="Int32" Name="wo_type" />
+    <Property Type="Int32" Name="wo_source" />
+    <Property Type="String" Name="wo_adress" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wo_orderid" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wo_payid" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="wo_paykind" />
+    <Property Type="Int32" Name="wo_orderstatus" />
+    <Property Type="Double" Name="wo_price" />
+    <Property Type="String" Name="wo_out_refund_no" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="wo_s_uid" />
+  </EntityType>
+  <EntityType Name="wx_phonecall">
+    <Key>
+      <PropertyRef Name="wpc_id" />
+    </Key>
+    <Property Type="Int32" Name="wpc_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="wpc_openid" />
+    <Property Type="Guid" Name="wpc_h_uid" />
+    <Property Type="String" Name="wpc_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="wpc_date" />
+  </EntityType>
+  <EntityType Name="wx_post">
+    <Key>
+      <PropertyRef Name="wp_id" />
+    </Key>
+    <Property Type="Int32" Name="wp_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="wp_fromid" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="wp_date" />
+    <Property Type="String" Name="wp_content" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="wx_qrcode">
+    <Key>
+      <PropertyRef Name="qr_id" />
+    </Key>
+    <Property Type="Int32" Name="qr_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="qr_ticket" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="qr_h_uid" />
+    <Property Type="DateTime" Name="qr_date" />
+    <Property Type="Int32" Name="qr_num" />
+    <Property Type="Int32" Name="qr_type" />
+    <Property Type="Int32" Name="qr_code" />
+  </EntityType>
+  <EntityType Name="wx_questions">
+    <Key>
+      <PropertyRef Name="wq_id" />
+    </Key>
+    <Property Type="Int32" Name="wq_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="wq_title" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wq_openid" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="wq_date" />
+    <Property Type="String" Name="wq_content" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wq_image1" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wq_image2" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="wq_type" />
+    <Property Type="Int32" Name="wq_status" />
+  </EntityType>
+  <EntityType Name="wx_request">
+    <Key>
+      <PropertyRef Name="wr_id" />
+    </Key>
+    <Property Type="Int32" Name="wr_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="wr_post" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wr_interfacename" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="wr_date" />
+  </EntityType>
+  <EntityType Name="wx_searchcell">
+    <Key>
+      <PropertyRef Name="ws_id" />
+    </Key>
+    <Property Type="Int32" Name="ws_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ws_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ws_search" />
+    <Property Type="DateTime" Name="ws_date" />
+  </EntityType>
+  <EntityType Name="wx_tip">
+    <Key>
+      <PropertyRef Name="wt_id" />
+    </Key>
+    <Property Type="Int32" Name="wt_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="wt_openid" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="wt_h_uid" />
+    <Property Type="Double" Name="wt_price" />
+    <Property Type="String" Name="wt_orderid" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wt_payid" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="wt_paykind" />
+    <Property Type="DateTime" Name="wt_date" />
+    <Property Type="Int32" Name="wt_status" />
+  </EntityType>
+  <EntityType Name="to_employee">
+    <Key>
+      <PropertyRef Name="oe_uid" />
+    </Key>
+    <Property Type="Guid" Name="oe_uid" Nullable="false" />
+    <Property Type="String" Name="oe_name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="oe_sex" />
+    <Property Type="String" Name="oe_logo" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="oe_lon" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="oe_lat" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="oe_introduce" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="oe_sort" />
+    <Property Type="Int32" Name="oe_workstatus" />
+    <Property Type="String" Name="oe_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="oe_cuid" />
+    <Property Type="Int32" Name="oe_status" />
+    <Property Type="Int32" Name="oe_sa" />
+    <Property Type="Double" Name="oe_quota" />
+    <Property Type="Int32" Name="oe_grade" />
+    <Property Type="Guid" Name="oe_b_uid" />
+    <Property Type="Guid" Name="oe_s_uid" />
+    <Property Type="String" Name="oe_idcard" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="oe_income" />
+    <Property Type="Double" Name="oe_price" />
+    <Property Type="String" Name="oe_worktime" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="oe_restday" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

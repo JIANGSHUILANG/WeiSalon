@@ -1,0 +1,704 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+  <Alias Key="Model" Value="mysqkbobohairEntites" />
+  <Alias Key="Target" Value="mysqkbobohairEntites.Store" />
+  <EntityContainerMapping CdmEntityContainer="mysqkbobohairEntitesContainer" StorageEntityContainer="mysqkbobohairEntitesStoreContainer">
+    <EntitySetMapping Name="ex_ad">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.ex_ad">
+        <MappingFragment StoreEntitySet="ex_ad">
+          <ScalarProperty Name="ea_status" ColumnName="ea_status" />
+          <ScalarProperty Name="ea_date" ColumnName="ea_date" />
+          <ScalarProperty Name="ea_type" ColumnName="ea_type" />
+          <ScalarProperty Name="ea_url" ColumnName="ea_url" />
+          <ScalarProperty Name="ea_image" ColumnName="ea_image" />
+          <ScalarProperty Name="ea_content" ColumnName="ea_content" />
+          <ScalarProperty Name="ea_title" ColumnName="ea_title" />
+          <ScalarProperty Name="ea_id" ColumnName="ea_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ex_bookingorder">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.ex_bookingorder">
+        <MappingFragment StoreEntitySet="ex_bookingorder">
+          <ScalarProperty Name="ebo_out_refund_no" ColumnName="ebo_out_refund_no" />
+          <ScalarProperty Name="ebo_status" ColumnName="ebo_status" />
+          <ScalarProperty Name="ebo_price" ColumnName="ebo_price" />
+          <ScalarProperty Name="ebo_et_id" ColumnName="ebo_et_id" />
+          <ScalarProperty Name="ebo_paykind" ColumnName="ebo_paykind" />
+          <ScalarProperty Name="ebo_payid" ColumnName="ebo_payid" />
+          <ScalarProperty Name="ebo_orderid" ColumnName="ebo_orderid" />
+          <ScalarProperty Name="ebo_about" ColumnName="ebo_about" />
+          <ScalarProperty Name="ebo_content" ColumnName="ebo_content" />
+          <ScalarProperty Name="ebo_date" ColumnName="ebo_date" />
+          <ScalarProperty Name="ebo_eh_uid" ColumnName="ebo_eh_uid" />
+          <ScalarProperty Name="ebo_cell" ColumnName="ebo_cell" />
+          <ScalarProperty Name="ebo_uid" ColumnName="ebo_uid" />
+          <ScalarProperty Name="ebo_id" ColumnName="ebo_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ex_comment">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.ex_comment">
+        <MappingFragment StoreEntitySet="ex_comment">
+          <ScalarProperty Name="ec_status" ColumnName="ec_status" />
+          <ScalarProperty Name="ec_score" ColumnName="ec_score" />
+          <ScalarProperty Name="ec_content" ColumnName="ec_content" />
+          <ScalarProperty Name="ec_ebo_id" ColumnName="ec_ebo_id" />
+          <ScalarProperty Name="ec_id" ColumnName="ec_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ex_hair">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.ex_hair">
+        <MappingFragment StoreEntitySet="ex_hair">
+          <ScalarProperty Name="eh_sort" ColumnName="eh_sort" />
+          <ScalarProperty Name="eh_status" ColumnName="eh_status" />
+          <ScalarProperty Name="eh_seeend" ColumnName="eh_seeend" />
+          <ScalarProperty Name="eh_see" ColumnName="eh_see" />
+          <ScalarProperty Name="eh_through" ColumnName="eh_through" />
+          <ScalarProperty Name="eh_applydate" ColumnName="eh_applydate" />
+          <ScalarProperty Name="eh_city" ColumnName="eh_city" />
+          <ScalarProperty Name="eh_introduction" ColumnName="eh_introduction" />
+          <ScalarProperty Name="eh_skill" ColumnName="eh_skill" />
+          <ScalarProperty Name="eh_workingyears" ColumnName="eh_workingyears" />
+          <ScalarProperty Name="eh_title" ColumnName="eh_title" />
+          <ScalarProperty Name="eh_salonname" ColumnName="eh_salonname" />
+          <ScalarProperty Name="eh_cell" ColumnName="eh_cell" />
+          <ScalarProperty Name="eh_phone" ColumnName="eh_phone" />
+          <ScalarProperty Name="eh_logo" ColumnName="eh_logo" />
+          <ScalarProperty Name="eh_name" ColumnName="eh_name" />
+          <ScalarProperty Name="eh_uid" ColumnName="eh_uid" />
+          <ScalarProperty Name="eh_id" ColumnName="eh_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ex_seerec">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.ex_seerec">
+        <MappingFragment StoreEntitySet="ex_seerec">
+          <ScalarProperty Name="es_status" ColumnName="es_status" />
+          <ScalarProperty Name="es_date" ColumnName="es_date" />
+          <ScalarProperty Name="es_eh_uid" ColumnName="es_eh_uid" />
+          <ScalarProperty Name="es_uid" ColumnName="es_uid" />
+          <ScalarProperty Name="es_id" ColumnName="es_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ex_topic">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.ex_topic">
+        <MappingFragment StoreEntitySet="ex_topic">
+          <ScalarProperty Name="et_status" ColumnName="et_status" />
+          <ScalarProperty Name="et_date" ColumnName="et_date" />
+          <ScalarProperty Name="et_time" ColumnName="et_time" />
+          <ScalarProperty Name="et_content" ColumnName="et_content" />
+          <ScalarProperty Name="et_tag" ColumnName="et_tag" />
+          <ScalarProperty Name="et_title" ColumnName="et_title" />
+          <ScalarProperty Name="et_price" ColumnName="et_price" />
+          <ScalarProperty Name="et_uid" ColumnName="et_uid" />
+          <ScalarProperty Name="et_id" ColumnName="et_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_advice">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.t_advice">
+        <MappingFragment StoreEntitySet="t_advice">
+          <ScalarProperty Name="ad_s_uid" ColumnName="ad_s_uid" />
+          <ScalarProperty Name="ad_status" ColumnName="ad_status" />
+          <ScalarProperty Name="ad_kind" ColumnName="ad_kind" />
+          <ScalarProperty Name="ad_cell" ColumnName="ad_cell" />
+          <ScalarProperty Name="ad_date" ColumnName="ad_date" />
+          <ScalarProperty Name="ad_content" ColumnName="ad_content" />
+          <ScalarProperty Name="ad_id" ColumnName="ad_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_backflow">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.t_backflow">
+        <MappingFragment StoreEntitySet="t_backflow">
+          <ScalarProperty Name="bk_type" ColumnName="bk_type" />
+          <ScalarProperty Name="bk_date" ColumnName="bk_date" />
+          <ScalarProperty Name="bk_uid" ColumnName="bk_uid" />
+          <ScalarProperty Name="bk_s_uid" ColumnName="bk_s_uid" />
+          <ScalarProperty Name="bk_id" ColumnName="bk_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_customermanage">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.t_customermanage">
+        <MappingFragment StoreEntitySet="t_customermanage">
+          <ScalarProperty Name="cm_status" ColumnName="cm_status" />
+          <ScalarProperty Name="cm_remarks5" ColumnName="cm_remarks5" />
+          <ScalarProperty Name="cm_remarks4" ColumnName="cm_remarks4" />
+          <ScalarProperty Name="cm_remarks3" ColumnName="cm_remarks3" />
+          <ScalarProperty Name="cm_remarks2" ColumnName="cm_remarks2" />
+          <ScalarProperty Name="cm_remarks1" ColumnName="cm_remarks1" />
+          <ScalarProperty Name="cm_nickname" ColumnName="cm_nickname" />
+          <ScalarProperty Name="cm_openid" ColumnName="cm_openid" />
+          <ScalarProperty Name="cm_h_name" ColumnName="cm_h_name" />
+          <ScalarProperty Name="cm_h_uid" ColumnName="cm_h_uid" />
+          <ScalarProperty Name="cm_s_nickname" ColumnName="cm_s_nickname" />
+          <ScalarProperty Name="cm_s_uid" ColumnName="cm_s_uid" />
+          <ScalarProperty Name="cm_id" ColumnName="cm_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_error">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.t_error">
+        <MappingFragment StoreEntitySet="t_error">
+          <ScalarProperty Name="eo_content" ColumnName="eo_content" />
+          <ScalarProperty Name="eo_name" ColumnName="eo_name" />
+          <ScalarProperty Name="eo_date" ColumnName="eo_date" />
+          <ScalarProperty Name="eo_id" ColumnName="eo_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_hairoff">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.t_hairoff">
+        <MappingFragment StoreEntitySet="t_hairoff">
+          <ScalarProperty Name="ho_status" ColumnName="ho_status" />
+          <ScalarProperty Name="ho_date" ColumnName="ho_date" />
+          <ScalarProperty Name="ho_s_uid" ColumnName="ho_s_uid" />
+          <ScalarProperty Name="ho_h_uid" ColumnName="ho_h_uid" />
+          <ScalarProperty Name="ho_id" ColumnName="ho_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_notice">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.t_notice">
+        <MappingFragment StoreEntitySet="t_notice">
+          <ScalarProperty Name="tn_status" ColumnName="tn_status" />
+          <ScalarProperty Name="tn_date" ColumnName="tn_date" />
+          <ScalarProperty Name="tn_content" ColumnName="tn_content" />
+          <ScalarProperty Name="tn_s_uid" ColumnName="tn_s_uid" />
+          <ScalarProperty Name="tn_id" ColumnName="tn_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_order">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.t_order">
+        <MappingFragment StoreEntitySet="t_order">
+          <ScalarProperty Name="o_status" ColumnName="o_status" />
+          <ScalarProperty Name="o_paydate" ColumnName="o_paydate" />
+          <ScalarProperty Name="o_date" ColumnName="o_date" />
+          <ScalarProperty Name="o_money" ColumnName="o_money" />
+          <ScalarProperty Name="o_name" ColumnName="o_name" />
+          <ScalarProperty Name="o_s_uid" ColumnName="o_s_uid" />
+          <ScalarProperty Name="o_orid" ColumnName="o_orid" />
+          <ScalarProperty Name="o_id" ColumnName="o_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_salemanager">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.t_salemanager">
+        <MappingFragment StoreEntitySet="t_salemanager">
+          <ScalarProperty Name="sm_editdate" ColumnName="sm_editdate" />
+          <ScalarProperty Name="sm_oldname" ColumnName="sm_oldname" />
+          <ScalarProperty Name="sm_date" ColumnName="sm_date" />
+          <ScalarProperty Name="sm_name" ColumnName="sm_name" />
+          <ScalarProperty Name="sm_s_uid" ColumnName="sm_s_uid" />
+          <ScalarProperty Name="sm_id" ColumnName="sm_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_salinhairstylist">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.t_salinhairstylist">
+        <MappingFragment StoreEntitySet="t_salinhairstylist">
+          <ScalarProperty Name="shs_status" ColumnName="shs_status" />
+          <ScalarProperty Name="shs_sort" ColumnName="shs_sort" />
+          <ScalarProperty Name="shs_cell" ColumnName="shs_cell" />
+          <ScalarProperty Name="shs_s_uid" ColumnName="shs_s_uid" />
+          <ScalarProperty Name="shs_logo" ColumnName="shs_logo" />
+          <ScalarProperty Name="shs_exp" ColumnName="shs_exp" />
+          <ScalarProperty Name="shs_hairprice" ColumnName="shs_hairprice" />
+          <ScalarProperty Name="shs_name" ColumnName="shs_name" />
+          <ScalarProperty Name="shs_h_uid" ColumnName="shs_h_uid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_salon">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.t_salon">
+        <MappingFragment StoreEntitySet="t_salon">
+          <ScalarProperty Name="s_recommend" ColumnName="s_recommend" />
+          <ScalarProperty Name="s_businessdate" ColumnName="s_businessdate" />
+          <ScalarProperty Name="s_opendate" ColumnName="s_opendate" />
+          <ScalarProperty Name="s_wxname" ColumnName="s_wxname" />
+          <ScalarProperty Name="s_price" ColumnName="s_price" />
+          <ScalarProperty Name="s_lat" ColumnName="s_lat" />
+          <ScalarProperty Name="s_lon" ColumnName="s_lon" />
+          <ScalarProperty Name="s_summary" ColumnName="s_summary" />
+          <ScalarProperty Name="s_linkname" ColumnName="s_linkname" />
+          <ScalarProperty Name="s_address" ColumnName="s_address" />
+          <ScalarProperty Name="s_status" ColumnName="s_status" />
+          <ScalarProperty Name="s_kind" ColumnName="s_kind" />
+          <ScalarProperty Name="s_date" ColumnName="s_date" />
+          <ScalarProperty Name="s_logo" ColumnName="s_logo" />
+          <ScalarProperty Name="s_nickname" ColumnName="s_nickname" />
+          <ScalarProperty Name="s_pwd" ColumnName="s_pwd" />
+          <ScalarProperty Name="s_cell" ColumnName="s_cell" />
+          <ScalarProperty Name="s_email" ColumnName="s_email" />
+          <ScalarProperty Name="s_uid" ColumnName="s_uid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_salonimageinfo">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.t_salonimageinfo">
+        <MappingFragment StoreEntitySet="t_salonimageinfo">
+          <ScalarProperty Name="si_status" ColumnName="si_status" />
+          <ScalarProperty Name="si_kind" ColumnName="si_kind" />
+          <ScalarProperty Name="si_photo" ColumnName="si_photo" />
+          <ScalarProperty Name="si_s_uid" ColumnName="si_s_uid" />
+          <ScalarProperty Name="si_id" ColumnName="si_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_salonpackage">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.t_salonpackage">
+        <MappingFragment StoreEntitySet="t_salonpackage">
+          <ScalarProperty Name="spk_image" ColumnName="spk_image" />
+          <ScalarProperty Name="spk_status" ColumnName="spk_status" />
+          <ScalarProperty Name="spk_date" ColumnName="spk_date" />
+          <ScalarProperty Name="spk_s_uid" ColumnName="spk_s_uid" />
+          <ScalarProperty Name="spk_dorder" ColumnName="spk_dorder" />
+          <ScalarProperty Name="spk_price" ColumnName="spk_price" />
+          <ScalarProperty Name="spk_content" ColumnName="spk_content" />
+          <ScalarProperty Name="spk_title" ColumnName="spk_title" />
+          <ScalarProperty Name="spk_id" ColumnName="spk_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_scanrec">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.t_scanrec">
+        <MappingFragment StoreEntitySet="t_scanrec">
+          <ScalarProperty Name="scr_ip" ColumnName="scr_ip" />
+          <ScalarProperty Name="scr_date" ColumnName="scr_date" />
+          <ScalarProperty Name="scr_code" ColumnName="scr_code" />
+          <ScalarProperty Name="scr_s_uid" ColumnName="scr_s_uid" />
+          <ScalarProperty Name="scr_id" ColumnName="scr_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_sms">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.t_sms">
+        <MappingFragment StoreEntitySet="t_sms">
+          <ScalarProperty Name="sm_status" ColumnName="sm_status" />
+          <ScalarProperty Name="sm_date" ColumnName="sm_date" />
+          <ScalarProperty Name="sm_content" ColumnName="sm_content" />
+          <ScalarProperty Name="sm_cell" ColumnName="sm_cell" />
+          <ScalarProperty Name="sm_id" ColumnName="sm_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_sysinformation">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.t_sysinformation">
+        <MappingFragment StoreEntitySet="t_sysinformation">
+          <ScalarProperty Name="sy_status" ColumnName="sy_status" />
+          <ScalarProperty Name="sy_date" ColumnName="sy_date" />
+          <ScalarProperty Name="sy_content" ColumnName="sy_content" />
+          <ScalarProperty Name="sy_title" ColumnName="sy_title" />
+          <ScalarProperty Name="sy_id" ColumnName="sy_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_winning">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.t_winning">
+        <MappingFragment StoreEntitySet="t_winning">
+          <ScalarProperty Name="wig_status" ColumnName="wig_status" />
+          <ScalarProperty Name="wig_pro" ColumnName="wig_pro" />
+          <ScalarProperty Name="wig_image" ColumnName="wig_image" />
+          <ScalarProperty Name="wig_date" ColumnName="wig_date" />
+          <ScalarProperty Name="wig_title" ColumnName="wig_title" />
+          <ScalarProperty Name="wig_s_uid" ColumnName="wig_s_uid" />
+          <ScalarProperty Name="wig_id" ColumnName="wig_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_winningrec">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.t_winningrec">
+        <MappingFragment StoreEntitySet="t_winningrec">
+          <ScalarProperty Name="win_s_uid" ColumnName="win_s_uid" />
+          <ScalarProperty Name="win_temuid" ColumnName="win_temuid" />
+          <ScalarProperty Name="win_cell" ColumnName="win_cell" />
+          <ScalarProperty Name="win_ip" ColumnName="win_ip" />
+          <ScalarProperty Name="win_date" ColumnName="win_date" />
+          <ScalarProperty Name="win_content" ColumnName="win_content" />
+          <ScalarProperty Name="win_id" ColumnName="win_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="to_activity">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.to_activity">
+        <MappingFragment StoreEntitySet="to_activity">
+          <ScalarProperty Name="act_status" ColumnName="act_status" />
+          <ScalarProperty Name="act_name" ColumnName="act_name" />
+          <ScalarProperty Name="act_type" ColumnName="act_type" />
+          <ScalarProperty Name="act_cell" ColumnName="act_cell" />
+          <ScalarProperty Name="act_id" ColumnName="act_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="to_ad">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.to_ad">
+        <MappingFragment StoreEntitySet="to_ad">
+          <ScalarProperty Name="oa_sort" ColumnName="oa_sort" />
+          <ScalarProperty Name="oa_content" ColumnName="oa_content" />
+          <ScalarProperty Name="oa_title" ColumnName="oa_title" />
+          <ScalarProperty Name="oa_status" ColumnName="oa_status" />
+          <ScalarProperty Name="oa_date" ColumnName="oa_date" />
+          <ScalarProperty Name="oa_url" ColumnName="oa_url" />
+          <ScalarProperty Name="oa_image" ColumnName="oa_image" />
+          <ScalarProperty Name="oa_id" ColumnName="oa_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="to_address">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.to_address">
+        <MappingFragment StoreEntitySet="to_address">
+          <ScalarProperty Name="od_lat" ColumnName="od_lat" />
+          <ScalarProperty Name="od_lon" ColumnName="od_lon" />
+          <ScalarProperty Name="od_default" ColumnName="od_default" />
+          <ScalarProperty Name="od_detailed" ColumnName="od_detailed" />
+          <ScalarProperty Name="od_district" ColumnName="od_district" />
+          <ScalarProperty Name="od_city" ColumnName="od_city" />
+          <ScalarProperty Name="od_province" ColumnName="od_province" />
+          <ScalarProperty Name="od_uid" ColumnName="od_uid" />
+          <ScalarProperty Name="od_id" ColumnName="od_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="to_apns">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.to_apns">
+        <MappingFragment StoreEntitySet="to_apns">
+          <ScalarProperty Name="ao_apptype" ColumnName="ao_apptype" />
+          <ScalarProperty Name="ao_device" ColumnName="ao_device" />
+          <ScalarProperty Name="ao_date" ColumnName="ao_date" />
+          <ScalarProperty Name="ao_cid" ColumnName="ao_cid" />
+          <ScalarProperty Name="ao_tokenid" ColumnName="ao_tokenid" />
+          <ScalarProperty Name="ao_cell" ColumnName="ao_cell" />
+          <ScalarProperty Name="ao_id" ColumnName="ao_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="to_apply">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.to_apply">
+        <MappingFragment StoreEntitySet="to_apply">
+          <ScalarProperty Name="ap_open" ColumnName="ap_open" />
+          <ScalarProperty Name="ap_sex" ColumnName="ap_sex" />
+          <ScalarProperty Name="ap_adate" ColumnName="ap_adate" />
+          <ScalarProperty Name="ap_date" ColumnName="ap_date" />
+          <ScalarProperty Name="ap_status" ColumnName="ap_status" />
+          <ScalarProperty Name="ap_gps" ColumnName="ap_gps" />
+          <ScalarProperty Name="ap_salonaddress" ColumnName="ap_salonaddress" />
+          <ScalarProperty Name="ap_salonname" ColumnName="ap_salonname" />
+          <ScalarProperty Name="ap_idcard" ColumnName="ap_idcard" />
+          <ScalarProperty Name="ap_name" ColumnName="ap_name" />
+          <ScalarProperty Name="ap_cell" ColumnName="ap_cell" />
+          <ScalarProperty Name="ap_uid" ColumnName="ap_uid" />
+          <ScalarProperty Name="ap_id" ColumnName="ap_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="to_balanceofpayments">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.to_balanceofpayments">
+        <MappingFragment StoreEntitySet="to_balanceofpayments">
+          <ScalarProperty Name="bp_oreid" ColumnName="bp_oreid" />
+          <ScalarProperty Name="bp_table" ColumnName="bp_table" />
+          <ScalarProperty Name="bp_orderid" ColumnName="bp_orderid" />
+          <ScalarProperty Name="bp_status" ColumnName="bp_status" />
+          <ScalarProperty Name="bp_date" ColumnName="bp_date" />
+          <ScalarProperty Name="bp_kind" ColumnName="bp_kind" />
+          <ScalarProperty Name="bp_payid" ColumnName="bp_payid" />
+          <ScalarProperty Name="bp_money" ColumnName="bp_money" />
+          <ScalarProperty Name="bp_title" ColumnName="bp_title" />
+          <ScalarProperty Name="bp_source" ColumnName="bp_source" />
+          <ScalarProperty Name="bp_type" ColumnName="bp_type" />
+          <ScalarProperty Name="bp_oe_uid" ColumnName="bp_oe_uid" />
+          <ScalarProperty Name="bp_id" ColumnName="bp_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="to_bgerror">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.to_bgerror">
+        <MappingFragment StoreEntitySet="to_bgerror">
+          <ScalarProperty Name="bg_status" ColumnName="bg_status" />
+          <ScalarProperty Name="bg_content" ColumnName="bg_content" />
+          <ScalarProperty Name="bg_name" ColumnName="bg_name" />
+          <ScalarProperty Name="bg_date" ColumnName="bg_date" />
+          <ScalarProperty Name="bg_id" ColumnName="bg_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="to_binding">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.to_binding">
+        <MappingFragment StoreEntitySet="to_binding">
+          <ScalarProperty Name="bd_name" ColumnName="bd_name" />
+          <ScalarProperty Name="bd_status" ColumnName="bd_status" />
+          <ScalarProperty Name="bd_date" ColumnName="bd_date" />
+          <ScalarProperty Name="bd_kind" ColumnName="bd_kind" />
+          <ScalarProperty Name="bd_account" ColumnName="bd_account" />
+          <ScalarProperty Name="bd_oe_uid" ColumnName="bd_oe_uid" />
+          <ScalarProperty Name="bd_id" ColumnName="bd_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wx_answers">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_answers">
+        <MappingFragment StoreEntitySet="wx_answers">
+          <ScalarProperty Name="wa_hot" ColumnName="wa_hot" />
+          <ScalarProperty Name="wa_attribute" ColumnName="wa_attribute" />
+          <ScalarProperty Name="wa_status" ColumnName="wa_status" />
+          <ScalarProperty Name="wa_replyid" ColumnName="wa_replyid" />
+          <ScalarProperty Name="wa_wq_id" ColumnName="wa_wq_id" />
+          <ScalarProperty Name="wa_image" ColumnName="wa_image" />
+          <ScalarProperty Name="wa_content" ColumnName="wa_content" />
+          <ScalarProperty Name="wa_date" ColumnName="wa_date" />
+          <ScalarProperty Name="wa_openid" ColumnName="wa_openid" />
+          <ScalarProperty Name="wa_h_uid" ColumnName="wa_h_uid" />
+          <ScalarProperty Name="wa_id" ColumnName="wa_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wx_article">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_article">
+        <MappingFragment StoreEntitySet="wx_article">
+          <ScalarProperty Name="atr_status" ColumnName="atr_status" />
+          <ScalarProperty Name="atr_date" ColumnName="atr_date" />
+          <ScalarProperty Name="atr_link" ColumnName="atr_link" />
+          <ScalarProperty Name="atr_image" ColumnName="atr_image" />
+          <ScalarProperty Name="atr_id" ColumnName="atr_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wx_bindhair">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_bindhair">
+        <MappingFragment StoreEntitySet="wx_bindhair">
+          <ScalarProperty Name="wb_cell" ColumnName="wb_cell" />
+          <ScalarProperty Name="wb_name" ColumnName="wb_name" />
+          <ScalarProperty Name="wb_status" ColumnName="wb_status" />
+          <ScalarProperty Name="wb_date" ColumnName="wb_date" />
+          <ScalarProperty Name="wb_h_uid" ColumnName="wb_h_uid" />
+          <ScalarProperty Name="wb_openid" ColumnName="wb_openid" />
+          <ScalarProperty Name="wb_id" ColumnName="wb_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wx_comment">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_comment">
+        <MappingFragment StoreEntitySet="wx_comment">
+          <ScalarProperty Name="wc_image" ColumnName="wc_image" />
+          <ScalarProperty Name="wc_status" ColumnName="wc_status" />
+          <ScalarProperty Name="wc_score" ColumnName="wc_score" />
+          <ScalarProperty Name="wc_wo_id" ColumnName="wc_wo_id" />
+          <ScalarProperty Name="wc_date" ColumnName="wc_date" />
+          <ScalarProperty Name="wc_content" ColumnName="wc_content" />
+          <ScalarProperty Name="wc_h_uid" ColumnName="wc_h_uid" />
+          <ScalarProperty Name="wc_openid" ColumnName="wc_openid" />
+          <ScalarProperty Name="wc_id" ColumnName="wc_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wx_customerservice">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_customerservice">
+        <MappingFragment StoreEntitySet="wx_customerservice">
+          <ScalarProperty Name="wcs_date" ColumnName="wcs_date" />
+          <ScalarProperty Name="wcs_account" ColumnName="wcs_account" />
+          <ScalarProperty Name="wcs_openid" ColumnName="wcs_openid" />
+          <ScalarProperty Name="wcs_id" ColumnName="wcs_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wx_impression">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_impression">
+        <MappingFragment StoreEntitySet="wx_impression">
+          <ScalarProperty Name="wi_status" ColumnName="wi_status" />
+          <ScalarProperty Name="wi_date" ColumnName="wi_date" />
+          <ScalarProperty Name="wi_type" ColumnName="wi_type" />
+          <ScalarProperty Name="wi_content" ColumnName="wi_content" />
+          <ScalarProperty Name="wi_h_uid" ColumnName="wi_h_uid" />
+          <ScalarProperty Name="wi_openid" ColumnName="wi_openid" />
+          <ScalarProperty Name="wi_id" ColumnName="wi_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wx_infromation">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_infromation">
+        <MappingFragment StoreEntitySet="wx_infromation">
+          <ScalarProperty Name="wim_push_status" ColumnName="wim_push_status" />
+          <ScalarProperty Name="wim_status" ColumnName="wim_status" />
+          <ScalarProperty Name="wim_url" ColumnName="wim_url" />
+          <ScalarProperty Name="wim_date" ColumnName="wim_date" />
+          <ScalarProperty Name="wim_image" ColumnName="wim_image" />
+          <ScalarProperty Name="wim_content" ColumnName="wim_content" />
+          <ScalarProperty Name="wim_title" ColumnName="wim_title" />
+          <ScalarProperty Name="wim_id" ColumnName="wim_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wx_location">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_location">
+        <MappingFragment StoreEntitySet="wx_location">
+          <ScalarProperty Name="wl_date" ColumnName="wl_date" />
+          <ScalarProperty Name="wl_openid" ColumnName="wl_openid" />
+          <ScalarProperty Name="wl_lat" ColumnName="wl_lat" />
+          <ScalarProperty Name="wl_lng" ColumnName="wl_lng" />
+          <ScalarProperty Name="wl_id" ColumnName="wl_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wx_member">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_member">
+        <MappingFragment StoreEntitySet="wx_member">
+          <ScalarProperty Name="wm_pwd" ColumnName="wm_pwd" />
+          <ScalarProperty Name="wm_type" ColumnName="wm_type" />
+          <ScalarProperty Name="wm_unionid" ColumnName="wm_unionid" />
+          <ScalarProperty Name="wm_subscribe_time" ColumnName="wm_subscribe_time" />
+          <ScalarProperty Name="wm_headimgurl" ColumnName="wm_headimgurl" />
+          <ScalarProperty Name="wm_language" ColumnName="wm_language" />
+          <ScalarProperty Name="wm_province" ColumnName="wm_province" />
+          <ScalarProperty Name="wm_country" ColumnName="wm_country" />
+          <ScalarProperty Name="wm_city" ColumnName="wm_city" />
+          <ScalarProperty Name="wm_sex" ColumnName="wm_sex" />
+          <ScalarProperty Name="wm_nickname" ColumnName="wm_nickname" />
+          <ScalarProperty Name="wm_subscribe" ColumnName="wm_subscribe" />
+          <ScalarProperty Name="wm_cell" ColumnName="wm_cell" />
+          <ScalarProperty Name="wm_openid" ColumnName="wm_openid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wx_order">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_order">
+        <MappingFragment StoreEntitySet="wx_order">
+          <ScalarProperty Name="wo_s_uid" ColumnName="wo_s_uid" />
+          <ScalarProperty Name="wo_out_refund_no" ColumnName="wo_out_refund_no" />
+          <ScalarProperty Name="wo_price" ColumnName="wo_price" />
+          <ScalarProperty Name="wo_orderstatus" ColumnName="wo_orderstatus" />
+          <ScalarProperty Name="wo_paykind" ColumnName="wo_paykind" />
+          <ScalarProperty Name="wo_payid" ColumnName="wo_payid" />
+          <ScalarProperty Name="wo_orderid" ColumnName="wo_orderid" />
+          <ScalarProperty Name="wo_adress" ColumnName="wo_adress" />
+          <ScalarProperty Name="wo_source" ColumnName="wo_source" />
+          <ScalarProperty Name="wo_type" ColumnName="wo_type" />
+          <ScalarProperty Name="wo_status" ColumnName="wo_status" />
+          <ScalarProperty Name="wo_image" ColumnName="wo_image" />
+          <ScalarProperty Name="wo_remarks" ColumnName="wo_remarks" />
+          <ScalarProperty Name="wo_cell" ColumnName="wo_cell" />
+          <ScalarProperty Name="wo_date" ColumnName="wo_date" />
+          <ScalarProperty Name="wo_bookingdate" ColumnName="wo_bookingdate" />
+          <ScalarProperty Name="wo_h_uid" ColumnName="wo_h_uid" />
+          <ScalarProperty Name="wo_openid" ColumnName="wo_openid" />
+          <ScalarProperty Name="wo_id" ColumnName="wo_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wx_phonecall">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_phonecall">
+        <MappingFragment StoreEntitySet="wx_phonecall">
+          <ScalarProperty Name="wpc_date" ColumnName="wpc_date" />
+          <ScalarProperty Name="wpc_cell" ColumnName="wpc_cell" />
+          <ScalarProperty Name="wpc_h_uid" ColumnName="wpc_h_uid" />
+          <ScalarProperty Name="wpc_openid" ColumnName="wpc_openid" />
+          <ScalarProperty Name="wpc_id" ColumnName="wpc_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wx_post">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_post">
+        <MappingFragment StoreEntitySet="wx_post">
+          <ScalarProperty Name="wp_content" ColumnName="wp_content" />
+          <ScalarProperty Name="wp_date" ColumnName="wp_date" />
+          <ScalarProperty Name="wp_fromid" ColumnName="wp_fromid" />
+          <ScalarProperty Name="wp_id" ColumnName="wp_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wx_qrcode">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_qrcode">
+        <MappingFragment StoreEntitySet="wx_qrcode">
+          <ScalarProperty Name="qr_code" ColumnName="qr_code" />
+          <ScalarProperty Name="qr_type" ColumnName="qr_type" />
+          <ScalarProperty Name="qr_num" ColumnName="qr_num" />
+          <ScalarProperty Name="qr_date" ColumnName="qr_date" />
+          <ScalarProperty Name="qr_h_uid" ColumnName="qr_h_uid" />
+          <ScalarProperty Name="qr_ticket" ColumnName="qr_ticket" />
+          <ScalarProperty Name="qr_id" ColumnName="qr_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wx_questions">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_questions">
+        <MappingFragment StoreEntitySet="wx_questions">
+          <ScalarProperty Name="wq_status" ColumnName="wq_status" />
+          <ScalarProperty Name="wq_type" ColumnName="wq_type" />
+          <ScalarProperty Name="wq_image2" ColumnName="wq_image2" />
+          <ScalarProperty Name="wq_image1" ColumnName="wq_image1" />
+          <ScalarProperty Name="wq_content" ColumnName="wq_content" />
+          <ScalarProperty Name="wq_date" ColumnName="wq_date" />
+          <ScalarProperty Name="wq_openid" ColumnName="wq_openid" />
+          <ScalarProperty Name="wq_title" ColumnName="wq_title" />
+          <ScalarProperty Name="wq_id" ColumnName="wq_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wx_request">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_request">
+        <MappingFragment StoreEntitySet="wx_request">
+          <ScalarProperty Name="wr_date" ColumnName="wr_date" />
+          <ScalarProperty Name="wr_interfacename" ColumnName="wr_interfacename" />
+          <ScalarProperty Name="wr_post" ColumnName="wr_post" />
+          <ScalarProperty Name="wr_id" ColumnName="wr_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wx_searchcell">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_searchcell">
+        <MappingFragment StoreEntitySet="wx_searchcell">
+          <ScalarProperty Name="ws_date" ColumnName="ws_date" />
+          <ScalarProperty Name="ws_search" ColumnName="ws_search" />
+          <ScalarProperty Name="ws_cell" ColumnName="ws_cell" />
+          <ScalarProperty Name="ws_id" ColumnName="ws_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wx_tip">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_tip">
+        <MappingFragment StoreEntitySet="wx_tip">
+          <ScalarProperty Name="wt_status" ColumnName="wt_status" />
+          <ScalarProperty Name="wt_date" ColumnName="wt_date" />
+          <ScalarProperty Name="wt_paykind" ColumnName="wt_paykind" />
+          <ScalarProperty Name="wt_payid" ColumnName="wt_payid" />
+          <ScalarProperty Name="wt_orderid" ColumnName="wt_orderid" />
+          <ScalarProperty Name="wt_price" ColumnName="wt_price" />
+          <ScalarProperty Name="wt_h_uid" ColumnName="wt_h_uid" />
+          <ScalarProperty Name="wt_openid" ColumnName="wt_openid" />
+          <ScalarProperty Name="wt_id" ColumnName="wt_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="to_employee">
+      <EntityTypeMapping TypeName="mysqkbobohairEntites.to_employee">
+        <MappingFragment StoreEntitySet="to_employee">
+          <ScalarProperty Name="oe_restday" ColumnName="oe_restday" />
+          <ScalarProperty Name="oe_worktime" ColumnName="oe_worktime" />
+          <ScalarProperty Name="oe_price" ColumnName="oe_price" />
+          <ScalarProperty Name="oe_income" ColumnName="oe_income" />
+          <ScalarProperty Name="oe_idcard" ColumnName="oe_idcard" />
+          <ScalarProperty Name="oe_s_uid" ColumnName="oe_s_uid" />
+          <ScalarProperty Name="oe_b_uid" ColumnName="oe_b_uid" />
+          <ScalarProperty Name="oe_grade" ColumnName="oe_grade" />
+          <ScalarProperty Name="oe_quota" ColumnName="oe_quota" />
+          <ScalarProperty Name="oe_sa" ColumnName="oe_sa" />
+          <ScalarProperty Name="oe_status" ColumnName="oe_status" />
+          <ScalarProperty Name="oe_cuid" ColumnName="oe_cuid" />
+          <ScalarProperty Name="oe_cell" ColumnName="oe_cell" />
+          <ScalarProperty Name="oe_workstatus" ColumnName="oe_workstatus" />
+          <ScalarProperty Name="oe_sort" ColumnName="oe_sort" />
+          <ScalarProperty Name="oe_introduce" ColumnName="oe_introduce" />
+          <ScalarProperty Name="oe_lat" ColumnName="oe_lat" />
+          <ScalarProperty Name="oe_lon" ColumnName="oe_lon" />
+          <ScalarProperty Name="oe_logo" ColumnName="oe_logo" />
+          <ScalarProperty Name="oe_sex" ColumnName="oe_sex" />
+          <ScalarProperty Name="oe_name" ColumnName="oe_name" />
+          <ScalarProperty Name="oe_uid" ColumnName="oe_uid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

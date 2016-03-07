@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B83EC20-D79B-4277-A1F0-9C6857A2722F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Boboframework</RootNamespace>
+    <AssemblyName>Boboframework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\MySql.Data.6.9.8\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.8\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\bobohairEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bobohairEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\bobohairEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bobohairEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\bobohairEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bobohairEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\bobohairEntities1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bobohairEntities1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\bobohairEntities1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bobohairEntities1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\bobohairEntities1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bobohairEntities1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DbContextManager.cs" />
+    <Compile Include="Data\ex_ad.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ex_bookingorder.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ex_comment.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ex_hair.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ex_seerec.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ex_topic.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\mysqkbobohairEntites.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mysqkbobohairEntites.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\mysqkbobohairEntites.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\mysqkbobohairEntites.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mysqkbobohairEntites.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\to_activity.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\to_ad.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\to_address.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\to_apns.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\to_apply.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\to_balanceofpayments.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\to_bgerror.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\to_binding.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\To_Employee.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\t_advice.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\t_backflow.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\t_customermanage.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\t_error.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\t_hairoff.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\t_notice.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\t_order.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\t_salemanager.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\t_salinhairstylist.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\t_salon.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\t_salonimageinfo.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\t_salonpackage.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\t_scanrec.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\t_sms.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\t_sysinformation.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\t_winning.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\t_winningrec.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\wx_answers.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\wx_article.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\wx_bindhair.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\wx_comment.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\wx_customerservice.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\wx_impression.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\wx_infromation.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\wx_location.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\wx_member.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\wx_order.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\wx_phonecall.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\wx_post.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\wx_qrcode.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\wx_questions.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\wx_request.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\wx_searchcell.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\wx_tip.cs">
+      <DependentUpon>mysqkbobohairEntites.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HtmlHelperExtensions.cs" />
+    <Compile Include="IPageOfItems.cs" />
+    <Compile Include="PageOfItems.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Data\bobohairEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>bobohairEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Data\bobohairEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>bobohairEntities.edmx</DependentUpon>
+      <LastGenOutput>bobohairEntities.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Data\bobohairEntities.edmx.diagram">
+      <DependentUpon>bobohairEntities.edmx</DependentUpon>
+    </None>
+    <None Include="Data\bobohairEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>bobohairEntities.edmx</DependentUpon>
+      <LastGenOutput>bobohairEntities.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="Data\bobohairEntities1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>bobohairEntities1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data\bobohairEntities1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>bobohairEntities1.edmx</DependentUpon>
+      <LastGenOutput>bobohairEntities1.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Data\bobohairEntities1.edmx.diagram">
+      <DependentUpon>bobohairEntities1.edmx</DependentUpon>
+    </None>
+    <None Include="Data\bobohairEntities1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>bobohairEntities1.edmx</DependentUpon>
+      <LastGenOutput>bobohairEntities1.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="Data\mysqkbobohairEntites.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>mysqkbobohairEntites.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data\mysqkbobohairEntites.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>mysqkbobohairEntites.edmx</DependentUpon>
+      <LastGenOutput>mysqkbobohairEntites.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Data\mysqkbobohairEntites.edmx.diagram">
+      <DependentUpon>mysqkbobohairEntites.edmx</DependentUpon>
+    </None>
+    <None Include="Data\mysqkbobohairEntites.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>mysqkbobohairEntites.edmx</DependentUpon>
+      <LastGenOutput>mysqkbobohairEntites.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

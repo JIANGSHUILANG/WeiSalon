@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "ShowSalonNotice";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using Boboframework
+@using BoboModel
+@model Boboframework.PageOfItems<Notice>
+<div class="am-cf admin-main">
+    <!-- content start -->
+    <div class="admin-content am-g">
+        <input type="hidden" value="@ViewBag.msg" id="msg" />
+        <div class="am-padding system-container">
+            <div class="am-panel am-panel-default">
+                <ul class="am-list am-list-static">
+                    @{
+                        if (Model != null)
+                        {
+                            foreach (var info in Model)
+                            {
+                        <li class="am-g">
+                            <div class="am-u-sm-6"><span class="am-block" title="@info.tn_content">@(info.tn_content)</span></div>
+                            <div class="am-u-sm-4"><span class="am-link-muted am-padding-left-lg">@info.tn_date.ToShortDateString()</span></div>
+                            <div class="am-u-sm-2">
+                                <button type="button" class="am-fr am-btn am-btn-default am-radius" onclick="askdelete(@info.tn_id)">删除</button>
+                            </div>
+                        </li>
+                            }
+                        }
+                    }
+                </ul>
+
+            </div>
+            <ul class="am-pagination am-pagination-centered">
+                @using BoboCommon
+                @MvcHtmlString.Create(MyPageBar.ShowMyPageBar((int)ViewBag.pageIndex, (int)ViewBag.pageCount))
+            </ul>
+        </div>
+    </div>
+    <!-- content end -->
+</div>
+<script type="text/javascript">
+    $(function () {
+        var n = window.event.screenX - window.screenLeft;
+        var b = n > document.documentElement.scrollWidth - 20;
+        if (b && window.event.clientY < 0 || window.event.altKey) {
+            //这是一个关闭操作而非刷新
+            window.event.returnValue = ""; 
+        } else {
+
+        }
+        if ($("#msg").val().trim() != "") {
+            alert($("#msg").val());
+            $("#msg").val("");
+        }
+    })
+    function askdelete(id) {
+        if (window.confirm("确认删除此公告?")) {
+            window.location.href = "/Manage/DeleteNotice?id=" + id + "";
+        }
+    }
+</script>
+

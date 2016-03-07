@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "SalonMonthStatistics";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using BoboModel
+@using Boboframework
+@model  PageOfItems<StatisticsMonthSum>
+<div class="am-cf admin-main">
+    <!-- content start -->
+    <div class="admin-content am-g">
+        <div class="am-padding charts-content bill-content">
+            <div class="am-margin-bottom-sm selcet-date">
+                <form class="am-form" action="/Manage/SalonMonthStatistics" method="post">
+                    <input type="text" id="date-start" name="date_start" class="am-form-field" data-am-datepicker="{format: 'yyyy-mm', viewMode: 'months', minViewMode: 'months'}" value="@ViewBag.start_time" placeholder="起始日期" data-am-datepicker readonly />
+                    <input type="text" id="date-end" name="date_end" class="am-form-field" data-am-datepicker="{format: 'yyyy-mm', viewMode: 'months', minViewMode: 'months'}" value="@ViewBag.end_time" placeholder="结束日期" data-am-datepicker readonly />
+                    <button type="submit" id="search-data-btn" class="am-btn am-btn-primary">查询</button>
+                </form>
+            </div>
+            <div id="date-alert" class="am-alert am-alert-warning" data-am-alert style="display: none;">
+                
+		
+            </div>
+
+            <table class="am-table am-table-centered am-table-bordered">
+                <tr>
+                    <th width="20%"></th>
+                    <th width="20%">预约单数</th>
+                    <th width="20%">定金收入</th>
+@*                    <th width="20%">新增客人</th>
+                    <th width="20%">流失客人</th>*@
+                </tr>
+                <tr>
+                    <td class="am-text-middle" width="20%"><a href="javascript:;" style="cursor:default;text-decoration:none;" class="user-pic shop-logo am-circle">全店</a></td>
+                    <td class="am-text-middle" width="20%">@ViewBag.sum_count 单</td>
+                    <td class="am-text-middle" width="20%">@ViewBag.sum_pirce 元</td>
+              @*      <td class="am-text-middle" width="20%">@ViewBag.add</td>
+                    <td class="am-text-middle" width="20%">@ViewBag.lost</td>*@
+                </tr>
+                @{
+                    if (Model != null)
+                    {
+
+                        foreach (StatisticsMonthSum item in Model)
+                        {
+                            
+                    <tr>
+                        <td class="am-text-middle" width="20%">
+                            @*http://my.bobo.so/Hair/index.html#detailhair/@item.HairUid*@
+                            <a class="user-pic am-circle" href="javascript:void(0)" style="cursor: default;">
+                                @Html.Image(item.HairLog, 0, "", new { width = 68 })</a><br>
+                            @item.HairName
+                        </td>
+                        <td class="am-text-middle" width="20%">@( item.Month_HairCount == null ? 0 : item.Month_HairCount)单</td>
+                        <td class="am-text-middle" width="20%">@( item.Month_Price == null ? 0 : item.Month_Price) 元</td>
+                   @*     <td class="am-text-middle" width="20%">@(item.AddCustomer == null ? 0 : item.AddCustomer)</td>
+                        <td class="am-text-middle" width="20%">@(item.LostCustomer == null ? 0 : item.LostCustomer)</td>*@
+                    </tr>
+                        }
+
+                    }
+                }
+            </table>
+
+        </div>
+    </div>
+    <!-- content end -->
+</div>
+<ul class="am-pagination am-pagination-centered">
+    @using BoboCommon
+    @MvcHtmlString.Create(MyPageBar.ShowMyPageBar((int)ViewBag.pageIndex, (int)ViewBag.pageCount))
+</ul>
+

@@ -1,0 +1,176 @@
+﻿@{
+    ViewBag.Title = "ChecksSalon";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>美发店审核</h2>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'microsoft yahei';
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    table {
+        width: 100%;
+        border-top: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+    }
+
+        table td {
+            padding: 10px 10px;
+            border-bottom: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        table input {
+            width: 30%;
+            min-width: 200px;
+            height: 30px;
+            padding: 0 5px;
+            font-size: 14px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+            table input.focus {
+                border: 1px solid #77baed;
+                box-shadow: 0 0 5px #9ccef3;
+            }
+
+            table input.error {
+                border: 1px solid #ff0000;
+                box-shadow: 0 0 5px #fa6363;
+            }
+
+        table td .must {
+            vertical-align: middle;
+            display: inline-block;
+            margin-left: 10px;
+            color: #f00;
+        }
+
+        table img {
+            vertical-align: middle;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+    input.radio {
+        width: auto;
+        height: auto;
+        padding: 0;
+        margin: 0 5px 0 10px;
+        vertical-align: middle;
+        min-width: inherit;
+    }
+
+    .btn {
+        display: inline-block;
+        width: auto;
+        min-width: 80px;
+        height: 30px;
+        line-height: 30px;
+        background: #ccc;
+        border: none;
+        text-align: center;
+        border-radius: 5px;
+        padding: 0 10px;
+        color: #000;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .msg {
+        display: inline-block;
+        margin-left: 10px;
+        vertical-align: middle;
+        color: #f00;
+    }
+</style>
+
+@using BoboModel
+@using Boboframework
+@using BoboIService
+@model PageOfItems<SalonSimple>
+<script src="/JS/pagination.js"></script>
+<br />
+
+<form class="am-form-inline" role="form" style="float: right" action="/Manage/ChecksSalon" method="post">
+    <div class="am-form-group am-form-group-sm">
+        <div class="am-u-sm-5">
+            <input maxlength="19" type="text" name="SaleName" id="doc-ipt-3-1" class="am-form-field" placeholder="输入销售人员姓名" required>
+        </div>
+    </div>
+    <button type="submit" class="am-btn am-btn-default">搜索</button>
+</form>
+
+<br />
+<br />
+<br />
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td align="center" width="15%">沙龙名称</td>
+        <td align="center" width="15%">联系电话</td>
+        <td align="center" width="15%">联系人</td>
+        <td align="center" width="15%">状态</td>
+        <td align="center" width="20">详情</td>
+        <td align="center" width="20%">销售人员姓名</td>
+    </tr>
+    @{
+        if (Model != null)
+        {
+            foreach (var t in Model)
+            {
+        <tr>
+            <td align="center"><a href="http://weisalon.cn/SalonWeb/index.html#salon/@t.Uid" target="_blank">@t.Nickname</a></td>
+            <td align="center">@t.Cell</td>
+            <td align="center">@t.LinkName</td>
+            <td align="center">@{ var status = (Tools.SalonStatus)t.Status;}@status</td>
+            <td align="center"><a href="/manage/saloninfo/@(t.Uid)">查看详情</a>&nbsp;&nbsp;</td>
+            <td align="center">
+                <textarea maxlength="11" style="line-height: 37px; float: left; width: 110px; height: 37px; text-align: center; overflow: hidden; resize: none;" class="textareatemp">@t.SaleName</textarea>
+                <button style="float: right;" onclick="AddupdateRemark(this, '@t.Uid')" class="am-btn am-btn-primary submit-btn" type="submit">修改</button>
+                <br />
+                推荐人信息:@t.Recommend
+            </td>
+
+        </tr> 
+            }
+        }
+    }
+</table>
+@if (Model != null && Model.TotalPageCount > 1)
+{ 
+    <script>
+        var index = @(Model.PageNumber);
+        var count = @(Model.TotalPageCount);
+        var url = '@(MvcHtmlString.Create(ViewBag.page))';
+        var message='@(ViewBag.message)';
+        $(function () {
+            
+            $(".paging a").eq(0).click(function () {
+                page(1);
+            });
+            $(".paging a").eq(1).click(function () {
+                page(0);
+            }); pageinit();
+
+            if(message.trim()!=""){
+                alert(message);
+            }
+        });
+
+        function AddupdateRemark(dom,salonid){
+            var input= $(dom).prev();
+            var tempsalename=encodeURIComponent(input.val().trim());
+            window.location.href="/Manage/AddOrUpdateSalesclerk?s_id="+salonid+"&saleName="+tempsalename;
+        }
+    </script>
+    <div class="paging"><a href="javascript:;;">上一页</a><a href="javascript:;;">下一页</a></div>
+}

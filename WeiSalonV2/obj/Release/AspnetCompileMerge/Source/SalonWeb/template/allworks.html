@@ -1,0 +1,21 @@
+<div class="main allworks">
+	<div class="all-works-list">
+		{@if !old}
+			<ul>
+				{@each works as item}
+				<li><a href="#workdetail/${item.bgid}"><img class="lazyload" data-original="http://img.hairbobo.com${item.bgimage}" src="images/pixel.gif"/></a></li>
+				{@/each}
+			</ul>
+		{@else}
+			{@each i in range(0, works.length)}
+				{@if i%3 === 0 }
+					<ul>
+						{@each j in range(0,3)}
+						<li><a href="#workdetail/${works[i+j].bgid}"><img class="lazyload" data-original="http://img.hairbobo.com${works[i+j].bgimage}" src="images/pixel.gif"/></a></li>
+						{@/each}
+					</ul>
+				{@/if}
+			{@/each}
+		{@/if}
+	</div>
+</div>

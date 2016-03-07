@@ -1,0 +1,123 @@
+﻿@{
+    ViewBag.Title = "密码修改";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main_bd" style="width: 929px;">
+    <div class="form_wrp">
+        修改密码：
+            <fieldset class="frm_fieldset no_extra">
+                <p class="frm_desc">
+                </p>
+                <div class="group frm_control_group">
+                    <label for="js_oldPassword" class="frm_label">
+                        原 密 码</label>
+                    <div class="frm_controls">
+                        <span class="frm_input_box">
+                            <input type="password" id="oldPwd" runat="server" maxlength="16" class="frm_input" />
+                        </span>
+                    </div>
+                </div>
+                <p class="frm_desc">
+                </p>
+                <div class="group frm_control_group">
+                    <label for="js_oldPassword" class="frm_label">
+                        新 密 码</label>
+                    <div class="frm_controls">
+                        <span class="frm_input_box">
+                            <input type="password" id="newPwd" runat="server" maxlength="16" class="frm_input"></span>
+                    </div>
+                </div>
+                <p class="frm_desc">
+                </p>
+                <div class="group frm_control_group">
+                    <label for="js_oldPassword" class="frm_label">
+                        确认新密码</label>
+                    <div class="frm_controls">
+                        <span class="frm_input_box">
+                            <input type="password" id="conNewPwd" runat="server" maxlength="16" class="frm_input"></span>
+                    </div>
+                </div>
+
+            </fieldset>
+        <a class="btn btn_input btn_primary" title="修  改" href="javascript:;" id="login_button"
+            onclick="Update();">修  改</a>
+    </div>
+</div>
+
+@section scripts{
+    <script src="/JS/AES.js"></script>
+    <script type="text/javascript">
+var k = false;
+        function Update() {
+            if (k) {
+                return;
+            }
+            k = true;
+            var pwd = "";
+            var pwd2 = "";
+            var pwd3 = "";
+            pwd = $("#oldPwd").val();
+            pwd2 = $("#newPwd").val();
+            pwd3 = $("#conNewPwd").val();
+            if (pwd.trim() == "") {
+                alert("请输入原密码");
+                k = false;
+                return;
+            }
+            if (pwd2.trim() == "") {
+                alert("请输入新密码");
+                k = false;
+                return;
+            }
+            if (pwd3.trim() == "") {
+                alert("请确认新密码");
+                k = false;
+                return;
+            }
+            if (pwd3.trim() != pwd2.trim()) {
+                alert("两次输入的新密码不一致");
+                k = false;
+                return;
+            }
+
+            pwd = Encrypt(pwd);
+            pwd2 = Encrypt(pwd2);
+            var param = {
+                "PWD": pwd,
+                "PWDnew": pwd2
+            };
+            $.ajax({
+                type: "post",
+                url: "/manage/Pwd",
+                dataType: "text",
+                data: param,
+                success: function (data) {
+                    if (data == 1) {
+                        alert("修改成功");
+                        window.location.href = window.location.href;
+                    } else {
+                        alert(data);
+                        k = false;
+                    }
+                    $("#oldPwd").val("");
+                    $("#newPwd").val("");
+                    $("#conNewPwd").val("");
+                },
+                error: function (data) {
+                    alert("失败-" + data.readyState);
+                    k = false;
+                }
+            });
+        }
+        function Encrypt(word) {
+            var test = new AES.Crypto('ihlih*0037JOHT*)(PIJY*(()JI^)IO%');
+            return test.encrypt(word);
+        }
+
+        function Eecrypt(word) {
+            var test = new AES.Crypto('ihlih*0037JOHT*)(PIJY*(()JI^)IO%');
+            return test.decrypt(word);
+        }
+    </script>
+    }

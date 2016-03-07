@@ -1,0 +1,181 @@
+﻿@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>沙龙管理后台--登录</title>         
+    <link rel="icon" href="/images/register/logo_o.png">
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="keywords" content="登录波波网" />
+
+    <script src="/JS/jquery-1.8.1.min.js"></script>
+    <script src="/JS/AES.js"></script>
+    <link rel="stylesheet" type="text/css" href="/CSS/layout_head1f56cd.css?v=1?v=1" />
+    <link rel="stylesheet" type="text/css" href="/CSS/base1fa648.css?v=1" />
+    <link rel="stylesheet" type="text/css" href="/CSS/lib1ec5f7.css?v=1" />
+    <link rel="stylesheet" href="/CSS/login.css" />
+    <style type="text/css">
+        .login-panel {
+            left: 30%;
+            right: auto;
+            top: 100px;
+        }
+
+        #footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        //--------------------------登陆动画特效
+        var box1;
+        function loading() {
+            box1 = new ajaxLoader($(".box-1"));
+        }
+        function endLoading() {
+            if (box1) box1.remove();
+        }
+        var k = false;
+        //验证是否登录
+        function checkLogin() {
+            if (k) {
+                return;
+            }
+            k = true;
+            var loginID = Encrypt($('#txtloginName').val());
+            var PWD = Encrypt($('#txtloginPassword').val());
+            var Code = $('#txtcheckCode').val();
+            var param = {
+                "loginID": loginID,
+                "PWD": PWD,
+                "code": Code
+            };
+
+            $.ajax({
+                type: "post",
+                url: "/manage/CHKLogin",
+                dataType: "text",
+                data: param,
+                success: function (data) {
+                    if (data == 1) {
+                        window.location.href = "/manage/index";
+                    } else {
+                        checkimgclick();
+                        alert(data);
+                        k = false;
+                    }
+                },
+                error: function (data) {
+                    alert("失败-" + data.readyState);
+                    k = false;
+                }
+            });
+        }
+
+        function checkimgclick() {
+            $('#checkimg').attr("src", '/manage/CheckImg?' + Math.random());
+        }
+        // 验证码刷新
+        var CheckCodeid = 0;
+        function getCheckCode() {
+            if (CheckCodeid == 0) {
+                CheckCodeid = 1;
+                $('#imgCheckCode').html("<img id='checkimg'  onClick=\"checkimgclick();\"  title='换一张' />");
+                $('#checkimg').click();
+            }
+        }
+        function showMessage(text) {
+            //    hiAlert(text, '提示');
+            $("#msgerror").html(text);
+        }
+
+        //指向新页面
+        function urlRedirect(url) {
+            window.location.href = url;
+        }
+
+
+        function Encrypt(word) {
+            var test = new AES.Crypto('ihlih*0037JOHT*)(PIJY*(()JI^)IO%');
+            return test.encrypt(word);
+        }
+
+        function Eecrypt(word) {
+            var test = new AES.Crypto('ihlih*0037JOHT*)(PIJY*(()JI^)IO%');
+            return test.decrypt(word);
+        }
+        /***************获取URL参数的值********************/
+        /******参数:Uid=123 例:getUrlPara(Uid) ***/
+        function getUrlPara(qs) {
+            var url = window.location.href;
+            var temp = url.indexOf("#");
+            if (temp > 0) {
+                url = url.substring(0, temp);
+            }
+            var rs = new RegExp("(^|)" + qs + "=([^\&]*)(\&|$)", "gi").exec(url), tmp;
+            if (tmp = rs) {
+                return tmp[2];
+            }
+            else {
+                return null;
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div style="margin: 0 auto; width: 960px; height: 460px; position: relative;">
+        <div class="login-panel">
+            <h3>登录</h3>
+            <div class="login-mod">
+                <div class="login-err-panel dn" id="err_area">
+                    <span class="vm" id="err_tips"></span>
+                </div>
+                <form class="login-form" id="login-form">
+                    <div class="login-un">
+                        <span class="icon-wrapper"><i class="icon_login un"></i></span>
+                        <input type="text" id="txtloginName" placeholder="登录名" maxlength="30">
+                    </div>
+                    <div class="login-pwd">
+                        <span class="icon-wrapper"><i class="icon_login pwd"></i></span>
+                        <input type="password" id="txtloginPassword" placeholder="密码" maxlength="20">
+                    </div>
+                </form>
+                <div class="login-code-panel dn" id="verify_area" style="display: block;">
+                    <input type="text" id="txtcheckCode" placeholder="验证码" onfocus="getCheckCode();"
+                        onkeyup="if(event.keyCode==13) checkLogin();" size="4" maxlength="4">
+                    <span class="icon-wrapper">
+                        <div id="imgCheckCode">
+                        </div>
+                    </span>
+                </div>
+                <div class="login-btn-panel">
+                    <a class="btn btn_input btn_primary" title="点击登录" href="javascript:;" id="login_button"
+                        onclick="checkLogin();">登录</a>
+
+                </div>
+                <div class="login-btn-panel">
+                    <span style="color: red; font-size: 15px; font-weight: 800;" id="msgerror"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <span><a target="_blank" href="http://www.hairbobo.com/help/aboutus.html">联系我们</a>&nbsp;|&nbsp;
+            <a target="_blank" href="http://www.hairbobo.com/help/aboutus/1.html">意见建议</a>&nbsp;|&nbsp;
+            <a target="_blank" href="http://www.hairbobo.com/help/aboutus/2.html">使用帮助</a>&nbsp;|&nbsp;
+            <a target="_blank" href="http://www.hairbobo.com/help/activity-rules.html">服务条款</a>&nbsp;|&nbsp;
+            <a target="_blank" href="http://www.hairbobo.com/mobile/index.html">手机应用</a>
+        </span><span>上海莫笛思信息科技有限公司版权所有 沪ICP备11041741号 </span>
+    </div>
+</body>
+</html>

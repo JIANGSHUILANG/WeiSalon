@@ -1,0 +1,17 @@
+E:\project\WeiSalonV2\BoboModel\bin\Release\BoboModel.dll
+E:\project\WeiSalonV2\BoboModel\bin\Release\BoboModel.pdb
+E:\project\WeiSalonV2\BoboModel\obj\Release\BoboModel.csprojResolveAssemblyReference.cache
+E:\project\WeiSalonV2\BoboModel\obj\Release\BoboModel.dll
+E:\project\WeiSalonV2\BoboModel\obj\Release\BoboModel.pdb
+E:\project\WeiSalonV2\BoboModel\bin\Release\Boboframework.dll
+E:\project\WeiSalonV2\BoboModel\bin\Release\EntityFramework.dll
+E:\project\WeiSalonV2\BoboModel\bin\Release\Boboframework.pdb
+E:\project\WeiSalonV2\BoboModel\bin\Release\AutoMapper.pdb
+E:\project\WeiSalonV2\BoboModel\bin\Release\AutoMapper.xml
+E:\project\WeiSalonV2\BoboModel\bin\Release\EntityFramework.xml
+E:\project\WeiSalonV2\BoboModel\bin\Release\zh-Hans\EntityFramework.resources.dll
+E:\project\WeiSalonV2\BoboModel\bin\Release\AutoMapper.Net4.dll
+E:\project\WeiSalonV2\BoboModel\bin\Release\AutoMapper.dll
+E:\project\WeiSalonV2\BoboModel\bin\Release\Newtonsoft.Json.dll
+E:\project\WeiSalonV2\BoboModel\bin\Release\AutoMapper.Net4.pdb
+E:\project\WeiSalonV2\BoboModel\bin\Release\Newtonsoft.Json.xml

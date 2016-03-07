@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "CustomerManage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using Boboframework
+@using BoboModel
+@model Boboframework.PageOfItems<CustomerManageInfo>
+<div class="am-cf admin-main">
+    <!-- content start -->
+    <div class="admin-content am-g">
+        <div class="am-padding charts-content bill-content">
+            <table class="am-table am-table-centered am-table-bordered">
+                <tr>
+                    <th width="10%"></th>
+                    <th width="15%">来源</th>
+                    <th width="20%">关注的发型师</th>
+                    <th width="10%">关注状态</th>
+                    <th width="20%">备注信息</th>
+                    <th width="20%">操作</th>
+                </tr>
+                @{
+                    if (Model != null)
+                    {
+
+                        foreach (var item in Model)
+                        {                
+                    <tr>
+                        <td class="am-text-middle" width="10%">
+
+                            <a class="user-pic am-circle" href="javascript:void(0)" style="cursor: default;">
+                                <img src="@item.Customer_Log" width="60px" height="60px" /></a>
+                            <br>
+                            @item.Customer_Name
+                        </td>
+                        <td class="am-text-middle" width="15%">@(item.Customer_Come == 1 ? "我的发型师微信号" : "我的发型师微信号")</td>
+                        <td class="am-text-middle" width="20%">@item.Attention_HairList</td>
+                        <td class="am-text-middle" width="10%">@(item.Attention_Status == 0 ? "已取消关注" : "已关注")</td>
+                        <td class="am-text-middle" width="25%">手机号：
+                            <textarea maxlength="11"   style="width: 100px; height: 25px; text-align: center; overflow: hidden; resize: none;" onkeydown="this.value=this.value.replace(/[^\r\n0-9]/g,'');" disabled="disabled" class="textareatemp">@(item.Customer_Remark)</textarea>
+                        </td>
+                        <td class="am-text-middle" width="20%">
+                            <button onclick="updateRemark(this,@item.Customer_Id)" class="am-btn am-btn-primary submit-btn" type="submit">修改备注</button></td>
+                    </tr>                                
+                        }
+
+                    }
+                }
+            </table>
+
+        </div>
+    </div>
+    <!-- content end -->
+</div>
+<ul class="am-pagination am-pagination-centered">
+    @using BoboCommon
+    @MvcHtmlString.Create(MyPageBar.ShowMyPageBar((int)ViewBag.pageIndex, (int)ViewBag.pageCount))
+</ul>
+
+<script type="text/javascript">
+    function updateRemark(domn, customer_id) {
+        var $dom = $(domn);
+        var txt = $dom.text();
+        var $txtarea = $dom.parent().prev().find("textarea");
+        if (txt == "修改备注") {
+            $txtarea.attr("disabled", false);
+            $dom.text("确定");
+        } else {
+            $txtarea.attr("disabled", true);
+            $dom.text("修改备注");
+            var tel = $txtarea.val(); //获取手机号
+            var telReg = !!tel.match(/^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/);
+            //如果手机号码不能通过验证
+            if (telReg == false) {
+                alert("请输入正确的手机号!");
+                return;
+            }
+
+            $.ajax({
+                type: "post",
+                url: "/Manage/updateRemark",
+                dataType: "text",
+                data: { customer_id: customer_id, remark: $txtarea.val() },
+                success: function (data) {
+                    if (data == "True") {
+                        alert("修改成功");
+                        window.location.href = window.location.href;
+                    } else {
+                        alert("修改失败");
+                    }
+                },
+                error: function (data) {
+                    alert("修改失败");
+                }
+            })
+        }
+
+    }
+
+</script>

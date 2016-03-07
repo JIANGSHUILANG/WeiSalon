@@ -1,0 +1,109 @@
+ body {
+                margin: 0;
+                font-family: 'microsoft yahei';
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            img {
+            }
+
+            table {
+                width: 100%;
+                border-top: 1px solid #ccc;
+                border-right: 1px solid #ccc;
+            }
+
+                table td {
+                    padding: 10px 10px;
+                    border-bottom: 1px solid #ccc;
+                    border-left: 1px solid #ccc;
+                    font-size: 14px;
+                }
+
+                    table td div {
+                        cursor: pointer;
+                    }
+
+                table input {
+                    width: 30%;
+                    min-width: 200px;
+                    height: 30px;
+                    padding: 0 5px;
+                    font-size: 14px;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                    table input.focus {
+                        border: 1px solid #77baed;
+                        box-shadow: 0 0 5px #9ccef3;
+                    }
+
+                    table input.error {
+                        border: 1px solid #ff0000;
+                        box-shadow: 0 0 5px #fa6363;
+                    }
+
+                table textarea {
+                    height: 80px;
+                    width: 30%;
+                    resize: none;
+                    min-width: 200px;
+                    padding: 0 5px;
+                    border: 1px solid #ccc;
+                }
+
+                table td .tips {
+                    font-size: 12px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    color: #999;
+                    margin-left: 10px;
+                }
+
+                table img {
+                    vertical-align: middle;
+                    display: inline-block;
+                    margin-left: 10px;
+                    height: 150px;
+                }
+
+            input.radio {
+                width: auto;
+                min-width: initial;
+                height: auto;
+                padding: 0;
+                margin: 0 5px 0 10px;
+                vertical-align: middle;
+            }
+
+            .btn {
+                display: inline-block;
+                width: auto;
+                min-width: 80px;
+                height: 30px;
+                line-height: 30px;
+                background: #ccc;
+                border: none;
+                text-align: center;
+                border-radius: 5px;
+                padding: 0 10px;
+                color: #000;
+                text-decoration: none;
+                font-size: 14px;
+            }
+
+            .msg {
+                display: inline-block;
+                margin-left: 10px;
+                vertical-align: middle;
+                color: #f00;
+            }
+            /*--qiniu--*/
+            .moxie-shim input {
+                font-size: 0 !important;
+                cursor: pointer;
+            }

@@ -1,0 +1,244 @@
+﻿@{
+    ViewBag.Title = "发型师信息";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using BoboModel
+@model AllSalon
+<div class="am-cf admin-main">
+    <!-- content start -->
+    <div class="admin-content am-g">
+        <div class="am-u-lg-8">
+            <div class="am-cf am-padding">
+                <div class="am-fl am-cf">
+                    <strong class="am-text-primary am-text-lg">沙龙基本资料</strong> / <small>完善沙龙基本资料让更多人了解你</small>
+                </div>
+            </div>
+            <div class="salon-info-edit am-padding">
+                <form action="/Manage/SaveBasicInfo" method="post" class="am-form" id="formbasic" data-am-validator>
+                    <input type="hidden" name="id1" value="@Model.Uid" />
+                    <input type="hidden" name="lng" value="" />
+                    <input type="hidden" name="lat" value="" />
+                    <fieldset>
+                        <div class="am-form-group">
+                            <label for="doc-vld-name">沙龙名称：<span>沙龙名称会在主页显示，还可以帮助用户更容易找到你</span></label>
+                            <input name="name" type="text" placeholder="输入新名称" class="am-form-field" value="@Model.Nickname" required />
+                        </div>
+                        <div class="am-form-group">
+                            <label for="doc-vld-name">价格区间：<span></span></label>
+                            <div class="am-form-inline">
+                                <div class="am-form-group">
+                                    <input type="text" name="low_price" placeholder="输入最低剪发价格" class="am-form-field" value="@(string.IsNullOrWhiteSpace(Model.Price) || !Model.Price.Contains('-') ? "0" : Model.Price.Split('-')[0])"  pattern="^\d+$" required />
+                                </div>
+                                -
+							
+                                    <div class="am-form-group">
+                                        <input name="hight_price" type="text" placeholder="输入最高剪发价格" class="am-form-field" value="@(string.IsNullOrWhiteSpace(Model.Price) || !Model.Price.Contains('-') ? "0" : Model.Price.Split('-')[1])"  pattern="^\d+$" required />
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="am-form-group">
+                            <label for="doc-vld-name">沙龙地址：<span>沙龙所在的详细地址</span></label>
+
+                            <input name="add" type="text" id="add" onblur="getLngLat(this.id)"  placeholder="输入新地址" class="am-form-field" value="@(Model.Address.Replace("|", "") ?? "")" required />
+
+                        </div>
+                        <div class="am-form-group">
+                            <label for="doc-vld-name">沙龙电话：<span>填写有效的电话号码可以让顾客联系你，固话请加区号（如：021-12345678）</span></label>
+                            <input name="cell" type="text" placeholder="输入有效的手机号码或者固话" class="am-form-field" value="@Model.Cell.Trim()" pattern="(^(\d{3}-|\d{4}-)(\d{8}|\d{7})$|^1((3|5|8){1}\d{1}|70)\d{8}$)" required />
+                        </div>
+
+                        <div class="am-form-group">
+                            <label for="doc-vld-name">沙龙简介：<span>填写对沙龙的信息描述</span></label><span id="summary">，最多输入<em><font color="green" style="font-size: 22px">1000</font></em>个字</span>
+                            <textarea class="am-form-field" rows="5" name="summary">@Model.Summary</textarea>
+                        </div>
+
+                        <div class="am-form-group">
+                            <label for="doc-vld-name">微信公众号：<span>请留下沙龙公众账号的名称或者ID</span></label>
+                            <input name="wxname" type="text" placeholder="输入您的微信号" class="am-form-field" value="@Model.Wxname.Trim()"   />
+                        </div>
+
+                        <div class="am-form-group">
+                            <label for="doc-vld-name">营业时间：<span></span></label>
+                            <div class="am-form-inline">
+                                <div class="am-form-group">
+                                    <input type="time" id="start_time" name="start_time" class="am-form-field" value="@(Model.Businessdate == "" ? "00:00" : (Model.Businessdate.Split('~')[0]) == "" ? "00:00" : Model.Businessdate.Split('~')[0])"  />
+                                </div>
+                                -
+                                    <div class="am-form-group">
+                                        <input type="time" id="end_time" name="end_time" class="am-form-field" value="@(Model.Businessdate == "" ? "23:59" : (Model.Businessdate.Split('~')[1]) == "" ? "23:59" : Model.Businessdate.Split('~')[1])"  />
+                                    </div>
+                            </div>
+                        </div>
+
+                        <a onclick="submitbasic()" class="am-btn am-btn-primary submit-btn">提交</a>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="am-cf am-padding">
+                <div class="am-fl am-cf">
+                    <strong class="am-text-primary am-text-lg">沙龙基本资料</strong> / <small>密码修改</small>
+                </div>
+            </div>
+
+            <div class="salon-info-edit am-padding">
+                <form id="formpassword">
+                    <div class="am-form-group">
+                        <label for="doc-vld-name">原始密码：</label>
+                        <input name="oldpassword" type="password" placeholder="输入原始密码" class="am-form-field" required />
+                    </div>
+                    <div class="am-form-group">
+                        <label for="doc-vld-name">请设置密码：</label>
+                        <input name="newpassword1" type="password" placeholder='输入最新密码（4-20位字符，支持汉字、字母、数字及"_"组合）' class="am-form-field" required />
+                    </div>
+                    <div class="am-form-group">
+                        <label for="doc-vld-name">请确认密码：</label>
+                        <input name="newpassword2" type="password" placeholder='确认最新密码（4-20位字符，支持汉字、字母、数字及"_"组合）' class="am-form-field" required />
+                    </div>
+                    <a onclick="updatepassword()" class="am-btn am-btn-primary submit-btn" type="submit">提交</a>
+                </form>
+            </div>
+
+
+        </div>
+        <div class="am-u-lg-4 am-u-sm-4 am-padding">
+            <div class="preview">
+                <a class="back" href="#"></a>
+                <iframe src="@ViewBag.uid" width="320" height="503"></iframe>
+            </div>
+            <div class="show-code">
+                <div id="qrcodeTable" class="form_wrp">
+                </div>
+                <span>扫描二维码预览页面</span>
+            </div>
+            <div class="page-link am-g am-padding">
+                <div class="am-u-sm-8">
+                    <input class="am-form-field" type="email" value="@ViewBag.uid">
+                </div>
+                <a class="am-u-sm-4 am-btn am-btn-default am-radius">复制链接</a>
+            </div>
+        </div>
+    </div>
+    <!-- content end -->
+    <input type="hidden" value="@ViewData["Msg"]" id="Msg" />
+</div>
+
+@section scripts{
+    <script type="text/javascript" src="/js/jquery.qrcode.js"></script>
+    <script type="text/javascript" src="/js/qrcode.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=LOoFXO0NxsgLd6BgTjGxb2ZD"></script>
+    <script type="text/javascript">
+        $(function () {
+            setInterval(function () {
+                $("textarea[name='summary']").change();
+            }, 200);
+
+            $("textarea[name='summary']").change(function () {
+                var length = 1000 - $(this).val().length;
+                if (length >= 0) {
+                    $("#summary").html('<span id="summary">，还能输入<em><font color="green" style="font-size:22px">' + length + '</font></em>个字</span>');
+                } else {
+                    $("#summary").html('<span id="summary">，已超出了<em><font color="red" style="font-size:22px">' + length + '</font></em>个字</span>');
+                }
+            })
+
+            if ($("#Msg").val().trim() != "") {
+                alert($("#Msg").val());
+            }
+
+
+
+            $("#qrcodeTable").qrcode({
+                render: "canvas",
+                text: "@ViewBag.uid",
+                width: "100",
+                height: "100"
+            });
+        })
+
+
+
+        //密码修改
+        function updatepassword() {
+            var p1 = $("input[name='newpassword1']").val();
+            var p2 = $("input[name='newpassword2']").val();
+            var oldpassword = $("input[name='oldpassword']").val();
+
+            if (oldpassword.trim() == "") {
+                alert("请输入原始密码!");
+                return;
+            }
+            else if (p1.trim() == "") {
+                alert("请设置密码!");
+                return;
+            } else if (p2.trim() == "") {
+                alert("请确认密码!");
+                return;
+            }
+
+            var check = /^[A-Za-z0-9_]+$/;
+            if (!check.test(p1)) {
+                alert('密码不允许包含特殊字符!');
+                return;
+            }
+            if (p1 == p2) {
+                if (p1.length < 6) {
+                    alert('密码长度不能小于6位!');
+                    return;
+                }
+                $.ajax({
+                    type: "post",
+                    url: "/Manage/UpdatePassword",
+                    dataType: "text",
+                    data: { password: p1, oldpassword: oldpassword },
+                    success: function (data) {
+                        var str = JSON.parse(data);
+                        if (str.flag) {
+                            alert(str.Msg);
+                            window.location.href = "/Manage/BasicInfo";
+                        } else {
+                            alert(str.Msg);
+                        }
+                    },
+                    error: function (data) {
+                        alert("密码修改失败!");
+                    }
+                });
+            } else {
+                alert("两次输入的新密码不一致!");
+            }
+        }
+        //提交基本信息表单
+        function submitbasic() {
+            var low_price = $("input[name=low_price]").val();
+            var hight_price = $("input[name=hight_price]").val();
+
+            if (parseInt(low_price) > parseInt(hight_price)) {
+                alert("价格区间应由小到大 !");
+                return;
+            }
+            var length = $("textarea[name='summary']").val().length;
+            if (length <= 1000) {
+                $("#formbasic").submit();
+            }
+        }
+        function getLngLat(id) {
+            var pointlnglat = document.getElementById(id).value;
+            // 创建地址解析器实例
+            var myGeo = new BMap.Geocoder();
+            // 将地址解析结果显示在地图上,并调整地图视野
+            myGeo.getPoint(pointlnglat, function (point) {
+                var lng = 0;
+                var lat = 0;
+                if (point) {
+                    lng = point.lng;
+                    lat = point.lat;
+                }
+                $("input[name='lng']").val(lng);
+                $("input[name='lat']").val(lat);
+            })
+        }
+    </script>
+}
+
+

@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "AddSalonNotice";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="am-cf admin-main">
+    <!-- content start -->
+    <div class="admin-content am-g">
+        <div class="am-u-lg-12 am-u-sm-12">
+            <div class="am-cf am-padding">
+                <div class="am-fl am-cf">
+                    <strong class="am-text-primary am-text-lg">添加沙龙公告</strong>
+                </div>
+            </div>
+            <div class="photo-list am-padding">
+                <form action="/Manage/AddSalonNotice" method="post" id="form1">
+                    <table class="am-table am-table-bordered" width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td width="20%" class="am-text-middle" align="right">公告内容:</td>
+                            <td width="80%">
+                                <textarea name="content" style="width: 800px; height: 200px;"></textarea>
+                                <p id="str" style="float:right"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="20%" class="am-text-middle" align="right"></td>
+                            <td width="80%">
+                                <p>
+                                    <a onclick="submitform()" class="am-btn am-btn-default">提交</a>
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- content end -->
+</div>
+<script type="text/javascript">
+    $(function () {
+        setInterval(function () {
+            $("textarea[name='content']").change();
+        }, 200);
+
+        $("textarea[name='content']").change(function () {
+            //获取文本框的内容 
+            var len = 100 - $(this).val().length;
+            if (len >= 0) {
+                $('#str').html('还能输入<em><font color="green" style="font-size:22px">' + len + '</font></em>个字');
+            } else {
+                $('#str').html('已经超出了<em><font color="red" style="font-size:22px">' + Math.abs(len) + '</font></em>个字');
+            }
+        });
+
+    })
+
+    function submitform() {
+        var txtval = $("textarea[name='content']").val();
+        if (txtval.trim() == '') {
+            alert('请输入公告信息');
+        }
+        else if (txtval.length > 100) {
+            alert('您输入的已超出上限，最多输入100个字');
+        } else {
+            $("#form1").submit();
+        }
+    }
+</script>
+
+

@@ -1,0 +1,13 @@
+<a class="row salon-info-item title" href="{@if works.length>0 }#allworks/${sid}{@else}javascript:;{@/if}">
+	<div class="col-90">沙龙作品(${works.length})</div>
+	<div class="col-10"><i class="iconfont icon-more" data-icon="&#xe601;"></i></div>
+</a>
+<div class="swiper-container salon-work-list">
+	<ul class="swiper-wrapper">
+		{@each works as item}
+		<li class="swiper-slide">
+			<a class="pic" href="#workdetail/${item.bgid}"><img src="http://img.hairbobo.com${item.bgimage}" /></a>
+		</li>
+		{@/each}
+	</ul>
+</div>

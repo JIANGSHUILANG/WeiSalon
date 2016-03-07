@@ -1,0 +1,210 @@
+﻿@using Boboframework
+@using BoboModel
+@using WeiSalonV2.Controllers
+@using WeiSalonV2.Models
+@{
+    Layout = null;
+    var logo = string.Empty;
+    try
+    {
+        logo = manage.User.Logo;
+    }
+    catch (Exception ex)
+    {
+        var s = new RegisterController();
+        s.LoginOut();
+        //Response.Redirect("http://weisalon.cn/");
+    }
+}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" href="/images/register/logo_o.png" />
+    <meta charset="utf-8" />
+    <title>沙龙管理后台-@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/bobo?v=1")
+    <link href="/CSS/Manage/Amazeui/css/amazeui.min.css" rel="stylesheet" />
+    <link href="/CSS/Manage/Amazeui/css/admin.css" rel="stylesheet" />
+    <style>
+        .body {
+            width: 1200px;
+        }
+
+        .container_box.cell_layout .col_side {
+            width: 198px;
+            max-width: 198px;
+        }
+
+        .container_box.cell_layout .col_main {
+            width: 1000px;
+        }
+
+        .menu {
+            border-top: none;
+            border-bottom: 1px solid #e7e7eb;
+        }
+
+        .account_info {
+            width: 2em;
+            margin: 0;
+            min-width: 0;
+        }
+
+            .account_info .type_wrp {
+                right: 0;
+                left: auto;
+            }
+
+            .account_info .avatar {
+                left: auto;
+                right: 3.4em;
+            }
+
+        .menu_itemselect {
+            background-color: #f4f5f9;
+        }
+    </style>
+    @*@Scripts.Render("~/bundles/jquery")*@
+    @*    <script type="text/javascript" src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>*@
+    <!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <script src="/CSS/Manage/Amazeui/js/jquery.min.js"></script>
+    <script src="/JS/Register/main.js"></script>
+    <!--<![endif]-->
+</head>
+<body class="zh_CN">
+    <div id="body">
+        @RenderSection("featured", required: false)
+        <div class="head" id="header">
+            <div class="head_box">
+                <div class="inner wrp">
+                    <h1 class="logo">
+                        @Html.Image("/images/register/logo.gif", -1, "")
+                    </h1>
+                    <div class="account">
+                        <div class="account_meta account_info">
+                            <label runat="server" class="nickname" id="nickname"></label>
+                            <span class="type_wrp"><span class="type icon_verify_label success">已认证</span> </span>
+                            <img class="avatar" src="http://bobosquad.qiniudn.com@(logo)" id="loginimg" />
+                            <a style="padding-top: 17px; position: absolute;" href="javascript:LoginOut()">退出</a>
+                        </div>
+                        <div class="account_meta account_logout">
+                            <label id="logout" runat="server" text="退出" onclick="LoginOut()"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="body page_user">
+                <div id="js_container_box" class="container_box cell_layout side_l">
+                    <div class="col_side">
+                        <div class="menu_box" id="menuBar">
+                            <dl class="menu ">
+                                <dt class="menu_title"><i class="icon_menu" style="background: url(/images/icon_menu_function.png) no-repeat;"></i>系统消息</dt>
+                                <dd class="menu_item ">
+                                    <a href="/Manage/SalonSystemMessages" id="SalonSystemMessages">系统公告</a>
+                                </dd>
+                            </dl>
+                            <dl class="menu ">
+                                <dt class="menu_title"><i class="icon_menu" style="background: url(/images/icon_menu_management.png) no-repeat;"></i>沙龙管理</dt>
+                                @{
+                                    if (ViewBag.admim == "true")
+                                    {
+                                    <dd class="menu_item ">
+                                        <a href="/Manage/ChecksSalon" id="saloncomments">沙龙申请管理</a>
+
+                                    </dd>                                   
+                                    }
+                                }
+                                <dd class="menu_item ">
+                                    <a href="/Manage/BasicInfo" id="BasicInfo">基本资料</a>
+                                </dd>
+                                <dd class="menu_item ">
+                                    <a href="/Manage/ImageInfo" id="ImageInfo">沙龙照片</a>
+                                </dd>
+                                <dd class="menu_item">
+                                    <a href="/Manage/FaxinshiInfos" id="FaxinshiInfos">发型师列表</a>
+                                </dd>
+                                <dd class="menu_item">
+                                    <a href="/Manage/DimissionHairstylist" id="DimissionHairstylist">离职发型师</a>
+                                </dd>
+                                <dd class="menu_item">
+                                    <a href="/Manage/Showreel" id="Showreel">作品墙</a>
+                                </dd>
+                            </dl>
+                            <dl class="menu ">
+                                <dt class="menu_title"><i class="icon_menu" style="background: url(/images/icon-user.png) no-repeat;"></i>顾客管理</dt>
+                                <dd class="menu_item ">
+                                    <a href="/Manage/CustomerManage" id="CustomerManage">顾客信息</a>
+                                </dd>
+                            </dl>
+                            <dl class="menu ">
+                                <dt class="menu_title"><i class="icon_menu" style="background: url(/images/icon_menu_management.png) no-repeat;"></i>订单管理</dt>
+                                <dd class="menu_item ">
+                                    <a href="/Manage/TodayOrder" id="TodayOrder">当日订单</a>
+                                </dd>
+                                <dd class="menu_item ">
+                                    <a href="/Manage/AllOrder" id="AllOrder">所有订单</a>
+                                </dd>
+                            </dl>
+                            <dl class="menu ">
+                                <dt class="menu_title"><i class="icon_menu" style="background: url(/images/icon_menu_statistics.png) no-repeat;"></i>统计功能</dt>
+                                <dd class="menu_item ">
+                                    <a href="/Manage/RealTimeStatistics" id="RealTimeStatistics">实时统计</a>
+                                </dd>
+                                <dd class="menu_item ">
+                                    <a href="/Manage/SalonMonthStatistics" id="SalonMonthStatistics">月度汇总</a>
+                                </dd>
+                            </dl>
+                            <dl class="menu ">
+                                <dt class="menu_title"><i class="icon_menu" style="background: url(/images/icon_menu_ad.png) no-repeat;"></i>活动推广</dt>
+                                <dd class="menu_item ">
+                                    <a href="/Manage/ShowSalonNotice" id="Notice">沙龙公告</a>
+                                </dd>
+                                <dd class="menu_item ">
+                                    <a href="/Manage/AddSalonNotice" id="AddSalonNotice">添加公告</a>
+                                </dd>
+                            </dl>
+                            <dl class="menu ">
+                                <dt class="menu_title" onclick="location.href='/about/index'" style="cursor: pointer"><i class="icon_menu" style="background: url(/images/icon_menu_setup.png) no-repeat;"></i>联系我们</dt>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col_main">
+                        @RenderBody()
+                    </div>
+                    <div class="version">
+                        ver 1.0
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="foot" id="footer">
+        <ul class="links ft">
+            <li class="links_item no_extra"><a target="_blank" href="http://www.hairbobo.com/help/aboutus.html">联系我们</a></li>
+            <li class="links_item"><a target="_blank" href="http://www.hairbobo.com/help/aboutus/1.html">意见建议</a></li>
+            <li class="links_item"><a target="_blank" href="http://www.hairbobo.com/help/aboutus/2.html">使用帮助</a></li>
+            <li class="links_item"><a target="_blank" href="http://www.hairbobo.com/help/activity-rules.html">服务条款</a></li>
+            <li class="links_item"><a target="_blank" href="http://www.hairbobo.com/mobile/index.html">手机应用</a></li>
+            <li class="links_item">
+                <p class="copyright">
+                    上海莫笛思信息科技有限公司版权所有 沪ICP备11041741号
+                </p>
+            </li>
+        </ul>
+    </footer>
+
+    @RenderSection("scripts", required: false)
+    <script src="~/CSS/Manage/Amazeui/js/amazeui.min.js"></script>
+    <script src="/CSS/Manage/Amazeui/js/jquery.zclip.min.js"></script>
+    <script src="~/CSS/Manage/Amazeui/js/app.js"></script>
+</body>
+</html>

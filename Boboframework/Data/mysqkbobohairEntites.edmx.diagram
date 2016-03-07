@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e0dc3e2b0ba3479f9e6b3bfb4d089728" Name="关系图1" >
+        <EntityTypeShape EntityType="mysqkbobohairEntites.ex_ad" Width="1.5" PointX="9.53380921368199" PointY="2.2112783948943382" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.ex_bookingorder" Width="1.5" PointX="8.11325488058536" PointY="8.5124932269158275" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.ex_comment" Width="1.5" PointX="1.4186858113010814" PointY="3.6185892837208646" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.ex_hair" Width="1.5" PointX="6.1666136636243269" PointY="0.63950511842943036" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.ex_seerec" Width="1.5" PointX="8.741597451614961" PointY="3.9286258686001534" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.ex_topic" Width="1.5" PointX="9.6576406292885721" PointY="15.947292782341732" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.t_advice" Width="1.5" PointX="1.1726552663243632" PointY="1.1008189176678747" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.t_backflow" Width="1.5" PointX="10.951524249721096" PointY="11.670764004658333" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.t_customermanage" Width="1.5" PointX="9.789511804370914" PointY="22.007172401066484" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.t_error" Width="1.5" PointX="4.1301137898723193" PointY="18.792355635572392" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.t_hairoff" Width="1.5" PointX="10.682666088772315" PointY="20.696180055242117" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.t_notice" Width="1.5" PointX="9.5122454769500742" PointY="28.624746887304237" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.t_order" Width="1.5" PointX="8.1138778180414235" PointY="16.331464596247052" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.t_salemanager" Width="1.5" PointX="5.7056707636013959" PointY="22.849732960970016" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.t_salinhairstylist" Width="1.5" PointX="2.8689683297970183" PointY="15.01844685478995" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.t_salon" Width="1.5" PointX="5.6213017504761469" PointY="3.8111459183558569" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.t_salonimageinfo" Width="1.5" PointX="2.6030220643631288" PointY="23.665612038069224" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.t_salonpackage" Width="1.5" PointX="5.9830606123353638" PointY="19.394942814202487" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.t_scanrec" Width="1.5" PointX="2.2975531361520072" PointY="23.153507958703447" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.t_sms" Width="1.5" PointX="10.496819821417713" PointY="22.166292826722511" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.t_sysinformation" Width="1.5" PointX="0.49960086890477728" PointY="9.0502380174818633" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.t_winning" Width="1.5" PointX="8.3242499643584011" PointY="18.213464566605847" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.t_winningrec" Width="1.5" PointX="4.9180101235015368" PointY="17.890585669265402" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.to_activity" Width="1.5" PointX="0.23123007651010069" PointY="6.9000523420516648" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.to_ad" Width="1.5" PointX="8.6798024683631034" PointY="14.609869218715406" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.to_address" Width="1.5" PointX="1.9410059461095397" PointY="10.712946509343082" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.to_apns" Width="1.5" PointX="0.32721019924022732" PointY="24.165282797145323" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.to_apply" Width="1.5" PointX="0.29241235940363836" PointY="4.7273111812431887" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.to_balanceofpayments" Width="1.5" PointX="3.3169839211353027" PointY="25.010599460923391" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.to_bgerror" Width="1.5" PointX="7.0783071420520116" PointY="19.4516975672225" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.to_binding" Width="1.5" PointX="7.6513002177939278" PointY="25.594570142028186" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.wx_answers" Width="1.5" PointX="9.3708460896140178" PointY="8.2924796828499439" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.wx_article" Width="1.5" PointX="7.85193295024891" PointY="21.942562426413673" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.wx_bindhair" Width="1.5" PointX="3.3772127290150209" PointY="11.461468672129078" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.wx_comment" Width="1.5" PointX="6.4297464817900885" PointY="9.8091218517204375" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.wx_customerservice" Width="1.5" PointX="2.0789833655948673" PointY="2.9518568529523241" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.wx_impression" Width="1.5" PointX="9.7558698289822186" PointY="20.847343946270339" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.wx_infromation" Width="1.5" PointX="6.5475324944348685" PointY="19.436871552577649" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.wx_location" Width="1.5" PointX="11.436817556357392" PointY="7.1525233719276837" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.wx_member" Width="1.5" PointX="5.8162699592375517" PointY="3.7464218455117297" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.wx_order" Width="1.5" PointX="5.893069147082544" PointY="8.3150696942187246" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.wx_phonecall" Width="1.5" PointX="11.888847392000653" PointY="25.040712994076642" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.wx_post" Width="1.5" PointX="3.6909116244366911" PointY="4.2771914919266436" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.wx_qrcode" Width="1.5" PointX="1.1019695201432191" PointY="14.776109374489685" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.wx_questions" Width="1.5" PointX="8.58219215487232" PointY="11.227517118317781" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.wx_request" Width="1.5" PointX="3.95611963419063" PointY="13.116208902148626" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.wx_searchcell" Width="1.5" PointX="1.6042583424617809" PointY="8.53982195655807" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.wx_tip" Width="1.5" PointX="0.6610595922270136" PointY="7.7376988417178856" />
+        <EntityTypeShape EntityType="mysqkbobohairEntites.to_employee" Width="1.5" PointX="6.0229931669416814" PointY="13.905520222105794" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

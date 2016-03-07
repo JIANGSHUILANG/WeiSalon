@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "ImageInfo";
+}
+@using Boboframework
+@using BoboModel
+@model List<SalonImage>
+
+
+<script src="/JS/qiniu/plupload/plupload.full.min.js"></script>
+<script src="/JS/qiniu/qiniu.js"></script>
+<script src="/JS/qiniu/main.js"></script>
+<script type="text/javascript">
+    var _token = '@ViewBag.Token';
+</script>
+
+<div class="am-cf admin-main">
+
+    <!-- content start -->
+    <div class="admin-content am-g">
+        <div class="am-u-lg-12 am-u-sm-12">
+            <div class="am-cf am-padding">
+                <div class="am-fl am-cf">
+                    <strong class="am-text-primary am-text-lg">美发店环境照片修改</strong> / <small>图片上传成功后将自动保存并显示在沙龙H5主页上</small>
+                </div>
+            </div>
+            <div class="photo-list am-padding">
+                <table class="am-table am-table-bordered" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    @{
+                        var count = 1;
+                        foreach (var t in Model)
+                        {
+                            var name = string.Empty; //说明
+                            var p = string.Empty; //图片
+                            var c = string.Empty; //样式
+                            var sid = string.Empty; //主键元素name
+                            switch (t.Kind)
+                            {
+                                case 2:
+                                    name = "正门";
+                                    p = t.Photo;
+                                    c = "upload-z";
+                                    sid = "sid-zm";
+                                    break;
+                                case 3:
+                                    name = "环境照" + count;
+                                    p = t.Photo;
+                                    c = "upload-h" + count;
+                                    sid = "sid-h" + count;
+                                    count++;
+                                    break;
+                            }
+                        <tr>
+                            <td width="20%" class="am-text-middle" align="right">@name：</td>
+                            <td width="80%" id="@(c)-parent">
+                                <a id="@c" class="am-btn am-btn-primary am-radius" href="javascript:;">点击上传照片</a>
+                                <input type="hidden" name="@sid" value="@t.Id"/>
+                                @if (p != null)
+                                {
+                                    <img src="@Html.ImageUrl(p, 1)" height="100">
+                                }
+                            </td>
+                        </tr>
+                        }
+                    }
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <!-- content end -->
+</div>

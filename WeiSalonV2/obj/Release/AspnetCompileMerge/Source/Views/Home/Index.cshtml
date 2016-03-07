@@ -1,0 +1,310 @@
+﻿@{
+    Layout = null;
+    var salo = (SalonSimple)Model;
+}
+@using BoboModel
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>微沙龙</title>
+    <link rel="icon" href="/images/register/logo_o.png">
+    <link rel="stylesheet" type="text/css" href="/css/Register/main.css">
+</head>
+<body>
+    <div class="header">
+        <div class="inside clearfix">
+            <div class="logo">
+                <a href="/Home/index">
+                    <img src="/images/register/logo.gif" alt=""></a>
+            </div>
+            @{
+                if (salo.Nickname == null || salo.Nickname == "")
+                {
+                <div class="not-login">
+                    <a href="/Register/Pact" style="cursor: pointer;">帮助中心</a> <a class="login-link" href="javascript:;" style="cursor: pointer;">登陆</a><a class="reg-link" href="/Register/Register" style="cursor: pointer;">注册</a>
+
+                </div>  }
+                else
+                {     
+                <div class="not-login">
+                    <a href="/Register/pact" style="cursor: pointer;">帮助中心</a>@*<a href="#">消息</a>*@<a href="#" style="color: #ff8855; font-weight: 500;">欢迎 @salo.Nickname
+                    </a>
+
+                    @if (salo.Status != 4)
+                    {
+                        <a href="/Register/Check" style="cursor: pointer;">查看进度</a>
+                    }
+                    else
+                    { 
+                        <a href="/manage/Index" style="cursor: pointer;">沙龙管理</a>
+                    } <a href="#" onclick="LoginOut();" style="cursor: pointer;">注销</a>
+                </div>
+                }
+            }
+            <form id="form1" runat="server" class="login-form">
+                @{
+                    if (salo.Nickname == null || salo.Nickname == "")
+                    {
+                    <ul>
+                        <li class="form-title">登陆</li>
+                        <li class="input-list">
+                            <input class="username" id="logname" maxlength="30" type="text" value="用户名" />
+                            <input class="pwd-text" type="text" value="密码" />
+                            <input class="pwd-point" id="pws" maxlength="20" type="password" value="" />
+                        </li>
+                        <li class="remember-user">
+                            <label>
+                                <input type="checkbox" checked="checked" id="chkrem" />记住账号</label></li>
+                        <li>
+                            <input type="button" id="Button1" class="login-btn" style="cursor: pointer;" value="登录" onclick="SetLastUser(); checkLogin();" />
+                        </li>
+                    </ul> }
+                    else
+                    { 
+                    <input type="button" id="outlog" class="reg-link" value="注销"
+                        onclick="LoginOut();" style="cursor: pointer;" />}
+                }
+            </form>
+        </div>
+    </div>
+    <div class="swiper-container slide-focus">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide slide-one">
+                <a href="/Register/Register">
+                    <img src="/images/register/banner1.png" /></a>
+            </li>
+            <li class="swiper-slide slide-two">
+                <a href="/Register/Register">
+                    <img src="/images/register/banner2.png" /></a>
+            </li>
+            <li class="swiper-slide slide-three">
+                <a href="/Register/Register">
+                    <img src="/images/register/banner3.png" /></a>
+            </li>
+            <li class="swiper-slide slide-four">
+                <a href="/Register/Register">
+                    <img src="/images/register/banner4.png" /></a>
+            </li>
+        </ul>
+        <div class="pagination"></div>
+    </div>
+    <div class="container">
+        <div class="inside">
+            <div class="block-ys">
+                <div class="block-cnt clearfix">
+                    <dl>
+                        <dt>
+                            <img src="/images/register/icon-cost.png"></dt>
+                        <dd><em>成本低</em></dd>
+                        <dd>每年最低仅需300元投入</dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="/images/register/icon-spread.png"></dt>
+                        <dd><em>传播强</em></dd>
+                        <dd>多种方式通过朋友圈分享互动</dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="/images/register/icon-conv.png"></dt>
+                        <dd><em>转化高</em></dd>
+                        <dd>高效拓客，并留存老客户</dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="/images/register/icon-data.png"></dt>
+                        <dd><em>数据全</em></dd>
+                        <dd>各种数据分析，<br>
+                            方便店主及时掌握情况</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="block-kh">
+                <div class="block-cnt clearfix">
+                    <span class="kh-step" data-index="1">提交资质信息</span>
+                    <span class="kh-step" data-index="2">信息审核</span>
+                    <span class="kh-step" data-index="3">开通微沙龙</span>
+                    <a class="ljkh" href="/Register/Register">立即开通</a>
+                </div>
+            </div>
+            <div class="block-al">
+                <div class="block-title">
+                    成功案例
+                </div>
+
+                <div class="block-cnt">
+                    <div class="case-list clearfix">
+                        <a class="current" href="javascript:;">
+                            <i class="case-img">
+                                <img src="/images/register/case-toni-logo.jpg"></i>
+                            <span class="case-name">TONI-东尼造型</span>
+                        </a>
+                        <a href="javascript:;">
+                            <i class="case-img">
+                                <img src="/images/register/case-jk-logo.jpg"></i>
+                            <span class="case-name">蚌埠JK秀造型</span>
+                        </a>
+                        <a href="javascript:;">
+                            <i class="case-img">
+                                <img src="/images/register/case-klp-logo.jpg"></i>
+                            <span class="case-name">Cola-Pie 沙龙派</span>
+                        </a>
+                        <a href="javascript:;">
+                            <i class="case-img">
+                                <img src="http://bobosquad.qiniudn.com/20151110122753784.jpg?imageView2/0/w/80/h/80"></i>
+                            <span class="case-name">诱惑力</span>
+                        </a>
+                        <a href="javascript:;">
+                            <i class="case-img">
+                                <img src="http://bobosquad.qiniudn.com/20151111183538645.jpg?imageView2/0/w/80/h/80"></i>
+                            <span class="case-name">爱慕社</span>
+                        </a>
+                        <div class="case-arrow"></div>
+                    </div>
+
+                    <div class="case-item show clearfix">
+                        <div class="case-pic">
+                            <img src="/images/register/case-toni-home.jpg">
+                            <img src="/images/register/case-toni-list.jpg">
+                            <img src="/images/register/case-toni-wall.jpg">
+                        </div>
+                        <div class="case-text">
+                            <h3>宝鸡【TONI-东尼造型】</h3>
+                            <div class="case-detai">【TONI-东尼造型】是一个创造可能性的团队，以探索.创造.蜕变的思想理念为引导，以托尼盖技术为基础的私人专属定制美发沙龙，致力于发型风格和个人整体风格的完美融合，帮客人展现不同的美感，是追求潮流时尚一族的最佳选择。坐落于曙光路藏宝楼（原百货大楼）斜对面。</div>
+                            <div class="codeimg">
+                                <img src="/images/register/case-toni-code.gif">
+                                <div class="tip">扫描二维码预览页面</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-item clearfix">
+                        <div class="case-pic">
+                            <img src="/images/register/case-jk-home.jpg">
+                            <img src="/images/register/case-jk-list.jpg">
+                            <img src="/images/register/case-jk-wall.jpg">
+                        </div>
+                        <div class="case-text">
+                            <h3>蚌埠JK秀造型</h3>
+                            <div class="case-detai">JK秀造型是一个探索精神充沛的团队，致力挖掘每位客户未被挖掘的美丽。我们团队不定期国内外交流学习，希望把走在前沿的时尚感觉带给我们的每一位客户。我们擅长把欧美与日韩相结合的造型风格运用到我们的每一个作品中去...</div>
+                            <div class="codeimg">
+                                <img src="/images/register/case-jk-code.gif">
+                                <div class="tip">扫描二维码预览页面</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-item clearfix">
+                        <div class="case-pic">
+                            <img src="/images/register/case-klp-home.jpg">
+                            <img src="/images/register/case-klp-list.jpg">
+                            <img src="/images/register/case-klp-wall.jpg">
+                        </div>
+                        <div class="case-text">
+                            <h3>Cola-Pie 沙龙派</h3>
+                            <div class="case-detai">发技是发型师的语言，创意是发型师的灵魂，这是Cola-Pie造型沙龙自创立之初便秉承的信念，不是浪漫的法式浓情，不是唯美的日式风格，不是简约的美式主张，而是独一无二的可乐主义，不局限于单一风格的桎梏，却能演绎每一种风格的感动，就像一座微缩的城市，每一个细节都绽放着精彩的芬芳。生活是一张巨大的网，人们总在点与点之间循环往复，但是，生活总会遇见不一样的精彩，就像遇见Cola-Pie。沙龙位于普陀区曹杨路505号尚城国际大厦604 Cola-Pie</div>
+                            <div class="codeimg">
+                                <div id="qrcodeTable_slp" class="form_wrp">
+                                </div>
+                                <span>扫描二维码预览页面</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-item clearfix">
+                        <div class="case-pic">
+                            <img src="/images/register/case-yhl-home.jpg">
+                            <img src="/images/register/case-yhl-list.jpg">
+                            <img src="/images/register/case-yhl-wall.jpg">
+                        </div>
+                        <div class="case-text">
+                            <h3>诱惑力</h3>
+                            <div class="case-detai">诱惑力将发型设计发挥至极致，多年来，沙龙以其对东方人独特气质的深入见解，凭借独到的审美视觉、精湛的专业技艺为热爱生活、追求时尚的人士成功地创造了尽享潮流，诠释真我的高端平台， 感受专业美发技术和造型设计的美妙。 洁净舒适的环境，专业的产品和技术，体贴入微的服务，公道的服务价格都是客人来诱惑力美发沙龙的最佳选择。</div>
+                            <div class="codeimg">
+                                <div id="qrcodeTable_yhl" class="form_wrp">
+                                </div>
+                                <span>扫描二维码预览页面</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-item clearfix">
+                        <div class="case-pic">
+                            <img src="/images/register/case-ams-home.jpg">
+                            <img src="/images/register/case-ams-list.jpg">
+                            <img src="/images/register/case-ams-wall.jpg">
+                        </div>
+                        <div class="case-text">
+                            <h3>爱慕社</h3>
+                            <div class="case-detai">身为宿迁顶尖美发团队之一，爱慕社造型拥有自己的独特的美学理念，爱慕社造型把西方的流行元素与东方人的审美相结合，团队很多作品表面上很前卫，但蕴涵东方风格，团队设计风格极广，各种发型都能驾驭的非常完美，在爱慕社团队看来发型分为两种：一种叫经典。一种叫流行，而爱慕社造型设计的发型都属于前一种！</div>
+                            <div class="codeimg">
+                                <div id="qrcodeTable_ams" class="form_wrp">
+                                </div>
+                                <span>扫描二维码预览页面</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="inside">
+            <div class="foot-menu">
+
+                <a href="/Register/pact" style="cursor: pointer;">服务协议</a>@*|<a href="#">侵权投诉</a>*@
+                |<a href="http://www.hairbobo.com" style="cursor: pointer;">波波网</a>@*|<a href="#">问题反馈</a>*@
+            </div>
+            <div class="copyright">
+                上海莫笛思信息科技有限公司版权所有 沪ICP备11041741号
+            </div>
+        </div>
+        <div style="width: 300px; margin: 0 auto; padding: 20px 0;">
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010902001008" style="display: inline-block; text-decoration: none; height: 20px; line-height: 20px;">
+                <img
+                    src="http://www.beian.gov.cn/file/ghs.png" style="float: left;" /><p style="float: left; height: 20px; line-height: 20px; margin: 0px 0px 0px 5px; color: #939393;">沪公网安备 31010902001008号</p>
+            </a>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/js/Register/jquery-1.8.1.min.js"></script>
+
+    <script type="text/javascript" src="/js/Register/jquery.scrollbar.js"></script>
+
+    <script type="text/javascript" src="/js/Register/main.js"></script>
+    <script type="text/javascript" src="/js/Register/CHKCookie.js"></script>
+
+    <script type="text/javascript" src="/JS/AES.js"></script>
+    <script src="~/JS/Register/idangerous.swiper.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.qrcode.js"></script>
+    <script type="text/javascript" src="/js/qrcode.js"></script>
+    <script type="text/javascript" src="/JS/layer/layer.js"></script>
+    <script type="text/javascript">
+
+        $("#pws").keydown(function (event) {
+            if (event.keyCode == 13) {
+                SetLastUser();
+                checkLogin();
+            }
+        });
+        $(function () {
+            var strs =
+                {
+                    "qrcodeTable_ams": "297b3149-4e2a-4372-bc42-03c1564e71eb",
+                    "qrcodeTable_yhl": "30087426-6075-44f3-9506-0fe03e651c84",
+                    "qrcodeTable_slp": "368ebe45-a2a5-429d-96a5-1d6f578d7019"
+                };
+            $.each(strs, function (key, value) {
+                loadtwocode(key, value);
+            })
+        })
+
+        function loadtwocode(div, salon_id) {
+            $("#" + div).qrcode({
+                render: "canvas",
+                text: "@ViewBag._baseSalonurl" + salon_id,
+                width: "108",
+                height: "108"
+            });
+        }
+
+    </script>
+</body>
+</html>

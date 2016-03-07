@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "DimissionHairstylist";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using Boboframework
+@using BoboModel
+@model Boboframework.PageOfItems<HariStyleList>
+<div class="am-cf admin-main">
+    <!-- content start -->
+    <div class="admin-content am-g">
+        <div class="am-padding charts-content bill-content">
+            <table class="am-table am-table-centered am-table-bordered">
+                <tr>
+                    <th width="20%"></th>
+                    <th width="40%">入职日期</th>
+                    <th width="40%">离职日期</th>
+
+                </tr>
+                @{
+                    if (Model != null)
+                    {
+
+                        for (int i = Model.Count - 1; i >= 0; i--)
+                        {
+                            if (i < 0)
+                            {
+                                break;
+                            }
+                            var item = Model[i]; 
+                    <tr>
+                        <td class="am-text-middle" width="20%">
+                            <a class="user-pic am-circle" href="javascript:void(0)" style="cursor: default;">@Html.Image(item.Logo, 0, "", new { width = 60 })</a><br />
+                            @item.Name
+                        </td>
+                        <td class="am-text-middle" width="40%">@item.enterdate</td>
+                        <td class="am-text-middle" width="40%">@item.offdate</td>
+                    </tr>                                
+                        }
+
+                    }
+                }
+            </table>
+
+        </div>
+    </div>
+    <!-- content end -->
+</div>
+<ul class="am-pagination am-pagination-centered">
+    @using BoboCommon
+    @MvcHtmlString.Create(MyPageBar.ShowMyPageBar((int)ViewBag.pageIndex, (int)ViewBag.pageCount))
+</ul>
+
+

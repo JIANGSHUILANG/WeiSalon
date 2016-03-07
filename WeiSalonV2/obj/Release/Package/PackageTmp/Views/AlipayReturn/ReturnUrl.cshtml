@@ -1,0 +1,44 @@
+﻿@{
+    Layout = null;
+}
+@{
+    int cou = (int)Model;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ReturnUrl</title>
+    <script type="text/javascript" src="/js/Register/jquery-1.8.1.min.js"></script>
+    <script>
+        var retval = "@cou";
+
+        $(function () {
+            if (retval == "1") {
+                alert("支付成功");
+                window.location.href = "/Home/index";
+            } else {
+                alert("支付失败");
+                window.location.href = "/Home/index";
+            }
+
+        })
+    </script>
+</head>
+<body>
+    <div>
+        @*@{
+            if (cou == 1)
+            {
+            <label>成功  </label>
+            }
+            else
+            {   
+            <label>失败  </label>
+            }
+        }*@
+        @cou
+    </div>
+</body>
+</html>

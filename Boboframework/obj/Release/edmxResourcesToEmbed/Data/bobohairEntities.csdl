@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bobohairModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="T_Advice">
+    <Key>
+      <PropertyRef Name="ad_id" />
+    </Key>
+    <Property Name="ad_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad_content" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ad_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ad_cell" Type="String" MaxLength="11" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ad_kind" Type="Int32" Nullable="false" />
+    <Property Name="ad_status" Type="Int32" Nullable="false" />
+    <Property Name="ad_s_uid" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Backflow">
+    <Key>
+      <PropertyRef Name="bk_id" />
+    </Key>
+    <Property Name="bk_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bk_s_uid" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="bk_uid" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="bk_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="bk_type" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Error">
+    <Key>
+      <PropertyRef Name="eo_id" />
+    </Key>
+    <Property Name="eo_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="eo_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="eo_name" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="eo_content" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Order">
+    <Key>
+      <PropertyRef Name="o_id" />
+    </Key>
+    <Property Name="o_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="o_orid" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="o_s_uid" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="o_name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="o_money" Type="Double" Nullable="false" />
+    <Property Name="o_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="o_paydate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="o_status" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Salon">
+    <Key>
+      <PropertyRef Name="s_uid" />
+    </Key>
+    <Property Name="s_uid" Type="String" MaxLength="36" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="s_email" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="s_cell" Type="String" MaxLength="13" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="s_pwd" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="s_nickname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="s_logo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="s_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="s_kind" Type="Int32" Nullable="false" />
+    <Property Name="s_status" Type="Int32" Nullable="false" />
+    <Property Name="s_address" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="s_linkname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="s_summary" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="s_lon" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="s_lat" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="s_price" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="s_wxname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Type="DateTime" Name="s_opendate" Precision="3" />
+    <Property Name="s_businessdate" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="s_recommend" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="T_SalonImageInfo">
+    <Key>
+      <PropertyRef Name="si_id" />
+    </Key>
+    <Property Name="si_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="si_s_uid" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="si_photo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="si_kind" Type="Int32" Nullable="false" />
+    <Property Name="si_status" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_SalonPackage">
+    <Key>
+      <PropertyRef Name="spk_id" />
+    </Key>
+    <Property Name="spk_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="spk_title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="spk_content" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="spk_price" Type="Double" Nullable="false" />
+    <Property Name="spk_dorder" Type="Int32" Nullable="false" />
+    <Property Name="spk_s_uid" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="spk_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="spk_status" Type="Int32" Nullable="false" />
+    <Property Name="spk_image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Scanrec">
+    <Key>
+      <PropertyRef Name="scr_id" />
+    </Key>
+    <Property Name="scr_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="scr_s_uid" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="scr_code" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="scr_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="scr_ip" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Sms">
+    <Key>
+      <PropertyRef Name="sm_id" />
+    </Key>
+    <Property Name="sm_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sm_cell" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="sm_content" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sm_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="sm_status" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Winning">
+    <Key>
+      <PropertyRef Name="wig_id" />
+    </Key>
+    <Property Name="wig_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="wig_s_uid" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="wig_title" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="wig_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="wig_image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="wig_pro" Type="Int32" Nullable="false" />
+    <Property Name="wig_status" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Winningrec">
+    <Key>
+      <PropertyRef Name="win_id" />
+    </Key>
+    <Property Name="win_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="win_content" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="win_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="win_ip" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="win_cell" Type="String" MaxLength="11" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="win_temuid" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="win_s_uid" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Wx_Comment">
+    <Key>
+      <PropertyRef Name="wc_id" />
+    </Key>
+    <Property Name="wc_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="wc_openid" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="wc_h_uid" Type="String" MaxLength="36" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="wc_content" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="wc_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="wc_wo_id" Type="Int32" Nullable="false" />
+    <Property Name="wc_score" Type="Int32" Nullable="false" />
+    <Property Name="wc_status" Type="Int32" Nullable="false" />
+    <Property Name="wc_image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="bobohairEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="T_Advice" EntityType="Self.T_Advice" />
+    <EntitySet Name="T_Backflow" EntityType="Self.T_Backflow" />
+    <EntitySet Name="T_Error" EntityType="Self.T_Error" />
+    <EntitySet Name="T_Order" EntityType="Self.T_Order" />
+    <EntitySet Name="T_Salon" EntityType="Self.T_Salon" />
+    <EntitySet Name="T_SalonImageInfo" EntityType="Self.T_SalonImageInfo" />
+    <EntitySet Name="T_SalonPackage" EntityType="Self.T_SalonPackage" />
+    <EntitySet Name="T_Scanrec" EntityType="Self.T_Scanrec" />
+    <EntitySet Name="T_Sms" EntityType="Self.T_Sms" />
+    <EntitySet Name="T_Winning" EntityType="Self.T_Winning" />
+    <EntitySet Name="T_Winningrec" EntityType="Self.T_Winningrec" />
+    <EntitySet Name="Wx_Comment" EntityType="Self.Wx_Comment" />
+    <EntitySet Name="To_Employee" EntityType="bobohairModel.To_Employee" />
+    <EntitySet Name="T_SysInformation" EntityType="bobohairModel.T_SysInformation" />
+    <EntitySet Name="Wx_Order" EntityType="bobohairModel.Wx_Order" />
+    <EntitySet Name="Wx_BindHair" EntityType="bobohairModel.Wx_BindHair" />
+    <EntitySet Name="T_CustomerManage" EntityType="bobohairModel.T_CustomerManage" />
+    <EntitySet Name="Wx_Member" EntityType="bobohairModel.Wx_Member" />
+    <EntitySet Name="T_SalinHairStylist" EntityType="bobohairModel.T_SalinHairStylist" />
+    <EntitySet Name="T_HairOff" EntityType="bobohairModel.T_HairOff" />
+    <EntitySet Name="T_Notice" EntityType="bobohairModel.T_Notice" />
+    <EntitySet Name="T_SaleManager" EntityType="bobohairModel.T_SaleManager" />
+  </EntityContainer>
+  <EntityType Name="To_Employee">
+    <Key>
+      <PropertyRef Name="oe_uid" />
+    </Key>
+    <Property Type="String" Name="oe_uid" Nullable="false" MaxLength="36" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="oe_name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="oe_sex" Nullable="false" />
+    <Property Type="String" Name="oe_logo" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="oe_lon" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="oe_lat" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="oe_introduce" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="oe_sort" Nullable="false" />
+    <Property Type="Int32" Name="oe_workstatus" Nullable="false" />
+    <Property Type="String" Name="oe_cell" Nullable="false" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="oe_cuid" Nullable="false" MaxLength="36" FixedLength="true" Unicode="true" />
+    <Property Type="Int32" Name="oe_status" Nullable="false" />
+    <Property Type="Int32" Name="oe_sa" Nullable="false" />
+    <Property Type="Double" Name="oe_quota" Nullable="false" />
+    <Property Type="Int32" Name="oe_grade" Nullable="false" />
+    <Property Type="String" Name="oe_b_uid" Nullable="false" MaxLength="36" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="oe_s_uid" Nullable="false" MaxLength="36" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="oe_idcard" Nullable="false" MaxLength="18" FixedLength="true" Unicode="true" />
+    <Property Type="Double" Name="oe_income" Nullable="false" />
+    <Property Type="Double" Name="oe_price" Nullable="false" />
+    <Property Type="String" Name="oe_worktime" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="oe_restday" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="T_SysInformation">
+    <Key>
+      <PropertyRef Name="sy_id" />
+    </Key>
+    <Property Type="Int32" Name="sy_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="sy_title" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="sy_content" Nullable="false" MaxLength="3000" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="sy_date" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="sy_status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Wx_Order">
+    <Key>
+      <PropertyRef Name="wo_id" />
+    </Key>
+    <Property Type="Int32" Name="wo_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="wo_openid" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wo_h_uid" Nullable="false" MaxLength="36" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="wo_bookingdate" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="wo_date" Nullable="false" Precision="3" />
+    <Property Type="String" Name="wo_cell" Nullable="false" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="wo_remarks" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wo_image" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="wo_status" Nullable="false" />
+    <Property Type="Int32" Name="wo_type" Nullable="false" />
+    <Property Type="Int32" Name="wo_source" Nullable="false" />
+    <Property Type="String" Name="wo_adress" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wo_orderid" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="wo_payid" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="wo_paykind" Nullable="false" />
+    <Property Type="Int32" Name="wo_orderstatus" Nullable="false" />
+    <Property Type="Double" Name="wo_price" Nullable="false" />
+    <Property Type="String" Name="wo_out_refund_no" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="wo_s_uid" MaxLength="36" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Wx_BindHair">
+    <Key>
+      <PropertyRef Name="wb_id" />
+    </Key>
+    <Property Type="Int32" Name="wb_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="wb_openid" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wb_h_uid" Nullable="false" MaxLength="36" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="wb_date" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="wb_status" Nullable="false" />
+    <Property Type="String" Name="wb_name" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wb_cell" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_CustomerManage">
+    <Key>
+      <PropertyRef Name="cm_id" />
+    </Key>
+    <Property Type="Int32" Name="cm_id" Nullable="false" />
+    <Property Type="String" Name="cm_s_uid" Nullable="false" MaxLength="36" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="cm_s_nickname" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cm_h_uid" Nullable="false" MaxLength="36" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="cm_h_name" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cm_openid" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="cm_nickname" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="cm_remarks1" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="cm_remarks2" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="cm_remarks3" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="cm_remarks4" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="cm_remarks5" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="cm_status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Wx_Member">
+    <Key>
+      <PropertyRef Name="wm_openid" />
+    </Key>
+    <Property Type="String" Name="wm_openid" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wm_cell" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="wm_subscribe" Nullable="false" />
+    <Property Type="String" Name="wm_nickname" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="wm_sex" Nullable="false" />
+    <Property Type="String" Name="wm_city" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wm_country" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wm_province" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wm_language" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wm_headimgurl" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wm_subscribe_time" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wm_unionid" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="wm_type" Nullable="false" />
+    <Property Name="wm_pwd" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_SalinHairStylist">
+    <Key>
+      <PropertyRef Name="shs_h_uid" />
+    </Key>
+    <Property Type="String" Name="shs_h_uid" Nullable="false" MaxLength="36" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="shs_name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="shs_hairprice" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="shs_exp" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="shs_logo" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="shs_s_uid" Nullable="false" MaxLength="36" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="shs_cell" Nullable="false" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="shs_sort" Nullable="false" />
+    <Property Type="Int32" Name="shs_status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_HairOff">
+    <Key>
+      <PropertyRef Name="ho_id" />
+    </Key>
+    <Property Type="Int32" Name="ho_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ho_h_uid" Nullable="false" MaxLength="36" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="ho_s_uid" Nullable="false" MaxLength="36" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="ho_date" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="ho_status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Notice">
+    <Key>
+      <PropertyRef Name="tn_id" />
+    </Key>
+    <Property Type="Int32" Name="tn_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="tn_s_uid" Nullable="false" MaxLength="36" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="tn_content" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="tn_date" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="tn_status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_SaleManager">
+    <Key>
+      <PropertyRef Name="sm_id" />
+    </Key>
+    <Property Type="Int32" Name="sm_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="sm_s_uid" Nullable="false" MaxLength="36" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="sm_name" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="sm_date" Nullable="false" Precision="3" />
+    <Property Type="String" Name="sm_oldname" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="sm_editdate" Precision="3" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,2467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="mysqkbobohairEntites.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="mysqkbobohairEntitesStoreContainer">
+          <EntitySet Name="ex_ad" EntityType="mysqkbobohairEntites.Store.ex_ad" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="ex_bookingorder" EntityType="mysqkbobohairEntites.Store.ex_bookingorder" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="ex_comment" EntityType="mysqkbobohairEntites.Store.ex_comment" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="ex_hair" EntityType="mysqkbobohairEntites.Store.ex_hair" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="ex_seerec" EntityType="mysqkbobohairEntites.Store.ex_seerec" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="ex_topic" EntityType="mysqkbobohairEntites.Store.ex_topic" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="t_advice" EntityType="mysqkbobohairEntites.Store.t_advice" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="t_backflow" EntityType="mysqkbobohairEntites.Store.t_backflow" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="t_customermanage" EntityType="mysqkbobohairEntites.Store.t_customermanage" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="t_error" EntityType="mysqkbobohairEntites.Store.t_error" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="t_hairoff" EntityType="mysqkbobohairEntites.Store.t_hairoff" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="t_notice" EntityType="mysqkbobohairEntites.Store.t_notice" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="t_order" EntityType="mysqkbobohairEntites.Store.t_order" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="t_salemanager" EntityType="mysqkbobohairEntites.Store.t_salemanager" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="t_salinhairstylist" EntityType="mysqkbobohairEntites.Store.t_salinhairstylist" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="t_salon" EntityType="mysqkbobohairEntites.Store.t_salon" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="t_salonimageinfo" EntityType="mysqkbobohairEntites.Store.t_salonimageinfo" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="t_salonpackage" EntityType="mysqkbobohairEntites.Store.t_salonpackage" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="t_scanrec" EntityType="mysqkbobohairEntites.Store.t_scanrec" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="t_sms" EntityType="mysqkbobohairEntites.Store.t_sms" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="t_sysinformation" EntityType="mysqkbobohairEntites.Store.t_sysinformation" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="t_winning" EntityType="mysqkbobohairEntites.Store.t_winning" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="t_winningrec" EntityType="mysqkbobohairEntites.Store.t_winningrec" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="to_activity" EntityType="mysqkbobohairEntites.Store.to_activity" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="to_ad" EntityType="mysqkbobohairEntites.Store.to_ad" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="to_address" EntityType="mysqkbobohairEntites.Store.to_address" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="to_apns" EntityType="mysqkbobohairEntites.Store.to_apns" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="to_apply" EntityType="mysqkbobohairEntites.Store.to_apply" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="to_balanceofpayments" EntityType="mysqkbobohairEntites.Store.to_balanceofpayments" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="to_bgerror" EntityType="mysqkbobohairEntites.Store.to_bgerror" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="to_binding" EntityType="mysqkbobohairEntites.Store.to_binding" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="to_employee" EntityType="mysqkbobohairEntites.Store.to_employee" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="wx_answers" EntityType="mysqkbobohairEntites.Store.wx_answers" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="wx_article" EntityType="mysqkbobohairEntites.Store.wx_article" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="wx_bindhair" EntityType="mysqkbobohairEntites.Store.wx_bindhair" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="wx_comment" EntityType="mysqkbobohairEntites.Store.wx_comment" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="wx_customerservice" EntityType="mysqkbobohairEntites.Store.wx_customerservice" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="wx_impression" EntityType="mysqkbobohairEntites.Store.wx_impression" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="wx_infromation" EntityType="mysqkbobohairEntites.Store.wx_infromation" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="wx_location" EntityType="mysqkbobohairEntites.Store.wx_location" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="wx_member" EntityType="mysqkbobohairEntites.Store.wx_member" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="wx_order" EntityType="mysqkbobohairEntites.Store.wx_order" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="wx_phonecall" EntityType="mysqkbobohairEntites.Store.wx_phonecall" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="wx_post" EntityType="mysqkbobohairEntites.Store.wx_post" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="wx_qrcode" EntityType="mysqkbobohairEntites.Store.wx_qrcode" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="wx_questions" EntityType="mysqkbobohairEntites.Store.wx_questions" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="wx_request" EntityType="mysqkbobohairEntites.Store.wx_request" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="wx_searchcell" EntityType="mysqkbobohairEntites.Store.wx_searchcell" store:Type="Tables" Schema="bobohair" />
+          <EntitySet Name="wx_tip" EntityType="mysqkbobohairEntites.Store.wx_tip" store:Type="Tables" Schema="bobohair" />
+        </EntityContainer>
+        <EntityType Name="ex_ad">
+          <Key>
+            <PropertyRef Name="ea_id" />
+          </Key>
+          <Property Name="ea_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ea_title" Type="varchar" MaxLength="30" />
+          <Property Name="ea_content" Type="varchar" MaxLength="255" />
+          <Property Name="ea_image" Type="varchar" MaxLength="50" />
+          <Property Name="ea_url" Type="varchar" MaxLength="100" />
+          <Property Name="ea_type" Type="int" />
+          <Property Name="ea_date" Type="datetime" />
+          <Property Name="ea_status" Type="int" />
+        </EntityType>
+        <EntityType Name="ex_bookingorder">
+          <Key>
+            <PropertyRef Name="ebo_id" />
+          </Key>
+          <Property Name="ebo_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ebo_uid" Type="guid" />
+          <Property Name="ebo_cell" Type="char" MaxLength="11" />
+          <Property Name="ebo_eh_uid" Type="guid" />
+          <Property Name="ebo_date" Type="datetime" />
+          <Property Name="ebo_content" Type="varchar" MaxLength="255" />
+          <Property Name="ebo_about" Type="varchar" MaxLength="255" />
+          <Property Name="ebo_orderid" Type="varchar" MaxLength="30" />
+          <Property Name="ebo_payid" Type="varchar" MaxLength="30" />
+          <Property Name="ebo_paykind" Type="int" />
+          <Property Name="ebo_et_id" Type="int" />
+          <Property Name="ebo_price" Type="double" />
+          <Property Name="ebo_status" Type="int" />
+          <Property Name="ebo_out_refund_no" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="ex_comment">
+          <Key>
+            <PropertyRef Name="ec_id" />
+          </Key>
+          <Property Name="ec_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ec_ebo_id" Type="int" />
+          <Property Name="ec_content" Type="varchar" MaxLength="255" />
+          <Property Name="ec_score" Type="int" />
+          <Property Name="ec_status" Type="int" />
+        </EntityType>
+        <EntityType Name="ex_hair">
+          <Key>
+            <PropertyRef Name="eh_id" />
+          </Key>
+          <Property Name="eh_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="eh_uid" Type="guid" />
+          <Property Name="eh_name" Type="varchar" MaxLength="20" />
+          <Property Name="eh_logo" Type="varchar" MaxLength="80" />
+          <Property Name="eh_phone" Type="varchar" MaxLength="80" />
+          <Property Name="eh_cell" Type="char" MaxLength="11" />
+          <Property Name="eh_salonname" Type="varchar" MaxLength="30" />
+          <Property Name="eh_title" Type="varchar" MaxLength="20" />
+          <Property Name="eh_workingyears" Type="varchar" MaxLength="15" />
+          <Property Name="eh_skill" Type="varchar" MaxLength="100" />
+          <Property Name="eh_introduction" Type="varchar" MaxLength="255" />
+          <Property Name="eh_city" Type="varchar" MaxLength="10" />
+          <Property Name="eh_applydate" Type="datetime" />
+          <Property Name="eh_through" Type="datetime" />
+          <Property Name="eh_see" Type="int" />
+          <Property Name="eh_seeend" Type="int" />
+          <Property Name="eh_status" Type="int" />
+          <Property Name="eh_sort" Type="int" />
+        </EntityType>
+        <EntityType Name="ex_seerec">
+          <Key>
+            <PropertyRef Name="es_id" />
+          </Key>
+          <Property Name="es_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="es_uid" Type="guid" />
+          <Property Name="es_eh_uid" Type="guid" />
+          <Property Name="es_date" Type="datetime" />
+          <Property Name="es_status" Type="int" />
+        </EntityType>
+        <EntityType Name="ex_topic">
+          <Key>
+            <PropertyRef Name="et_id" />
+          </Key>
+          <Property Name="et_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="et_uid" Type="guid" />
+          <Property Name="et_price" Type="double" />
+          <Property Name="et_title" Type="varchar" MaxLength="50" />
+          <Property Name="et_tag" Type="varchar" MaxLength="100" />
+          <Property Name="et_content" Type="varchar" MaxLength="255" />
+          <Property Name="et_time" Type="varchar" MaxLength="10" />
+          <Property Name="et_date" Type="datetime" />
+          <Property Name="et_status" Type="int" />
+        </EntityType>
+        <EntityType Name="t_advice">
+          <Key>
+            <PropertyRef Name="ad_id" />
+          </Key>
+          <Property Name="ad_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ad_content" Type="varchar" MaxLength="255" />
+          <Property Name="ad_date" Type="datetime" />
+          <Property Name="ad_cell" Type="char" MaxLength="11" />
+          <Property Name="ad_kind" Type="int" />
+          <Property Name="ad_status" Type="int" />
+          <Property Name="ad_s_uid" Type="guid" />
+        </EntityType>
+        <EntityType Name="t_backflow">
+          <Key>
+            <PropertyRef Name="bk_id" />
+          </Key>
+          <Property Name="bk_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="bk_s_uid" Type="guid" />
+          <Property Name="bk_uid" Type="guid" />
+          <Property Name="bk_date" Type="datetime" />
+          <Property Name="bk_type" Type="int" />
+        </EntityType>
+        <EntityType Name="t_customermanage">
+          <Key>
+            <PropertyRef Name="cm_id" />
+          </Key>
+          <Property Name="cm_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="cm_s_uid" Type="guid" />
+          <Property Name="cm_s_nickname" Type="varchar" MaxLength="30" />
+          <Property Name="cm_h_uid" Type="guid" />
+          <Property Name="cm_h_name" Type="varchar" MaxLength="30" />
+          <Property Name="cm_openid" Type="varchar" MaxLength="36" />
+          <Property Name="cm_nickname" Type="varchar" MaxLength="200" />
+          <Property Name="cm_remarks1" Type="varchar" MaxLength="50" />
+          <Property Name="cm_remarks2" Type="varchar" MaxLength="50" />
+          <Property Name="cm_remarks3" Type="varchar" MaxLength="50" />
+          <Property Name="cm_remarks4" Type="varchar" MaxLength="50" />
+          <Property Name="cm_remarks5" Type="varchar" MaxLength="50" />
+          <Property Name="cm_status" Type="int" />
+        </EntityType>
+        <EntityType Name="t_error">
+          <Key>
+            <PropertyRef Name="eo_id" />
+          </Key>
+          <Property Name="eo_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="eo_date" Type="datetime" />
+          <Property Name="eo_name" Type="varchar" MaxLength="64" />
+          <Property Name="eo_content" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="t_hairoff">
+          <Key>
+            <PropertyRef Name="ho_id" />
+          </Key>
+          <Property Name="ho_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ho_h_uid" Type="guid" />
+          <Property Name="ho_s_uid" Type="guid" />
+          <Property Name="ho_date" Type="datetime" />
+          <Property Name="ho_status" Type="int" />
+        </EntityType>
+        <EntityType Name="t_notice">
+          <Key>
+            <PropertyRef Name="tn_id" />
+          </Key>
+          <Property Name="tn_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="tn_s_uid" Type="guid" />
+          <Property Name="tn_content" Type="varchar" MaxLength="255" />
+          <Property Name="tn_date" Type="datetime" />
+          <Property Name="tn_status" Type="int" />
+        </EntityType>
+        <EntityType Name="t_order">
+          <Key>
+            <PropertyRef Name="o_id" />
+          </Key>
+          <Property Name="o_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="o_orid" Type="varchar" MaxLength="30" />
+          <Property Name="o_s_uid" Type="guid" />
+          <Property Name="o_name" Type="varchar" MaxLength="30" />
+          <Property Name="o_money" Type="double" />
+          <Property Name="o_date" Type="datetime" />
+          <Property Name="o_paydate" Type="datetime" />
+          <Property Name="o_status" Type="int" />
+        </EntityType>
+        <EntityType Name="t_salemanager">
+          <Key>
+            <PropertyRef Name="sm_id" />
+          </Key>
+          <Property Name="sm_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="sm_s_uid" Type="guid" />
+          <Property Name="sm_name" Type="varchar" MaxLength="20" />
+          <Property Name="sm_date" Type="datetime" />
+          <Property Name="sm_oldname" Type="varchar" MaxLength="20" />
+          <Property Name="sm_editdate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="t_salinhairstylist">
+          <Key>
+            <PropertyRef Name="shs_h_uid" />
+          </Key>
+          <Property Name="shs_h_uid" Type="guid" Nullable="false" />
+          <Property Name="shs_name" Type="varchar" MaxLength="50" />
+          <Property Name="shs_hairprice" Type="varchar" MaxLength="200" />
+          <Property Name="shs_exp" Type="varchar" MaxLength="200" />
+          <Property Name="shs_logo" Type="varchar" MaxLength="100" />
+          <Property Name="shs_s_uid" Type="guid" />
+          <Property Name="shs_cell" Type="char" MaxLength="11" />
+          <Property Name="shs_sort" Type="int" />
+          <Property Name="shs_status" Type="int" />
+        </EntityType>
+        <EntityType Name="t_salon">
+          <Key>
+            <PropertyRef Name="s_uid" />
+          </Key>
+          <Property Name="s_uid" Type="guid" Nullable="false" />
+          <Property Name="s_email" Type="varchar" MaxLength="64" />
+          <Property Name="s_cell" Type="char" MaxLength="13" />
+          <Property Name="s_pwd" Type="varchar" MaxLength="32" />
+          <Property Name="s_nickname" Type="varchar" MaxLength="30" />
+          <Property Name="s_logo" Type="varchar" MaxLength="100" />
+          <Property Name="s_date" Type="datetime" />
+          <Property Name="s_kind" Type="int" />
+          <Property Name="s_status" Type="int" />
+          <Property Name="s_address" Type="varchar" MaxLength="255" />
+          <Property Name="s_linkname" Type="varchar" MaxLength="50" />
+          <Property Name="s_summary" Type="varchar" MaxLength="255" />
+          <Property Name="s_lon" Type="varchar" MaxLength="100" />
+          <Property Name="s_lat" Type="varchar" MaxLength="100" />
+          <Property Name="s_price" Type="varchar" MaxLength="20" />
+          <Property Name="s_wxname" Type="varchar" MaxLength="100" />
+          <Property Name="s_opendate" Type="datetime" />
+          <Property Name="s_businessdate" Type="varchar" MaxLength="20" />
+          <Property Name="s_recommend" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="t_salonimageinfo">
+          <Key>
+            <PropertyRef Name="si_id" />
+          </Key>
+          <Property Name="si_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="si_s_uid" Type="guid" />
+          <Property Name="si_photo" Type="varchar" MaxLength="100" />
+          <Property Name="si_kind" Type="int" />
+          <Property Name="si_status" Type="int" />
+        </EntityType>
+        <EntityType Name="t_salonpackage">
+          <Key>
+            <PropertyRef Name="spk_id" />
+          </Key>
+          <Property Name="spk_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="spk_title" Type="varchar" MaxLength="200" />
+          <Property Name="spk_content" Type="varchar" MaxLength="255" />
+          <Property Name="spk_price" Type="double" />
+          <Property Name="spk_dorder" Type="int" />
+          <Property Name="spk_s_uid" Type="guid" />
+          <Property Name="spk_date" Type="datetime" />
+          <Property Name="spk_status" Type="int" />
+          <Property Name="spk_image" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="t_scanrec">
+          <Key>
+            <PropertyRef Name="scr_id" />
+          </Key>
+          <Property Name="scr_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="scr_s_uid" Type="guid" />
+          <Property Name="scr_code" Type="guid" />
+          <Property Name="scr_date" Type="datetime" />
+          <Property Name="scr_ip" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="t_sms">
+          <Key>
+            <PropertyRef Name="sm_id" />
+          </Key>
+          <Property Name="sm_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="sm_cell" Type="char" MaxLength="11" />
+          <Property Name="sm_content" Type="varchar" MaxLength="100" />
+          <Property Name="sm_date" Type="datetime" />
+          <Property Name="sm_status" Type="int" />
+        </EntityType>
+        <EntityType Name="t_sysinformation">
+          <Key>
+            <PropertyRef Name="sy_id" />
+          </Key>
+          <Property Name="sy_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="sy_title" Type="varchar" MaxLength="30" />
+          <Property Name="sy_content" Type="varchar" MaxLength="255" />
+          <Property Name="sy_date" Type="datetime" />
+          <Property Name="sy_status" Type="int" />
+        </EntityType>
+        <EntityType Name="t_winning">
+          <Key>
+            <PropertyRef Name="wig_id" />
+          </Key>
+          <Property Name="wig_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="wig_s_uid" Type="guid" />
+          <Property Name="wig_title" Type="varchar" MaxLength="200" />
+          <Property Name="wig_date" Type="datetime" />
+          <Property Name="wig_image" Type="varchar" MaxLength="100" />
+          <Property Name="wig_pro" Type="int" />
+          <Property Name="wig_status" Type="int" />
+        </EntityType>
+        <EntityType Name="t_winningrec">
+          <Key>
+            <PropertyRef Name="win_id" />
+          </Key>
+          <Property Name="win_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="win_content" Type="varchar" MaxLength="255" />
+          <Property Name="win_date" Type="datetime" />
+          <Property Name="win_ip" Type="varchar" MaxLength="30" />
+          <Property Name="win_cell" Type="char" MaxLength="11" />
+          <Property Name="win_temuid" Type="guid" />
+          <Property Name="win_s_uid" Type="guid" />
+        </EntityType>
+        <EntityType Name="to_activity">
+          <Key>
+            <PropertyRef Name="act_id" />
+          </Key>
+          <Property Name="act_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="act_cell" Type="varchar" MaxLength="11" />
+          <Property Name="act_type" Type="int" />
+          <Property Name="act_name" Type="varchar" MaxLength="20" />
+          <Property Name="act_status" Type="int" />
+        </EntityType>
+        <EntityType Name="to_ad">
+          <Key>
+            <PropertyRef Name="oa_id" />
+          </Key>
+          <Property Name="oa_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="oa_image" Type="varchar" MaxLength="100" />
+          <Property Name="oa_url" Type="varchar" MaxLength="100" />
+          <Property Name="oa_date" Type="datetime" />
+          <Property Name="oa_status" Type="int" />
+          <Property Name="oa_title" Type="varchar" MaxLength="50" />
+          <Property Name="oa_content" Type="varchar" MaxLength="255" />
+          <Property Name="oa_sort" Type="int" />
+        </EntityType>
+        <EntityType Name="to_address">
+          <Key>
+            <PropertyRef Name="od_id" />
+          </Key>
+          <Property Name="od_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="od_uid" Type="guid" />
+          <Property Name="od_province" Type="varchar" MaxLength="20" />
+          <Property Name="od_city" Type="varchar" MaxLength="20" />
+          <Property Name="od_district" Type="varchar" MaxLength="50" />
+          <Property Name="od_detailed" Type="varchar" MaxLength="100" />
+          <Property Name="od_default" Type="int" />
+          <Property Name="od_lon" Type="varchar" MaxLength="100" />
+          <Property Name="od_lat" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="to_apns">
+          <Key>
+            <PropertyRef Name="ao_id" />
+          </Key>
+          <Property Name="ao_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ao_cell" Type="char" MaxLength="11" />
+          <Property Name="ao_tokenid" Type="varchar" MaxLength="80" />
+          <Property Name="ao_cid" Type="guid" />
+          <Property Name="ao_date" Type="datetime" />
+          <Property Name="ao_device" Type="int" />
+          <Property Name="ao_apptype" Type="int" />
+        </EntityType>
+        <EntityType Name="to_apply">
+          <Key>
+            <PropertyRef Name="ap_id" />
+          </Key>
+          <Property Name="ap_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ap_uid" Type="guid" />
+          <Property Name="ap_cell" Type="char" MaxLength="11" />
+          <Property Name="ap_name" Type="varchar" MaxLength="50" />
+          <Property Name="ap_idcard" Type="char" MaxLength="18" />
+          <Property Name="ap_salonname" Type="varchar" MaxLength="50" />
+          <Property Name="ap_salonaddress" Type="varchar" MaxLength="100" />
+          <Property Name="ap_gps" Type="varchar" MaxLength="200" />
+          <Property Name="ap_status" Type="int" />
+          <Property Name="ap_date" Type="datetime" />
+          <Property Name="ap_adate" Type="datetime" />
+          <Property Name="ap_sex" Type="int" />
+          <Property Name="ap_open" Type="int" />
+        </EntityType>
+        <EntityType Name="to_balanceofpayments">
+          <Key>
+            <PropertyRef Name="bp_id" />
+          </Key>
+          <Property Name="bp_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="bp_oe_uid" Type="guid" />
+          <Property Name="bp_type" Type="int" />
+          <Property Name="bp_source" Type="int" />
+          <Property Name="bp_title" Type="varchar" MaxLength="50" />
+          <Property Name="bp_money" Type="double" />
+          <Property Name="bp_payid" Type="varchar" MaxLength="30" />
+          <Property Name="bp_kind" Type="int" />
+          <Property Name="bp_date" Type="datetime" />
+          <Property Name="bp_status" Type="int" />
+          <Property Name="bp_orderid" Type="int" />
+          <Property Name="bp_table" Type="int" />
+          <Property Name="bp_oreid" Type="int" />
+        </EntityType>
+        <EntityType Name="to_bgerror">
+          <Key>
+            <PropertyRef Name="bg_id" />
+          </Key>
+          <Property Name="bg_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="bg_date" Type="datetime" />
+          <Property Name="bg_name" Type="varchar" MaxLength="64" />
+          <Property Name="bg_content" Type="varchar" MaxLength="255" />
+          <Property Name="bg_status" Type="int" />
+        </EntityType>
+        <EntityType Name="to_binding">
+          <Key>
+            <PropertyRef Name="bd_id" />
+          </Key>
+          <Property Name="bd_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="bd_oe_uid" Type="guid" />
+          <Property Name="bd_account" Type="varchar" MaxLength="100" />
+          <Property Name="bd_kind" Type="int" />
+          <Property Name="bd_date" Type="datetime" />
+          <Property Name="bd_status" Type="int" />
+          <Property Name="bd_name" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="to_employee">
+          <Key>
+            <PropertyRef Name="oe_uid" />
+          </Key>
+          <Property Name="oe_uid" Type="guid" Nullable="false" />
+          <Property Name="oe_name" Type="varchar" MaxLength="50" />
+          <Property Name="oe_sex" Type="int" />
+          <Property Name="oe_logo" Type="varchar" MaxLength="100" />
+          <Property Name="oe_lon" Type="varchar" MaxLength="100" />
+          <Property Name="oe_lat" Type="varchar" MaxLength="100" />
+          <Property Name="oe_introduce" Type="varchar" MaxLength="100" />
+          <Property Name="oe_sort" Type="int" />
+          <Property Name="oe_workstatus" Type="int" />
+          <Property Name="oe_cell" Type="char" MaxLength="11" />
+          <Property Name="oe_cuid" Type="guid" />
+          <Property Name="oe_status" Type="int" />
+          <Property Name="oe_sa" Type="int" />
+          <Property Name="oe_quota" Type="double" />
+          <Property Name="oe_grade" Type="int" />
+          <Property Name="oe_b_uid" Type="guid" />
+          <Property Name="oe_s_uid" Type="guid" />
+          <Property Name="oe_idcard" Type="char" MaxLength="18" />
+          <Property Name="oe_income" Type="double" />
+          <Property Name="oe_price" Type="double" />
+          <Property Name="oe_worktime" Type="varchar" MaxLength="30" />
+          <Property Name="oe_restday" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="wx_answers">
+          <Key>
+            <PropertyRef Name="wa_id" />
+          </Key>
+          <Property Name="wa_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="wa_h_uid" Type="guid" />
+          <Property Name="wa_openid" Type="varchar" MaxLength="36" />
+          <Property Name="wa_date" Type="datetime" />
+          <Property Name="wa_content" Type="varchar" MaxLength="200" />
+          <Property Name="wa_image" Type="varchar" MaxLength="100" />
+          <Property Name="wa_wq_id" Type="int" />
+          <Property Name="wa_replyid" Type="int" />
+          <Property Name="wa_status" Type="int" />
+          <Property Name="wa_attribute" Type="varchar" MaxLength="30" />
+          <Property Name="wa_hot" Type="int" />
+        </EntityType>
+        <EntityType Name="wx_article">
+          <Key>
+            <PropertyRef Name="atr_id" />
+          </Key>
+          <Property Name="atr_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="atr_image" Type="varchar" MaxLength="100" />
+          <Property Name="atr_link" Type="varchar" MaxLength="200" />
+          <Property Name="atr_date" Type="datetime" />
+          <Property Name="atr_status" Type="int" />
+        </EntityType>
+        <EntityType Name="wx_bindhair">
+          <Key>
+            <PropertyRef Name="wb_id" />
+          </Key>
+          <Property Name="wb_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="wb_openid" Type="varchar" MaxLength="36" />
+          <Property Name="wb_h_uid" Type="guid" />
+          <Property Name="wb_date" Type="datetime" />
+          <Property Name="wb_status" Type="int" />
+          <Property Name="wb_name" Type="varchar" MaxLength="20" />
+          <Property Name="wb_cell" Type="varchar" MaxLength="11" />
+        </EntityType>
+        <EntityType Name="wx_comment">
+          <Key>
+            <PropertyRef Name="wc_id" />
+          </Key>
+          <Property Name="wc_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="wc_openid" Type="varchar" MaxLength="36" />
+          <Property Name="wc_h_uid" Type="guid" />
+          <Property Name="wc_content" Type="varchar" MaxLength="255" />
+          <Property Name="wc_date" Type="datetime" />
+          <Property Name="wc_wo_id" Type="int" />
+          <Property Name="wc_score" Type="int" />
+          <Property Name="wc_status" Type="int" />
+          <Property Name="wc_image" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="wx_customerservice">
+          <Key>
+            <PropertyRef Name="wcs_id" />
+          </Key>
+          <Property Name="wcs_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="wcs_openid" Type="varchar" MaxLength="36" />
+          <Property Name="wcs_account" Type="varchar" MaxLength="30" />
+          <Property Name="wcs_date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="wx_impression">
+          <Key>
+            <PropertyRef Name="wi_id" />
+          </Key>
+          <Property Name="wi_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="wi_openid" Type="varchar" MaxLength="36" />
+          <Property Name="wi_h_uid" Type="guid" />
+          <Property Name="wi_content" Type="varchar" MaxLength="20" />
+          <Property Name="wi_type" Type="int" />
+          <Property Name="wi_date" Type="datetime" />
+          <Property Name="wi_status" Type="int" />
+        </EntityType>
+        <EntityType Name="wx_infromation">
+          <Key>
+            <PropertyRef Name="wim_id" />
+          </Key>
+          <Property Name="wim_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="wim_title" Type="varchar" MaxLength="50" />
+          <Property Name="wim_content" Type="longtext" />
+          <Property Name="wim_image" Type="varchar" MaxLength="100" />
+          <Property Name="wim_date" Type="datetime" />
+          <Property Name="wim_url" Type="varchar" MaxLength="255" />
+          <Property Name="wim_status" Type="int" />
+          <Property Name="wim_push_status" Type="int" />
+        </EntityType>
+        <EntityType Name="wx_location">
+          <Key>
+            <PropertyRef Name="wl_id" />
+          </Key>
+          <Property Name="wl_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="wl_lng" Type="varchar" MaxLength="15" />
+          <Property Name="wl_lat" Type="varchar" MaxLength="15" />
+          <Property Name="wl_openid" Type="varchar" MaxLength="36" />
+          <Property Name="wl_date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="wx_member">
+          <Key>
+            <PropertyRef Name="wm_openid" />
+          </Key>
+          <Property Name="wm_openid" Type="varchar" Nullable="false" MaxLength="36" />
+          <Property Name="wm_cell" Type="varchar" MaxLength="11" />
+          <Property Name="wm_subscribe" Type="int" />
+          <Property Name="wm_nickname" Type="varchar" MaxLength="200" />
+          <Property Name="wm_sex" Type="int" />
+          <Property Name="wm_city" Type="varchar" MaxLength="20" />
+          <Property Name="wm_country" Type="varchar" MaxLength="20" />
+          <Property Name="wm_province" Type="varchar" MaxLength="20" />
+          <Property Name="wm_language" Type="varchar" MaxLength="20" />
+          <Property Name="wm_headimgurl" Type="varchar" MaxLength="255" />
+          <Property Name="wm_subscribe_time" Type="varchar" MaxLength="20" />
+          <Property Name="wm_unionid" Type="varchar" MaxLength="36" />
+          <Property Name="wm_type" Type="int" />
+          <Property Name="wm_pwd" Type="varchar" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="wx_order">
+          <Key>
+            <PropertyRef Name="wo_id" />
+          </Key>
+          <Property Name="wo_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="wo_openid" Type="varchar" MaxLength="36" />
+          <Property Name="wo_h_uid" Type="guid" />
+          <Property Name="wo_bookingdate" Type="datetime" />
+          <Property Name="wo_date" Type="datetime" />
+          <Property Name="wo_cell" Type="char" MaxLength="11" />
+          <Property Name="wo_remarks" Type="varchar" MaxLength="50" />
+          <Property Name="wo_image" Type="varchar" MaxLength="255" />
+          <Property Name="wo_status" Type="int" />
+          <Property Name="wo_type" Type="int" />
+          <Property Name="wo_source" Type="int" />
+          <Property Name="wo_adress" Type="varchar" MaxLength="50" />
+          <Property Name="wo_orderid" Type="varchar" MaxLength="30" />
+          <Property Name="wo_payid" Type="varchar" MaxLength="30" />
+          <Property Name="wo_paykind" Type="int" />
+          <Property Name="wo_orderstatus" Type="int" />
+          <Property Name="wo_price" Type="double" />
+          <Property Name="wo_out_refund_no" Type="varchar" MaxLength="30" />
+          <Property Name="wo_s_uid" Type="guid" />
+        </EntityType>
+        <EntityType Name="wx_phonecall">
+          <Key>
+            <PropertyRef Name="wpc_id" />
+          </Key>
+          <Property Name="wpc_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="wpc_openid" Type="guid" />
+          <Property Name="wpc_h_uid" Type="guid" />
+          <Property Name="wpc_cell" Type="char" MaxLength="11" />
+          <Property Name="wpc_date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="wx_post">
+          <Key>
+            <PropertyRef Name="wp_id" />
+          </Key>
+          <Property Name="wp_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="wp_fromid" Type="varchar" MaxLength="36" />
+          <Property Name="wp_date" Type="datetime" />
+          <Property Name="wp_content" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="wx_qrcode">
+          <Key>
+            <PropertyRef Name="qr_id" />
+          </Key>
+          <Property Name="qr_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="qr_ticket" Type="varchar" MaxLength="100" />
+          <Property Name="qr_h_uid" Type="guid" />
+          <Property Name="qr_date" Type="datetime" />
+          <Property Name="qr_num" Type="int" />
+          <Property Name="qr_type" Type="int" />
+          <Property Name="qr_code" Type="int" />
+        </EntityType>
+        <EntityType Name="wx_questions">
+          <Key>
+            <PropertyRef Name="wq_id" />
+          </Key>
+          <Property Name="wq_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="wq_title" Type="varchar" MaxLength="30" />
+          <Property Name="wq_openid" Type="varchar" MaxLength="36" />
+          <Property Name="wq_date" Type="datetime" />
+          <Property Name="wq_content" Type="varchar" MaxLength="200" />
+          <Property Name="wq_image1" Type="varchar" MaxLength="100" />
+          <Property Name="wq_image2" Type="varchar" MaxLength="100" />
+          <Property Name="wq_type" Type="int" />
+          <Property Name="wq_status" Type="int" />
+        </EntityType>
+        <EntityType Name="wx_request">
+          <Key>
+            <PropertyRef Name="wr_id" />
+          </Key>
+          <Property Name="wr_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="wr_post" Type="varchar" MaxLength="255" />
+          <Property Name="wr_interfacename" Type="varchar" MaxLength="100" />
+          <Property Name="wr_date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="wx_searchcell">
+          <Key>
+            <PropertyRef Name="ws_id" />
+          </Key>
+          <Property Name="ws_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ws_cell" Type="char" MaxLength="11" />
+          <Property Name="ws_search" Type="int" />
+          <Property Name="ws_date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="wx_tip">
+          <Key>
+            <PropertyRef Name="wt_id" />
+          </Key>
+          <Property Name="wt_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="wt_openid" Type="varchar" MaxLength="36" />
+          <Property Name="wt_h_uid" Type="guid" />
+          <Property Name="wt_price" Type="double" />
+          <Property Name="wt_orderid" Type="varchar" MaxLength="30" />
+          <Property Name="wt_payid" Type="varchar" MaxLength="30" />
+          <Property Name="wt_paykind" Type="int" />
+          <Property Name="wt_date" Type="datetime" />
+          <Property Name="wt_status" Type="int" />
+        </EntityType>
+        <!--生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_bookingdate”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_bookingdate">
+        <Property Name="ob_id" Type="int" />
+        <Property Name="ob_date" Type="varchar" MaxLength="10" />
+        <Property Name="ob_bdate" Type="varchar" MaxLength="10" />
+        <Property Name="ob_edate" Type="varchar" MaxLength="10" />
+        <Property Name="ob_status" Type="int" />
+        <Property Name="ob_interval" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_comment”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_comment">
+        <Property Name="om_id" Type="int" />
+        <Property Name="om_or_id" Type="int" />
+        <Property Name="om_eo_uid" Type="guid" />
+        <Property Name="om_content" Type="varchar" MaxLength="100" />
+        <Property Name="om_img1" Type="varchar" MaxLength="50" />
+        <Property Name="om_img2" Type="varchar" MaxLength="50" />
+        <Property Name="om_img3" Type="varchar" MaxLength="50" />
+        <Property Name="om_score" Type="int" />
+        <Property Name="om_hairscore" Type="int" />
+        <Property Name="om_servicescore" Type="int" />
+        <Property Name="om_modescore" Type="int" />
+        <Property Name="om_status" Type="int" />
+        <Property Name="om_co_uid" Type="guid" />
+        <Property Name="om_date" Type="datetime" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_coupon”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_coupon">
+        <Property Name="oc_id" Type="int" />
+        <Property Name="oc_title" Type="varchar" MaxLength="20" />
+        <Property Name="oc_money" Type="int" />
+        <Property Name="oc_content" Type="varchar" MaxLength="50" />
+        <Property Name="oc_status" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_couponrec”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_couponrec">
+        <Property Name="ore_id" Type="int" />
+        <Property Name="ore_suid" Type="guid" />
+        <Property Name="ore_ruid" Type="guid" />
+        <Property Name="ore_name" Type="varchar" MaxLength="20" />
+        <Property Name="ore_discount" Type="double" />
+        <Property Name="ore_kind" Type="int" />
+        <Property Name="ore_date" Type="datetime" />
+        <Property Name="ore_bdate" Type="datetime" />
+        <Property Name="ore_edate" Type="datetime" />
+        <Property Name="ore_code" Type="char" MaxLength="6" />
+        <Property Name="ore_status" Type="int" />
+        <Property Name="ore_remarks" Type="varchar" MaxLength="50" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_customer”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_customer">
+        <Property Name="co_uid" Type="guid" />
+        <Property Name="co_cell" Type="char" MaxLength="11" />
+        <Property Name="co_pwd" Type="varchar" MaxLength="200" />
+        <Property Name="co_ip" Type="varchar" MaxLength="50" />
+        <Property Name="co_nickname" Type="varchar" MaxLength="50" />
+        <Property Name="co_logo" Type="varchar" MaxLength="100" />
+        <Property Name="co_sex" Type="int" />
+        <Property Name="co_date" Type="datetime" />
+        <Property Name="co_status" Type="int" />
+        <Property Name="co_kind" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_error”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_error">
+        <Property Name="eo_id" Type="int" />
+        <Property Name="eo_date" Type="datetime" />
+        <Property Name="eo_name" Type="varchar" MaxLength="64" />
+        <Property Name="eo_content" Type="varchar" MaxLength="255" />
+        <Property Name="eo_status" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_hairtypes”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_hairtypes">
+        <Property Name="oh_id" Type="int" />
+        <Property Name="oh_name" Type="varchar" MaxLength="50" />
+        <Property Name="oh_price" Type="double" />
+        <Property Name="oh_time" Type="int" />
+        <Property Name="oh_content" Type="varchar" MaxLength="255" />
+        <Property Name="oh_cover" Type="varchar" MaxLength="100" />
+        <Property Name="oh_img" Type="varchar" MaxLength="100" />
+        <Property Name="oh_imgleft" Type="varchar" MaxLength="100" />
+        <Property Name="oh_imgright" Type="varchar" MaxLength="100" />
+        <Property Name="oh_imgbg" Type="varchar" MaxLength="100" />
+        <Property Name="oh_video" Type="varchar" MaxLength="100" />
+        <Property Name="oh_face" Type="varchar" MaxLength="100" />
+        <Property Name="oh_kind" Type="int" />
+        <Property Name="oh_url" Type="varchar" MaxLength="255" />
+        <Property Name="oh_status" Type="int" />
+        <Property Name="oh_sort" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_notify”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_notify">
+        <Property Name="nf_id" Type="int" />
+        <Property Name="nf_date" Type="datetime" />
+        <Property Name="nf_type" Type="int" />
+        <Property Name="nf_trade" Type="varchar" MaxLength="100" />
+        <Property Name="nf_outtrade" Type="varchar" MaxLength="100" />
+        <Property Name="nf_status" Type="varchar" MaxLength="100" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_operation”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_operation">
+        <Property Name="op_id" Type="int" />
+        <Property Name="op_uid" Type="guid" />
+        <Property Name="op_name" Type="varchar" MaxLength="30" />
+        <Property Name="op_date" Type="datetime" />
+        <Property Name="op_interfacename" Type="varchar" MaxLength="50" />
+        <Property Name="op_post" Type="varchar" MaxLength="255" />
+        <Property Name="op_status" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_order”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_order">
+        <Property Name="or_id" Type="int" />
+        <Property Name="or_oh_id" Type="int" />
+        <Property Name="or_co_uid" Type="guid" />
+        <Property Name="or_money" Type="double" />
+        <Property Name="or_kind" Type="int" />
+        <Property Name="or_date" Type="datetime" />
+        <Property Name="or_orderid" Type="varchar" MaxLength="30" />
+        <Property Name="or_payid" Type="varchar" MaxLength="30" />
+        <Property Name="or_paykind" Type="int" />
+        <Property Name="or_address" Type="varchar" MaxLength="100" />
+        <Property Name="or_oe_uid" Type="guid" />
+        <Property Name="or_cell" Type="char" MaxLength="11" />
+        <Property Name="or_bookingdate" Type="datetime" />
+        <Property Name="or_ore_id" Type="int" />
+        <Property Name="or_status" Type="int" />
+        <Property Name="or_lon" Type="varchar" MaxLength="100" />
+        <Property Name="or_lat" Type="varchar" MaxLength="100" />
+        <Property Name="or_remarks" Type="varchar" MaxLength="100" />
+        <Property Name="or_num" Type="int" />
+        <Property Name="or_source" Type="int" />
+        <Property Name="or_type" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_orderbooking”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_orderbooking">
+        <Property Name="bo_id" Type="int" />
+        <Property Name="bo_date" Type="datetime" />
+        <Property Name="bo_oe_uid" Type="guid" />
+        <Property Name="bo_type" Type="int" />
+        <Property Name="bo_status" Type="int" />
+        <Property Name="bo_source" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_permissions”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_permissions">
+        <Property Name="pe_id" Type="int" />
+        <Property Name="pe_oe_uid" Type="guid" />
+        <Property Name="pe_kind" Type="int" />
+        <Property Name="pe_date" Type="datetime" />
+        <Property Name="pe_status" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_post”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_post">
+        <Property Name="po_id" Type="int" />
+        <Property Name="po_date" Type="datetime" />
+        <Property Name="po_post" Type="varchar" MaxLength="255" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_sms”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_sms">
+        <Property Name="os_id" Type="int" />
+        <Property Name="os_cell" Type="char" MaxLength="11" />
+        <Property Name="os_content" Type="varchar" MaxLength="100" />
+        <Property Name="os_date" Type="datetime" />
+        <Property Name="os_status" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_statusdate”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_statusdate">
+        <Property Name="osd_id" Type="int" />
+        <Property Name="osd_or_id" Type="int" />
+        <Property Name="osd_confirmdate" Type="varchar" MaxLength="20" />
+        <Property Name="ob_startdate" Type="varchar" MaxLength="20" />
+        <Property Name="ob_arrivedate" Type="varchar" MaxLength="20" />
+        <Property Name="ob_overdate" Type="varchar" MaxLength="20" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.to_withdraw”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="to_withdraw">
+        <Property Name="wd_id" Type="int" />
+        <Property Name="wd_oe_uid" Type="guid" />
+        <Property Name="wd_money" Type="double" />
+        <Property Name="wd_bd_id" Type="int" />
+        <Property Name="wd_applydate" Type="datetime" />
+        <Property Name="wd_handledate" Type="datetime" />
+        <Property Name="wd_status" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.tp_cachepush”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="tp_cachepush">
+        <Property Name="cp_id" Type="int" />
+        <Property Name="cp_sender" Type="guid" />
+        <Property Name="cp_receiver" Type="guid" />
+        <Property Name="cp_token" Type="varchar" MaxLength="80" />
+        <Property Name="cp_content" Type="varchar" MaxLength="100" />
+        <Property Name="cp_param" Type="varchar" MaxLength="200" />
+        <Property Name="cp_type" Type="int" />
+        <Property Name="cp_device" Type="int" />
+        <Property Name="cp_date" Type="datetime" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.tp_push”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="tp_push">
+        <Property Name="p_id" Type="int" />
+        <Property Name="p_sender" Type="guid" />
+        <Property Name="p_receiver" Type="guid" />
+        <Property Name="p_content" Type="varchar" MaxLength="100" />
+        <Property Name="p_type" Type="int" />
+        <Property Name="p_date" Type="datetime" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.tp_remind”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="tp_remind">
+        <Property Name="rp_id" Type="int" />
+        <Property Name="rp_receiver" Type="guid" />
+        <Property Name="rp_apptype" Type="int" />
+        <Property Name="rp_remind" Type="varchar" MaxLength="36" />
+        <Property Name="rp_read" Type="tinyint" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.ts_ask”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="ts_ask">
+        <Property Name="sk_id" Type="int" />
+        <Property Name="sk_name" Type="varchar" MaxLength="30" />
+        <Property Name="sk_logo" Type="varchar" MaxLength="100" />
+        <Property Name="sk_cell" Type="char" MaxLength="11" />
+        <Property Name="sk_sex" Type="int" />
+        <Property Name="sk_type" Type="int" />
+        <Property Name="sk_s_uid" Type="guid" />
+        <Property Name="sk_address" Type="varchar" MaxLength="100" />
+        <Property Name="sk_money" Type="double" />
+        <Property Name="sk_orderid" Type="varchar" MaxLength="30" />
+        <Property Name="sk_payid" Type="varchar" MaxLength="30" />
+        <Property Name="sk_paykind" Type="int" />
+        <Property Name="sk_date" Type="datetime" />
+        <Property Name="sk_status" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.ts_comment”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="ts_comment">
+        <Property Name="co_id" Type="int" />
+        <Property Name="co_so_id" Type="int" />
+        <Property Name="co_cell" Type="varchar" MaxLength="11" />
+        <Property Name="co_content" Type="varchar" MaxLength="200" />
+        <Property Name="co_skill" Type="int" />
+        <Property Name="co_service" Type="int" />
+        <Property Name="co_environment" Type="int" />
+        <Property Name="co_again" Type="tinyint" />
+        <Property Name="co_date" Type="datetime" />
+        <Property Name="co_status" Type="int" />
+        <Property Name="co_s_uid" Type="guid" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.ts_coupon”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="ts_coupon">
+        <Property Name="sc_id" Type="int" />
+        <Property Name="sc_code" Type="varchar" MaxLength="10" />
+        <Property Name="sc_money" Type="double" />
+        <Property Name="sc_bdate" Type="datetime" />
+        <Property Name="sc_edate" Type="datetime" />
+        <Property Name="sc_date" Type="datetime" />
+        <Property Name="sc_status" Type="int" />
+        <Property Name="sc_about" Type="varchar" MaxLength="20" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.ts_order”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="ts_order">
+        <Property Name="so_id" Type="int" />
+        <Property Name="so_money" Type="double" />
+        <Property Name="so_date" Type="datetime" />
+        <Property Name="so_orderid" Type="varchar" MaxLength="30" />
+        <Property Name="so_payid" Type="varchar" MaxLength="30" />
+        <Property Name="so_paykind" Type="int" />
+        <Property Name="so_oe_uid" Type="guid" />
+        <Property Name="so_cell" Type="char" MaxLength="11" />
+        <Property Name="so_s_uid" Type="guid" />
+        <Property Name="so_bookingdate" Type="datetime" />
+        <Property Name="so_status" Type="int" />
+        <Property Name="so_source" Type="int" />
+        <Property Name="so_code" Type="char" MaxLength="6" />
+        <Property Name="so_sc_id" Type="int" />
+      </EntityType>
+      生成过程中发现错误:
+      警告 6013: 表/视图“def.bobohair.ts_vipcustomer”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+      
+      <EntityType Name="ts_vipcustomer">
+        <Property Name="vc_id" Type="int" />
+        <Property Name="vc_kname" Type="varchar" MaxLength="30" />
+        <Property Name="vc_logo" Type="varchar" MaxLength="100" />
+        <Property Name="vc_cell" Type="char" MaxLength="11" />
+        <Property Name="vc_bdate" Type="datetime" />
+        <Property Name="vc_edate" Type="datetime" />
+        <Property Name="vc_card" Type="varchar" MaxLength="20" />
+        <Property Name="vc_co_uid" Type="guid" />
+        <Property Name="vc_status" Type="int" />
+      </EntityType>-->
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="mysqkbobohairEntites" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="mysqkbobohairEntitesContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ex_ad" EntityType="mysqkbobohairEntites.ex_ad" />
+          <EntitySet Name="ex_bookingorder" EntityType="mysqkbobohairEntites.ex_bookingorder" />
+          <EntitySet Name="ex_comment" EntityType="mysqkbobohairEntites.ex_comment" />
+          <EntitySet Name="ex_hair" EntityType="mysqkbobohairEntites.ex_hair" />
+          <EntitySet Name="ex_seerec" EntityType="mysqkbobohairEntites.ex_seerec" />
+          <EntitySet Name="ex_topic" EntityType="mysqkbobohairEntites.ex_topic" />
+          <EntitySet Name="t_advice" EntityType="mysqkbobohairEntites.t_advice" />
+          <EntitySet Name="t_backflow" EntityType="mysqkbobohairEntites.t_backflow" />
+          <EntitySet Name="t_customermanage" EntityType="mysqkbobohairEntites.t_customermanage" />
+          <EntitySet Name="t_error" EntityType="mysqkbobohairEntites.t_error" />
+          <EntitySet Name="t_hairoff" EntityType="mysqkbobohairEntites.t_hairoff" />
+          <EntitySet Name="t_notice" EntityType="mysqkbobohairEntites.t_notice" />
+          <EntitySet Name="t_order" EntityType="mysqkbobohairEntites.t_order" />
+          <EntitySet Name="t_salemanager" EntityType="mysqkbobohairEntites.t_salemanager" />
+          <EntitySet Name="t_salinhairstylist" EntityType="mysqkbobohairEntites.t_salinhairstylist" />
+          <EntitySet Name="t_salon" EntityType="mysqkbobohairEntites.t_salon" />
+          <EntitySet Name="t_salonimageinfo" EntityType="mysqkbobohairEntites.t_salonimageinfo" />
+          <EntitySet Name="t_salonpackage" EntityType="mysqkbobohairEntites.t_salonpackage" />
+          <EntitySet Name="t_scanrec" EntityType="mysqkbobohairEntites.t_scanrec" />
+          <EntitySet Name="t_sms" EntityType="mysqkbobohairEntites.t_sms" />
+          <EntitySet Name="t_sysinformation" EntityType="mysqkbobohairEntites.t_sysinformation" />
+          <EntitySet Name="t_winning" EntityType="mysqkbobohairEntites.t_winning" />
+          <EntitySet Name="t_winningrec" EntityType="mysqkbobohairEntites.t_winningrec" />
+          <EntitySet Name="to_activity" EntityType="mysqkbobohairEntites.to_activity" />
+          <EntitySet Name="to_ad" EntityType="mysqkbobohairEntites.to_ad" />
+          <EntitySet Name="to_address" EntityType="mysqkbobohairEntites.to_address" />
+          <EntitySet Name="to_apns" EntityType="mysqkbobohairEntites.to_apns" />
+          <EntitySet Name="to_apply" EntityType="mysqkbobohairEntites.to_apply" />
+          <EntitySet Name="to_balanceofpayments" EntityType="mysqkbobohairEntites.to_balanceofpayments" />
+          <EntitySet Name="to_bgerror" EntityType="mysqkbobohairEntites.to_bgerror" />
+          <EntitySet Name="to_binding" EntityType="mysqkbobohairEntites.to_binding" />
+          <EntitySet Name="wx_answers" EntityType="mysqkbobohairEntites.wx_answers" />
+          <EntitySet Name="wx_article" EntityType="mysqkbobohairEntites.wx_article" />
+          <EntitySet Name="wx_bindhair" EntityType="mysqkbobohairEntites.wx_bindhair" />
+          <EntitySet Name="wx_comment" EntityType="mysqkbobohairEntites.wx_comment" />
+          <EntitySet Name="wx_customerservice" EntityType="mysqkbobohairEntites.wx_customerservice" />
+          <EntitySet Name="wx_impression" EntityType="mysqkbobohairEntites.wx_impression" />
+          <EntitySet Name="wx_infromation" EntityType="mysqkbobohairEntites.wx_infromation" />
+          <EntitySet Name="wx_location" EntityType="mysqkbobohairEntites.wx_location" />
+          <EntitySet Name="wx_member" EntityType="mysqkbobohairEntites.wx_member" />
+          <EntitySet Name="wx_order" EntityType="mysqkbobohairEntites.wx_order" />
+          <EntitySet Name="wx_phonecall" EntityType="mysqkbobohairEntites.wx_phonecall" />
+          <EntitySet Name="wx_post" EntityType="mysqkbobohairEntites.wx_post" />
+          <EntitySet Name="wx_qrcode" EntityType="mysqkbobohairEntites.wx_qrcode" />
+          <EntitySet Name="wx_questions" EntityType="mysqkbobohairEntites.wx_questions" />
+          <EntitySet Name="wx_request" EntityType="mysqkbobohairEntites.wx_request" />
+          <EntitySet Name="wx_searchcell" EntityType="mysqkbobohairEntites.wx_searchcell" />
+          <EntitySet Name="wx_tip" EntityType="mysqkbobohairEntites.wx_tip" />
+          <EntitySet Name="to_employee" EntityType="mysqkbobohairEntites.to_employee" />
+        </EntityContainer>
+        <EntityType Name="ex_ad">
+          <Key>
+            <PropertyRef Name="ea_id" />
+          </Key>
+          <Property Type="Int32" Name="ea_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ea_title" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ea_content" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ea_image" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ea_url" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ea_type" />
+          <Property Type="DateTime" Name="ea_date" />
+          <Property Type="Int32" Name="ea_status" />
+        </EntityType>
+        <EntityType Name="ex_bookingorder">
+          <Key>
+            <PropertyRef Name="ebo_id" />
+          </Key>
+          <Property Type="Int32" Name="ebo_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="ebo_uid" />
+          <Property Type="String" Name="ebo_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="ebo_eh_uid" />
+          <Property Type="DateTime" Name="ebo_date" />
+          <Property Type="String" Name="ebo_content" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ebo_about" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ebo_orderid" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ebo_payid" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ebo_paykind" />
+          <Property Type="Int32" Name="ebo_et_id" />
+          <Property Type="Double" Name="ebo_price" />
+          <Property Type="Int32" Name="ebo_status" />
+          <Property Type="String" Name="ebo_out_refund_no" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ex_comment">
+          <Key>
+            <PropertyRef Name="ec_id" />
+          </Key>
+          <Property Type="Int32" Name="ec_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ec_ebo_id" />
+          <Property Type="String" Name="ec_content" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ec_score" />
+          <Property Type="Int32" Name="ec_status" />
+        </EntityType>
+        <EntityType Name="ex_hair">
+          <Key>
+            <PropertyRef Name="eh_id" />
+          </Key>
+          <Property Type="Int32" Name="eh_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="eh_uid" />
+          <Property Type="String" Name="eh_name" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="eh_logo" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="eh_phone" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="eh_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="eh_salonname" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="eh_title" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="eh_workingyears" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="eh_skill" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="eh_introduction" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="eh_city" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="eh_applydate" />
+          <Property Type="DateTime" Name="eh_through" />
+          <Property Type="Int32" Name="eh_see" />
+          <Property Type="Int32" Name="eh_seeend" />
+          <Property Type="Int32" Name="eh_status" />
+          <Property Type="Int32" Name="eh_sort" />
+        </EntityType>
+        <EntityType Name="ex_seerec">
+          <Key>
+            <PropertyRef Name="es_id" />
+          </Key>
+          <Property Type="Int32" Name="es_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="es_uid" />
+          <Property Type="Guid" Name="es_eh_uid" />
+          <Property Type="DateTime" Name="es_date" />
+          <Property Type="Int32" Name="es_status" />
+        </EntityType>
+        <EntityType Name="ex_topic">
+          <Key>
+            <PropertyRef Name="et_id" />
+          </Key>
+          <Property Type="Int32" Name="et_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="et_uid" />
+          <Property Type="Double" Name="et_price" />
+          <Property Type="String" Name="et_title" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="et_tag" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="et_content" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="et_time" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="et_date" />
+          <Property Type="Int32" Name="et_status" />
+        </EntityType>
+        <EntityType Name="t_advice">
+          <Key>
+            <PropertyRef Name="ad_id" />
+          </Key>
+          <Property Type="Int32" Name="ad_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ad_content" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ad_date" />
+          <Property Type="String" Name="ad_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ad_kind" />
+          <Property Type="Int32" Name="ad_status" />
+          <Property Type="Guid" Name="ad_s_uid" />
+        </EntityType>
+        <EntityType Name="t_backflow">
+          <Key>
+            <PropertyRef Name="bk_id" />
+          </Key>
+          <Property Type="Int32" Name="bk_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="bk_s_uid" />
+          <Property Type="Guid" Name="bk_uid" />
+          <Property Type="DateTime" Name="bk_date" />
+          <Property Type="Int32" Name="bk_type" />
+        </EntityType>
+        <EntityType Name="t_customermanage">
+          <Key>
+            <PropertyRef Name="cm_id" />
+          </Key>
+          <Property Type="Int32" Name="cm_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="cm_s_uid" />
+          <Property Type="String" Name="cm_s_nickname" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="cm_h_uid" />
+          <Property Type="String" Name="cm_h_name" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="cm_openid" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="cm_nickname" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="cm_remarks1" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="cm_remarks2" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="cm_remarks3" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="cm_remarks4" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="cm_remarks5" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="cm_status" />
+        </EntityType>
+        <EntityType Name="t_error">
+          <Key>
+            <PropertyRef Name="eo_id" />
+          </Key>
+          <Property Type="Int32" Name="eo_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="eo_date" />
+          <Property Type="String" Name="eo_name" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="eo_content" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="t_hairoff">
+          <Key>
+            <PropertyRef Name="ho_id" />
+          </Key>
+          <Property Type="Int32" Name="ho_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="ho_h_uid" />
+          <Property Type="Guid" Name="ho_s_uid" />
+          <Property Type="DateTime" Name="ho_date" />
+          <Property Type="Int32" Name="ho_status" />
+        </EntityType>
+        <EntityType Name="t_notice">
+          <Key>
+            <PropertyRef Name="tn_id" />
+          </Key>
+          <Property Type="Int32" Name="tn_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="tn_s_uid" />
+          <Property Type="String" Name="tn_content" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="tn_date" />
+          <Property Type="Int32" Name="tn_status" />
+        </EntityType>
+        <EntityType Name="t_order">
+          <Key>
+            <PropertyRef Name="o_id" />
+          </Key>
+          <Property Type="Int32" Name="o_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="o_orid" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="o_s_uid" />
+          <Property Type="String" Name="o_name" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="o_money" />
+          <Property Type="DateTime" Name="o_date" />
+          <Property Type="DateTime" Name="o_paydate" />
+          <Property Type="Int32" Name="o_status" />
+        </EntityType>
+        <EntityType Name="t_salemanager">
+          <Key>
+            <PropertyRef Name="sm_id" />
+          </Key>
+          <Property Type="Int32" Name="sm_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="sm_s_uid" />
+          <Property Type="String" Name="sm_name" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="sm_date" />
+          <Property Type="String" Name="sm_oldname" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="sm_editdate" />
+        </EntityType>
+        <EntityType Name="t_salinhairstylist">
+          <Key>
+            <PropertyRef Name="shs_h_uid" />
+          </Key>
+          <Property Type="Guid" Name="shs_h_uid" Nullable="false" />
+          <Property Type="String" Name="shs_name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="shs_hairprice" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="shs_exp" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="shs_logo" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="shs_s_uid" />
+          <Property Type="String" Name="shs_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="shs_sort" />
+          <Property Type="Int32" Name="shs_status" />
+        </EntityType>
+        <EntityType Name="t_salon">
+          <Key>
+            <PropertyRef Name="s_uid" />
+          </Key>
+          <Property Type="Guid" Name="s_uid" Nullable="false" />
+          <Property Type="String" Name="s_email" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="s_cell" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="s_pwd" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="s_nickname" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="s_logo" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="s_date" />
+          <Property Type="Int32" Name="s_kind" />
+          <Property Type="Int32" Name="s_status" />
+          <Property Type="String" Name="s_address" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="s_linkname" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="s_summary" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="s_lon" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="s_lat" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="s_price" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="s_wxname" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="s_opendate" />
+          <Property Type="String" Name="s_businessdate" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="s_recommend" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="t_salonimageinfo">
+          <Key>
+            <PropertyRef Name="si_id" />
+          </Key>
+          <Property Type="Int32" Name="si_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="si_s_uid" />
+          <Property Type="String" Name="si_photo" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="si_kind" />
+          <Property Type="Int32" Name="si_status" />
+        </EntityType>
+        <EntityType Name="t_salonpackage">
+          <Key>
+            <PropertyRef Name="spk_id" />
+          </Key>
+          <Property Type="Int32" Name="spk_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="spk_title" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="spk_content" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="spk_price" />
+          <Property Type="Int32" Name="spk_dorder" />
+          <Property Type="Guid" Name="spk_s_uid" />
+          <Property Type="DateTime" Name="spk_date" />
+          <Property Type="Int32" Name="spk_status" />
+          <Property Type="String" Name="spk_image" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="t_scanrec">
+          <Key>
+            <PropertyRef Name="scr_id" />
+          </Key>
+          <Property Type="Int32" Name="scr_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="scr_s_uid" />
+          <Property Type="Guid" Name="scr_code" />
+          <Property Type="DateTime" Name="scr_date" />
+          <Property Type="String" Name="scr_ip" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="t_sms">
+          <Key>
+            <PropertyRef Name="sm_id" />
+          </Key>
+          <Property Type="Int32" Name="sm_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="sm_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="sm_content" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="sm_date" />
+          <Property Type="Int32" Name="sm_status" />
+        </EntityType>
+        <EntityType Name="t_sysinformation">
+          <Key>
+            <PropertyRef Name="sy_id" />
+          </Key>
+          <Property Type="Int32" Name="sy_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="sy_title" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="sy_content" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="sy_date" />
+          <Property Type="Int32" Name="sy_status" />
+        </EntityType>
+        <EntityType Name="t_winning">
+          <Key>
+            <PropertyRef Name="wig_id" />
+          </Key>
+          <Property Type="Int32" Name="wig_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="wig_s_uid" />
+          <Property Type="String" Name="wig_title" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="wig_date" />
+          <Property Type="String" Name="wig_image" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="wig_pro" />
+          <Property Type="Int32" Name="wig_status" />
+        </EntityType>
+        <EntityType Name="t_winningrec">
+          <Key>
+            <PropertyRef Name="win_id" />
+          </Key>
+          <Property Type="Int32" Name="win_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="win_content" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="win_date" />
+          <Property Type="String" Name="win_ip" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="win_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="win_temuid" />
+          <Property Type="Guid" Name="win_s_uid" />
+        </EntityType>
+        <EntityType Name="to_activity">
+          <Key>
+            <PropertyRef Name="act_id" />
+          </Key>
+          <Property Type="Int32" Name="act_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="act_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="act_type" />
+          <Property Type="String" Name="act_name" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="act_status" />
+        </EntityType>
+        <EntityType Name="to_ad">
+          <Key>
+            <PropertyRef Name="oa_id" />
+          </Key>
+          <Property Type="Int32" Name="oa_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="oa_image" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="oa_url" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="oa_date" />
+          <Property Type="Int32" Name="oa_status" />
+          <Property Type="String" Name="oa_title" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="oa_content" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="oa_sort" />
+        </EntityType>
+        <EntityType Name="to_address">
+          <Key>
+            <PropertyRef Name="od_id" />
+          </Key>
+          <Property Type="Int32" Name="od_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="od_uid" />
+          <Property Type="String" Name="od_province" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="od_city" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="od_district" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="od_detailed" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="od_default" />
+          <Property Type="String" Name="od_lon" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="od_lat" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="to_apns">
+          <Key>
+            <PropertyRef Name="ao_id" />
+          </Key>
+          <Property Type="Int32" Name="ao_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ao_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ao_tokenid" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="ao_cid" />
+          <Property Type="DateTime" Name="ao_date" />
+          <Property Type="Int32" Name="ao_device" />
+          <Property Type="Int32" Name="ao_apptype" />
+        </EntityType>
+        <EntityType Name="to_apply">
+          <Key>
+            <PropertyRef Name="ap_id" />
+          </Key>
+          <Property Type="Int32" Name="ap_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="ap_uid" />
+          <Property Type="String" Name="ap_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ap_name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ap_idcard" MaxLength="18" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ap_salonname" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ap_salonaddress" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ap_gps" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ap_status" />
+          <Property Type="DateTime" Name="ap_date" />
+          <Property Type="DateTime" Name="ap_adate" />
+          <Property Type="Int32" Name="ap_sex" />
+          <Property Type="Int32" Name="ap_open" />
+        </EntityType>
+        <EntityType Name="to_balanceofpayments">
+          <Key>
+            <PropertyRef Name="bp_id" />
+          </Key>
+          <Property Type="Int32" Name="bp_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="bp_oe_uid" />
+          <Property Type="Int32" Name="bp_type" />
+          <Property Type="Int32" Name="bp_source" />
+          <Property Type="String" Name="bp_title" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="bp_money" />
+          <Property Type="String" Name="bp_payid" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="bp_kind" />
+          <Property Type="DateTime" Name="bp_date" />
+          <Property Type="Int32" Name="bp_status" />
+          <Property Type="Int32" Name="bp_orderid" />
+          <Property Type="Int32" Name="bp_table" />
+          <Property Type="Int32" Name="bp_oreid" />
+        </EntityType>
+        <EntityType Name="to_bgerror">
+          <Key>
+            <PropertyRef Name="bg_id" />
+          </Key>
+          <Property Type="Int32" Name="bg_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="bg_date" />
+          <Property Type="String" Name="bg_name" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="bg_content" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="bg_status" />
+        </EntityType>
+        <EntityType Name="to_binding">
+          <Key>
+            <PropertyRef Name="bd_id" />
+          </Key>
+          <Property Type="Int32" Name="bd_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="bd_oe_uid" />
+          <Property Type="String" Name="bd_account" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="bd_kind" />
+          <Property Type="DateTime" Name="bd_date" />
+          <Property Type="Int32" Name="bd_status" />
+          <Property Type="String" Name="bd_name" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="wx_answers">
+          <Key>
+            <PropertyRef Name="wa_id" />
+          </Key>
+          <Property Type="Int32" Name="wa_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="wa_h_uid" />
+          <Property Type="String" Name="wa_openid" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="wa_date" />
+          <Property Type="String" Name="wa_content" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wa_image" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="wa_wq_id" />
+          <Property Type="Int32" Name="wa_replyid" />
+          <Property Type="Int32" Name="wa_status" />
+          <Property Type="String" Name="wa_attribute" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="wa_hot" />
+        </EntityType>
+        <EntityType Name="wx_article">
+          <Key>
+            <PropertyRef Name="atr_id" />
+          </Key>
+          <Property Type="Int32" Name="atr_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="atr_image" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="atr_link" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="atr_date" />
+          <Property Type="Int32" Name="atr_status" />
+        </EntityType>
+        <EntityType Name="wx_bindhair">
+          <Key>
+            <PropertyRef Name="wb_id" />
+          </Key>
+          <Property Type="Int32" Name="wb_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="wb_openid" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="wb_h_uid" />
+          <Property Type="DateTime" Name="wb_date" />
+          <Property Type="Int32" Name="wb_status" />
+          <Property Type="String" Name="wb_name" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wb_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="wx_comment">
+          <Key>
+            <PropertyRef Name="wc_id" />
+          </Key>
+          <Property Type="Int32" Name="wc_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="wc_openid" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="wc_h_uid" />
+          <Property Type="String" Name="wc_content" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="wc_date" />
+          <Property Type="Int32" Name="wc_wo_id" />
+          <Property Type="Int32" Name="wc_score" />
+          <Property Type="Int32" Name="wc_status" />
+          <Property Type="String" Name="wc_image" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="wx_customerservice">
+          <Key>
+            <PropertyRef Name="wcs_id" />
+          </Key>
+          <Property Type="Int32" Name="wcs_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="wcs_openid" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wcs_account" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="wcs_date" />
+        </EntityType>
+        <EntityType Name="wx_impression">
+          <Key>
+            <PropertyRef Name="wi_id" />
+          </Key>
+          <Property Type="Int32" Name="wi_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="wi_openid" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="wi_h_uid" />
+          <Property Type="String" Name="wi_content" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="wi_type" />
+          <Property Type="DateTime" Name="wi_date" />
+          <Property Type="Int32" Name="wi_status" />
+        </EntityType>
+        <EntityType Name="wx_infromation">
+          <Key>
+            <PropertyRef Name="wim_id" />
+          </Key>
+          <Property Type="Int32" Name="wim_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="wim_title" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wim_content" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wim_image" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="wim_date" />
+          <Property Type="String" Name="wim_url" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="wim_status" />
+          <Property Type="Int32" Name="wim_push_status" />
+        </EntityType>
+        <EntityType Name="wx_location">
+          <Key>
+            <PropertyRef Name="wl_id" />
+          </Key>
+          <Property Type="Int32" Name="wl_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="wl_lng" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wl_lat" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wl_openid" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="wl_date" />
+        </EntityType>
+        <EntityType Name="wx_member">
+          <Key>
+            <PropertyRef Name="wm_openid" />
+          </Key>
+          <Property Type="String" Name="wm_openid" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wm_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="wm_subscribe" />
+          <Property Type="String" Name="wm_nickname" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="wm_sex" />
+          <Property Type="String" Name="wm_city" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wm_country" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wm_province" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wm_language" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wm_headimgurl" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wm_subscribe_time" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wm_unionid" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="wm_type" />
+          <Property Type="String" Name="wm_pwd" MaxLength="64" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="wx_order">
+          <Key>
+            <PropertyRef Name="wo_id" />
+          </Key>
+          <Property Type="Int32" Name="wo_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="wo_openid" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="wo_h_uid" />
+          <Property Type="DateTime" Name="wo_bookingdate" />
+          <Property Type="DateTime" Name="wo_date" />
+          <Property Type="String" Name="wo_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wo_remarks" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wo_image" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="wo_status" />
+          <Property Type="Int32" Name="wo_type" />
+          <Property Type="Int32" Name="wo_source" />
+          <Property Type="String" Name="wo_adress" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wo_orderid" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wo_payid" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="wo_paykind" />
+          <Property Type="Int32" Name="wo_orderstatus" />
+          <Property Type="Double" Name="wo_price" />
+          <Property Type="String" Name="wo_out_refund_no" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="wo_s_uid" />
+        </EntityType>
+        <EntityType Name="wx_phonecall">
+          <Key>
+            <PropertyRef Name="wpc_id" />
+          </Key>
+          <Property Type="Int32" Name="wpc_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="wpc_openid" />
+          <Property Type="Guid" Name="wpc_h_uid" />
+          <Property Type="String" Name="wpc_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="wpc_date" />
+        </EntityType>
+        <EntityType Name="wx_post">
+          <Key>
+            <PropertyRef Name="wp_id" />
+          </Key>
+          <Property Type="Int32" Name="wp_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="wp_fromid" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="wp_date" />
+          <Property Type="String" Name="wp_content" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="wx_qrcode">
+          <Key>
+            <PropertyRef Name="qr_id" />
+          </Key>
+          <Property Type="Int32" Name="qr_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="qr_ticket" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="qr_h_uid" />
+          <Property Type="DateTime" Name="qr_date" />
+          <Property Type="Int32" Name="qr_num" />
+          <Property Type="Int32" Name="qr_type" />
+          <Property Type="Int32" Name="qr_code" />
+        </EntityType>
+        <EntityType Name="wx_questions">
+          <Key>
+            <PropertyRef Name="wq_id" />
+          </Key>
+          <Property Type="Int32" Name="wq_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="wq_title" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wq_openid" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="wq_date" />
+          <Property Type="String" Name="wq_content" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wq_image1" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wq_image2" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="wq_type" />
+          <Property Type="Int32" Name="wq_status" />
+        </EntityType>
+        <EntityType Name="wx_request">
+          <Key>
+            <PropertyRef Name="wr_id" />
+          </Key>
+          <Property Type="Int32" Name="wr_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="wr_post" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wr_interfacename" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="wr_date" />
+        </EntityType>
+        <EntityType Name="wx_searchcell">
+          <Key>
+            <PropertyRef Name="ws_id" />
+          </Key>
+          <Property Type="Int32" Name="ws_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ws_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ws_search" />
+          <Property Type="DateTime" Name="ws_date" />
+        </EntityType>
+        <EntityType Name="wx_tip">
+          <Key>
+            <PropertyRef Name="wt_id" />
+          </Key>
+          <Property Type="Int32" Name="wt_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="wt_openid" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="wt_h_uid" />
+          <Property Type="Double" Name="wt_price" />
+          <Property Type="String" Name="wt_orderid" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="wt_payid" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="wt_paykind" />
+          <Property Type="DateTime" Name="wt_date" />
+          <Property Type="Int32" Name="wt_status" />
+        </EntityType>
+        <EntityType Name="to_employee">
+          <Key>
+            <PropertyRef Name="oe_uid" />
+          </Key>
+          <Property Type="Guid" Name="oe_uid" Nullable="false" />
+          <Property Type="String" Name="oe_name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="oe_sex" />
+          <Property Type="String" Name="oe_logo" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="oe_lon" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="oe_lat" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="oe_introduce" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="oe_sort" />
+          <Property Type="Int32" Name="oe_workstatus" />
+          <Property Type="String" Name="oe_cell" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="oe_cuid" />
+          <Property Type="Int32" Name="oe_status" />
+          <Property Type="Int32" Name="oe_sa" />
+          <Property Type="Double" Name="oe_quota" />
+          <Property Type="Int32" Name="oe_grade" />
+          <Property Type="Guid" Name="oe_b_uid" />
+          <Property Type="Guid" Name="oe_s_uid" />
+          <Property Type="String" Name="oe_idcard" MaxLength="18" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="oe_income" />
+          <Property Type="Double" Name="oe_price" />
+          <Property Type="String" Name="oe_worktime" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="oe_restday" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="mysqkbobohairEntites" />
+        <Alias Key="Target" Value="mysqkbobohairEntites.Store" />
+        <EntityContainerMapping CdmEntityContainer="mysqkbobohairEntitesContainer" StorageEntityContainer="mysqkbobohairEntitesStoreContainer">
+          <EntitySetMapping Name="ex_ad">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.ex_ad">
+              <MappingFragment StoreEntitySet="ex_ad">
+                <ScalarProperty Name="ea_status" ColumnName="ea_status" />
+                <ScalarProperty Name="ea_date" ColumnName="ea_date" />
+                <ScalarProperty Name="ea_type" ColumnName="ea_type" />
+                <ScalarProperty Name="ea_url" ColumnName="ea_url" />
+                <ScalarProperty Name="ea_image" ColumnName="ea_image" />
+                <ScalarProperty Name="ea_content" ColumnName="ea_content" />
+                <ScalarProperty Name="ea_title" ColumnName="ea_title" />
+                <ScalarProperty Name="ea_id" ColumnName="ea_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ex_bookingorder">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.ex_bookingorder">
+              <MappingFragment StoreEntitySet="ex_bookingorder">
+                <ScalarProperty Name="ebo_out_refund_no" ColumnName="ebo_out_refund_no" />
+                <ScalarProperty Name="ebo_status" ColumnName="ebo_status" />
+                <ScalarProperty Name="ebo_price" ColumnName="ebo_price" />
+                <ScalarProperty Name="ebo_et_id" ColumnName="ebo_et_id" />
+                <ScalarProperty Name="ebo_paykind" ColumnName="ebo_paykind" />
+                <ScalarProperty Name="ebo_payid" ColumnName="ebo_payid" />
+                <ScalarProperty Name="ebo_orderid" ColumnName="ebo_orderid" />
+                <ScalarProperty Name="ebo_about" ColumnName="ebo_about" />
+                <ScalarProperty Name="ebo_content" ColumnName="ebo_content" />
+                <ScalarProperty Name="ebo_date" ColumnName="ebo_date" />
+                <ScalarProperty Name="ebo_eh_uid" ColumnName="ebo_eh_uid" />
+                <ScalarProperty Name="ebo_cell" ColumnName="ebo_cell" />
+                <ScalarProperty Name="ebo_uid" ColumnName="ebo_uid" />
+                <ScalarProperty Name="ebo_id" ColumnName="ebo_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ex_comment">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.ex_comment">
+              <MappingFragment StoreEntitySet="ex_comment">
+                <ScalarProperty Name="ec_status" ColumnName="ec_status" />
+                <ScalarProperty Name="ec_score" ColumnName="ec_score" />
+                <ScalarProperty Name="ec_content" ColumnName="ec_content" />
+                <ScalarProperty Name="ec_ebo_id" ColumnName="ec_ebo_id" />
+                <ScalarProperty Name="ec_id" ColumnName="ec_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ex_hair">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.ex_hair">
+              <MappingFragment StoreEntitySet="ex_hair">
+                <ScalarProperty Name="eh_sort" ColumnName="eh_sort" />
+                <ScalarProperty Name="eh_status" ColumnName="eh_status" />
+                <ScalarProperty Name="eh_seeend" ColumnName="eh_seeend" />
+                <ScalarProperty Name="eh_see" ColumnName="eh_see" />
+                <ScalarProperty Name="eh_through" ColumnName="eh_through" />
+                <ScalarProperty Name="eh_applydate" ColumnName="eh_applydate" />
+                <ScalarProperty Name="eh_city" ColumnName="eh_city" />
+                <ScalarProperty Name="eh_introduction" ColumnName="eh_introduction" />
+                <ScalarProperty Name="eh_skill" ColumnName="eh_skill" />
+                <ScalarProperty Name="eh_workingyears" ColumnName="eh_workingyears" />
+                <ScalarProperty Name="eh_title" ColumnName="eh_title" />
+                <ScalarProperty Name="eh_salonname" ColumnName="eh_salonname" />
+                <ScalarProperty Name="eh_cell" ColumnName="eh_cell" />
+                <ScalarProperty Name="eh_phone" ColumnName="eh_phone" />
+                <ScalarProperty Name="eh_logo" ColumnName="eh_logo" />
+                <ScalarProperty Name="eh_name" ColumnName="eh_name" />
+                <ScalarProperty Name="eh_uid" ColumnName="eh_uid" />
+                <ScalarProperty Name="eh_id" ColumnName="eh_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ex_seerec">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.ex_seerec">
+              <MappingFragment StoreEntitySet="ex_seerec">
+                <ScalarProperty Name="es_status" ColumnName="es_status" />
+                <ScalarProperty Name="es_date" ColumnName="es_date" />
+                <ScalarProperty Name="es_eh_uid" ColumnName="es_eh_uid" />
+                <ScalarProperty Name="es_uid" ColumnName="es_uid" />
+                <ScalarProperty Name="es_id" ColumnName="es_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ex_topic">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.ex_topic">
+              <MappingFragment StoreEntitySet="ex_topic">
+                <ScalarProperty Name="et_status" ColumnName="et_status" />
+                <ScalarProperty Name="et_date" ColumnName="et_date" />
+                <ScalarProperty Name="et_time" ColumnName="et_time" />
+                <ScalarProperty Name="et_content" ColumnName="et_content" />
+                <ScalarProperty Name="et_tag" ColumnName="et_tag" />
+                <ScalarProperty Name="et_title" ColumnName="et_title" />
+                <ScalarProperty Name="et_price" ColumnName="et_price" />
+                <ScalarProperty Name="et_uid" ColumnName="et_uid" />
+                <ScalarProperty Name="et_id" ColumnName="et_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_advice">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.t_advice">
+              <MappingFragment StoreEntitySet="t_advice">
+                <ScalarProperty Name="ad_s_uid" ColumnName="ad_s_uid" />
+                <ScalarProperty Name="ad_status" ColumnName="ad_status" />
+                <ScalarProperty Name="ad_kind" ColumnName="ad_kind" />
+                <ScalarProperty Name="ad_cell" ColumnName="ad_cell" />
+                <ScalarProperty Name="ad_date" ColumnName="ad_date" />
+                <ScalarProperty Name="ad_content" ColumnName="ad_content" />
+                <ScalarProperty Name="ad_id" ColumnName="ad_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_backflow">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.t_backflow">
+              <MappingFragment StoreEntitySet="t_backflow">
+                <ScalarProperty Name="bk_type" ColumnName="bk_type" />
+                <ScalarProperty Name="bk_date" ColumnName="bk_date" />
+                <ScalarProperty Name="bk_uid" ColumnName="bk_uid" />
+                <ScalarProperty Name="bk_s_uid" ColumnName="bk_s_uid" />
+                <ScalarProperty Name="bk_id" ColumnName="bk_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_customermanage">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.t_customermanage">
+              <MappingFragment StoreEntitySet="t_customermanage">
+                <ScalarProperty Name="cm_status" ColumnName="cm_status" />
+                <ScalarProperty Name="cm_remarks5" ColumnName="cm_remarks5" />
+                <ScalarProperty Name="cm_remarks4" ColumnName="cm_remarks4" />
+                <ScalarProperty Name="cm_remarks3" ColumnName="cm_remarks3" />
+                <ScalarProperty Name="cm_remarks2" ColumnName="cm_remarks2" />
+                <ScalarProperty Name="cm_remarks1" ColumnName="cm_remarks1" />
+                <ScalarProperty Name="cm_nickname" ColumnName="cm_nickname" />
+                <ScalarProperty Name="cm_openid" ColumnName="cm_openid" />
+                <ScalarProperty Name="cm_h_name" ColumnName="cm_h_name" />
+                <ScalarProperty Name="cm_h_uid" ColumnName="cm_h_uid" />
+                <ScalarProperty Name="cm_s_nickname" ColumnName="cm_s_nickname" />
+                <ScalarProperty Name="cm_s_uid" ColumnName="cm_s_uid" />
+                <ScalarProperty Name="cm_id" ColumnName="cm_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_error">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.t_error">
+              <MappingFragment StoreEntitySet="t_error">
+                <ScalarProperty Name="eo_content" ColumnName="eo_content" />
+                <ScalarProperty Name="eo_name" ColumnName="eo_name" />
+                <ScalarProperty Name="eo_date" ColumnName="eo_date" />
+                <ScalarProperty Name="eo_id" ColumnName="eo_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_hairoff">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.t_hairoff">
+              <MappingFragment StoreEntitySet="t_hairoff">
+                <ScalarProperty Name="ho_status" ColumnName="ho_status" />
+                <ScalarProperty Name="ho_date" ColumnName="ho_date" />
+                <ScalarProperty Name="ho_s_uid" ColumnName="ho_s_uid" />
+                <ScalarProperty Name="ho_h_uid" ColumnName="ho_h_uid" />
+                <ScalarProperty Name="ho_id" ColumnName="ho_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_notice">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.t_notice">
+              <MappingFragment StoreEntitySet="t_notice">
+                <ScalarProperty Name="tn_status" ColumnName="tn_status" />
+                <ScalarProperty Name="tn_date" ColumnName="tn_date" />
+                <ScalarProperty Name="tn_content" ColumnName="tn_content" />
+                <ScalarProperty Name="tn_s_uid" ColumnName="tn_s_uid" />
+                <ScalarProperty Name="tn_id" ColumnName="tn_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_order">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.t_order">
+              <MappingFragment StoreEntitySet="t_order">
+                <ScalarProperty Name="o_status" ColumnName="o_status" />
+                <ScalarProperty Name="o_paydate" ColumnName="o_paydate" />
+                <ScalarProperty Name="o_date" ColumnName="o_date" />
+                <ScalarProperty Name="o_money" ColumnName="o_money" />
+                <ScalarProperty Name="o_name" ColumnName="o_name" />
+                <ScalarProperty Name="o_s_uid" ColumnName="o_s_uid" />
+                <ScalarProperty Name="o_orid" ColumnName="o_orid" />
+                <ScalarProperty Name="o_id" ColumnName="o_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_salemanager">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.t_salemanager">
+              <MappingFragment StoreEntitySet="t_salemanager">
+                <ScalarProperty Name="sm_editdate" ColumnName="sm_editdate" />
+                <ScalarProperty Name="sm_oldname" ColumnName="sm_oldname" />
+                <ScalarProperty Name="sm_date" ColumnName="sm_date" />
+                <ScalarProperty Name="sm_name" ColumnName="sm_name" />
+                <ScalarProperty Name="sm_s_uid" ColumnName="sm_s_uid" />
+                <ScalarProperty Name="sm_id" ColumnName="sm_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_salinhairstylist">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.t_salinhairstylist">
+              <MappingFragment StoreEntitySet="t_salinhairstylist">
+                <ScalarProperty Name="shs_status" ColumnName="shs_status" />
+                <ScalarProperty Name="shs_sort" ColumnName="shs_sort" />
+                <ScalarProperty Name="shs_cell" ColumnName="shs_cell" />
+                <ScalarProperty Name="shs_s_uid" ColumnName="shs_s_uid" />
+                <ScalarProperty Name="shs_logo" ColumnName="shs_logo" />
+                <ScalarProperty Name="shs_exp" ColumnName="shs_exp" />
+                <ScalarProperty Name="shs_hairprice" ColumnName="shs_hairprice" />
+                <ScalarProperty Name="shs_name" ColumnName="shs_name" />
+                <ScalarProperty Name="shs_h_uid" ColumnName="shs_h_uid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_salon">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.t_salon">
+              <MappingFragment StoreEntitySet="t_salon">
+                <ScalarProperty Name="s_recommend" ColumnName="s_recommend" />
+                <ScalarProperty Name="s_businessdate" ColumnName="s_businessdate" />
+                <ScalarProperty Name="s_opendate" ColumnName="s_opendate" />
+                <ScalarProperty Name="s_wxname" ColumnName="s_wxname" />
+                <ScalarProperty Name="s_price" ColumnName="s_price" />
+                <ScalarProperty Name="s_lat" ColumnName="s_lat" />
+                <ScalarProperty Name="s_lon" ColumnName="s_lon" />
+                <ScalarProperty Name="s_summary" ColumnName="s_summary" />
+                <ScalarProperty Name="s_linkname" ColumnName="s_linkname" />
+                <ScalarProperty Name="s_address" ColumnName="s_address" />
+                <ScalarProperty Name="s_status" ColumnName="s_status" />
+                <ScalarProperty Name="s_kind" ColumnName="s_kind" />
+                <ScalarProperty Name="s_date" ColumnName="s_date" />
+                <ScalarProperty Name="s_logo" ColumnName="s_logo" />
+                <ScalarProperty Name="s_nickname" ColumnName="s_nickname" />
+                <ScalarProperty Name="s_pwd" ColumnName="s_pwd" />
+                <ScalarProperty Name="s_cell" ColumnName="s_cell" />
+                <ScalarProperty Name="s_email" ColumnName="s_email" />
+                <ScalarProperty Name="s_uid" ColumnName="s_uid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_salonimageinfo">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.t_salonimageinfo">
+              <MappingFragment StoreEntitySet="t_salonimageinfo">
+                <ScalarProperty Name="si_status" ColumnName="si_status" />
+                <ScalarProperty Name="si_kind" ColumnName="si_kind" />
+                <ScalarProperty Name="si_photo" ColumnName="si_photo" />
+                <ScalarProperty Name="si_s_uid" ColumnName="si_s_uid" />
+                <ScalarProperty Name="si_id" ColumnName="si_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_salonpackage">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.t_salonpackage">
+              <MappingFragment StoreEntitySet="t_salonpackage">
+                <ScalarProperty Name="spk_image" ColumnName="spk_image" />
+                <ScalarProperty Name="spk_status" ColumnName="spk_status" />
+                <ScalarProperty Name="spk_date" ColumnName="spk_date" />
+                <ScalarProperty Name="spk_s_uid" ColumnName="spk_s_uid" />
+                <ScalarProperty Name="spk_dorder" ColumnName="spk_dorder" />
+                <ScalarProperty Name="spk_price" ColumnName="spk_price" />
+                <ScalarProperty Name="spk_content" ColumnName="spk_content" />
+                <ScalarProperty Name="spk_title" ColumnName="spk_title" />
+                <ScalarProperty Name="spk_id" ColumnName="spk_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_scanrec">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.t_scanrec">
+              <MappingFragment StoreEntitySet="t_scanrec">
+                <ScalarProperty Name="scr_ip" ColumnName="scr_ip" />
+                <ScalarProperty Name="scr_date" ColumnName="scr_date" />
+                <ScalarProperty Name="scr_code" ColumnName="scr_code" />
+                <ScalarProperty Name="scr_s_uid" ColumnName="scr_s_uid" />
+                <ScalarProperty Name="scr_id" ColumnName="scr_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_sms">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.t_sms">
+              <MappingFragment StoreEntitySet="t_sms">
+                <ScalarProperty Name="sm_status" ColumnName="sm_status" />
+                <ScalarProperty Name="sm_date" ColumnName="sm_date" />
+                <ScalarProperty Name="sm_content" ColumnName="sm_content" />
+                <ScalarProperty Name="sm_cell" ColumnName="sm_cell" />
+                <ScalarProperty Name="sm_id" ColumnName="sm_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_sysinformation">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.t_sysinformation">
+              <MappingFragment StoreEntitySet="t_sysinformation">
+                <ScalarProperty Name="sy_status" ColumnName="sy_status" />
+                <ScalarProperty Name="sy_date" ColumnName="sy_date" />
+                <ScalarProperty Name="sy_content" ColumnName="sy_content" />
+                <ScalarProperty Name="sy_title" ColumnName="sy_title" />
+                <ScalarProperty Name="sy_id" ColumnName="sy_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_winning">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.t_winning">
+              <MappingFragment StoreEntitySet="t_winning">
+                <ScalarProperty Name="wig_status" ColumnName="wig_status" />
+                <ScalarProperty Name="wig_pro" ColumnName="wig_pro" />
+                <ScalarProperty Name="wig_image" ColumnName="wig_image" />
+                <ScalarProperty Name="wig_date" ColumnName="wig_date" />
+                <ScalarProperty Name="wig_title" ColumnName="wig_title" />
+                <ScalarProperty Name="wig_s_uid" ColumnName="wig_s_uid" />
+                <ScalarProperty Name="wig_id" ColumnName="wig_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_winningrec">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.t_winningrec">
+              <MappingFragment StoreEntitySet="t_winningrec">
+                <ScalarProperty Name="win_s_uid" ColumnName="win_s_uid" />
+                <ScalarProperty Name="win_temuid" ColumnName="win_temuid" />
+                <ScalarProperty Name="win_cell" ColumnName="win_cell" />
+                <ScalarProperty Name="win_ip" ColumnName="win_ip" />
+                <ScalarProperty Name="win_date" ColumnName="win_date" />
+                <ScalarProperty Name="win_content" ColumnName="win_content" />
+                <ScalarProperty Name="win_id" ColumnName="win_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="to_activity">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.to_activity">
+              <MappingFragment StoreEntitySet="to_activity">
+                <ScalarProperty Name="act_status" ColumnName="act_status" />
+                <ScalarProperty Name="act_name" ColumnName="act_name" />
+                <ScalarProperty Name="act_type" ColumnName="act_type" />
+                <ScalarProperty Name="act_cell" ColumnName="act_cell" />
+                <ScalarProperty Name="act_id" ColumnName="act_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="to_ad">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.to_ad">
+              <MappingFragment StoreEntitySet="to_ad">
+                <ScalarProperty Name="oa_sort" ColumnName="oa_sort" />
+                <ScalarProperty Name="oa_content" ColumnName="oa_content" />
+                <ScalarProperty Name="oa_title" ColumnName="oa_title" />
+                <ScalarProperty Name="oa_status" ColumnName="oa_status" />
+                <ScalarProperty Name="oa_date" ColumnName="oa_date" />
+                <ScalarProperty Name="oa_url" ColumnName="oa_url" />
+                <ScalarProperty Name="oa_image" ColumnName="oa_image" />
+                <ScalarProperty Name="oa_id" ColumnName="oa_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="to_address">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.to_address">
+              <MappingFragment StoreEntitySet="to_address">
+                <ScalarProperty Name="od_lat" ColumnName="od_lat" />
+                <ScalarProperty Name="od_lon" ColumnName="od_lon" />
+                <ScalarProperty Name="od_default" ColumnName="od_default" />
+                <ScalarProperty Name="od_detailed" ColumnName="od_detailed" />
+                <ScalarProperty Name="od_district" ColumnName="od_district" />
+                <ScalarProperty Name="od_city" ColumnName="od_city" />
+                <ScalarProperty Name="od_province" ColumnName="od_province" />
+                <ScalarProperty Name="od_uid" ColumnName="od_uid" />
+                <ScalarProperty Name="od_id" ColumnName="od_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="to_apns">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.to_apns">
+              <MappingFragment StoreEntitySet="to_apns">
+                <ScalarProperty Name="ao_apptype" ColumnName="ao_apptype" />
+                <ScalarProperty Name="ao_device" ColumnName="ao_device" />
+                <ScalarProperty Name="ao_date" ColumnName="ao_date" />
+                <ScalarProperty Name="ao_cid" ColumnName="ao_cid" />
+                <ScalarProperty Name="ao_tokenid" ColumnName="ao_tokenid" />
+                <ScalarProperty Name="ao_cell" ColumnName="ao_cell" />
+                <ScalarProperty Name="ao_id" ColumnName="ao_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="to_apply">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.to_apply">
+              <MappingFragment StoreEntitySet="to_apply">
+                <ScalarProperty Name="ap_open" ColumnName="ap_open" />
+                <ScalarProperty Name="ap_sex" ColumnName="ap_sex" />
+                <ScalarProperty Name="ap_adate" ColumnName="ap_adate" />
+                <ScalarProperty Name="ap_date" ColumnName="ap_date" />
+                <ScalarProperty Name="ap_status" ColumnName="ap_status" />
+                <ScalarProperty Name="ap_gps" ColumnName="ap_gps" />
+                <ScalarProperty Name="ap_salonaddress" ColumnName="ap_salonaddress" />
+                <ScalarProperty Name="ap_salonname" ColumnName="ap_salonname" />
+                <ScalarProperty Name="ap_idcard" ColumnName="ap_idcard" />
+                <ScalarProperty Name="ap_name" ColumnName="ap_name" />
+                <ScalarProperty Name="ap_cell" ColumnName="ap_cell" />
+                <ScalarProperty Name="ap_uid" ColumnName="ap_uid" />
+                <ScalarProperty Name="ap_id" ColumnName="ap_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="to_balanceofpayments">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.to_balanceofpayments">
+              <MappingFragment StoreEntitySet="to_balanceofpayments">
+                <ScalarProperty Name="bp_oreid" ColumnName="bp_oreid" />
+                <ScalarProperty Name="bp_table" ColumnName="bp_table" />
+                <ScalarProperty Name="bp_orderid" ColumnName="bp_orderid" />
+                <ScalarProperty Name="bp_status" ColumnName="bp_status" />
+                <ScalarProperty Name="bp_date" ColumnName="bp_date" />
+                <ScalarProperty Name="bp_kind" ColumnName="bp_kind" />
+                <ScalarProperty Name="bp_payid" ColumnName="bp_payid" />
+                <ScalarProperty Name="bp_money" ColumnName="bp_money" />
+                <ScalarProperty Name="bp_title" ColumnName="bp_title" />
+                <ScalarProperty Name="bp_source" ColumnName="bp_source" />
+                <ScalarProperty Name="bp_type" ColumnName="bp_type" />
+                <ScalarProperty Name="bp_oe_uid" ColumnName="bp_oe_uid" />
+                <ScalarProperty Name="bp_id" ColumnName="bp_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="to_bgerror">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.to_bgerror">
+              <MappingFragment StoreEntitySet="to_bgerror">
+                <ScalarProperty Name="bg_status" ColumnName="bg_status" />
+                <ScalarProperty Name="bg_content" ColumnName="bg_content" />
+                <ScalarProperty Name="bg_name" ColumnName="bg_name" />
+                <ScalarProperty Name="bg_date" ColumnName="bg_date" />
+                <ScalarProperty Name="bg_id" ColumnName="bg_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="to_binding">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.to_binding">
+              <MappingFragment StoreEntitySet="to_binding">
+                <ScalarProperty Name="bd_name" ColumnName="bd_name" />
+                <ScalarProperty Name="bd_status" ColumnName="bd_status" />
+                <ScalarProperty Name="bd_date" ColumnName="bd_date" />
+                <ScalarProperty Name="bd_kind" ColumnName="bd_kind" />
+                <ScalarProperty Name="bd_account" ColumnName="bd_account" />
+                <ScalarProperty Name="bd_oe_uid" ColumnName="bd_oe_uid" />
+                <ScalarProperty Name="bd_id" ColumnName="bd_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wx_answers">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_answers">
+              <MappingFragment StoreEntitySet="wx_answers">
+                <ScalarProperty Name="wa_hot" ColumnName="wa_hot" />
+                <ScalarProperty Name="wa_attribute" ColumnName="wa_attribute" />
+                <ScalarProperty Name="wa_status" ColumnName="wa_status" />
+                <ScalarProperty Name="wa_replyid" ColumnName="wa_replyid" />
+                <ScalarProperty Name="wa_wq_id" ColumnName="wa_wq_id" />
+                <ScalarProperty Name="wa_image" ColumnName="wa_image" />
+                <ScalarProperty Name="wa_content" ColumnName="wa_content" />
+                <ScalarProperty Name="wa_date" ColumnName="wa_date" />
+                <ScalarProperty Name="wa_openid" ColumnName="wa_openid" />
+                <ScalarProperty Name="wa_h_uid" ColumnName="wa_h_uid" />
+                <ScalarProperty Name="wa_id" ColumnName="wa_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wx_article">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_article">
+              <MappingFragment StoreEntitySet="wx_article">
+                <ScalarProperty Name="atr_status" ColumnName="atr_status" />
+                <ScalarProperty Name="atr_date" ColumnName="atr_date" />
+                <ScalarProperty Name="atr_link" ColumnName="atr_link" />
+                <ScalarProperty Name="atr_image" ColumnName="atr_image" />
+                <ScalarProperty Name="atr_id" ColumnName="atr_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wx_bindhair">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_bindhair">
+              <MappingFragment StoreEntitySet="wx_bindhair">
+                <ScalarProperty Name="wb_cell" ColumnName="wb_cell" />
+                <ScalarProperty Name="wb_name" ColumnName="wb_name" />
+                <ScalarProperty Name="wb_status" ColumnName="wb_status" />
+                <ScalarProperty Name="wb_date" ColumnName="wb_date" />
+                <ScalarProperty Name="wb_h_uid" ColumnName="wb_h_uid" />
+                <ScalarProperty Name="wb_openid" ColumnName="wb_openid" />
+                <ScalarProperty Name="wb_id" ColumnName="wb_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wx_comment">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_comment">
+              <MappingFragment StoreEntitySet="wx_comment">
+                <ScalarProperty Name="wc_image" ColumnName="wc_image" />
+                <ScalarProperty Name="wc_status" ColumnName="wc_status" />
+                <ScalarProperty Name="wc_score" ColumnName="wc_score" />
+                <ScalarProperty Name="wc_wo_id" ColumnName="wc_wo_id" />
+                <ScalarProperty Name="wc_date" ColumnName="wc_date" />
+                <ScalarProperty Name="wc_content" ColumnName="wc_content" />
+                <ScalarProperty Name="wc_h_uid" ColumnName="wc_h_uid" />
+                <ScalarProperty Name="wc_openid" ColumnName="wc_openid" />
+                <ScalarProperty Name="wc_id" ColumnName="wc_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wx_customerservice">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_customerservice">
+              <MappingFragment StoreEntitySet="wx_customerservice">
+                <ScalarProperty Name="wcs_date" ColumnName="wcs_date" />
+                <ScalarProperty Name="wcs_account" ColumnName="wcs_account" />
+                <ScalarProperty Name="wcs_openid" ColumnName="wcs_openid" />
+                <ScalarProperty Name="wcs_id" ColumnName="wcs_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wx_impression">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_impression">
+              <MappingFragment StoreEntitySet="wx_impression">
+                <ScalarProperty Name="wi_status" ColumnName="wi_status" />
+                <ScalarProperty Name="wi_date" ColumnName="wi_date" />
+                <ScalarProperty Name="wi_type" ColumnName="wi_type" />
+                <ScalarProperty Name="wi_content" ColumnName="wi_content" />
+                <ScalarProperty Name="wi_h_uid" ColumnName="wi_h_uid" />
+                <ScalarProperty Name="wi_openid" ColumnName="wi_openid" />
+                <ScalarProperty Name="wi_id" ColumnName="wi_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wx_infromation">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_infromation">
+              <MappingFragment StoreEntitySet="wx_infromation">
+                <ScalarProperty Name="wim_push_status" ColumnName="wim_push_status" />
+                <ScalarProperty Name="wim_status" ColumnName="wim_status" />
+                <ScalarProperty Name="wim_url" ColumnName="wim_url" />
+                <ScalarProperty Name="wim_date" ColumnName="wim_date" />
+                <ScalarProperty Name="wim_image" ColumnName="wim_image" />
+                <ScalarProperty Name="wim_content" ColumnName="wim_content" />
+                <ScalarProperty Name="wim_title" ColumnName="wim_title" />
+                <ScalarProperty Name="wim_id" ColumnName="wim_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wx_location">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_location">
+              <MappingFragment StoreEntitySet="wx_location">
+                <ScalarProperty Name="wl_date" ColumnName="wl_date" />
+                <ScalarProperty Name="wl_openid" ColumnName="wl_openid" />
+                <ScalarProperty Name="wl_lat" ColumnName="wl_lat" />
+                <ScalarProperty Name="wl_lng" ColumnName="wl_lng" />
+                <ScalarProperty Name="wl_id" ColumnName="wl_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wx_member">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_member">
+              <MappingFragment StoreEntitySet="wx_member">
+                <ScalarProperty Name="wm_pwd" ColumnName="wm_pwd" />
+                <ScalarProperty Name="wm_type" ColumnName="wm_type" />
+                <ScalarProperty Name="wm_unionid" ColumnName="wm_unionid" />
+                <ScalarProperty Name="wm_subscribe_time" ColumnName="wm_subscribe_time" />
+                <ScalarProperty Name="wm_headimgurl" ColumnName="wm_headimgurl" />
+                <ScalarProperty Name="wm_language" ColumnName="wm_language" />
+                <ScalarProperty Name="wm_province" ColumnName="wm_province" />
+                <ScalarProperty Name="wm_country" ColumnName="wm_country" />
+                <ScalarProperty Name="wm_city" ColumnName="wm_city" />
+                <ScalarProperty Name="wm_sex" ColumnName="wm_sex" />
+                <ScalarProperty Name="wm_nickname" ColumnName="wm_nickname" />
+                <ScalarProperty Name="wm_subscribe" ColumnName="wm_subscribe" />
+                <ScalarProperty Name="wm_cell" ColumnName="wm_cell" />
+                <ScalarProperty Name="wm_openid" ColumnName="wm_openid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wx_order">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_order">
+              <MappingFragment StoreEntitySet="wx_order">
+                <ScalarProperty Name="wo_s_uid" ColumnName="wo_s_uid" />
+                <ScalarProperty Name="wo_out_refund_no" ColumnName="wo_out_refund_no" />
+                <ScalarProperty Name="wo_price" ColumnName="wo_price" />
+                <ScalarProperty Name="wo_orderstatus" ColumnName="wo_orderstatus" />
+                <ScalarProperty Name="wo_paykind" ColumnName="wo_paykind" />
+                <ScalarProperty Name="wo_payid" ColumnName="wo_payid" />
+                <ScalarProperty Name="wo_orderid" ColumnName="wo_orderid" />
+                <ScalarProperty Name="wo_adress" ColumnName="wo_adress" />
+                <ScalarProperty Name="wo_source" ColumnName="wo_source" />
+                <ScalarProperty Name="wo_type" ColumnName="wo_type" />
+                <ScalarProperty Name="wo_status" ColumnName="wo_status" />
+                <ScalarProperty Name="wo_image" ColumnName="wo_image" />
+                <ScalarProperty Name="wo_remarks" ColumnName="wo_remarks" />
+                <ScalarProperty Name="wo_cell" ColumnName="wo_cell" />
+                <ScalarProperty Name="wo_date" ColumnName="wo_date" />
+                <ScalarProperty Name="wo_bookingdate" ColumnName="wo_bookingdate" />
+                <ScalarProperty Name="wo_h_uid" ColumnName="wo_h_uid" />
+                <ScalarProperty Name="wo_openid" ColumnName="wo_openid" />
+                <ScalarProperty Name="wo_id" ColumnName="wo_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wx_phonecall">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_phonecall">
+              <MappingFragment StoreEntitySet="wx_phonecall">
+                <ScalarProperty Name="wpc_date" ColumnName="wpc_date" />
+                <ScalarProperty Name="wpc_cell" ColumnName="wpc_cell" />
+                <ScalarProperty Name="wpc_h_uid" ColumnName="wpc_h_uid" />
+                <ScalarProperty Name="wpc_openid" ColumnName="wpc_openid" />
+                <ScalarProperty Name="wpc_id" ColumnName="wpc_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wx_post">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_post">
+              <MappingFragment StoreEntitySet="wx_post">
+                <ScalarProperty Name="wp_content" ColumnName="wp_content" />
+                <ScalarProperty Name="wp_date" ColumnName="wp_date" />
+                <ScalarProperty Name="wp_fromid" ColumnName="wp_fromid" />
+                <ScalarProperty Name="wp_id" ColumnName="wp_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wx_qrcode">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_qrcode">
+              <MappingFragment StoreEntitySet="wx_qrcode">
+                <ScalarProperty Name="qr_code" ColumnName="qr_code" />
+                <ScalarProperty Name="qr_type" ColumnName="qr_type" />
+                <ScalarProperty Name="qr_num" ColumnName="qr_num" />
+                <ScalarProperty Name="qr_date" ColumnName="qr_date" />
+                <ScalarProperty Name="qr_h_uid" ColumnName="qr_h_uid" />
+                <ScalarProperty Name="qr_ticket" ColumnName="qr_ticket" />
+                <ScalarProperty Name="qr_id" ColumnName="qr_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wx_questions">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_questions">
+              <MappingFragment StoreEntitySet="wx_questions">
+                <ScalarProperty Name="wq_status" ColumnName="wq_status" />
+                <ScalarProperty Name="wq_type" ColumnName="wq_type" />
+                <ScalarProperty Name="wq_image2" ColumnName="wq_image2" />
+                <ScalarProperty Name="wq_image1" ColumnName="wq_image1" />
+                <ScalarProperty Name="wq_content" ColumnName="wq_content" />
+                <ScalarProperty Name="wq_date" ColumnName="wq_date" />
+                <ScalarProperty Name="wq_openid" ColumnName="wq_openid" />
+                <ScalarProperty Name="wq_title" ColumnName="wq_title" />
+                <ScalarProperty Name="wq_id" ColumnName="wq_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wx_request">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_request">
+              <MappingFragment StoreEntitySet="wx_request">
+                <ScalarProperty Name="wr_date" ColumnName="wr_date" />
+                <ScalarProperty Name="wr_interfacename" ColumnName="wr_interfacename" />
+                <ScalarProperty Name="wr_post" ColumnName="wr_post" />
+                <ScalarProperty Name="wr_id" ColumnName="wr_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wx_searchcell">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_searchcell">
+              <MappingFragment StoreEntitySet="wx_searchcell">
+                <ScalarProperty Name="ws_date" ColumnName="ws_date" />
+                <ScalarProperty Name="ws_search" ColumnName="ws_search" />
+                <ScalarProperty Name="ws_cell" ColumnName="ws_cell" />
+                <ScalarProperty Name="ws_id" ColumnName="ws_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wx_tip">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.wx_tip">
+              <MappingFragment StoreEntitySet="wx_tip">
+                <ScalarProperty Name="wt_status" ColumnName="wt_status" />
+                <ScalarProperty Name="wt_date" ColumnName="wt_date" />
+                <ScalarProperty Name="wt_paykind" ColumnName="wt_paykind" />
+                <ScalarProperty Name="wt_payid" ColumnName="wt_payid" />
+                <ScalarProperty Name="wt_orderid" ColumnName="wt_orderid" />
+                <ScalarProperty Name="wt_price" ColumnName="wt_price" />
+                <ScalarProperty Name="wt_h_uid" ColumnName="wt_h_uid" />
+                <ScalarProperty Name="wt_openid" ColumnName="wt_openid" />
+                <ScalarProperty Name="wt_id" ColumnName="wt_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="to_employee">
+            <EntityTypeMapping TypeName="mysqkbobohairEntites.to_employee">
+              <MappingFragment StoreEntitySet="to_employee">
+                <ScalarProperty Name="oe_restday" ColumnName="oe_restday" />
+                <ScalarProperty Name="oe_worktime" ColumnName="oe_worktime" />
+                <ScalarProperty Name="oe_price" ColumnName="oe_price" />
+                <ScalarProperty Name="oe_income" ColumnName="oe_income" />
+                <ScalarProperty Name="oe_idcard" ColumnName="oe_idcard" />
+                <ScalarProperty Name="oe_s_uid" ColumnName="oe_s_uid" />
+                <ScalarProperty Name="oe_b_uid" ColumnName="oe_b_uid" />
+                <ScalarProperty Name="oe_grade" ColumnName="oe_grade" />
+                <ScalarProperty Name="oe_quota" ColumnName="oe_quota" />
+                <ScalarProperty Name="oe_sa" ColumnName="oe_sa" />
+                <ScalarProperty Name="oe_status" ColumnName="oe_status" />
+                <ScalarProperty Name="oe_cuid" ColumnName="oe_cuid" />
+                <ScalarProperty Name="oe_cell" ColumnName="oe_cell" />
+                <ScalarProperty Name="oe_workstatus" ColumnName="oe_workstatus" />
+                <ScalarProperty Name="oe_sort" ColumnName="oe_sort" />
+                <ScalarProperty Name="oe_introduce" ColumnName="oe_introduce" />
+                <ScalarProperty Name="oe_lat" ColumnName="oe_lat" />
+                <ScalarProperty Name="oe_lon" ColumnName="oe_lon" />
+                <ScalarProperty Name="oe_logo" ColumnName="oe_logo" />
+                <ScalarProperty Name="oe_sex" ColumnName="oe_sex" />
+                <ScalarProperty Name="oe_name" ColumnName="oe_name" />
+                <ScalarProperty Name="oe_uid" ColumnName="oe_uid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

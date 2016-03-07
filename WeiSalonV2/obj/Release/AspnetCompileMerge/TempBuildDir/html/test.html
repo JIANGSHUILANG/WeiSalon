@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="/Scripts/jquery-1.8.2.min.js"></script>
+    <script>
+        function SalonInfo() {
+            $.ajax({
+                url: "/api/NewSalon/SalonInfo",
+                //url: "/api/SalonNew/SalonInfo",
+                dataType: "json",
+                data: {
+                    suid: "894608b1-44fa-4697-b1e9-76341324d233"  
+                    //suid: "4589e16e-af2e-43cc-80ce-001dcec0170f"
+                    //suid: "25d7a62b-d7e8-4560-896e-dcc377fc240c"
+                },
+                type: "post",
+                success: function (result) {
+                    //alert(result);
+                    $("#h").html(result);
+                },
+                error: function (result) {
+                    //alert(result.msg);
+                    $("#h").html(result.msg);
+                }
+            });
+        }      
+        function getshow() {
+            $.ajax({
+                url: "/api/NewSalon/getshow",
+                //url: "/api/SalonNew/SalonInfo",
+                dataType: "json",
+                data: {
+                    //suid: "894608b1-44fa-4697-b1e9-76341324d233"  
+                    bgid: "1165585"
+                    //suid: "25d7a62b-d7e8-4560-896e-dcc377fc240c"
+                },
+                type: "post",
+                success: function (result) {
+                    //alert(result);
+                    $("#h").html(result);
+                },
+                error: function (result) {
+                    //alert(result.msg);
+                    $("#h").html(result.msg);
+                }
+            });
+        }
+
+        function Getticket() {
+            $.ajax({
+                //url: "/Manage/Getticket",
+                url: "/api/SalonNew/SalonInfo",
+                dataType: "json",
+                data: {
+                    huid: "ff3298fd-e9ce-4e05-b43c-fbf2e0221f4f"
+                    //suid: "25d7a62b-d7e8-4560-896e-dcc377fc240c"
+                },
+                type: "post",
+                success: function (result) {
+                    //alert(result);
+                    $("#h").html(result);
+                },
+                error: function () {
+                    //alert(result.msg);
+                    $("#h").html(result.msg);
+                }
+            });
+        }
+        function HariStyleListList() {
+            $.ajax({
+                url: "/api/NewSalon/HariStyleListList",
+                //url: "/api/SalonNew/HariStyleListList",
+                dataType: "json",
+                data: {
+                    //suid: "25d7a62b-d7e8-4560-896e-dcc377fc240c",   
+                    //suid: "3b09027d-aed5-47db-82ad-7b1304a59172",   
+                    suid: "894608b1-44fa-4697-b1e9-76341324d233",
+                    pageindex: "0",
+                    pagesize: "0"
+                },
+                type: "post",
+                success: function (result) {
+                    //alert(result);
+                    $("#h").html(result);
+                },
+                error: function (result) {
+                    //alert(result.msg);
+                    $("#h").html(result.msg);
+                }
+            });
+        }
+
+        function ShowList() {
+            $.ajax({
+                url: "/api/NewSalon/ShowList",
+                //url: "/api/SalonNew/HariStyleListList",
+                dataType: "json",
+                data: {
+                    //suid: "25d7a62b-d7e8-4560-896e-dcc377fc240c",
+                    suid: "71c10bf7-cad1-4b99-a86a-51d14a48a371",
+                    pageindex: "1",
+                    pagesize: "10"
+                },
+                type: "post",
+                success: function (result) {
+                    //alert(result);
+                    $("#h").html(result);
+                },
+                error: function () {
+                    //alert(result.msg);
+                    $("#h").html(result.msg);
+                }
+            });
+        }
+        function GetWXtoken() {
+            $.ajax({
+                url: "/api/NewSalon/GetWXtoken",
+                //url: "/api/SalonNew/HariStyleListList",
+                dataType: "json",
+                data: {
+                    //suid: "25d7a62b-d7e8-4560-896e-dcc377fc240c",
+                    htmlurl: "www.hairbobo.cn",
+                },
+                type: "post",
+                success: function (result) {
+                    //alert(result);
+                    $("#h").html(result);
+                },
+                error: function () {
+                    //alert(result.msg);
+                    $("#h").html(result.msg);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1 id="h1"></h1>
+    <br />
+    <h1 id="h"></h1>
+    <input type="button" onclick="SalonInfo()" value="SalonInfo" />
+    <input type="button" onclick="HariStyleListList()" value="HariStyleListList" />
+    <input type="button" onclick="ShowList()" value="ShowList" />
+    <input type="button" onclick="Getticket()" value="Getticket" />     
+    <input type="button" onclick="getshow()" value="getshow" /> 
+    <input type="button" onclick="GetWXtoken()" value="GetWXtoken" />
+</body>
+</html>

@@ -1,0 +1,429 @@
+﻿@{
+    ViewBag.Title = "发型师信息";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using Boboframework
+@using BoboModel
+@model AllSalon
+
+
+<div class="am-cf admin-main">
+    <!-- content start -->
+    <div class="admin-content am-g">
+        <div class="am-u-lg-8">
+            <div class="am-cf am-padding">
+                <div class="am-fl am-cf">
+                    <strong class="am-text-primary am-text-lg">沙龙基本资料</strong> / <small>完善沙龙基本资料让更多人了解你</small>
+                </div>
+            </div>
+            <div class="salon-info-edit am-padding">
+                <form action="/Manage/SaveBasicInfo" method="post" class="am-form" id="formbasic" data-am-validator>
+                    <input type="hidden" name="id1" value="@Model.Uid" />
+                    <input type="hidden" name="lng" value="" />
+                    <input type="hidden" name="lat" value="" />
+                    <fieldset>
+                        <div class="am-form-group">
+                            <label for="doc-vld-name">沙龙名称：<span>沙龙名称会在主页显示，还可以帮助用户更容易找到你</span></label>
+                            <input name="name" type="text" placeholder="输入新名称" class="am-form-field" value="@Model.Nickname" required />
+                        </div>
+                        <div class="am-form-group">
+                            <label for="doc-vld-name">价格区间：<span></span></label>
+                            <div class="am-form-inline">
+                                <div class="am-form-group">
+                                    <input type="text" name="low_price" placeholder="输入最低剪发价格" class="am-form-field" value="@(string.IsNullOrWhiteSpace(Model.Price) || !Model.Price.Contains('-') ? "0" : Model.Price.Split('-')[0])"  pattern="^\d+$" required />
+                                </div>
+                                -
+							
+                                    <div class="am-form-group">
+                                        <input name="hight_price" type="text" placeholder="输入最高剪发价格" class="am-form-field" value="@(string.IsNullOrWhiteSpace(Model.Price) || !Model.Price.Contains('-') ? "0" : Model.Price.Split('-')[1])"  pattern="^\d+$" required />
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="am-form-group">
+                            <label for="doc-vld-name">沙龙地址：<span>沙龙所在的详细地址</span></label>
+
+                            <input name="add" type="text" id="add" onblur="getLngLat(this.id)"  placeholder="输入新地址" class="am-form-field" value="@(Model.Address.Replace("|", "") ?? "")" required />
+
+                        </div>
+                        <div class="am-form-group">
+                            <label for="doc-vld-name">沙龙电话：<span>填写有效的电话号码可以让顾客联系你，固话请加区号（如：021-12345678）</span></label>
+                            <input name="cell" type="text" placeholder="输入有效的手机号码或者固话" class="am-form-field" value="@Model.Cell.Trim()" pattern="(^(\d{3}-|\d{4}-)(\d{8}|\d{7})$|^1((3|5|8){1}\d{1}|70)\d{8}$)" required />
+                        </div>
+
+                        <div class="am-form-group">
+                            <label for="doc-vld-name">沙龙简介：<span>填写对沙龙的信息描述</span></label><span id="summary">，最多输入<em><font color="green" style="font-size: 22px">1000</font></em>个字</span>
+                            <textarea class="am-form-field" rows="5" name="summary">@Model.Summary</textarea>
+                        </div>
+
+                        <div class="am-form-group">
+                            <label for="doc-vld-name">微信公众号：<span>请留下沙龙公众账号的名称或者ID</span></label>
+                            <input name="wxname" type="text" placeholder="输入您的微信号" class="am-form-field" value="@Model.Wxname.Trim()"   />
+                        </div>
+
+                        <div class="am-form-group">
+                            <label for="doc-vld-name">营业时间：<span></span></label>
+                            <div class="am-form-inline">
+                                <div class="am-form-group">
+                                    <input type="time" id="start_time" name="start_time" class="am-form-field" value="@(Model.Businessdate == "" ? "00:00" : (Model.Businessdate.Split('~')[0]) == "" ? "00:00" : Model.Businessdate.Split('~')[0])"  />
+                                </div>
+                                -
+                                    <div class="am-form-group">
+                                        <input type="time" id="end_time" name="end_time" class="am-form-field" value="@(Model.Businessdate == "" ? "23:59" : (Model.Businessdate.Split('~')[1]) == "" ? "23:59" : Model.Businessdate.Split('~')[1])"  />
+                                    </div>
+                            </div>
+                        </div>
+
+                        <a onclick="submitbasic()" class="am-btn am-btn-primary submit-btn">提交</a>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="am-u-lg-4 am-u-sm-4 am-padding">
+            <div class="preview">
+                <a class="back" href="#"></a>
+                <iframe src="@ViewBag.uid" width="320" height="503"></iframe>
+            </div>
+            <div class="show-code">
+                <div id="qrcodeTable" class="form_wrp">
+                </div>
+                <span>扫描二维码预览页面</span>
+            </div>
+            <div class="page-link am-g am-padding">
+                <div class="am-u-sm-8">
+                    <input class="am-form-field" type="email" value="@ViewBag.uid">
+                </div>
+                <a class="am-u-sm-4 am-btn am-btn-default am-radius">复制链接</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="admin-content am-g">
+        <div class="am-u-lg-12">
+            <div class="am-cf am-padding">
+                <div class="am-fl am-cf">
+                    <strong class="am-text-primary am-text-lg">发型师背景图片</strong> / <small>绑定发型师背景图片</small>
+                </div>
+            </div>
+            <div class="salon-info-edit am-padding">
+                <div class="am-form-group am-form-file">
+                    @{
+                        if ((int)ViewBag.imagehairstatus == 0)
+                        {
+                        <p>
+                            <button type="button" onclick="showimage(this,'titleimage')" class="am-btn am-btn-default">上传发型师背景图</button>
+                        </p>
+                        }
+                        else
+                        {
+                        <p>
+                            <button type="button" onclick="showimage(this,'titleimage')" class="am-btn am-btn-default">修改发型师背景图</button>
+                        </p>
+                        }
+                    }
+                    <table class="temporganization">
+                        <tr>
+                            @{
+                               
+                                if (Model != null)
+                                {
+                                    if ((int)ViewBag.imagehairstatus == 1)
+                                    {
+                                <td style="text-align: center;">
+                                    <img src="@string.Format("http://bobosquad.qiniudn.com{0}?imageView2/0/w/236/h/177", Model.ImageUrl)" width="236" height="177" class="am-img-thumbnail" />
+                                    <br />
+                                    <a href="javascript:;;" onclick="unimage(this)" data-value="" class="am-close am-close-alt am-icon-times"></a>
+                                </td>
+                                    }
+                                }
+                            }
+                        </tr>
+                    </table>
+
+                    <div style="width: 800px; height: 0px;" id="titleimage">
+                        <div class="img-container">
+                            <img src="~/Images/basicInfo_img.png" />
+                        </div>
+                        <div class="img-operation-btns" data-index="1">
+                            <label class="am-btn am-btn-primary am-radius" for="inputImage" title="Upload image file">
+                                <input type="file" class="sr-only inputImage" id="inputImage" name="file" accept="image/*">
+                                <span class="docs-tooltip" data-toggle="tooltip" title="Import image with Blob URLs" style="color:#fff;font-size:16px;">上传图片
+                                </span>
+                            </label>
+                            <button type="button" class="am-btn am-btn-primary am-radius" data-method="getCroppedCanvas" data-type="title_image">
+                                <span class="docs-tooltip" data-toggle="tooltip" title="$().cropper(&quot;getCroppedCanvas&quot;)">保存图片
+                                </span>
+                            </button>
+                            <a href="javascript:;;" onclick="unsave(this)" class="am-btn am-btn-primary am-radius">取消保存
+                            </a>
+                            <input type="hidden" class="imgurl" id="enlogimage" name="enlogimage">
+                            @*<input type="hidden" id="originalimage" name="originalimage" placeholder="原始图片路径" />*@
+                            <input type="hidden" id="imageindex" />
+                            <div class="am-btn btn-zoom-add-sub">
+                                <button class="btn btn-primary" data-method="zoom" data-option="0.1" type="button" title="Zoom In">
+                                    <span class="docs-tooltip" data-toggle="tooltip" data-option="0.1" title="$().cropper(&quot;zoom&quot;, 0.1)">
+                                        <span class="icon icon-zoom-in"></span>
+                                    </span>
+                                </button>
+                                <button class="btn btn-primary" style="margin-left: 10px;" data-method="zoom" data-option="-0.1" type="button" title="Zoom Out">
+                                    <span class="docs-tooltip" data-toggle="tooltip" data-option="-0.1" title="$().cropper(&quot;zoom&quot;, -0.1)">
+                                        <span class="icon icon-zoom-out"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="admin-content am-g">
+        <div class="am-u-lg-8">
+            <div class="am-cf am-padding">
+                <div class="am-fl am-cf">
+                    <strong class="am-text-primary am-text-lg">沙龙基本资料</strong> / <small>密码修改</small>
+                </div>
+            </div>
+
+            <div class="salon-info-edit am-padding">
+                <form id="formpassword">
+                    <div class="am-form-group">
+                        <label for="doc-vld-name">原始密码：</label>
+                        <input name="oldpassword" type="password" placeholder="输入原始密码" class="am-form-field" required />
+                    </div>
+                    <div class="am-form-group">
+                        <label for="doc-vld-name">请设置密码：</label>
+                        <input name="newpassword1" type="password" placeholder='输入最新密码（4-20位字符，支持汉字、字母、数字及"_"组合）' class="am-form-field" required />
+                    </div>
+                    <div class="am-form-group">
+                        <label for="doc-vld-name">请确认密码：</label>
+                        <input name="newpassword2" type="password" placeholder='确认最新密码（4-20位字符，支持汉字、字母、数字及"_"组合）' class="am-form-field" required />
+                    </div>
+                    <a onclick="updatepassword()" class="am-btn am-btn-primary submit-btn" type="submit">提交</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- content end -->
+    <input type="hidden" value="@ViewData["Msg"]" id="Msg" />
+</div>
+
+@section scripts{
+    <script type="text/javascript" src="/js/jquery.qrcode.js"></script>
+    <script type="text/javascript" src="/js/qrcode.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=LOoFXO0NxsgLd6BgTjGxb2ZD"></script>
+    <link href="~/Content/cropper.min.css" rel="stylesheet" />
+    <link href="~/Content/upload.css" rel="stylesheet" />
+    <link href="~/Content/main.css" rel="stylesheet" />
+    <script src="~/JS/cropper/cropper.min.js"></script>
+    <script src="~/JS/cropper/basicinfoupload.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            setInterval(function () {
+                $("textarea[name='summary']").change();
+            }, 200);
+
+            $("textarea[name='summary']").change(function () {
+                var length = 1000 - $(this).val().length;
+                if (length >= 0) {
+                    $("#summary").html('<span id="summary">，还能输入<em><font color="green" style="font-size:22px">' + length + '</font></em>个字</span>');
+                } else {
+                    $("#summary").html('<span id="summary">，已超出了<em><font color="red" style="font-size:22px">' + length + '</font></em>个字</span>');
+                }
+            })
+
+            if ($("#Msg").val().trim() != "") {
+                alert($("#Msg").val());
+            }
+
+
+
+            $("#qrcodeTable").qrcode({
+                render: "canvas",
+                text: "@ViewBag.uid",
+                width: "100",
+                height: "100"
+            });
+        })
+
+
+
+        //密码修改
+        function updatepassword() {
+            var p1 = $("input[name='newpassword1']").val();
+            var p2 = $("input[name='newpassword2']").val();
+            var oldpassword = $("input[name='oldpassword']").val();
+
+            if (oldpassword.trim() == "") {
+                alert("请输入原始密码!");
+                return;
+            }
+            else if (p1.trim() == "") {
+                alert("请设置密码!");
+                return;
+            } else if (p2.trim() == "") {
+                alert("请确认密码!");
+                return;
+            }
+
+            var check = /^[A-Za-z0-9_]+$/;
+            if (!check.test(p1)) {
+                alert('密码不允许包含特殊字符!');
+                return;
+            }
+            if (p1 == p2) {
+                if (p1.length < 6) {
+                    alert('密码长度不能小于6位!');
+                    return;
+                }
+                $.ajax({
+                    type: "post",
+                    url: "/Manage/UpdatePassword",
+                    dataType: "text",
+                    data: { password: p1, oldpassword: oldpassword },
+                    success: function (data) {
+                        var str = JSON.parse(data);
+                        if (str.flag) {
+                            alert(str.Msg);
+                            window.location.href = "/Manage/BasicInfo";
+                        } else {
+                            alert(str.Msg);
+                        }
+                    },
+                    error: function (data) {
+                        alert("密码修改失败!");
+                    }
+                });
+            } else {
+                alert("两次输入的新密码不一致!");
+            }
+        }
+        //提交基本信息表单
+        function submitbasic() {
+            var low_price = $("input[name=low_price]").val();
+            var hight_price = $("input[name=hight_price]").val();
+
+            if (parseInt(low_price) > parseInt(hight_price)) {
+                alert("价格区间应由小到大 !");
+                return;
+            }
+            var length = $("textarea[name='summary']").val().length;
+            if (length <= 1000) {
+                $("#formbasic").submit();
+            }
+        }
+        function getLngLat(id) {
+            var pointlnglat = document.getElementById(id).value;
+            // 创建地址解析器实例
+            var myGeo = new BMap.Geocoder();
+            // 将地址解析结果显示在地图上,并调整地图视野
+            myGeo.getPoint(pointlnglat, function (point) {
+                var lng = 0;
+                var lat = 0;
+                if (point) {
+                    lng = point.lng;
+                    lat = point.lat;
+                }
+                $("input[name='lng']").val(lng);
+                $("input[name='lat']").val(lat);
+            })
+        }
+
+
+
+        function showimage(dom, id) {
+            $("#" + id).show();
+            $("#" + id).css("height", "600px");
+        }
+
+        function unsave(dom, imageurl) {
+            $(dom).next().data("value", 0);
+            $(dom).parents('.img-operation-btns').parent().css('height', '0px');
+        }
+
+        function unimage(dom) {
+            $(dom).parent().remove();
+            $("#enlogimage").val("");
+            var image = $(dom).data("value");
+
+            $.ajax({
+                url: "/Manage/RemoveHairBackImage",
+                type: "post",
+                success: function (data) {
+                    $("#imageindex").val(data);
+                    if (data == 1) {
+                        alert("上传失败，请联系波波网管理员 ！");
+                    }
+                }
+            })
+        }
+
+        function onsubmitformimage() {
+            var tds = $(".temporganization tr").find("td");
+            if (tds.length >= 1) {
+                alert("发型师背景图片个数超出上限");
+                return;
+            }
+            //if (navigator.userAgent.indexOf("Firefox") < 0) {
+            //    $('.img-operation-btns button').click();
+            //}
+
+            var imgurl = $("#enlogimage").val();
+            var imageindex = $("#imageindex").val();
+            if (imgurl.trim() != "") {
+                $.ajax({
+                    url: "/Manage/SaveIamgeAlone",
+                    data: {
+                        image: imgurl,
+                        kind: 5
+                    },
+                    type: "post",
+                    success: function (data) {
+                        if (data == null || data == "") { alert("上传失败 !"); return };
+                        $("#enlogimage").val(data);
+                        var url = data;
+                        $("#imageindex").val("");
+
+                        if (imageindex == "" || imageindex == null) {
+
+                            var html = "";
+                            html += '<td style="text-align:center;">';
+                            html += '<img src="' + url + '" width="236" height="177" class="am-img-thumbnail" onclick="imageclick(this)" />';
+                            html += '<br /><a href="javascript:;;" onclick="unimage(this)"   data-type="title_image"  data-value="' + data.image + '"  class="am-close am-close-alt am-icon-times"></a></td>';
+                            $(".temporganization tr").append(html);
+                        } else {
+                            var html = "";
+                            html += '<td style="text-align:center;">';
+                            html += '<img src="' + url + '" width="236" height="177" class="am-img-thumbnail" onclick="imageclick(this)" />';
+                            html += '<br /><a href="javascript:;;" onclick="unimage(this)"   data-type="title_image"  data-value="' + data.image + '"  class="am-close am-close-alt am-icon-times"></a></td>';
+                            var images = $(".temporganization tr td");
+
+                            if (images.length == imageindex) {
+                                $(".temporganization tr").append(html);
+                            } else {
+                                $(".temporganization tr").empty();
+                                for (var i = 0; i < images.length; i++) {
+                                    if (i == parseInt(imageindex)) {
+                                        $(".temporganization tr").append(html);
+                                    }
+                                    $(".temporganization tr").append("<td style='text-align:center;'>" + $(images[i]).html() + "</td>");
+                                }
+                            }
+
+                        }
+                        //还远成原始图片
+                        //$(".cropper-canvas img").remove();
+                        //$(".img-container img").attr("src", "/Images/basicInfo_img.png");
+                        //$(".img-container img").css({ "width": "711.111px", "height": "400px", "margin-left": "19.4444px", "margin-top": "-30px", "transform": "none" });
+
+                    }
+                })
+
+            }
+        }
+    </script>
+}
+
+

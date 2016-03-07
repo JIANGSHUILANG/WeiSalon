@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "RealTimeStatistics";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using Boboframework
+@using BoboModel
+@model PageOfItems<StatisticsMonthSum>
+<div class="am-cf admin-main">
+    <!-- content start -->
+    <div class="admin-content am-g">
+        <div class="am-padding charts-content">
+            <table class="am-table am-table-centered charts-head">
+                <tr>
+                    <th width="25%"></th>
+                    <th width="25%">今日预约</th>
+                    <th width="25%">本周累计</th>
+                    <th width="25%">本月累计</th>
+                </tr>
+            </table>
+            <div class="am-panel-group" id="statistics">
+                <div class="am-panel-default">
+                    <table class="am-table am-table-centered" class="am-panel-hd" data-am-collapse="{parent: '#statistics', target: '#do-not-say-0'}">
+                        <tr>
+                            <td class="am-text-middle" width="25%"><a href="javascript:;" class="user-pic shop-logo am-circle">全店</a></td>
+
+                            <td class="am-text-middle" width="25%">@ViewBag.today_allcount 单<br>
+                                定金收入 @ViewBag.today_price 元</td>
+                            <td class="am-text-middle" width="25%">@ViewBag.week_allcount 单<br>
+                                定金收入 @ViewBag.week_price 元</td>
+                            <td class="am-text-middle" width="25%">@ViewBag.month_allcount 单<br>
+                                定金收入 @ViewBag.month_price  元</td>
+                        </tr>
+                    </table>
+                    <div id="do-not-say-0" data-id="0" class="am-panel-collapse am-collapse">
+                        <div class="am-panel-bd">
+                            图表
+					
+                        </div>
+                    </div>
+                </div>
+                @{
+                    if (Model != null)
+                    {
+                        foreach (StatisticsMonthSum item in Model)
+                        {
+                            
+                    <div class="am-panel-default">
+                        <table class="am-table am-table-centered" class="am-panel-hd" data-am-collapse="{parent: '#statistics', target: '#do-not-say-@item.HairUid'}">
+                            <tr>
+                                <td class="am-text-middle" width="25%">
+                                    <a class="user-pic am-circle" href="javascript:void(0)">
+                                        @Html.Image(item.HairLog, 0, "", new { width = 68 })</a><br>
+                                    @item.HairName
+                                </td>
+                                <td class="am-text-middle" width="25%">@(item.Today_HairCount==null?0:item.Today_HairCount) 单<br>
+                                    定金收入@(item.Today_Price==null?0:item.Today_Price) 元</td>
+                                <td class="am-text-middle" width="25%">@(item.Week_HairCount==null?0:item.Week_HairCount) 单<br>
+                                    定金收入@(item.Week_Price==null?0:item.Week_Price)元</td>
+                                <td class="am-text-middle" width="25%">@(item.Month_HairCount==null?0:item.Month_HairCount) 单<br>
+                                    定金收入@(item.Month_Price==null?0:item.Month_Price)元</td>
+                            </tr>
+                        </table>
+                        <div id="do-not-say-@item.HairUid" data-id="@item.HairUid" class="am-panel-collapse am-collapse">
+                            <div class="am-panel-bd">
+                                图表
+					
+                            </div>
+                        </div>
+                    </div>
+                        }
+
+                    }
+                }
+
+            </div>
+
+        </div>
+    </div>
+    <!-- content end -->
+</div>
+<ul class="am-pagination am-pagination-centered">
+    @using BoboCommon
+    @MvcHtmlString.Create(MyPageBar.ShowMyPageBar((int)ViewBag.pageIndex, (int)ViewBag.pageCount))
+</ul>
+<script src="/CSS/Manage/Amazeui/js/echarts.js"></script>
+
+

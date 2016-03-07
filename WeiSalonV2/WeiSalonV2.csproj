@@ -1,0 +1,1205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{31AF796F-3692-4805-8352-75E6411626F7}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WeiSalonV2</RootNamespace>
+    <AssemblyName>WeiSalonV2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Qiniu.4.0">
+      <HintPath>..\..\..\Weisalon\WeiSalon\WeiSalon\bin\Qiniu.4.0.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.20710.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.0\lib\net40\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alipay\AlipayConfig.cs" />
+    <Compile Include="Alipay\AlipayCore.cs" />
+    <Compile Include="Alipay\AlipayNotify.cs" />
+    <Compile Include="Alipay\AlipaySubmit.cs" />
+    <Compile Include="Alipay\MD5.cs" />
+    <Compile Include="Alipay\RSA.cs" />
+    <Compile Include="Alipay\Unity.cs" />
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\BaseManageController.cs" />
+    <Compile Include="Controllers\AlipayReturnController.cs" />
+    <Compile Include="Controllers\ErrController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NewSalonController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\SalonController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AESHelper.cs" />
+    <Compile Include="Models\APIModels.cs" />
+    <Compile Include="Models\AutoMapperConfiguration_Load.cs" />
+    <Compile Include="Models\CacheManage.cs" />
+    <Compile Include="Models\CodeHelp.cs" />
+    <Compile Include="Models\Common.cs" />
+    <Compile Include="Models\JSONHelper.cs" />
+    <Compile Include="Models\JsonTools.cs" />
+    <Compile Include="Models\manage.cs" />
+    <Compile Include="Models\MD5.cs" />
+    <Compile Include="Models\PayHelp.cs" />
+    <Compile Include="Models\Result.cs" />
+    <Compile Include="Models\SalonMo.cs" />
+    <Compile Include="Models\SQLFilter.cs" />
+    <Compile Include="Models\Tools.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\base1fa648.css" />
+    <Content Include="Content\common.css" />
+    <Content Include="Content\cropper.min.css" />
+    <Content Include="Content\layout_head1f56cd.css" />
+    <Content Include="Content\lib1ec5f7.css" />
+    <Content Include="Content\login.css" />
+    <Content Include="Content\main.css" />
+    <Content Include="Content\page.css" />
+    <Content Include="Content\page_index1ec663.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\upload.css" />
+    <Content Include="CSS\fancybox.css" />
+    <Content Include="CSS\list.css" />
+    <Content Include="CSS\main.css" />
+    <Content Include="CSS\Manage\Amazeui\css\admin.css" />
+    <Content Include="CSS\Manage\Amazeui\css\amazeui.css" />
+    <Content Include="CSS\Manage\Amazeui\css\amazeui.flat.css" />
+    <Content Include="CSS\Manage\Amazeui\css\amazeui.flat.min.css" />
+    <Content Include="CSS\Manage\Amazeui\css\amazeui.min.css" />
+    <Content Include="CSS\Manage\Amazeui\css\app.css" />
+    <Content Include="CSS\Manage\Amazeui\images\phone-frame.png" />
+    <Content Include="CSS\Manage\Amazeui\js\amazeui.ie8polyfill.js" />
+    <Content Include="CSS\Manage\Amazeui\js\amazeui.ie8polyfill.min.js" />
+    <Content Include="CSS\Manage\Amazeui\js\amazeui.js" />
+    <Content Include="CSS\Manage\Amazeui\js\amazeui.min.js" />
+    <Content Include="CSS\Manage\Amazeui\js\amazeui.widgets.helper.js" />
+    <Content Include="CSS\Manage\Amazeui\js\amazeui.widgets.helper.min.js" />
+    <Content Include="CSS\Manage\Amazeui\js\app.js" />
+    <Content Include="CSS\Manage\Amazeui\js\echarts.js" />
+    <Content Include="CSS\Manage\Amazeui\js\handlebars.min.js" />
+    <Content Include="CSS\Manage\Amazeui\js\jquery.min.js" />
+    <Content Include="CSS\Manage\Amazeui\js\jquery.zclip.min.js" />
+    <Content Include="CSS\Manage\Amazeui\js\ZeroClipboard.swf" />
+    <Content Include="CSS\Manage\basicInfo.css" />
+    <Content Include="CSS\Manage\PageBar.css" />
+    <Content Include="CSS\pagination1ec5f7.css" />
+    <Content Include="CSS\Register\main.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\icon-money.png" />
+    <Content Include="Images\icon-user.png" />
+    <Content Include="Images\icons.png" />
+    <Content Include="Images\basicInfo_img.png" />
+    <Content Include="Images\qrcode.jpg" />
+    <Content Include="Images\Register\case-ams-home.jpg" />
+    <Content Include="Images\Register\case-ams-list.jpg" />
+    <Content Include="Images\Register\case-ams-wall.jpg" />
+    <Content Include="Images\Register\case-jk-code.gif" />
+    <Content Include="Images\Register\case-jk-home.jpg" />
+    <Content Include="Images\Register\case-jk-list.jpg" />
+    <Content Include="Images\Register\case-jk-logo.jpg" />
+    <Content Include="Images\Register\case-jk-wall.jpg" />
+    <Content Include="Images\Register\case-klp-home.jpg" />
+    <Content Include="Images\Register\case-klp-list.jpg" />
+    <Content Include="Images\Register\case-klp-logo.jpg" />
+    <Content Include="Images\Register\case-klp-wall.jpg" />
+    <Content Include="Images\Register\case-toni-code.gif" />
+    <Content Include="Images\Register\case-toni-home.jpg" />
+    <Content Include="Images\Register\case-toni-list.jpg" />
+    <Content Include="Images\Register\case-toni-logo.jpg" />
+    <Content Include="Images\Register\case-toni-wall.jpg" />
+    <Content Include="Images\Register\case-yhl-home.jpg" />
+    <Content Include="Images\Register\case-yhl-list.jpg" />
+    <Content Include="Images\Register\case-yhl-wall.jpg" />
+    <Content Include="JS\cropper\basicinfoupload.js" />
+    <Content Include="JS\cropper\cropper.min.js" />
+    <Content Include="JS\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="JS\layer\extend\layer.ext.js" />
+    <Content Include="JS\layer\layer.js" />
+    <Content Include="JS\layer\skin\default\icon-ext.png" />
+    <Content Include="JS\layer\skin\default\icon.png" />
+    <Content Include="JS\layer\skin\default\loading-0.gif" />
+    <Content Include="JS\layer\skin\default\loading-1.gif" />
+    <Content Include="JS\layer\skin\default\loading-2.gif" />
+    <Content Include="JS\layer\skin\layer.css" />
+    <Content Include="JS\layer\skin\layer.ext.css" />
+    <Content Include="SalonWeb\css\main.css" />
+    <Content Include="SalonWeb\css\scale.css" />
+    <Content Include="SalonWeb\fonts\iconfont.svg" />
+    <Content Include="SalonWeb\images\base_ui_wait.gif" />
+    <Content Include="SalonWeb\images\pixel.gif" />
+    <Content Include="SalonWeb\images\salon-fxs.png" />
+    <Content Include="SalonWeb\index.html" />
+    <Content Include="SalonWeb\js\lib\backbone.js" />
+    <Content Include="SalonWeb\js\lib\imagesloaded.js" />
+    <Content Include="SalonWeb\js\lib\iscroll.js" />
+    <Content Include="SalonWeb\js\lib\jquery.bridget.js" />
+    <Content Include="SalonWeb\js\lib\jquery.js" />
+    <Content Include="SalonWeb\js\lib\jquery.lazyload.js" />
+    <Content Include="SalonWeb\js\lib\juicer.js" />
+    <Content Include="SalonWeb\js\lib\jweixin-1.0.0.js" />
+    <Content Include="SalonWeb\js\lib\masonry.pkgd.min.js" />
+    <Content Include="SalonWeb\js\lib\require.js" />
+    <Content Include="SalonWeb\js\lib\require.text.js" />
+    <Content Include="SalonWeb\js\lib\swiper.min.js" />
+    <Content Include="SalonWeb\js\lib\underscore.js" />
+    <Content Include="SalonWeb\js\main.js" />
+    <Content Include="SalonWeb\template\allfxs.html" />
+    <Content Include="SalonWeb\template\allworks.html" />
+    <Content Include="SalonWeb\template\salon.html" />
+    <Content Include="SalonWeb\template\salonfxs.html" />
+    <Content Include="SalonWeb\template\salonmap.html" />
+    <Content Include="SalonWeb\template\salonworks.html" />
+    <Content Include="html\test.html" />
+    <Content Include="Images\404.png" />
+    <Content Include="Images\about_footbg.png" />
+    <Content Include="Images\activity-1.gif" />
+    <Content Include="Images\activity-2.gif" />
+    <Content Include="Images\activity-3.gif" />
+    <Content Include="Images\activity-4.gif" />
+    <Content Include="Images\activity-5.gif" />
+    <Content Include="Images\arrow_01_03.png" />
+    <Content Include="Images\awardss_img03.jpg" />
+    <Content Include="Images\awardss_img03.png" />
+    <Content Include="Images\awards_bg.jpg" />
+    <Content Include="Images\awards_bg.png" />
+    <Content Include="Images\awards_img01.png" />
+    <Content Include="Images\awards_img011.png" />
+    <Content Include="Images\back-icon.gif" />
+    <Content Include="Images\back_logo.png" />
+    <Content Include="Images\banner1.png" />
+    <Content Include="Images\banner2.png" />
+    <Content Include="Images\banner3.png" />
+    <Content Include="Images\banner4.png" />
+    <Content Include="Images\base_z1fa648.png" />
+    <Content Include="Images\bg_img.jpg" />
+    <Content Include="Images\bg_img02.jpg" />
+    <Content Include="Images\bg_img03.png" />
+    <Content Include="Images\bg_img04.png" />
+    <Content Include="Images\bg_img05.png" />
+    <Content Include="Images\bg_logo1e7c60.png" />
+    <Content Include="Images\blank.gif" />
+    <Content Include="Images\bphoto.png" />
+    <Content Include="Images\btn_Home01.png" />
+    <Content Include="Images\btn_img.png" />
+    <Content Include="Images\btn_img01.png" />
+    <Content Include="Images\btn_img02.png" />
+    <Content Include="Images\btn_img03.png" />
+    <Content Include="Images\btn_img04.png" />
+    <Content Include="Images\btn_img05.png" />
+    <Content Include="Images\case1.jpg" />
+    <Content Include="Images\cloudy.jpg" />
+    <Content Include="Images\cloudy.png" />
+    <Content Include="Images\coin01.png" />
+    <Content Include="Images\coin02.png" />
+    <Content Include="Images\coin03.png" />
+    <Content Include="Images\coin04.png" />
+    <Content Include="Images\coin05.png" />
+    <Content Include="Images\coupons_pic01_03.png" />
+    <Content Include="Images\dress_img.jpg" />
+    <Content Include="Images\fancybox-x.png" />
+    <Content Include="Images\fancybox-y.png" />
+    <Content Include="Images\fancybox.png" />
+    <Content Include="Images\fancy_close.png" />
+    <Content Include="Images\fancy_loading.png" />
+    <Content Include="Images\fancy_nav_left.png" />
+    <Content Include="Images\fancy_nav_right.png" />
+    <Content Include="Images\fancy_shadow_e.png" />
+    <Content Include="Images\fancy_shadow_n.png" />
+    <Content Include="Images\fancy_shadow_ne.png" />
+    <Content Include="Images\fancy_shadow_nw.png" />
+    <Content Include="Images\fancy_shadow_s.png" />
+    <Content Include="Images\fancy_shadow_se.png" />
+    <Content Include="Images\fancy_shadow_sw.png" />
+    <Content Include="Images\fancy_shadow_w.png" />
+    <Content Include="Images\fancy_title_left.png" />
+    <Content Include="Images\fancy_title_main.png" />
+    <Content Include="Images\fancy_title_over.png" />
+    <Content Include="Images\fancy_title_right.png" />
+    <Content Include="Images\gua.png" />
+    <Content Include="Images\hair_dress_bg.png" />
+    <Content Include="Images\hand_img.gif" />
+    <Content Include="Images\head_img.jpg" />
+    <Content Include="Images\home-bg-1.gif" />
+    <Content Include="Images\home-bg-2.gif" />
+    <Content Include="Images\home-bg-3.gif" />
+    <Content Include="Images\home-bg-4.gif" />
+    <Content Include="Images\home-bg-5.gif" />
+    <Content Include="Images\icon-conv.png" />
+    <Content Include="Images\icon-cost.png" />
+    <Content Include="Images\icon-data.png" />
+    <Content Include="Images\icon-spread.png" />
+    <Content Include="Images\icon_menu_ad.png" />
+    <Content Include="Images\icon_menu_function.png" />
+    <Content Include="Images\icon_menu_management.png" />
+    <Content Include="Images\icon_menu_setup.png" />
+    <Content Include="Images\icon_menu_statistics.png" />
+    <Content Include="Images\idx-menu-fxs.gif" />
+    <Content Include="Images\idx-menu-hd.gif" />
+    <Content Include="Images\idx-menu-jg.gif" />
+    <Content Include="Images\idx-menu-ts.gif" />
+    <Content Include="Images\idx-menu-yy.gif" />
+    <Content Include="Images\idx-menu-zp.gif" />
+    <Content Include="Images\img02.png" />
+    <Content Include="Images\img02_1.png" />
+    <Content Include="Images\img03.jpg" />
+    <Content Include="Images\img04.png" />
+    <Content Include="Images\img06.jpg" />
+    <Content Include="Images\layout_head_z1f56cd.png" />
+    <Content Include="Images\left.png" />
+    <Content Include="Images\line.png" />
+    <Content Include="Images\line_img.png" />
+    <Content Include="Images\line_img01.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\menu-icon.gif" />
+    <Content Include="Images\menu-icon.png" />
+    <Content Include="Images\money_img.png" />
+    <Content Include="Images\opacity01.png" />
+    <Content Include="Images\order-menu.png" />
+    <Content Include="Images\order-show.jpg" />
+    <Content Include="Images\page_login_old_z1fcd41.png" />
+    <Content Include="Images\pay-success.gif" />
+    <Content Include="Images\phone_bg.png" />
+    <Content Include="Images\phone_btn.png" />
+    <Content Include="Images\phone_upload.png" />
+    <Content Include="Images\pop-close.png" />
+    <Content Include="Images\pop-tips.png" />
+    <Content Include="Images\price_bg1.png" />
+    <Content Include="Images\price_bg2.png" />
+    <Content Include="Images\price_bg3.png" />
+    <Content Include="Images\price_img.png" />
+    <Content Include="Images\quan.jpg" />
+    <Content Include="JS\asset\css\bootstrap-theme.css.map" />
+    <Content Include="JS\asset\css\bootstrap.css.map" />
+    <Content Include="JS\asset\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="JS\asset\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="JS\asset\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="JS\asset\js\jquery-1.10.2.min.map" />
+    <Content Include="JS\asset\js\jquery.min.map" />
+    <Content Include="JS\pagination.js" />
+    <Content Include="JS\qiniu\jquery.min.map" />
+    <Content Include="JS\qiniu\plupload\.DS_Store" />
+    <Content Include="JS\qiniu\plupload\jquery.plupload.queue\.DS_Store" />
+    <Content Include="JS\qiniu\plupload\jquery.ui.plupload\.DS_Store" />
+    <Content Include="JS\qiniu\Respond-1.4.2\.DS_Store" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\an_hui_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\ao_men_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\bei_jing_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\china_city.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\china_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\chong_qing_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\fu_jian_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\gan_su_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\guang_dong_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\guang_xi_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\gui_zhou_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\hai_nan_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\hei_long_jiang_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\he_bei_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\he_nan_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\hu_bei_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\hu_nan_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\jiang_su_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\jiang_xi_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\ji_lin_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\liao_ning_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\nei_meng_gu_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\ning_xia_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\qing_hai_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\shang_hai_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\shan_dong_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\shan_xi_1_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\shan_xi_2_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\si_chuan_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\tai_wan_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\tian_jin_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\world_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\xiang_gang_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\xin_jiang_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\xi_zang_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\yun_nan_geo.json" />
+    <Content Include="JS\src\util\mapData\rawData\geoJson\zhe_jiang_geo.json" />
+    <Content Include="CSS\Manage\Amazeui\fonts\fontawesome-webfont.eot" />
+    <Content Include="CSS\Manage\Amazeui\fonts\fontawesome-webfont.svg" />
+    <Content Include="CSS\Manage\Amazeui\fonts\fontawesome-webfont.ttf" />
+    <Content Include="CSS\Manage\Amazeui\fonts\fontawesome-webfont.woff" />
+    <Content Include="CSS\Manage\Amazeui\fonts\fontawesome-webfont.woff2" />
+    <Content Include="CSS\Manage\Amazeui\fonts\FontAwesome.otf" />
+    <Content Include="CSS\Manage\Amazeui\images\.DS_Store" />
+    <None Include="Properties\PublishProfiles\V2.pubxml" />
+    <Content Include="SalonWeb\fonts\iconfont.eot" />
+    <Content Include="SalonWeb\fonts\iconfont.ttf" />
+    <Content Include="SalonWeb\fonts\iconfont.woff" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Images\main\account-steps.gif" />
+    <Content Include="Images\main\banner.jpg" />
+    <Content Include="Images\main\banner1.png" />
+    <Content Include="Images\main\banner2.png" />
+    <Content Include="Images\main\banner3.png" />
+    <Content Include="Images\main\banner4.png" />
+    <Content Include="Images\main\case-arrow.gif" />
+    <Content Include="Images\main\case1-1.jpg" />
+    <Content Include="Images\main\case1-2.jpg" />
+    <Content Include="Images\main\case1-3.jpg" />
+    <Content Include="Images\main\case1-codeimg.gif" />
+    <Content Include="Images\main\case1.jpg" />
+    <Content Include="Images\main\case2.jpg" />
+    <Content Include="Images\main\case3.jpg" />
+    <Content Include="Images\main\icon-conv.gif" />
+    <Content Include="Images\main\icon-conv.png" />
+    <Content Include="Images\main\icon-cost.gif" />
+    <Content Include="Images\main\icon-cost.png" />
+    <Content Include="Images\main\icon-data.gif" />
+    <Content Include="Images\main\icon-data.png" />
+    <Content Include="Images\main\icon-pass.gif" />
+    <Content Include="Images\main\icon-spread.gif" />
+    <Content Include="Images\main\icon-spread.png" />
+    <Content Include="Images\main\icon-user.gif" />
+    <Content Include="Images\main\kf.gif" />
+    <Content Include="Images\main\logo.gif" />
+    <Content Include="Images\main\reg-step.png" />
+    <Content Include="Images\main\status.gif" />
+    <Content Include="Images\Register\account-steps.gif" />
+    <Content Include="Images\Register\banner.jpg" />
+    <Content Include="Images\Register\banner1.png" />
+    <Content Include="Images\Register\banner2.png" />
+    <Content Include="Images\Register\banner3.png" />
+    <Content Include="Images\Register\banner4.png" />
+    <Content Include="Images\Register\case-arrow.gif" />
+    <Content Include="Images\Register\icon-conv.gif" />
+    <Content Include="Images\Register\icon-conv.png" />
+    <Content Include="Images\Register\icon-cost.gif" />
+    <Content Include="Images\Register\icon-cost.png" />
+    <Content Include="Images\Register\icon-data.gif" />
+    <Content Include="Images\Register\icon-data.png" />
+    <Content Include="Images\Register\icon-pass.gif" />
+    <Content Include="Images\Register\icon-spread.gif" />
+    <Content Include="Images\Register\icon-spread.png" />
+    <Content Include="Images\Register\images\status_01.png" />
+    <Content Include="Images\Register\images\status_02.png" />
+    <Content Include="Images\Register\images\status_04.png" />
+    <Content Include="Images\Register\images\status_05.png" />
+    <Content Include="Images\Register\kf.gif" />
+    <Content Include="Images\Register\logo.gif" />
+    <Content Include="Images\Register\logo_o.png" />
+    <Content Include="Images\Register\reg-step.png" />
+    <Content Include="Images\Register\status.gif" />
+    <Content Include="Images\Register\up-img.gif" />
+    <Content Include="Images\review_img01.jpg" />
+    <Content Include="Images\right.png" />
+    <Content Include="Images\share-btn.png" />
+    <Content Include="Images\share_img.png" />
+    <Content Include="Images\Snowflakes.png" />
+    <Content Include="Images\up_img.png" />
+    <Content Include="Images\yy-1.gif" />
+    <Content Include="Images\yy-2.gif" />
+    <Content Include="Images\yy-3.gif" />
+    <Content Include="Images\yy-4.gif" />
+    <Content Include="Images\zan.gif" />
+    <Content Include="JS\AES.js" />
+    <Content Include="JS\asset\css\bootstrap-responsive.css" />
+    <Content Include="JS\asset\css\bootstrap-theme.css" />
+    <Content Include="JS\asset\css\bootstrap-theme.min.css" />
+    <Content Include="JS\asset\css\bootstrap.css" />
+    <Content Include="JS\asset\css\bootstrap.min.css" />
+    <Content Include="JS\asset\css\carousel.css" />
+    <Content Include="JS\asset\css\codemirror.css" />
+    <Content Include="JS\asset\css\echartsHome.css" />
+    <Content Include="JS\asset\css\flexslider.css" />
+    <Content Include="JS\asset\css\google-code-prettify.css" />
+    <Content Include="JS\asset\css\monokai.css" />
+    <Content Include="JS\asset\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="JS\asset\ico\favicon.png" />
+    <Content Include="JS\asset\ico\K线图.png" />
+    <Content Include="JS\asset\ico\仪表盘.png" />
+    <Content Include="JS\asset\ico\力导向图.png" />
+    <Content Include="JS\asset\ico\和弦图.png" />
+    <Content Include="JS\asset\ico\地图.png" />
+    <Content Include="JS\asset\ico\折线图.png" />
+    <Content Include="JS\asset\ico\散点图.png" />
+    <Content Include="JS\asset\ico\柱状图.png" />
+    <Content Include="JS\asset\ico\漏斗图.png" />
+    <Content Include="JS\asset\ico\雷达图.png" />
+    <Content Include="JS\asset\ico\饼状图.png" />
+    <Content Include="JS\asset\img\about\chenwei.jpg" />
+    <Content Include="JS\asset\img\about\denghongqi.jpg" />
+    <Content Include="JS\asset\img\about\echarts1.png" />
+    <Content Include="JS\asset\img\about\erik.jpg" />
+    <Content Include="JS\asset\img\about\huangyue.jpg" />
+    <Content Include="JS\asset\img\about\huangzhimin.jpg" />
+    <Content Include="JS\asset\img\about\linfeng.jpg" />
+    <Content Include="JS\asset\img\about\lizhan.jpg" />
+    <Content Include="JS\asset\img\about\loutongbing.jpg" />
+    <Content Include="JS\asset\img\about\shenhao.jpg" />
+    <Content Include="JS\asset\img\about\shenyi.jpg" />
+    <Content Include="JS\asset\img\about\sushuang.jpg" />
+    <Content Include="JS\asset\img\about\tanhe.jpg" />
+    <Content Include="JS\asset\img\about\wangjunting.jpg" />
+    <Content Include="JS\asset\img\about\weitaiyun.jpg" />
+    <Content Include="JS\asset\img\about\yangji.jpg" />
+    <Content Include="JS\asset\img\about\yaofeifei.jpg" />
+    <Content Include="JS\asset\img\about\zhangyanru.jpg" />
+    <Content Include="JS\asset\img\about\zhouyang.jpg" />
+    <Content Include="JS\asset\img\about\zrender1.png" />
+    <Content Include="JS\asset\img\about\zuming.jpg" />
+    <Content Include="JS\asset\img\architecture.png" />
+    <Content Include="JS\asset\img\bg_direction_nav.png" />
+    <Content Include="JS\asset\img\blacktocat.png" />
+    <Content Include="JS\asset\img\connect.gif" />
+    <Content Include="JS\asset\img\creativity.jpg" />
+    <Content Include="JS\asset\img\custom.png" />
+    <Content Include="JS\asset\img\dataDancing.mp3" />
+    <Content Include="JS\asset\img\dataRange.gif" />
+    <Content Include="JS\asset\img\dataView.gif" />
+    <Content Include="JS\asset\img\datazoom.gif" />
+    <Content Include="JS\asset\img\device.png" />
+    <Content Include="JS\asset\img\doc\axisBoundaryGap.png" />
+    <Content Include="JS\asset\img\doc\axisBoundaryGap1.jpg" />
+    <Content Include="JS\asset\img\doc\axisDetail.jpg" />
+    <Content Include="JS\asset\img\doc\axisDetail.png" />
+    <Content Include="JS\asset\img\doc\axisScale1.png" />
+    <Content Include="JS\asset\img\doc\axisScale2.png" />
+    <Content Include="JS\asset\img\doc\barTheme.png" />
+    <Content Include="JS\asset\img\doc\charts.jpg" />
+    <Content Include="JS\asset\img\doc\chordTheme.png" />
+    <Content Include="JS\asset\img\doc\dataRange.png" />
+    <Content Include="JS\asset\img\doc\dataZoom.png" />
+    <Content Include="JS\asset\img\doc\forceTheme.png" />
+    <Content Include="JS\asset\img\doc\grid.jpg" />
+    <Content Include="JS\asset\img\doc\kTheme.png" />
+    <Content Include="JS\asset\img\doc\legend.png" />
+    <Content Include="JS\asset\img\doc\lineTheme.png" />
+    <Content Include="JS\asset\img\doc\mapTheme.png" />
+    <Content Include="JS\asset\img\doc\multiControl.jpg" />
+    <Content Include="JS\asset\img\doc\pieTheme.png" />
+    <Content Include="JS\asset\img\doc\radarTheme.png" />
+    <Content Include="JS\asset\img\doc\roamController.png" />
+    <Content Include="JS\asset\img\doc\scatterTheme.png" />
+    <Content Include="JS\asset\img\doc\timeline.png" />
+    <Content Include="JS\asset\img\doc\title.png" />
+    <Content Include="JS\asset\img\doc\toolbox.png" />
+    <Content Include="JS\asset\img\doc\tooltip1.jpg" />
+    <Content Include="JS\asset\img\doc\tooltip2.jpg" />
+    <Content Include="JS\asset\img\draggable.gif" />
+    <Content Include="JS\asset\img\dynamic1.gif" />
+    <Content Include="JS\asset\img\dynamic2.gif" />
+    <Content Include="JS\asset\img\echarts-logo.png" />
+    <Content Include="JS\asset\img\echarts-logo2.png" />
+    <Content Include="JS\asset\img\effect.gif" />
+    <Content Include="JS\asset\img\example\axis.png" />
+    <Content Include="JS\asset\img\example\bar.png" />
+    <Content Include="JS\asset\img\example\bar1.png" />
+    <Content Include="JS\asset\img\example\bar10.png" />
+    <Content Include="JS\asset\img\example\bar11.png" />
+    <Content Include="JS\asset\img\example\bar12.png" />
+    <Content Include="JS\asset\img\example\bar2.png" />
+    <Content Include="JS\asset\img\example\bar3.png" />
+    <Content Include="JS\asset\img\example\bar4.png" />
+    <Content Include="JS\asset\img\example\bar5.png" />
+    <Content Include="JS\asset\img\example\bar6.png" />
+    <Content Include="JS\asset\img\example\bar7.png" />
+    <Content Include="JS\asset\img\example\bar8.png" />
+    <Content Include="JS\asset\img\example\bar9.png" />
+    <Content Include="JS\asset\img\example\cache.png" />
+    <Content Include="JS\asset\img\example\chord.png" />
+    <Content Include="JS\asset\img\example\chord1.png" />
+    <Content Include="JS\asset\img\example\chord2.png" />
+    <Content Include="JS\asset\img\example\dataRange.png" />
+    <Content Include="JS\asset\img\example\dataRange1.png" />
+    <Content Include="JS\asset\img\example\dataZoom.png" />
+    <Content Include="JS\asset\img\example\dataZoom1.png" />
+    <Content Include="JS\asset\img\example\dynamicLineBar.png" />
+    <Content Include="JS\asset\img\example\dynamicPieRadar.png" />
+    <Content Include="JS\asset\img\example\dynamicScatterK.png" />
+    <Content Include="JS\asset\img\example\EChartsTheme.jpg" />
+    <Content Include="JS\asset\img\example\event.png" />
+    <Content Include="JS\asset\img\example\force.png" />
+    <Content Include="JS\asset\img\example\force1.png" />
+    <Content Include="JS\asset\img\example\force2.png" />
+    <Content Include="JS\asset\img\example\force4.png" />
+    <Content Include="JS\asset\img\example\funnel.png" />
+    <Content Include="JS\asset\img\example\funnel1.png" />
+    <Content Include="JS\asset\img\example\funnel2.png" />
+    <Content Include="JS\asset\img\example\funnel3.png" />
+    <Content Include="JS\asset\img\example\gauge.png" />
+    <Content Include="JS\asset\img\example\gauge1.png" />
+    <Content Include="JS\asset\img\example\gauge2.png" />
+    <Content Include="JS\asset\img\example\gauge3.png" />
+    <Content Include="JS\asset\img\example\gauge4.png" />
+    <Content Include="JS\asset\img\example\gauge5.png" />
+    <Content Include="JS\asset\img\example\import.png" />
+    <Content Include="JS\asset\img\example\k.png" />
+    <Content Include="JS\asset\img\example\k1.png" />
+    <Content Include="JS\asset\img\example\lasagna.png" />
+    <Content Include="JS\asset\img\example\line.png" />
+    <Content Include="JS\asset\img\example\line1.png" />
+    <Content Include="JS\asset\img\example\line2.png" />
+    <Content Include="JS\asset\img\example\line3.png" />
+    <Content Include="JS\asset\img\example\line4.png" />
+    <Content Include="JS\asset\img\example\line5.png" />
+    <Content Include="JS\asset\img\example\line6.png" />
+    <Content Include="JS\asset\img\example\loading.png" />
+    <Content Include="JS\asset\img\example\map.png" />
+    <Content Include="JS\asset\img\example\map1.png" />
+    <Content Include="JS\asset\img\example\map10.png" />
+    <Content Include="JS\asset\img\example\map11.png" />
+    <Content Include="JS\asset\img\example\map12.png" />
+    <Content Include="JS\asset\img\example\map13.png" />
+    <Content Include="JS\asset\img\example\map14.png" />
+    <Content Include="JS\asset\img\example\map15.png" />
+    <Content Include="JS\asset\img\example\map16.png" />
+    <Content Include="JS\asset\img\example\map17.png" />
+    <Content Include="JS\asset\img\example\map18.png" />
+    <Content Include="JS\asset\img\example\map19.png" />
+    <Content Include="JS\asset\img\example\map2.png" />
+    <Content Include="JS\asset\img\example\map3.png" />
+    <Content Include="JS\asset\img\example\map4.png" />
+    <Content Include="JS\asset\img\example\map5.png" />
+    <Content Include="JS\asset\img\example\map6.png" />
+    <Content Include="JS\asset\img\example\map7.png" />
+    <Content Include="JS\asset\img\example\map8.png" />
+    <Content Include="JS\asset\img\example\map9.png" />
+    <Content Include="JS\asset\img\example\mix1.png" />
+    <Content Include="JS\asset\img\example\mix10.png" />
+    <Content Include="JS\asset\img\example\mix11.png" />
+    <Content Include="JS\asset\img\example\mix2.png" />
+    <Content Include="JS\asset\img\example\mix3.png" />
+    <Content Include="JS\asset\img\example\mix4.png" />
+    <Content Include="JS\asset\img\example\mix5.png" />
+    <Content Include="JS\asset\img\example\mix6.png" />
+    <Content Include="JS\asset\img\example\mix7.png" />
+    <Content Include="JS\asset\img\example\mix8.png" />
+    <Content Include="JS\asset\img\example\mix9.png" />
+    <Content Include="JS\asset\img\example\pie.png" />
+    <Content Include="JS\asset\img\example\pie1.png" />
+    <Content Include="JS\asset\img\example\pie2.png" />
+    <Content Include="JS\asset\img\example\pie3.png" />
+    <Content Include="JS\asset\img\example\pie4.png" />
+    <Content Include="JS\asset\img\example\pie5.png" />
+    <Content Include="JS\asset\img\example\pie6.png" />
+    <Content Include="JS\asset\img\example\pie7.png" />
+    <Content Include="JS\asset\img\example\radar.png" />
+    <Content Include="JS\asset\img\example\radar1.png" />
+    <Content Include="JS\asset\img\example\radar2.png" />
+    <Content Include="JS\asset\img\example\radar3.png" />
+    <Content Include="JS\asset\img\example\scatter.png" />
+    <Content Include="JS\asset\img\example\scatter1.png" />
+    <Content Include="JS\asset\img\example\scatter2.png" />
+    <Content Include="JS\asset\img\example\scatter3.png" />
+    <Content Include="JS\asset\img\example\scatter4.png" />
+    <Content Include="JS\asset\img\example\scatter5.png" />
+    <Content Include="JS\asset\img\example\theme.png" />
+    <Content Include="JS\asset\img\example\tooltip.png" />
+    <Content Include="JS\asset\img\example\webkit-dep.png" />
+    <Content Include="JS\asset\img\example\wormhole.png" />
+    <Content Include="JS\asset\img\explorer.png" />
+    <Content Include="JS\asset\img\feature1.png" />
+    <Content Include="JS\asset\img\feature2.png" />
+    <Content Include="JS\asset\img\feature3.png" />
+    <Content Include="JS\asset\img\fork.png" />
+    <Content Include="JS\asset\img\glyphicons-halflings-white.png" />
+    <Content Include="JS\asset\img\glyphicons-halflings.png" />
+    <Content Include="JS\asset\img\groovepaper.png" />
+    <Content Include="JS\asset\img\icon-bar.png" />
+    <Content Include="JS\asset\img\legendSelected.gif" />
+    <Content Include="JS\asset\img\magicType.gif" />
+    <Content Include="JS\asset\img\mark.gif" />
+    <Content Include="JS\asset\img\mix.jpg" />
+    <Content Include="JS\asset\img\multiStack.png" />
+    <Content Include="JS\asset\img\scatter.gif" />
+    <Content Include="JS\asset\img\slide-01.png" />
+    <Content Include="JS\asset\img\slide-02.png" />
+    <Content Include="JS\asset\img\slide-03.png" />
+    <Content Include="JS\asset\img\slide-04.png" />
+    <Content Include="JS\asset\img\slide-05.jpg" />
+    <Content Include="JS\asset\img\subMapType.png" />
+    <Content Include="JS\asset\img\ticks.png" />
+    <Content Include="JS\asset\img\tweed.png" />
+    <Content Include="JS\asset\img\zrender.png" />
+    <Content Include="JS\asset\js\application.js" />
+    <Content Include="JS\asset\js\bootstrap-affix.js" />
+    <Content Include="JS\asset\js\bootstrap-alert.js" />
+    <Content Include="JS\asset\js\bootstrap-button.js" />
+    <Content Include="JS\asset\js\bootstrap-carousel.js" />
+    <Content Include="JS\asset\js\bootstrap-collapse.js" />
+    <Content Include="JS\asset\js\bootstrap-dropdown.js" />
+    <Content Include="JS\asset\js\bootstrap-modal.js" />
+    <Content Include="JS\asset\js\bootstrap-popover.js" />
+    <Content Include="JS\asset\js\bootstrap-scrollspy.js" />
+    <Content Include="JS\asset\js\bootstrap-tab.js" />
+    <Content Include="JS\asset\js\bootstrap-tooltip.js" />
+    <Content Include="JS\asset\js\bootstrap-transition.js" />
+    <Content Include="JS\asset\js\bootstrap-typeahead.js" />
+    <Content Include="JS\asset\js\bootstrap.js" />
+    <Content Include="JS\asset\js\bootstrap.min.js" />
+    <Content Include="JS\asset\js\codemirror.js" />
+    <Content Include="JS\asset\js\dataDancing.js" />
+    <Content Include="JS\asset\js\echartsConfig.js" />
+    <Content Include="JS\asset\js\echartsDoc.js" />
+    <Content Include="JS\asset\js\echartsExample.js" />
+    <Content Include="JS\asset\js\echartsHome.js" />
+    <Content Include="JS\asset\js\echartsTheme.js" />
+    <Content Include="JS\asset\js\echartsThemeDesigner.js" />
+    <Content Include="JS\asset\js\esl\css.js" />
+    <Content Include="JS\asset\js\esl\esl.js" />
+    <Content Include="JS\asset\js\esl\js.js" />
+    <Content Include="JS\asset\js\google-code-prettify.js" />
+    <Content Include="JS\asset\js\html5shiv.js" />
+    <Content Include="JS\asset\js\javascript.js" />
+    <Content Include="JS\asset\js\jquery.flexslider.js" />
+    <Content Include="JS\asset\js\jquery.js" />
+    <Content Include="JS\asset\js\jquery.min.js" />
+    <Content Include="JS\fancybox.css" />
+    <Content Include="JS\imagesloaded.js" />
+    <Content Include="JS\images\blank.gif" />
+    <Content Include="JS\images\example\s1.gif" />
+    <Content Include="JS\images\example\s2.gif" />
+    <Content Include="JS\images\example\s3.gif" />
+    <Content Include="JS\images\fancybox-x.png" />
+    <Content Include="JS\images\fancybox-y.png" />
+    <Content Include="JS\images\fancybox.png" />
+    <Content Include="JS\images\fancy_close.png" />
+    <Content Include="JS\images\fancy_loading.png" />
+    <Content Include="JS\images\fancy_nav_left.png" />
+    <Content Include="JS\images\fancy_nav_right.png" />
+    <Content Include="JS\images\fancy_shadow_e.png" />
+    <Content Include="JS\images\fancy_shadow_n.png" />
+    <Content Include="JS\images\fancy_shadow_ne.png" />
+    <Content Include="JS\images\fancy_shadow_nw.png" />
+    <Content Include="JS\images\fancy_shadow_s.png" />
+    <Content Include="JS\images\fancy_shadow_se.png" />
+    <Content Include="JS\images\fancy_shadow_sw.png" />
+    <Content Include="JS\images\fancy_shadow_w.png" />
+    <Content Include="JS\images\fancy_title_left.png" />
+    <Content Include="JS\images\fancy_title_main.png" />
+    <Content Include="JS\images\fancy_title_over.png" />
+    <Content Include="JS\images\fancy_title_right.png" />
+    <Content Include="JS\jquery-1.8.1.min.js" />
+    <Content Include="JS\jquery.fancybox-1.3.1.pack.js" />
+    <Content Include="JS\jquery.mobilechangepic.js" />
+    <Content Include="JS\jquery.qrcode.js" />
+    <Content Include="JS\main.js" />
+    <Content Include="JS\masonry.min.js" />
+    <Content Include="JS\masonry.pkgd.min.js" />
+    <Content Include="JS\qiniu\html5shiv.js" />
+    <Content Include="JS\qiniu\jquery-1.9.1.min.js" />
+    <Content Include="JS\qiniu\main-obj.js" />
+    <Content Include="JS\qiniu\main.js" />
+    <Content Include="JS\qiniu\plupload\i18n\zh_CN.js" />
+    <Content Include="JS\qiniu\plupload\jquery.plupload.queue\css\jquery.plupload.queue.css" />
+    <Content Include="JS\qiniu\plupload\jquery.plupload.queue\img\backgrounds.gif" />
+    <Content Include="JS\qiniu\plupload\jquery.plupload.queue\img\buttons-disabled.png" />
+    <Content Include="JS\qiniu\plupload\jquery.plupload.queue\img\buttons.png" />
+    <Content Include="JS\qiniu\plupload\jquery.plupload.queue\img\delete.gif" />
+    <Content Include="JS\qiniu\plupload\jquery.plupload.queue\img\done.gif" />
+    <Content Include="JS\qiniu\plupload\jquery.plupload.queue\img\error.gif" />
+    <Content Include="JS\qiniu\plupload\jquery.plupload.queue\img\throbber.gif" />
+    <Content Include="JS\qiniu\plupload\jquery.plupload.queue\img\transp50.png" />
+    <Content Include="JS\qiniu\plupload\jquery.plupload.queue\jquery.plupload.queue.js" />
+    <Content Include="JS\qiniu\plupload\jquery.plupload.queue\jquery.plupload.queue.min.js" />
+    <Content Include="JS\qiniu\plupload\jquery.ui.plupload\css\jquery.ui.plupload.css" />
+    <Content Include="JS\qiniu\plupload\jquery.ui.plupload\img\loading.gif" />
+    <Content Include="JS\qiniu\plupload\jquery.ui.plupload\img\plupload.png" />
+    <Content Include="JS\qiniu\plupload\jquery.ui.plupload\jquery.ui.plupload.js" />
+    <Content Include="JS\qiniu\plupload\jquery.ui.plupload\jquery.ui.plupload.min.js" />
+    <Content Include="JS\qiniu\plupload\moxie.js" />
+    <Content Include="JS\qiniu\plupload\moxie.min.js" />
+    <Content Include="JS\qiniu\plupload\Moxie.swf" />
+    <Content Include="JS\qiniu\plupload\Moxie.xap" />
+    <Content Include="JS\qiniu\plupload\plupload.dev.js" />
+    <Content Include="JS\qiniu\plupload\plupload.full.min.js" />
+    <Content Include="JS\qiniu\plupload\plupload.min.js" />
+    <Content Include="JS\qiniu\qiniu.js" />
+    <Content Include="JS\qiniu\Respond-1.4.2\respond.min.js" />
+    <Content Include="JS\qrcode.js" />
+    <Content Include="JS\Register\CHKCookie.js" />
+    <Content Include="JS\Register\city.min.js" />
+    <Content Include="JS\Register\DD_belatedPNG_0.0.8a-min.js" />
+    <Content Include="JS\Register\idangerous.swiper.min.js" />
+    <Content Include="JS\Register\jquery-1.8.1.min.js" />
+    <Content Include="JS\Register\jquery.ba-hashchange.js" />
+    <Content Include="JS\Register\jquery.ba-hashchange.min.js" />
+    <Content Include="JS\Register\jquery.cityselect.js" />
+    <Content Include="JS\Register\jquery.scrollbar.js" />
+    <Content Include="JS\Register\main.js" />
+    <Content Include="JS\src\chart.js" />
+    <Content Include="JS\src\chart\bar.js" />
+    <Content Include="JS\src\chart\base.js" />
+    <Content Include="JS\src\chart\chord.js" />
+    <Content Include="JS\src\chart\force.js" />
+    <Content Include="JS\src\chart\forceLayoutWorker.js" />
+    <Content Include="JS\src\chart\funnel.js" />
+    <Content Include="JS\src\chart\gauge.js" />
+    <Content Include="JS\src\chart\island.js" />
+    <Content Include="JS\src\chart\k.js" />
+    <Content Include="JS\src\chart\line.js" />
+    <Content Include="JS\src\chart\map.js" />
+    <Content Include="JS\src\chart\pie.js" />
+    <Content Include="JS\src\chart\radar.js" />
+    <Content Include="JS\src\chart\scatter.js" />
+    <Content Include="JS\src\component.js" />
+    <Content Include="JS\src\component\axis.js" />
+    <Content Include="JS\src\component\base.js" />
+    <Content Include="JS\src\component\categoryAxis.js" />
+    <Content Include="JS\src\component\dataRange.js" />
+    <Content Include="JS\src\component\dataView.js" />
+    <Content Include="JS\src\component\dataZoom.js" />
+    <Content Include="JS\src\component\grid.js" />
+    <Content Include="JS\src\component\legend.js" />
+    <Content Include="JS\src\component\polar.js" />
+    <Content Include="JS\src\component\roamController.js" />
+    <Content Include="JS\src\component\timeline.js" />
+    <Content Include="JS\src\component\title.js" />
+    <Content Include="JS\src\component\toolbox.js" />
+    <Content Include="JS\src\component\tooltip.js" />
+    <Content Include="JS\src\component\valueAxis.js" />
+    <Content Include="JS\src\config.js" />
+    <Content Include="JS\src\data\Graph.js" />
+    <Content Include="JS\src\echarts-map.js" />
+    <Content Include="JS\src\echarts.js" />
+    <Content Include="JS\src\layout\Force.js" />
+    <Content Include="JS\src\layout\forceLayoutWorker.js" />
+    <Content Include="JS\src\theme\default.js" />
+    <Content Include="JS\src\util\accMath.js" />
+    <Content Include="JS\src\util\coordinates.js" />
+    <Content Include="JS\src\util\ecAnimation.js" />
+    <Content Include="JS\src\util\ecData.js" />
+    <Content Include="JS\src\util\ecEffect.js" />
+    <Content Include="JS\src\util\ecQuery.js" />
+    <Content Include="JS\src\util\kwargs.js" />
+    <Content Include="JS\src\util\mapData\geoCoord.js" />
+    <Content Include="JS\src\util\mapData\geoJson\an_hui_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\ao_men_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\bei_jing_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\china_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\chong_qing_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\fu_jian_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\gan_su_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\guang_dong_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\guang_xi_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\gui_zhou_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\hai_nan_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\hei_long_jiang_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\he_bei_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\he_nan_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\hu_bei_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\hu_nan_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\jiang_su_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\jiang_xi_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\ji_lin_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\liao_ning_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\nei_meng_gu_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\ning_xia_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\qing_hai_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\shang_hai_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\shan_dong_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\shan_xi_1_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\shan_xi_2_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\si_chuan_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\tai_wan_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\tian_jin_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\world_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\xiang_gang_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\xin_jiang_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\xi_zang_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\yun_nan_geo.js" />
+    <Content Include="JS\src\util\mapData\geoJson\zhe_jiang_geo.js" />
+    <Content Include="JS\src\util\mapData\params.js" />
+    <Content Include="JS\src\util\mapData\rawData\encode.js" />
+    <Content Include="JS\src\util\mapData\textFixed.js" />
+    <Content Include="JS\src\util\ndarray.js" />
+    <Content Include="JS\src\util\number.js" />
+    <Content Include="JS\src\util\projection\albers.js" />
+    <Content Include="JS\src\util\projection\mercator.js" />
+    <Content Include="JS\src\util\projection\normal.js" />
+    <Content Include="JS\src\util\projection\svg.js" />
+    <Content Include="JS\src\util\shape\Candle.js" />
+    <Content Include="JS\src\util\shape\Chain.js" />
+    <Content Include="JS\src\util\shape\Chord.js" />
+    <Content Include="JS\src\util\shape\Cross.js" />
+    <Content Include="JS\src\util\shape\GaugePointer.js" />
+    <Content Include="JS\src\util\shape\HalfSmoothPolygon.js" />
+    <Content Include="JS\src\util\shape\HandlePolygon.js" />
+    <Content Include="JS\src\util\shape\Icon.js" />
+    <Content Include="JS\src\util\shape\MarkLine.js" />
+    <Content Include="JS\src\util\shape\normalIsCover.js" />
+    <Content Include="JS\src\util\shape\Ribbon.js" />
+    <Content Include="JS\src\util\shape\Symbol.js" />
+    <Content Include="JS\zepto.fx.js" />
+    <Content Include="JS\zepto.min.js" />
+    <Content Include="JS\zepto.touch.js" />
+    <Content Include="SalonWeb\template\workdetail.html" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Register\Pact.cshtml" />
+    <Content Include="Views\Register\Register.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\Showreel.cshtml" />
+    <Content Include="Views\Register\Check.cshtml" />
+    <Content Include="Views\Register\Pay.cshtml" />
+    <Content Include="Views\AlipayReturn\ReturnUrl.cshtml" />
+    <Content Include="Views\Manage\Login.cshtml" />
+    <Content Include="Views\Manage\LoginEnd.cshtml" />
+    <Content Include="Views\Manage\UpdatePwd.cshtml" />
+    <Content Include="Views\Err\Err.cshtml" />
+    <Content Include="Views\Manage\ChecksSalon.cshtml" />
+    <Content Include="Views\Manage\SalonInfo.cshtml" />
+    <Content Include="Views\Manage\FaxinshiInfos.cshtml" />
+    <Content Include="Views\Manage\BasicInfo.cshtml" />
+    <Content Include="Views\Manage\ImageInfo.cshtml" />
+    <Content Include="Views\Shared\_Layout1.cshtml" />
+    <Content Include="Views\Manage\SalonSystemMessages.cshtml" />
+    <Content Include="Views\Manage\SystemInfo.cshtml" />
+    <Content Include="Views\Manage\RealTimeStatistics.cshtml" />
+    <Content Include="Views\Manage\SalonMonthStatistics.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Manage\DimissionHairstylist.cshtml" />
+    <Content Include="Views\Manage\TodayOrder.cshtml" />
+    <Content Include="Views\Manage\AllOrder.cshtml" />
+    <Content Include="Views\Manage\CustomerManage.cshtml" />
+    <Content Include="Views\Manage\ShowSalonNotice.cshtml" />
+    <Content Include="Views\Manage\AddSalonNotice.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Browsers\" />
+    <Folder Include="Filters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BoboCommon\BoboCommon.csproj">
+      <Project>{e11466c8-27fc-4067-80bd-737731766f67}</Project>
+      <Name>BoboCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Boboframework\Boboframework.csproj">
+      <Project>{0b83ec20-d79b-4277-a1f0-9c6857a2722f}</Project>
+      <Name>Boboframework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BoboIService\BoboIService.csproj">
+      <Project>{fdcc7fab-8312-4fea-8e7d-9fa07d533a7a}</Project>
+      <Name>BoboIService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BoboModel\BoboModel.csproj">
+      <Project>{85b7b1f6-8b0f-4330-bfb9-f0aa30a3f0da}</Project>
+      <Name>BoboModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>48879</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:17217/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

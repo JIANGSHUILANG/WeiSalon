@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="aeac59531abc4c92ae87f0c326786ab1" Name="Diagram1">
+        <EntityTypeShape EntityType="bobosquadModel.T_Advice" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobosquadModel.T_Backflow" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobosquadModel.T_Error" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobosquadModel.T_Order" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobosquadModel.T_Salon" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobosquadModel.T_SalonImageInfo" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobosquadModel.T_SalonPackage" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobosquadModel.T_Scanrec" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobosquadModel.T_Sms" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobosquadModel.T_Winning" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobosquadModel.T_Winningrec" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobosquadModel.Wx_Comment" Width="1.5" PointX="8.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobosquadModel.To_Employee" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="bobosquadModel.T_SalinHairStylist" Width="1.5" PointX="3.375" PointY="10.75" />
+        <EntityTypeShape EntityType="bobosquadModel.T_SysInformation" Width="1.5" PointX="5.375" PointY="10.75" />
+        <EntityTypeShape EntityType="bobosquadModel.Wx_BindHair" Width="1.5" PointX="11.375" PointY="0.75" />
+        <EntityTypeShape EntityType="bobosquadModel.Wx_Order" Width="1.5" PointX="11.375" PointY="4.75" />
+        <EntityTypeShape EntityType="bobosquadModel.T_CustomerManage" Width="1.5" PointX="11.375" PointY="10.75" />
+        <EntityTypeShape EntityType="bobosquadModel.T_HairOff" Width="1.5" PointX="7.375" PointY="12.75" />
+        <EntityTypeShape EntityType="bobosquadModel.T_Notice" Width="1.5" PointX="13.375" PointY="0.75" />
+        <EntityTypeShape EntityType="bobosquadModel.Wx_Member" Width="1.5" PointX="13.375" PointY="3.75" />
+        <EntityTypeShape EntityType="bobosquadModel.T_SaleManager" Width="1.5" PointX="13.375" PointY="8.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

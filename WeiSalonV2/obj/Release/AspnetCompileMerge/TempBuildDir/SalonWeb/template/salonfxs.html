@@ -1,0 +1,23 @@
+<a class="row salon-info-item title" href="{@if fxs.length>0 }#allfxs/${sid}{@else}javascript:;{@/if}">
+	<div class="col-90">沙龙推荐发型师(${fxs.length})</div>
+	<div class="col-10"><i class="iconfont icon-more" data-icon="&#xe601;"></i></div>
+</a>
+<div class="swiper-container salon-fxs-list">
+	<ul class="swiper-wrapper">
+		{@each fxs as item}
+		<li class="swiper-slide">
+			<a class="pic" href="http://my.bobo.so/hair/index.html#detailhair/${item.huid}"><img src="http://img.hairbobo.com${item.logo}"></a>
+			<div class="name">${item.name}</div>
+			<div class="star">
+				{@each i in range(0,5)}
+					{@if i < fxs.length }
+						<i class="iconfont icon-star-light" data-icon="&#xe604;"></i>
+					{@else}
+						<i class="iconfont icon-star" data-icon="&#xe604;"></i>
+					{@/if}
+				{@/each}
+			</div>
+		</li>
+		{@/each}
+	</ul>
+</div>

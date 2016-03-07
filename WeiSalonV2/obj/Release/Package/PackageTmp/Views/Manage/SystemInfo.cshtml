@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "SystemInfo";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<!--[if lte IE 9]>
+<p class="browsehappy">
+	你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+以获得更好的体验！
+</p>
+<![endif]-->
+@using BoboModel
+@model SysInformation
+<div class="am-cf admin-main">
+
+    <!-- content start -->
+    <div class="admin-content system-content am-g">
+        <div class="am-padding  system-container">
+            @{
+                if (Model != null)
+                {
+                <article class="am-article">
+                    <div class="am-article-hd am-margin-vertical-xl">
+                        <div class="am-text-xl am-text-center">@Model.sy_title</div>
+                    </div>
+                    <div class="am-article-bd am-text-justify">
+                        @Html.Raw(Model.sy_content)
+                    </div>
+                </article>
+                }
+            }
+
+        </div>
+    </div>
+    <!-- content end -->
+</div>

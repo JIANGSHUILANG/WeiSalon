@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6cf7b0e4744a4a58ad550ad07cfaa70a" Name="Diagram1">
+        <EntityTypeShape EntityType="bobohairModel.T_Advice" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobohairModel.T_Backflow" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobohairModel.T_Error" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobohairModel.T_Order" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobohairModel.T_Salon" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobohairModel.T_SalonImageInfo" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobohairModel.T_SalonPackage" Width="1.5" PointX="6.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobohairModel.T_Scanrec" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobohairModel.T_Sms" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobohairModel.T_Winning" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobohairModel.T_Winningrec" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobohairModel.Wx_Comment" Width="1.5" PointX="6" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="bobohairModel.To_Employee" Width="1.5" PointX="1.4004779483193894" PointY="30.895397081456796" />
+        <EntityTypeShape EntityType="bobohairModel.T_SysInformation" Width="1.5" PointX="7.9199968929961315" PointY="9.6041798189301879" />
+        <EntityTypeShape EntityType="bobohairModel.Wx_Order" Width="1.5" PointX="9.875" PointY="6.75" />
+        <EntityTypeShape EntityType="bobohairModel.Wx_BindHair" Width="1.5" PointX="5.3134149505353605" PointY="27.025601459213348" />
+        <EntityTypeShape EntityType="bobohairModel.T_CustomerManage" Width="1.5" PointX="0.45596907867862335" PointY="19.090525263496918" />
+        <EntityTypeShape EntityType="bobohairModel.Wx_Member" Width="1.5" PointX="9.8531343554394013" PointY="22.071290965225216" />
+        <EntityTypeShape EntityType="bobohairModel.T_SalinHairStylist" Width="1.5" PointX="6.8622339213556778" PointY="29.66157965253181" />
+        <EntityTypeShape EntityType="bobohairModel.T_HairOff" Width="1.5" PointX="2.30364667358978" PointY="12.460185801824641" />
+        <EntityTypeShape EntityType="bobohairModel.T_Notice" Width="1.5" PointX="4.148426650161122" PointY="8.7684935819210921" />
+        <EntityTypeShape EntityType="bobohairModel.T_SaleManager" Width="1.5" PointX="8.1589146666968766" PointY="3.1948427572822395" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
