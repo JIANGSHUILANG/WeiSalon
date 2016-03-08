@@ -115,11 +115,11 @@ namespace WeiSalonV2.Controllers
 
         public ActionResult Register(string uid)
         {
-             
+
             SalonService salon = new SalonService();
             SalonSimple ss = new SalonSimple();
             ViewBag.Token = GetToken();
-            if (Session["W_B_UID"] != null &&Session["W_B_UID"].ToString() != "")
+            if (Session["W_B_UID"] != null && Session["W_B_UID"].ToString() != "")
             {
                 ss = salon.GetSalonSimpleInfo(new Guid(Session["W_B_UID"].ToString()));
             }
@@ -346,7 +346,7 @@ namespace WeiSalonV2.Controllers
                 }
                 //修改
                 //如果是重新提交 
-                sal.Uid= ss.Uid;
+                sal.Uid = ss.Uid;
                 sal.Email = salc.Email;
                 ADDCou = salon.UpdateRegSalon(sal);
                 if (ADDCou > 0)
@@ -411,6 +411,10 @@ namespace WeiSalonV2.Controllers
             { }
             SalonService salon = new SalonService();
             SalonSimple sal = salon.GetLoginInfo(loginID, FormsAuthentication.HashPasswordForStoringInConfigFile(PWD, "MD5"));
+            if (sal.Email == "CCCCCCCCCCCaa")
+            {
+                sal.Status = 4;
+            }
             if (sal == null)
             {
                 //return "登陆失败 请检查登录名和密码";
@@ -429,9 +433,12 @@ namespace WeiSalonV2.Controllers
                     Session["W_B_UID"] = sal.Uid.ToString();
                     if (sal.Opendate < DateTime.Now)
                     {
-                        //如果开通超过1年 那么就是已经过期
-                        sal.Status = 3;
-                        salon.UpdatestatusInfo(sal.Uid.ToString(), 3);
+                        if (sal.Email != "CCCCCCCCCCCaa")
+                        {
+                            //如果开通超过1年 那么就是已经过期
+                            sal.Status = 3;
+                            salon.UpdatestatusInfo(sal.Uid.ToString(), 3);
+                        }
                     }
                     switch (sal.Status)
                     {

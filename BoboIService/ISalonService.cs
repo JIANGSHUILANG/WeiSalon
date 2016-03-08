@@ -138,7 +138,7 @@ namespace BoboIService
                 s_nickname = mod.Nickname,
                 s_pwd = mod.Pwd,
                 s_status = mod.Status,
-                s_uid =mod.Uid,
+                s_uid = mod.Uid,
                 s_address = mod.Address,
                 s_linkname = mod.LinkName,
                 s_summary = mod.Summary,
@@ -306,10 +306,11 @@ namespace BoboIService
         /// <returns></returns>
         public SalonSimple GetLoginInfo(string loginID, string PWD)
         {
+
             var info = new List<SalonSimple>();
             try
             {
-                info = _db.t_salon.Where(a => a.s_email == loginID && a.s_pwd == PWD && a.s_status != 0)
+                info = _db.t_salon.Where(a => a.s_email == loginID && a.s_pwd == PWD.ToLower() && a.s_status != 0)
                     .Select(a => new SalonSimple()
                     {
                         Nickname = a.s_nickname,
@@ -376,7 +377,7 @@ namespace BoboIService
         public int UpdatestatusInfo(string uid, int status)
         {
             int count = 0;
-            var model = _db.t_salon.Find(uid);
+            var model = _db.t_salon.Find(new Guid(uid));
             try
             {
                 model.s_status = status;
@@ -468,7 +469,7 @@ namespace BoboIService
         /// <returns></returns>
         public List<AllSalon> GetSalonInfo(Guid uid, int type)
         {
-        
+
             var list = new List<AllSalon>();
             try
             {
@@ -588,16 +589,16 @@ namespace BoboIService
             else
             {
                 salons = info.Select(a => new SalonSimple
-                  {
-                      Uid = a.s_uid,
-                      Cell = a.s_cell,
-                      Nickname = a.s_nickname,
-                      Logo = a.s_logo,
-                      Opendate = a.s_opendate,
-                      Status = a.s_status,
-                      Businessdate = a.s_businessdate,
-                      LinkName = a.s_linkname
-                  });
+                {
+                    Uid = a.s_uid,
+                    Cell = a.s_cell,
+                    Nickname = a.s_nickname,
+                    Logo = a.s_logo,
+                    Opendate = a.s_opendate,
+                    Status = a.s_status,
+                    Businessdate = a.s_businessdate,
+                    LinkName = a.s_linkname
+                });
             }
             list.AddRange(saleName == null ? salons.ToList() : salons.OrderByDescending(c => c.LastTime).Skip(beginNum).Take(pageSize).ToList());
             return list;

@@ -14,7 +14,7 @@ namespace BoboModel
         public int sy_id { get; set; }
         public string sy_title { get; set; }
         public string sy_content { get; set; }
-        public System.DateTime sy_date { get; set; }
-        public int sy_status { get; set; }
+        public System.DateTime? sy_date { get; set; }
+        public int? sy_status { get; set; }
     }
 }
